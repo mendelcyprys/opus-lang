@@ -1,23 +1,26 @@
 # Japanese — Learning Plan
 
-_Last updated: —_
+_Last updated: 2026-11-04_
 
 ## Current phase
-**Phase 0 — onboarding & placement** (not started). See `CLAUDE.md` → "Onboarding a new language" and `LANGUAGE.md` → Onboarding questions.
+**Phase 1 — A1/N5 foundations** (grammar absolute beginner; kana nearly solid). Romaji alongside kana for now; drop once kana stick.
 
-## Milestones (CEFR + JLPT)
+## Milestones
 | Level | Target date | Assessed on | Result |
 |---|---|---|---|
+| A1 / N5 | — | — | onboarding 2026-11-04: self-assessed beginner |
 
 ## Roadmap
-_Draft after placement from the Grammar map in `LANGUAGE.md`._
-
 | Phase | Focus | Status |
 |---|---|---|
-| 0 | Onboarding & placement | planned |
+| 0 | Onboarding | done 2026-11-04 |
+| 1 | Kana refresh (incl. katakana food/loanwords), です, は/の/か, self-intro | in progress |
+| 2 | ます verbs (present/past/negative), を/に/で, numbers & time | planned |
+| 3 | Adjectives (い/な), あります/います, counters | planned |
+| 4 | A2/N4: plain form, te-form | planned |
 
 ## Next session
-1. Onboarding: self-assessed level per skill, goal, language-specific questions from `LANGUAGE.md`; then placement (or script basics for a true beginner).
+1. Kana refresh (katakana food words) + X は Y です.
 
 ## Ideas / backlog
--
+- Katakana loanwords from food/tech (interests).
