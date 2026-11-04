@@ -21,3 +21,4 @@
 - Round 1 (translation): 2/4 fully correct; errors: دهبنا → ذهبنا; الى → إلى ×2.
 - Round 2 (modal): 4/4 grammar ✓ (كتب، ذهبوا، كتبتِ); الى → إلى again.
 - Learner asked for AskUserQuestion modals instead of plain-text rounds.
+- Attached pronouns on nouns: 4/4 (بيتها، رسالتي، معلمنا جديد، كتبت رسالته).

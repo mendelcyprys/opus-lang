@@ -13,3 +13,4 @@ The first column is always the target-language term (used by scripts/export_anki
 | ذَهَبَ / يَذْهَبُ | dhahaba / yadhhabu | to go | v., root ذ-ه-ب, form I, maṣdar ذَهَاب; with إِلَى | ذَهَبْنَا إِلَى السُّوقِ أَمْسِ. — We went to the market yesterday. | 2026-11-04 | 2026-11-04 | 3 |
 | إِلَى | ilā | to, towards | preposition; hamza under alif | ذَهَبْتُ إِلَى الأُسْتَاذِ. — I went to the teacher. | 2026-11-04 | 2026-11-04 | 2 |
 | هَلْ | hal | yes/no question particle | particle | هَلْ ذَهَبْتَ أَمْسِ؟ — Did you go yesterday? | 2026-11-04 | 2026-11-04 | 3 |
+| بَيْت | bayt | house | m, pl. بُيُوت | بَيْتُهَا جَدِيدٌ. — Her house is new. | 2026-11-04 | 2026-11-04 | 3 |

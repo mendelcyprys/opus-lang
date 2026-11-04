@@ -8,3 +8,4 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | جديد، معلم، رسالة، أمس | vocab | 1d | 2026-11-05 |
 | إلى (hamza under alif), ذ vs د (ذهبنا) | spelling | 1d | 2026-11-05 |
 | past tense all persons of كتب/ذهب | grammar | 1d | 2026-11-05 |
+| attached pronouns on nouns (ة→ت, no ال) | grammar | 1d | 2026-11-05 |
