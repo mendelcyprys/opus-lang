@@ -19,7 +19,7 @@ _Last updated: 2026-11-04_
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. Typed-production check (hamza, ذ, معلمنا). Pronouns on verbs/prepositions done 2026-11-04 (7/8). Then present tense (Phase 2): prefixes أ-/ت-/ي-/ن-.
+1. Typed-production check (hamza, ذ, معلمنا). Pronouns on verbs/prepositions done 2026-11-04 (7/8). Present tense intro done 2026-11-04 (7/8). Next: more present verbs/stem vowels, negation (لا، لم، ما، ليس), then broken plurals.
 
 ## Ideas / backlog
 - Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.

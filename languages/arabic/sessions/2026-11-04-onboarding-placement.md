@@ -34,3 +34,8 @@
 - Round (8 Qs): 7/8. Q1–7 ✓ (كتبته، سمعني، قرأناها، كتبوه، له رسالة، معه، إليه).
 - Q8 typed: كتبته (= I wrote it) for "I read it" → قرأتُه. Suffix correct, wrong verb (primed by كتب).
 - New vocab: سَمِعَ، قَرَأَ، سُوق (re-used), لَهُ، مَعَهُ، إِلَيْهِ.
+
+## Later the same day: present tense (muḍāriʿ) intro
+- Taught: prefixes أ ت ي ن; endings ـين (you f.) / ـون (they m., alif not silent, vs past كتبوا); stem vowels vary; Hebrew parallel אכתוב/תכתוב/יכתוב/נכתוב.
+- Round (8 Qs): 7/8. Q1–7 ✓ (أكتب، تذهب، نقرأ، يسمعك، تكتبين، يذهبون، أسمعه).
+- Q8 typed: ندهب → نذهب (ذ written as د again, 2nd time). Rest of sentence ✓.

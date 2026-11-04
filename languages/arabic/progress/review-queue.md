@@ -12,3 +12,5 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | معلمنا (noun + نا + adjective), typed production | grammar | 1d | 2026-11-05 |
 | قرأ، سمع (قرأته), pronouns on verbs (ـني!, كتبوه) | vocab+grammar | 1d | 2026-11-05 |
 | prepositions + suffixes (لي له معه إليه) | grammar | 1d | 2026-11-05 |
+| present tense prefixes/endings (أكتب، تكتبين، يذهبون) | grammar | 1d | 2026-11-05 |
+| ذ in ذهب (typed: نذهب) | spelling | 1d | 2026-11-05 |
