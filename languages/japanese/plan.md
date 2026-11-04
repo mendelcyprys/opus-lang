@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 4 | A2/N4: plain form, te-form | planned |
 
 ## Next session
-1. Kana refresh (katakana food words) + X は Y です.
+1. Review; self-intro (なまえ、〜からきました); sentence-building before typed translation; suggest Japanese keyboard.
 
 ## Ideas / backlog
 - Katakana loanwords from food/tech (interests).

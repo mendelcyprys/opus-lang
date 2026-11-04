@@ -5,3 +5,4 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 
 | Pattern | Example (wrong → right) | Category | First seen | Last seen | Count | Status (active/improving/fixed) |
 |---|---|---|---|---|---|---|
+| Stray か on a statement | これはわたしのラーメンですか → これはわたしのラーメンです | particle | 2026-11-04 | 2026-11-04 | 1 | active |

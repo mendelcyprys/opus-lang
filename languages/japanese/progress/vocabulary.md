@@ -5,3 +5,9 @@ The first column is always the target-language term (used by scripts/export_anki
 
 | Japanese | Reading (kana) | English | Grammar info (word type, verb group, forms) | Example sentence (— gloss) | First learned | Last reviewed | Mastery (0–4) |
 |---|---|---|---|---|---|---|---|
+| コーヒー | こーひー (kōhī) | coffee | noun, katakana loanword | これは コーヒーですか。 — Is this coffee? | 2026-11-04 | 2026-11-04 | 3 |
+| すし | すし (sushi) | sushi | noun (寿司) | これは すしです。 — This is sushi. | 2026-11-04 | 2026-11-04 | 3 |
+| ラーメン | らーめん (rāmen) | ramen | noun, katakana | わたしの ラーメンです。 — It's my ramen. | 2026-11-04 | 2026-11-04 | 3 |
+| おちゃ | おちゃ (ocha) | (green) tea | noun (お茶) | これは おちゃですか。 — Is this tea? | 2026-11-04 | 2026-11-04 | 3 |
+| わたし | わたし (watashi) | I | pronoun (私) | わたしは エリックです。 — I'm Erik. | 2026-11-04 | 2026-11-04 | 3 |
+| これ | これ (kore) | this (thing) | demonstrative | これは すしです。 — This is sushi. | 2026-11-04 | 2026-11-04 | 3 |
