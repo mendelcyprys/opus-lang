@@ -9,3 +9,4 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | אחים / אחיות | vocab | 1d | 2026-11-05 |
 | pu'al vs nif'al passive (בושל, not נבשל) | grammar | 1d | 2026-11-05 |
 | huf'al הוזמן; לאור; תורגם | vocab | 1d | 2026-11-05 |
+| בעקבות, חרף/על אף, שיפוץ, פתיחת (smichut) | vocab | 1d | 2026-11-05 |

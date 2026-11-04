@@ -13,3 +13,8 @@ The first column is always the target-language term (used by scripts/export_anki
 | בֻּשַּׁל | bushal | was cooked | ב-ש-ל, pu'al past 3ms | הָאֹכֶל בֻּשַּׁל עַל יְדֵי הַשֵּׁף. — The food was cooked by the chef. | 2026-11-04 | 2026-11-04 | 1 |
 | תֻּרְגַּם | turgam | was translated | ת-ר-ג-ם, pu'al past 3ms | הַסֵּפֶר תֻּרְגַּם לְאַנְגְּלִית. — The book was translated into English. | 2026-11-04 | 2026-11-04 | 3 |
 | הוּזְמַן | huzman | was ordered / invited | ז-מ-ן, huf'al past 3ms | הַכַּרְטִיסִים הוּזְמְנוּ אֶתְמוֹל. — The tickets were ordered yesterday. | 2026-11-04 | 2026-11-04 | 3 |
+| בְּעִקְבוֹת | be'ikvot | following, as a result of | preposition (formal) | בְּעִקְבוֹת הַשְּׁבִיתָה הַטִּיסָה בֻּטְּלָה. — The flight was cancelled following the strike. | 2026-11-04 | 2026-11-04 | 3 |
+| חֶרֶף / עַל אַף | ḥeref / al af | despite (formal) | preposition | חֶרֶף הַגֶּשֶׁם — despite the rain | 2026-11-04 | 2026-11-04 | 2 |
+| שִׁפּוּץ | shiputz | renovation | m, pl. שִׁפּוּצִים; ש-פ-צ, verbal noun of pi'el שִׁפֵּץ (passive שֻׁפַּץ) | בְּעִקְבוֹת הַשִּׁפּוּץ נִפְתְּחָה הַמִּסְעָדָה מֵחָדָשׁ. — Following the renovation, the restaurant was reopened. | 2026-11-04 | 2026-11-04 | 3 |
+| פְּתִיחָה | ptiḥa | opening | f; smichut פְּתִיחַת | פְּתִיחַת הַמִּסְעָדָה — the opening of the restaurant | 2026-11-04 | 2026-11-04 | 3 |
+| פֻּרְסַם | pursam | was published | פ-ר-ס-ם, pu'al | הַכַּתָּבָה פֻּרְסְמָה אֶתְמוֹל. — The article was published yesterday. | 2026-11-04 | 2026-11-04 | 3 |

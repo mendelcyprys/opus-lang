@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 2 | B2: news Hebrew, verbal nouns, idioms | planned |
 
 ## Next session
-1. B2 probe round 1 done (7/8): drill pu'al vs nif'al (pi'el → pu'al, pa'al → nif'al); more formal connectors; short news-style reading.
+1. B2 probes 7/8 then 8/8 (passives fixed in drill; formal connectors + nominal style ✓). Next: short news-style reading text (unpointed) + more verbal-noun mishkalim; consider a formal B2 check soon.
 
 ## Ideas / backlog
 - Hebrew↔Arabic shared roots once Arabic starts.
