@@ -5,4 +5,5 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 
 | Pattern | Example (wrong → right) | Category | First seen | Last seen | Count | Status (active/improving/fixed) |
 |---|---|---|---|---|---|---|
-| Hamza dropped on initial alif | امس → أمس; الاستاذ → الأستاذ | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
+| Hamza dropped on initial alif | امس → أمس; الاستاذ → الأستاذ; الى → إلى (×3, hamza *under* alif) | spelling | 2026-11-04 | 2026-11-04 | 3 | active |
+| ذ written as د | دهبنا → ذهبنا | spelling | 2026-11-04 | 2026-11-04 | 1 | active |

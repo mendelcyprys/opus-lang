@@ -19,7 +19,7 @@ _Last updated: 2026-11-04_
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. Production: past tense all persons + attached pronouns (كتابي، بيتها); check hamza.
+1. Attached pronouns (كتابي، بيتها) + review of the past tense; drill إلى / ذ.
 
 ## Ideas / backlog
 - Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.
