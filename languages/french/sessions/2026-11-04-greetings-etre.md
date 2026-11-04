@@ -14,5 +14,8 @@
 ## Learner feedback / preferences noted
 - none new
 
+## Round 3: articles + gender
+- le/la/l'/un/une: 4/4 (le fromage, l'école, une gare / un café, La pizza est française — accents ✓).
+
 ## Next time
 - Review; articles le/la/un/une + gender.

@@ -11,3 +11,8 @@ The first column is always the target-language term (used by scripts/export_anki
 | au revoir | goodbye | interjection | Au revoir ! | 2026-11-04 | 2026-11-04 | 2 |
 | anglais / anglaise | English | adj. (m/f) | Tu es anglais. | 2026-11-04 | 2026-11-04 | 2 |
 | français / française | French | adj. (m/f) | Elle est française. | 2026-11-04 | 2026-11-04 | 1 |
+| le fromage | cheese | m | Le fromage est français. | 2026-11-04 | 2026-11-04 | 3 |
+| l'école (f) | school | f; elision | L'école est grande. | 2026-11-04 | 2026-11-04 | 3 |
+| la gare | (train) station | f | C'est une gare. | 2026-11-04 | 2026-11-04 | 3 |
+| le café | coffee; café | m | Un café, s'il vous plaît. | 2026-11-04 | 2026-11-04 | 3 |
+| la pizza | pizza | f | La pizza est française. | 2026-11-04 | 2026-11-04 | 3 |

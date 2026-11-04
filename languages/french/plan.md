@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 4 | A2: passé composé, futur proche, reflexives | planned |
 
 ## Next session
-1. Review greetings + être (all forms); then articles le/la/un/une + gender.
+1. Review être + articles; then avoir (present) and plural les/des.
 
 ## Ideas / backlog
 - Spanish/French false friends once Spanish starts.
