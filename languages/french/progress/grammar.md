@@ -8,3 +8,5 @@
 | Articles le/la/l'/les, un/une/des + gender | learn nouns with article; -tion/-té f, -ment/-age m | 2026-11-04 | 2026-11-04 | 3 |
 | avoir — present (j'ai, tu as, il a, nous avons, vous avez, ils ont) | a ≠ à; ont ≠ sont; liaison | 2026-11-04 | 2026-11-04 | 3 |
 | Plural les/des + silent -s | des = some | 2026-11-04 | 2026-11-04 | 3 |
+| Present of -er verbs (parler, manger, aimer) | -e/-es/-e/-ons/-ez/-ent | 2026-11-04 | 2026-11-04 | 2 |
+| ne…pas (n' before vowel); un/une/du → de after negation | stretch item ✓ | 2026-11-04 | 2026-11-04 | 2 |

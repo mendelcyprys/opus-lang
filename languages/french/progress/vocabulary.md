@@ -20,3 +20,6 @@ The first column is always the target-language term (used by scripts/export_anki
 | le chat | cat | m | Ils ont un chat. | 2026-11-04 | 2026-11-04 | 3 |
 | le livre | book | m | Elle a des livres. | 2026-11-04 | 2026-11-04 | 3 |
 | l'ami / l'amie | friend (m/f) | elision | Nous avons des amis français. | 2026-11-04 | 2026-11-04 | 3 |
+| parler | to speak | 1er groupe, aux. avoir | Elle ne parle pas français. | 2026-11-04 | 2026-11-04 | 2 |
+| manger | to eat | 1er groupe (nous mangeons), aux. avoir | Vous mangez une pizza. | 2026-11-04 | 2026-11-04 | 2 |
+| aimer | to like, love | 1er groupe, aux. avoir | Je n'aime pas le fromage. | 2026-11-04 | 2026-11-04 | 0 |

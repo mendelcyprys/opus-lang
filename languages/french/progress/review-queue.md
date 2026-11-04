@@ -12,3 +12,5 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | fromage, école, gare, café, pizza | vocab | 1d | 2026-11-05 |
 | avoir present + les/des | grammar | 1d | 2026-11-05 |
 | chat, livre, ami(e) | vocab | 1d | 2026-11-05 |
+| -er present + ne…pas (+ de after negation) | grammar | 1d | 2026-11-05 |
+| parler, manger, aimer; vous spelling | vocab | 1d | 2026-11-05 |

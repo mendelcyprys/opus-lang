@@ -20,5 +20,8 @@
 ## Round 4: avoir + les/des
 - 4/4 (Ils ont un chat, avons, J'ai un café, Elle a des livres).
 
+## Round 5: -er verbs + ne…pas
+- Q1–4 lost (modal rejected because both were sent in parallel). Q5–8: 3/4 grammar ✓ incl. stretch (pas de chat, pas de fromage); typo Vouz → Vous.
+
 ## Next time
 - Review; articles le/la/un/une + gender.
