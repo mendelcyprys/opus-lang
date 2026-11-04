@@ -16,7 +16,8 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
 ## Device & format
 - Uses the Claude **mobile app** — quiz widgets don't render. Use `AskUserQuestion` for MC and translation (with Hint/Skip options;
   learner types answers via "Other"). Plain text only for longer items. Answers compactly.
-- Round length: likes longer rounds — 8 Qs as 2 back-to-back AskUserQuestion modals, feedback after both (2026-11-04).
+- **Round length — DEFAULT for every language: 8 questions = 2 AskUserQuestion modals back to back** (4 + 4, no feedback in between),
+  then feedback on all 8. Don't stop at a single modal of 4 (re-confirmed 2026-11-04).
 - Likes reading comprehension as text + AskUserQuestion MC.
 
 ## Teaching preferences

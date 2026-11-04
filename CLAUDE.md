@@ -111,7 +111,7 @@ Pass the TTS tag from the router (or the variety's tag from `profile.md`) as `la
 If the connector is unavailable, run the same exercise types in plain chat.
 **Quiz widgets do NOT render in the Claude mobile app** (learner often uses mobile). Default to plain-text exercises with numbered
 items so answers can be typed compactly (e.g. `1b 2c` / `1. czasu`); only use widgets if the learner says they're on desktop/web.
-**Multiple choice on mobile: use the `AskUserQuestion` tool** — renders tappable options in the app (max 4 questions × 4 options
+**Default round = 8 questions as two back-to-back `AskUserQuestion` calls** (learner preference, all languages). **Multiple choice on mobile: use the `AskUserQuestion` tool** — renders tappable options in the app (max 4 questions × 4 options
 per call; header ≤12 chars, e.g. "1"). Use it for MC drills, reading comprehension (the dialog HIDES chat text on mobile, so EITHER
 print the text in chat right before the dialog OR put it inside question 1; in both cases quote the relevant sentence in later
 questions) AND translation: either pick-the-correct-translation (3 distractors with realistic errors) or free typing via the
