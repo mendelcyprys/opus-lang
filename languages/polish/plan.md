@@ -1,0 +1,33 @@
+# Polish — Learning Plan
+
+_Last updated: 2026-11-04_
+
+## Current phase
+**B1 consolidation** (reading/writing). Placement shows cases, numerals, conditional, comparatives and word order are solid at A2–B1. Initial gap was aspect in future time clauses — fixed within the first session (correct in MC + typed production).
+
+## CEFR milestones
+| Level | Target date | Assessed on | Result |
+|---|---|---|---|
+| A2 (reading/writing) | — | 2026-11-04 | 26/27 on placement test → passed |
+| B1 (reading/writing) | ~2027-02 | 2026-11-04 (informal) | reading ~low B2 on familiar topics (2 B2 texts 8/8); writing ~B1; formal recheck ~mid-Dec |
+| B2 | later | | |
+
+## Roadmap
+| Phase | Focus | Status |
+|---|---|---|
+| 0 | Onboarding & placement | done 2026-11-04 |
+| 1 | Verb aspect: pairs, perfective future, aspect in time clauses, imperatives | mostly done 2026-11-04 |
+| 2 | Verbs of motion with prefixes (przy-, wy-, do-, prze-, za-, od-) | started 2026-11-04 (5.5/8) |
+| 3 | Instrumental & locative plural, genitive plural irregulars | started 2026-11-04 (6.5/8); next: gen. pl. irregulars, numerals + oblique cases |
+| 4 | Conditional (gdyby, żeby), reported speech | planned |
+| 5 | Participles & verbal nouns (reading-focused B1→B2) | planned |
+| ongoing | Vocabulary via short B1 reading texts; translation into Polish from given sentences | |
+
+## Next session
+1. Review due items; **drill kiedy + pf future with motion verbs** (recurred: dojechaliśmy → dojedziemy). Drill neg. imperatives of motion verbs (nie wychodź) + habit impf in production (obchodzę). Continue Phase 2: w-/wy-/z- done 4/4; ob-/roz- introduced 2/2; next ob- (obejść), roz- (rozejść się), s-/z- reciprocal (zejść się), + impf forms (chodzić/jeździć, przychodzę).
+2. ~~Aspect in imperatives~~ done 2026-11-04 (4/4). Genitive of negation drilled 4/4. Next: start Phase 2 (prefixed motion verbs); occasional B2 stretch reading.
+3. Motion-verb nuances surfaced naturally (dojść vs dojechać, przyjść vs pójść) → Phase 2 is close; consider starting it soon.
+4. Format: 8 Qs as 2 back-to-back AskUserQuestion modals (feedback at end), short mixed-language explanations.
+
+## Ideas / backlog
+- Assess listening at some point (mobile-friendly: learner could read aloud / dictation via voice mode).
