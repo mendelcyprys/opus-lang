@@ -28,3 +28,9 @@
 - Q8 typed "Our teacher is new": معامبا جديد → معلمنا جديد (letters garbled — typing slip, not grammar; pattern is noun + نا + adjective).
 - Spelling of hamza/ذ held up in recognition (7/7); keep checking in typed production.
 - Not reached: pronouns on verbs/prepositions (next).
+
+## Later the same day: object pronouns on verbs and prepositions
+- Taught: verb + ـنِي/ـكَ/ـهُ/ـهَا/ـنَا/ـهُمْ; ن of ـني on verbs only (nouns: ـي); silent alif drops (كتبوه); preposition suffixes (لي له لها، معه معنا); إلى/على → إليـ/عليـ.
+- Round (8 Qs): 7/8. Q1–7 ✓ (كتبته، سمعني، قرأناها، كتبوه، له رسالة، معه، إليه).
+- Q8 typed: كتبته (= I wrote it) for "I read it" → قرأتُه. Suffix correct, wrong verb (primed by كتب).
+- New vocab: سَمِعَ، قَرَأَ، سُوق (re-used), لَهُ، مَعَهُ، إِلَيْهِ.

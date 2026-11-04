@@ -14,3 +14,8 @@ The first column is always the target-language term (used by scripts/export_anki
 | إِلَى | ilā | to, towards | preposition; hamza under alif | ذَهَبْتُ إِلَى الأُسْتَاذِ. — I went to the teacher. | 2026-11-04 | 2026-11-04 | 2 |
 | هَلْ | hal | yes/no question particle | particle | هَلْ ذَهَبْتَ أَمْسِ؟ — Did you go yesterday? | 2026-11-04 | 2026-11-04 | 3 |
 | بَيْت | bayt | house | m, pl. بُيُوت | بَيْتُهَا جَدِيدٌ. — Her house is new. | 2026-11-04 | 2026-11-04 | 3 |
+| سَمِعَ / يَسْمَعُ | samiʿa / yasmaʿu | to hear | v., root س-م-ع, form I, maṣdar سَمْع | سَمِعَنِي. — He heard me. | 2026-11-04 | 2026-11-04 | 2 |
+| قَرَأَ / يَقْرَأُ | qaraʾa / yaqraʾu | to read | v., root ق-ر-أ, form I, maṣdar قِرَاءَة; hamza on alif | قَرَأْتُهُ. — I read it. | 2026-11-04 | 2026-11-04 | 1 |
+| سُوق | sūq | market | m, pl. أَسْوَاق | ذَهَبْنَا إِلَى السُّوقِ. — We went to the market. | 2026-11-04 | 2026-11-04 | 3 |
+| مَعَ | maʿa | with | preposition; + suffix مَعِي، مَعَهُ، مَعَنَا | ذَهَبْتُ مَعَهُ. — I went with him. | 2026-11-04 | 2026-11-04 | 2 |
+| لِ- | li- | to, for; (has) | preposition; لِي، لَهُ، لَهَا | لَهُ رِسَالَةٌ. — He has a letter. | 2026-11-04 | 2026-11-04 | 2 |
