@@ -1,23 +1,26 @@
 # Hebrew — Learning Plan
 
-_Last updated: —_
+_Last updated: 2026-11-04_
 
 ## Current phase
-**Phase 0 — onboarding & placement** (not started). See `CLAUDE.md` → "Onboarding a new language" and `LANGUAGE.md` → Onboarding questions.
+**Phase 1 — consolidate B1, probe B2** (placement 8/8 on A2+B1 MC, 2026-11-04). Strengths/gaps in production & vocabulary still unknown — "strong in different ways".
 
 ## Milestones
 | Level | Target date | Assessed on | Result |
 |---|---|---|---|
+| A2 | — | 2026-11-04 | 4/4 (past pa'al, את, future hitpa'el, smichut) |
+| B1 | — | 2026-11-04 | 4/4 recognition (nif'al present, number polarity, אילו, relative ש + resumptive) |
+| B2 | — | — | — |
 
 ## Roadmap
-_Draft after placement from the Grammar map in `LANGUAGE.md`._
-
 | Phase | Focus | Status |
 |---|---|---|
-| 0 | Onboarding & placement | planned |
+| 0 | Onboarding & placement | done 2026-11-04 |
+| 1 | Find gaps: production (translation into Hebrew), B2 probe (passives pu'al/huf'al, formal register, nominal style) | next |
+| 2 | B2: news Hebrew, verbal nouns, idioms | planned |
 
 ## Next session
-1. Onboarding: self-assessed level per skill, goal, language-specific questions from `LANGUAGE.md`; then placement (or script basics for a true beginner).
+1. B2 probe round (MC) + 4 translations EN→HE to test production and spelling.
 
 ## Ideas / backlog
--
+- Hebrew↔Arabic shared roots once Arabic starts.
