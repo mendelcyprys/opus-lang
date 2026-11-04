@@ -19,7 +19,7 @@ _Last updated: 2026-11-04_
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. Short EN→AR translations (nominal sentences, past tense) to start production.
+1. Production: past tense all persons + attached pronouns (كتابي، بيتها); check hamza.
 
 ## Ideas / backlog
 - Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.
