@@ -13,5 +13,9 @@
 ## Learner feedback / preferences noted
 - No transliteration needed.
 
+## Later: numbers drill + B2 probe (8 Qs)
+- Numbers 4/4 (שלושה ספרים, שתי ערים, חמש אחיות, ארבע מסעדות ליד החוף).
+- B2 probe 3/4: נבשל → בושל (pu'al); הוזמנו ✓, לאור ✓, תורגם ✓.
+
 ## Next time
 - Number-gender drill (production); then B2 probe.

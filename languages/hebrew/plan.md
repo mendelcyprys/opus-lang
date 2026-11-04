@@ -16,11 +16,11 @@ _Last updated: 2026-11-04_
 | Phase | Focus | Status |
 |---|---|---|
 | 0 | Onboarding & placement | done 2026-11-04 |
-| 1 | Find gaps: production (translation into Hebrew), B2 probe (passives pu'al/huf'al, formal register, nominal style) | next |
+| 1 | Find gaps: production (translation into Hebrew), B2 probe (passives pu'al/huf'al, formal register, nominal style) | in progress (numbers fixed; passives 3/4) |
 | 2 | B2: news Hebrew, verbal nouns, idioms | planned |
 
 ## Next session
-1. Drill number gender in production (2, 3–10 with m/f nouns); then B2 probe round.
+1. B2 probe round 1 done (7/8): drill pu'al vs nif'al (pi'el → pu'al, pa'al → nif'al); more formal connectors; short news-style reading.
 
 ## Ideas / backlog
 - Hebrew↔Arabic shared roots once Arabic starts.

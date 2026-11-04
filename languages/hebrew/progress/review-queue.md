@@ -4,6 +4,8 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 
 | Item | Kind (vocab/grammar) | Current interval | Next due |
 |---|---|---|---|
-| numbers 2–10 + noun gender | grammar | 1d | 2026-11-05 |
+| numbers 2–10 + noun gender | grammar | 3d | 2026-11-07 |
 | ליד vs אצל | vocab | 1d | 2026-11-05 |
 | אחים / אחיות | vocab | 1d | 2026-11-05 |
+| pu'al vs nif'al passive (בושל, not נבשל) | grammar | 1d | 2026-11-05 |
+| huf'al הוזמן; לאור; תורגם | vocab | 1d | 2026-11-05 |
