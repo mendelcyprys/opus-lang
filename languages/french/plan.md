@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 4 | A2: passé composé, futur proche, reflexives | planned |
 
 ## Next session
-1. Greetings + être (je suis, tu es…) with a short MC round; articles le/la/un/une.
+1. Review greetings + être sg.; then être plural and articles le/la/un/une.
 
 ## Ideas / backlog
 - Spanish/French false friends once Spanish starts.

@@ -10,6 +10,6 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 | Hebrew | not assessed | onboarding & placement | — | not started |
 | Arabic | not assessed | onboarding & placement (choose MSA / dialect) | — | not started |
 | Spanish | not assessed | onboarding & placement | — | not started |
-| French | absolute beginner (A1 track) | sounds, greetings, être, articles | — | active |
+| French | absolute beginner (A1 track) | être, articles & gender | 2026-11-04 | active |
 | German | not assessed | onboarding & placement | — | not started |
 | Japanese | not assessed | onboarding & placement (kana/kanji check) | — | not started |
