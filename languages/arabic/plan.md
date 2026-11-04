@@ -1,23 +1,25 @@
 # Arabic — Learning Plan
 
-_Last updated: —_
+_Last updated: 2026-11-04_
 
 ## Current phase
-**Phase 0 — onboarding & placement** (not started). See `CLAUDE.md` → "Onboarding a new language" and `LANGUAGE.md` → Onboarding questions.
+**Phase 1 — A2: start producing** (placement 4/4 on A1–A2 recognition, 2026-11-04). Main gap: production & reading fluency.
 
 ## Milestones
 | Level | Target date | Assessed on | Result |
 |---|---|---|---|
+| A1/A2 | — | 2026-11-04 | 4/4 recognition (nominal sentence, ة agreement, past 1sg, لحم false friend) |
 
 ## Roadmap
-_Draft after placement from the Grammar map in `LANGUAGE.md`._
-
 | Phase | Focus | Status |
 |---|---|---|
-| 0 | Onboarding & placement | planned |
+| 0 | Onboarding & placement | done 2026-11-04 |
+| 1 | Production basics: nominal sentences, past tense all persons, idafa, attached pronouns; typing practice | next |
+| 2 | Present tense (muḍāriʿ), negation (لا / لم / ليس), plurals (broken) | planned |
+| 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. Onboarding: self-assessed level per skill, goal, language-specific questions from `LANGUAGE.md`; then placement (or script basics for a true beginner).
+1. Short EN→AR translations (nominal sentences, past tense) to start production.
 
 ## Ideas / backlog
--
+- Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.
