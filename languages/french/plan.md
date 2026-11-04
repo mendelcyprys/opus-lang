@@ -1,23 +1,26 @@
 # French — Learning Plan
 
-_Last updated: —_
+_Last updated: 2026-11-04_
 
 ## Current phase
-**Phase 0 — onboarding & placement** (not started). See `CLAUDE.md` → "Onboarding a new language" and `LANGUAGE.md` → Onboarding questions.
+**Phase 1 — A1 foundations** (absolute beginner, app exposure; placement skipped 2026-11-04).
 
 ## Milestones
 | Level | Target date | Assessed on | Result |
 |---|---|---|---|
+| A1 | — | — | onboarding 2026-11-04: self-assessed absolute beginner |
 
 ## Roadmap
-_Draft after placement from the Grammar map in `LANGUAGE.md`._
-
 | Phase | Focus | Status |
 |---|---|---|
-| 0 | Onboarding & placement | planned |
+| 0 | Onboarding | done 2026-11-04 |
+| 1 | Sounds & accents (silent letters, nasals, u/ou), greetings, être/avoir, articles & gender | in progress |
+| 2 | Present -er verbs + aller/faire/prendre, ne…pas, questions | planned |
+| 3 | Adjective agreement & position, partitive, food/travel vocab | planned |
+| 4 | A2: passé composé, futur proche, reflexives | planned |
 
 ## Next session
-1. Onboarding: self-assessed level per skill, goal, language-specific questions from `LANGUAGE.md`; then placement (or script basics for a true beginner).
+1. Greetings + être (je suis, tu es…) with a short MC round; articles le/la/un/une.
 
 ## Ideas / backlog
--
+- Spanish/French false friends once Spanish starts.
