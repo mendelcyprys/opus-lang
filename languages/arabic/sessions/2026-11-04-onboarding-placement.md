@@ -22,3 +22,9 @@
 - Round 2 (modal): 4/4 grammar ✓ (كتب، ذهبوا، كتبتِ); الى → إلى again.
 - Learner asked for AskUserQuestion modals instead of plain-text rounds.
 - Attached pronouns on nouns: 4/4 (بيتها، رسالتي، معلمنا جديد، كتبت رسالته).
+
+## Later the same day: warm-up review (8 Qs, MC + 1 typed)
+- Q1–7 all correct: أمس, ذهبتُ إلى الأستاذ (hamza + ذ ✓), كتبوا, بيتها, معلمتي كتبت (ة→ت), ذهبنا إلى السوق أمس, هل كتبتِ.
+- Q8 typed "Our teacher is new": معامبا جديد → معلمنا جديد (letters garbled — typing slip, not grammar; pattern is noun + نا + adjective).
+- Spelling of hamza/ذ held up in recognition (7/7); keep checking in typed production.
+- Not reached: pronouns on verbs/prepositions (next).

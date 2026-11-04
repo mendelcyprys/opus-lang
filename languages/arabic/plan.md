@@ -19,7 +19,7 @@ _Last updated: 2026-11-04_
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. Review past tense + attached pronouns; drill إلى / ذ. Then pronouns on verbs/prepositions (كتبتُه، لي، معه) or present tense (Phase 2).
+1. Typed-production check (hamza, ذ, معلمنا). Then pronouns on verbs/prepositions (كتبتُه، لي، معه) or present tense (Phase 2).
 
 ## Ideas / backlog
 - Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.
