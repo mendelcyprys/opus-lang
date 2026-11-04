@@ -26,3 +26,5 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | zejdź (walk down) vs zjedź (drive down) vs zjedz (eat up) | vocab | 1d | 2026-11-05 |
 | Instr. pl. -ami / loc. pl. -ach (+ irregular: przyjaciółmi, ludźmi, dziećmi, pieniędzmi) | grammar | 1d | 2026-11-05 |
 | wielu/kilku + oblique case (w wielu miastach, z kilkoma) ; we Włoszech | grammar | 1d | 2026-11-05 |
+| Gen. pl. irregulars (kobiet, okien, przyjaciół, ludzi, pieniędzy, urodzin, wakacji) | grammar | 1d | 2026-11-05 |
+| wychodzić z domu (habit) vs zejść (go down) | vocab | 1d | 2026-11-05 |

@@ -18,13 +18,13 @@ _Last updated: 2026-11-04_
 | 0 | Onboarding & placement | done 2026-11-04 |
 | 1 | Verb aspect: pairs, perfective future, aspect in time clauses, imperatives | mostly done 2026-11-04 |
 | 2 | Verbs of motion with prefixes (przy-, wy-, do-, prze-, za-, od-) | started 2026-11-04 (5.5/8) |
-| 3 | Instrumental & locative plural, genitive plural irregulars | started 2026-11-04 (6.5/8); next: gen. pl. irregulars, numerals + oblique cases |
+| 3 | Instrumental & locative plural, genitive plural irregulars | started 2026-11-04 (6.5/8); gen. pl. irregulars 3.5/4 2026-11-04; next: numerals + oblique cases |
 | 4 | Conditional (gdyby, żeby), reported speech | planned |
 | 5 | Participles & verbal nouns (reading-focused B1→B2) | planned |
 | ongoing | Vocabulary via short B1 reading texts; translation into Polish from given sentences | |
 
 ## Next session
-1. Review due items; **drill kiedy + pf future with motion verbs** (recurred: dojechaliśmy → dojedziemy). Drill neg. imperatives of motion verbs (nie wychodź) + habit impf in production (obchodzę). Continue Phase 2: w-/wy-/z- done 4/4; ob-/roz- introduced 2/2; next ob- (obejść), roz- (rozejść się), s-/z- reciprocal (zejść się), + impf forms (chodzić/jeździć, przychodzę).
+1. **Top priority:** kiedy + pf future (missed again: dojeżdżamy) and habit impf in production (zejdę → wychodzę). Review due items; **drill kiedy + pf future with motion verbs** (recurred: dojechaliśmy → dojedziemy). Drill neg. imperatives of motion verbs (nie wychodź) + habit impf in production (obchodzę). Continue Phase 2: w-/wy-/z- done 4/4; ob-/roz- introduced 2/2; next ob- (obejść), roz- (rozejść się), s-/z- reciprocal (zejść się), + impf forms (chodzić/jeździć, przychodzę).
 2. ~~Aspect in imperatives~~ done 2026-11-04 (4/4). Genitive of negation drilled 4/4. Next: start Phase 2 (prefixed motion verbs); occasional B2 stretch reading.
 3. Motion-verb nuances surfaced naturally (dojść vs dojechać, przyjść vs pójść) → Phase 2 is close; consider starting it soon.
 4. Format: 8 Qs as 2 back-to-back AskUserQuestion modals (feedback at end), short mixed-language explanations.

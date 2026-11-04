@@ -23,3 +23,4 @@
 | Aspect in imperatives (pf affirmative / impf negative) | 4/4 incl. typed Weź parasol!, nie kupuj chleba (gen.) | 2026-11-04 | 2026-11-04 | 3 |
 | Prefixed motion verbs (przy-/wy-/do-/prze-/za-/od-) | 5.5/8 first session, then 4/4 and 4/4 (kiedy drill; w-/wy-/z-) | 2026-11-04 | 2026-11-04 | 3 |
 | Habit (impf) vs single action (pf) with motion verbs | MC 5/5; production slip obejdę→obchodzę; neg. imperative slip | 2026-11-04 | 2026-11-04 | 2 |
+| Gen. pl. irregulars: zero ending (kobiet, okien, sióstr), ludzi, przyjaciół, pieniędzy; plural-only (drzwi, urodzin, wakacji) | 3.5/4 first try; ł typo | 2026-11-04 | 2026-11-04 | 2 |
