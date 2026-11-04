@@ -5,3 +5,6 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 
 | Pattern | Example (wrong → right) | Category | First seen | Last seen | Count | Status (active/improving/fixed) |
 |---|---|---|---|---|---|---|
+| Number gender with nouns (2 and 3–10) | שתי אחים → שני אחים; שלשה אחיות → שלוש אחיות | agreement | 2026-11-04 | 2026-11-04 | 1 | active |
+| אצל used for "near" (place) | אצל הים → ליד הים | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
+| Defective spelling | שלשה → שלושה | spelling | 2026-11-04 | 2026-11-04 | 1 | active |

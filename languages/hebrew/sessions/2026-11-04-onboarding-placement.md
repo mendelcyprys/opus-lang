@@ -5,13 +5,13 @@
 - Placement: A2 round 4/4, B1 round 4/4 (MC recognition).
 
 ## New vocabulary / grammar
-- none (placement)
+- ליד vs אצל; אחים/אחיות; numbers with nouns (production)
 
 ## How it went (strengths, mistakes)
-- No errors. Grammar recognition at B1 is solid; production untested.
+- No errors. Grammar recognition at B1 is solid; production: 4 translations, 2 perfect (ללמוד לבשל; אם… תתקשר אליי); errors: number gender (שתי אחים, שלשה אחיות), אצל for 'near', defective spelling שלשה.
 
 ## Learner feedback / preferences noted
 - No transliteration needed.
 
 ## Next time
-- B2 probe + EN→HE translations.
+- Number-gender drill (production); then B2 probe.

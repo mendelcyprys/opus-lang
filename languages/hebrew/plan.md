@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 2 | B2: news Hebrew, verbal nouns, idioms | planned |
 
 ## Next session
-1. B2 probe round (MC) + 4 translations EN→HE to test production and spelling.
+1. Drill number gender in production (2, 3–10 with m/f nouns); then B2 probe round.
 
 ## Ideas / backlog
 - Hebrew↔Arabic shared roots once Arabic starts.
