@@ -17,5 +17,8 @@
 ## Round 3: articles + gender
 - le/la/l'/un/une: 4/4 (le fromage, l'école, une gare / un café, La pizza est française — accents ✓).
 
+## Round 4: avoir + les/des
+- 4/4 (Ils ont un chat, avons, J'ai un café, Elle a des livres).
+
 ## Next time
 - Review; articles le/la/un/une + gender.

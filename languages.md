@@ -10,6 +10,6 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 | Hebrew | B1 (placement 8/8), probing B2 | number gender in production, B2 probe | 2026-11-04 | active |
 | Arabic | A1/A2 (MSA; placement 4/4) | past tense + attached pronouns done → pronouns on verbs/preps, present tense | 2026-11-04 | active |
 | Spanish | not assessed | onboarding & placement | — | not started |
-| French | absolute beginner (A1 track) | avoir, plural les/des | 2026-11-04 | active |
+| French | absolute beginner (A1 track) | -er verbs, ne…pas | 2026-11-04 | active |
 | German | not assessed | onboarding & placement | — | not started |
 | Japanese | beginner (kana nearly solid) | です sentences, self-intro | 2026-11-04 | active |

@@ -20,7 +20,7 @@ _Last updated: 2026-11-04_
 | 4 | A2: passé composé, futur proche, reflexives | planned |
 
 ## Next session
-1. Review être + articles; then avoir (present) and plural les/des.
+1. Review être/avoir/articles; then Phase 2: present of -er verbs (parler, manger) + ne…pas.
 
 ## Ideas / backlog
 - Spanish/French false friends once Spanish starts.

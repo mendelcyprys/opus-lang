@@ -16,3 +16,7 @@ The first column is always the target-language term (used by scripts/export_anki
 | la gare | (train) station | f | C'est une gare. | 2026-11-04 | 2026-11-04 | 3 |
 | le café | coffee; café | m | Un café, s'il vous plaît. | 2026-11-04 | 2026-11-04 | 3 |
 | la pizza | pizza | f | La pizza est française. | 2026-11-04 | 2026-11-04 | 3 |
+| avoir | to have | 3e groupe, irregular: ai, as, a, avons, avez, ont; PC aux. avoir, p.p. eu | J'ai un café. | 2026-11-04 | 2026-11-04 | 3 |
+| le chat | cat | m | Ils ont un chat. | 2026-11-04 | 2026-11-04 | 3 |
+| le livre | book | m | Elle a des livres. | 2026-11-04 | 2026-11-04 | 3 |
+| l'ami / l'amie | friend (m/f) | elision | Nous avons des amis français. | 2026-11-04 | 2026-11-04 | 3 |
