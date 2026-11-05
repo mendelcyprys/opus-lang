@@ -30,3 +30,4 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
 - Stretch: every so often (~1 in 3–4 rounds) set an exercise one level up for challenge (requested in Polish, 2026-11-04).
 - Explanation language: depends on level → set per language in its `profile.md` (Polish: mix of simple Polish + English).
 - Typing: occasionally drops diacritics/letters — correct every time; suggest long-press / the right keyboard layout.
+- **Reading texts on mobile (2026-11-05):** chat text printed before an AskUserQuestion dialog is NOT visible. Put the whole text inside question 1 (and quote the relevant sentence in later questions).

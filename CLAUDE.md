@@ -112,9 +112,9 @@ If the connector is unavailable, run the same exercise types in plain chat.
 **Quiz widgets do NOT render in the Claude mobile app** (learner often uses mobile). Default to plain-text exercises with numbered
 items so answers can be typed compactly (e.g. `1b 2c` / `1. czasu`); only use widgets if the learner says they're on desktop/web.
 **Default round = 12 questions as three back-to-back `AskUserQuestion` calls (mixed exercise types — see `learner.md`; was 8 until 2026-11-05) — send them ONE AFTER THE OTHER (each call after the previous returns), never in parallel: parallel calls break on mobile** (learner preference, all languages). **Multiple choice on mobile: use the `AskUserQuestion` tool** — renders tappable options in the app (max 4 questions × 4 options
-per call; header ≤12 chars, e.g. "1"). Use it for MC drills, reading comprehension (the dialog HIDES chat text on mobile, so EITHER
-print the text in chat right before the dialog OR put it inside question 1; in both cases quote the relevant sentence in later
-questions) AND translation: either pick-the-correct-translation (3 distractors with realistic errors) or free typing via the
+per call; header ≤12 chars, e.g. "1"). Use it for MC drills, reading comprehension (the dialog HIDES chat text on mobile, so ALWAYS
+put the full text inside question 1 of the dialog itself — printing it in chat before the dialog does NOT work: the learner could not see it
+on mobile, 2026-11-05; also quote the relevant sentence in every later question) AND translation: either pick-the-correct-translation (3 distractors with realistic errors) or free typing via the
 automatic "Other" field. Plain text only for longer exercises.
 **Right-to-left (Hebrew, Arabic):** put each Hebrew/Arabic sentence on its own line / option and the English in the description or on
 a separate line — mixing RTL and English in one line scrambles the visual word order.
