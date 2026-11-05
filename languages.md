@@ -5,7 +5,7 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 
 | Language | Level | Current focus | Last session | Status |
 |---|---|---|---|---|
-| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | kiedy + pf future & habit impf drill; numerals + oblique cases | 2026-11-04 | active |
+| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | negative imperative → impf drill; numerals + oblique cases; Phase 2 motion prefixes | 2026-11-05 | active |
 | Ukrainian | B1 (placement A2 4/4, B1 3/4) | instrumental, production | 2026-11-04 | active |
 | Hebrew | B1 (placement 8/8), probing B2 | B2: news-style reading, verbal nouns | 2026-11-04 | active |
 | Arabic | A1/A2 (MSA; placement 4/4) | past tense + attached pronouns (nouns, verbs, preps) done; present tense intro done → negation, more present verbs | 2026-11-04 | active |
