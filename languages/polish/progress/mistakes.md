@@ -21,3 +21,5 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | w → we before w-/f- clusters | *w Włoszech* → **we Włoszech** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (✓ in production) |
 | zejść (go down) for "leave the house" | *zejdę z domu* → **wychodzę z domu** (wyjść = go out) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
 | ł typed as l | *przyjaciól* → **przyjaciół** | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
+| Instr. of cztery | *z czterymi* → **z czterema** | case | 2026-11-05 | 2026-11-05 | 1 | active |
+| Dropped ó in pójść forms | *pojdą* → **pójdą** | spelling | 2026-11-05 | 2026-11-05 | 1 | active (typing diacritics: also ł, ę earlier) |

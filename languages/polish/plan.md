@@ -24,6 +24,7 @@ _Last updated: 2026-11-05_
 | ongoing | Vocabulary via short B1 reading texts; translation into Polish from given sentences | |
 
 ## Next session
+000. 2026-11-05 round 3 (12-Q mixed types): 10/12. Active: czterema (instr.), typed ó in pójdą. Next: more typed items (numerals, pójść forms), reported speech (Phase 4), B2 participle stretch.
 00. 2026-11-05 pm: neg. imperatives of motion verbs 4/4; numerals + oblique cases 4/4 (started). Next: typed production with numerals, numerals 11+/collectives, then Phase 4 (conditional/reported speech) or Phase 2 remainder (roz-/s-/z- się).
 0. 2026-11-05 review 7/8: kiedy + pf future now clean (dojadę, wyjdę). **New top priority: negative imperative → imperfective** (nie wyjdź ✗; drill nie wchodź/odchodź/przychodź + others). Then continue as below.
 1. **Top priority:** kiedy + pf future (missed again: dojeżdżamy) and habit impf in production (zejdę → wychodzę). Review due items; **drill kiedy + pf future with motion verbs** (recurred: dojechaliśmy → dojedziemy). Drill neg. imperatives of motion verbs (nie wychodź) + habit impf in production (obchodzę). Continue Phase 2: w-/wy-/z- done 4/4; ob-/roz- introduced 2/2; next ob- (obejść), roz- (rozejść się), s-/z- reciprocal (zejść się), + impf forms (chodzić/jeździć, przychodzę).
