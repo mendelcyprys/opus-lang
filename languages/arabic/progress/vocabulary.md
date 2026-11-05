@@ -19,3 +19,6 @@ The first column is always the target-language term (used by scripts/export_anki
 | سُوق | sūq | market | m, pl. أَسْوَاق | ذَهَبْنَا إِلَى السُّوقِ. — We went to the market. | 2026-11-04 | 2026-11-04 | 3 |
 | مَعَ | maʿa | with | preposition; + suffix مَعِي، مَعَهُ، مَعَنَا | ذَهَبْتُ مَعَهُ. — I went with him. | 2026-11-04 | 2026-11-04 | 2 |
 | لِ- | li- | to, for; (has) | preposition; لِي، لَهُ، لَهَا | لَهُ رِسَالَةٌ. — He has a letter. | 2026-11-04 | 2026-11-04 | 2 |
+| لَا | lā | not, don't | particle; + present (habitual/now) | أَنَا لَا أَذْهَبُ إِلَى السُّوقِ. — I don't go to the market. | 2026-11-05 | 2026-11-05 | 2 |
+| لَمْ | lam | did not | particle; + jussive (short present) | لَمْ أَكْتُبْ الرِّسَالَةَ. — I didn't write the letter. | 2026-11-05 | 2026-11-05 | 2 |
+| لَنْ | lan | will not | particle; + subjunctive (shown for contrast) | لَنْ أَذْهَبَ. — I won't go. | 2026-11-05 | 2026-11-05 | 1 |

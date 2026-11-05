@@ -9,3 +9,4 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 | ذ written as د | دهبنا → ذهبنا; ندهب → نذهب | spelling | 2026-11-04 | 2026-11-04 | 2 | active |
 | Typing slip in own production | معامبا → معلمنا (garbled letters; check spelling before sending) | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
 | Wrong verb from priming (كتب for قرأ) | كتبته → قرأته (suffix right, verb wrong) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
+| لا vs لم (present 'don't' vs 'didn't') | أنا لم أذهب (meant 'I don't go') → أنا **لا** أذهب | tense | 2026-11-05 | 2026-11-05 | 1 | active |

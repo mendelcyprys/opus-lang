@@ -12,3 +12,4 @@
 | Object pronouns on verbs (-nī, -ka, -hu, -hā, -nā; ن of -nī; كتبوه) | me = ـني on verbs vs ـي on nouns | 2026-11-04 | 2026-11-04 | 2 |
 | Prepositions + suffixes (لي له لها، مع+ه، إلى→إليه) | إلى/على → إليـ/عليـ | 2026-11-04 | 2026-11-04 | 2 |
 | Present tense prefixes (أ ت ي ن) + endings ـين / ـون | يكتبون has no silent alif; stem vowel varies | 2026-11-04 | 2026-11-04 | 2 |
+| Negation: لا + present (don't) vs لم + jussive (didn't) | 3/4: لم/لا mix-up on a habitual 'don't go'; لم يذهبوا (ن dropped) ✓ | 2026-11-05 | 2026-11-05 | 2 |
