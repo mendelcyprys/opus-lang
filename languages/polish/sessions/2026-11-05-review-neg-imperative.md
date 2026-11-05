@@ -18,3 +18,9 @@
 
 ## Next time
 - More negative imperatives of motion verbs (nie wchodź, nie odchodź, nie przychodź); continue Phase 2 (roz-/s-/z- się, chodzić/jeździć impf forms) or Phase 3 numerals + oblique cases; B2 stretch reading.
+
+## Second round (same day): negative imperatives of motion verbs + numerals in oblique cases
+- 8-Q round (2 modals): **8/8**.
+- Neg. imperative → impf: ✓ nie wchodź, ✓ nie odchodź, ✓ nie jedź; ✓ przyjdź (positive, single visit → pf).
+- New: numerals in oblique cases (gen./loc. pięciu, trzech, czterech; instr. -oma/-ema): ✓ do pięciu sklepów, ✓ z trzema, ✓ o czterech książkach, ✓ od pięciu lat.
+- Next: Phase 3 numerals further (11+, ordinal/dates?), Phase 4 conditional/reported speech; typed production of numerals+noun; B2 stretch reading.

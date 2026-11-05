@@ -10,7 +10,7 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Spelling: dropped letters / diacritics when typing | *zadwoniłeś* → **zadzwoniłeś**; *Bedę* → **Będę** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (clean in review) |
 | Motion verb nuance: wrong direction/means | *dojdę do Krakowa* → **dojadę/dotrę**; *że pójdzie* (come) → **przyjdzie** | vocabulary | 2026-11-04 | 2026-11-04 | 2 | improving (correct in review + dotrzesz) |
 | Accusative instead of genitive after negation | Nie kupuj *chleb* → **chleba** | case | 2026-11-04 | 2026-11-04 | 1 | improving (4/4 in drill) |
-| Perfective in negative imperative | *Nie zjedz tego ciasta* → **Nie jedz tego ciasta**; *Nie wyjdź bez kurtki* → **Nie wychodź** | aspect | 2026-11-04 | 2026-11-05 | 3 | active (relapse 2026-11-05: nie wyjdź; nie jedz ✓) |
+| Perfective in negative imperative | *Nie zjedz tego ciasta* → **Nie jedz tego ciasta**; *Nie wyjdź bez kurtki* → **Nie wychodź** | aspect | 2026-11-04 | 2026-11-05 | 3 | improving (relapse 2026-11-05 am: nie wyjdź; pm: 3/3 correct — nie wchodź, nie odchodź, nie jedź) |
 | za- (drop by) vs prze- (through/across) | *Przeszedłem do sklepu* → **Zaszedłem** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (zajdę correct next round) |
 | Perfective future for a habit in production | *Każdego dnia obejdę park* → **obchodzę**; *Co rano zejdę z domu* → **wychodzę** | aspect | 2026-11-04 | 2026-11-04 | 2 | active (MC habit items 3/3 correct; production still pf) |
 | Diacritic changes meaning | *Zjedź zupę* → **Zjedz** (zjedź = drive down) | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedz ✓ in drill) |
