@@ -1,4 +1,4 @@
-# Polish session 2026-11-05 — mixed review (kiedy + pf future, imperatives, motion habits, plural cases)
+# Polish session 2026-11-05 — mixed review, negative imperatives, numerals + case, reported speech (4 rounds)
 
 ## Covered
 - 8-Q review in 2 AskUserQuestion modals: **7/8**.
@@ -34,4 +34,8 @@
 - Typed: ✓ Poszedł na obiad z czterema kolegami · ✓ Jutro pójdą do domu (both earlier slips — czterema, ó — now correct in production).
 - ✓ z czterymi = wrong instr.; ✓ odd-one-out wyjść.
 - New: reported speech (mowa zależna): no tense backshift, person shifts; questions → czy; requests/commands → żeby + -m/-ś/-śmy (past-form ending); negative command → żeby … nie + impf.
-  ✓ że jutro będzie · ✓ czy lubię · ✓ żebym zadzwonił · ✓ error-spot (*żeby przyjdzie* wrong) · reading 2/2 (Kraków café text) · ✓ z dwiema starszymi paniami · ✓ stretch: żebym tam nie wchodził.
+  ✓ że jutro będzie · ✓ czy lubię · ✓ żebym zadzwonił · ✓ error-spot (*żeby przyjdzie* wrong) · reading 2/2 (Kraków café text — **unverified**: the text was printed in chat before the dialog and was not visible on mobile) · ✓ z dwiema starszymi paniami · ✓ stretch: żebym tam nie wchodził.
+
+## Learner feedback / preferences noted (later rounds)
+- Wants longer sessions and longer rounds → default round is now 12 Qs (3 modals) with mixed exercise types (`learner.md`, `CLAUDE.md`).
+- Reading text printed in chat before an AskUserQuestion dialog is not visible on mobile → text must go inside question 1.

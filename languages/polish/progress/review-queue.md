@@ -21,9 +21,9 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Motion prefixes w-/wy-/z- (wejść, zejść, wyjechać) | vocab | 3d | 2026-11-08 |
 | Habit impf vs single pf with motion verbs (wychodzę/wyjdę, obchodzę/obejdę) | grammar | 3d | 2026-11-08 |
 | ob- / roz- się (objechać, rozejść się) | vocab | 1d | 2026-11-05 |
-| zjedz (eat up) vs zjedź (drive down) | vocab | 1d | 2026-11-05 |
-| zejść się / zjechać się (gather) vs rozejść się (disperse); obejść się bez (do without) | vocab | 1d | 2026-11-05 |
-| zejdź (walk down) vs zjedź (drive down) vs zjedz (eat up) | vocab | 1d | 2026-11-05 |
+| zjedz (eat up) vs zjedź (drive down) | vocab | 3d | 2026-11-08 |
+| zejść się / zjechać się (gather) vs rozejść się (disperse); obejść się bez (do without) | vocab | 3d | 2026-11-08 |
+| zejdź (walk down) vs zjedź (drive down) vs zjedz (eat up) | vocab | 3d | 2026-11-08 |
 | Instr. pl. -ami / loc. pl. -ach (+ irregular: przyjaciółmi, ludźmi, dziećmi, pieniędzmi) | grammar | 3d | 2026-11-08 |
 | wielu/kilku + oblique case (w wielu miastach, z kilkoma) ; we Włoszech | grammar | 3d | 2026-11-08 |
 | Gen. pl. irregulars (kobiet, okien, przyjaciół, ludzi, pieniędzy, urodzin, wakacji) | grammar | 3d | 2026-11-08 |
@@ -32,4 +32,3 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Typing: pójdą (ó), pójść forms | vocab/spelling | 3d | 2026-11-08 |
 | zamknięte drzwi (participle -ty as adjective) | vocab | 3d | 2026-11-08 |
 | Reported speech: że / czy / żeby + -m (żebym zadzwonił; żeby … nie + impf) | grammar | 1d | 2026-11-06 |
-

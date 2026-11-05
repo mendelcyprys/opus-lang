@@ -14,14 +14,15 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
   Matters for Hebrew/Arabic addressing ("you"), Slavic past tense, Romance adjective agreement.
 
 ## Device & format
-- Uses the Claude **mobile app** — quiz widgets don't render. Use `AskUserQuestion` for MC and translation (with Hint/Skip options;
+- Mostly uses the Claude **mobile app** — quiz widgets don't render. Claude can't detect the device: assume mobile unless the learner
+  says "desktop" in that chat. Use `AskUserQuestion` for MC and translation (with Hint/Skip options;
   learner types answers via "Other"). Plain text only for longer items. Answers compactly.
 - **Round length — DEFAULT for every language: 12 questions = 3 AskUserQuestion modals back to back, one after another** (4 + 4 + 4, no feedback in between),
   then feedback on all 12 (raised from 8 on 2026-11-05: learner wants longer rounds). Don't stop at a single modal of 4.
 - **Variation within a round (2026-11-05):** mix exercise types in each round — e.g. MC fill-in, pick-the-translation, error-spotting
   ("which sentence is wrong?"), odd-one-out, matching a form to its use, reading snippet, typed answer via "Other" — instead of 8 near-identical items.
   Mix review + mistake drill + new material in one round; vary the topic and sentence frames.
-- Likes reading comprehension as text + AskUserQuestion MC.
+- Likes reading comprehension: short text + AskUserQuestion MC — with the text **inside** question 1 (see the last bullet).
 
 ## Teaching preferences
 - Correction style: correct **every** mistake, with a brief explanation.

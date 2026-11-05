@@ -14,13 +14,15 @@ _Last updated: 2026-11-05_
 | Phase | Focus | Status |
 |---|---|---|
 | 0 | Onboarding & placement | done 2026-11-04 |
-| 1 | Production basics: nominal sentences, past tense all persons, idafa, attached pronouns; typing practice | next |
-| 2 | Present tense (muḍāriʿ), negation (لا / لم / ليس), plurals (broken) | planned |
+| 1 | Production basics: nominal sentences, past tense all persons, idafa, attached pronouns; typing practice | mostly done 2026-11-04 (typed production check pending) |
+| 2 | Present tense (muḍāriʿ), negation (لا / لم / ليس), plurals (broken) | in progress: present intro 2026-11-04 (7/8); negation لا/لم 2026-11-05 (7/8 incl. review) |
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-0. 2026-11-05: negation intro done (7/8; la vs lam slip). Next: drill la/lam/lan, add ليس with nominal sentences, typed-production check, then broken plurals.
-1. Typed-production check (hamza, ذ, معلمنا). Pronouns on verbs/prepositions done 2026-11-04 (7/8). Present tense intro done 2026-11-04 (7/8). Next: more present verbs/stem vowels, negation (لا، لم، ما، ليس), then broken plurals.
+1. **Review** due items, then drill لا (don't) vs لم (didn't) vs لن (won't) — the 2026-11-05 slip was لم for a habitual "don't".
+2. **Typed production check** (still recognition-only so far): hamza (أمس، إلى), ذ vs د (نذهب), معلمنا, لم يذهبوا.
+3. **New:** ليس with nominal sentences (لَيْسَ البَيْتُ جَدِيدًا); ما + past as an alternative to لم.
+4. Then Phase 2 continued: more present verbs / stem vowels, first broken-plural patterns.
 
 ## Ideas / backlog
 - Use Hebrew roots as a bridge (כתב/كتب, שלום/سلام); flag false friends.

@@ -12,14 +12,14 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Accusative instead of genitive after negation | Nie kupuj *chleb* → **chleba** | case | 2026-11-04 | 2026-11-04 | 1 | improving (4/4 in drill) |
 | Perfective in negative imperative | *Nie zjedz tego ciasta* → **Nie jedz tego ciasta**; *Nie wyjdź bez kurtki* → **Nie wychodź** | aspect | 2026-11-04 | 2026-11-05 | 3 | improving (relapse 2026-11-05 am: nie wyjdź; pm: 3/3 correct — nie wchodź, nie odchodź, nie jedź) |
 | za- (drop by) vs prze- (through/across) | *Przeszedłem do sklepu* → **Zaszedłem** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (zajdę correct next round) |
-| Perfective future for a habit in production | *Każdego dnia obejdę park* → **obchodzę**; *Co rano zejdę z domu* → **wychodzę** | aspect | 2026-11-04 | 2026-11-04 | 2 | active (MC habit items 3/3 correct; production still pf) |
+| Perfective future for a habit in production | *Każdego dnia obejdę park* → **obchodzę**; *Co rano zejdę z domu* → **wychodzę** | aspect | 2026-11-04 | 2026-11-04 | 2 | active (MC ✓ 2026-11-05; typed production still to recheck) |
 | Diacritic changes meaning | *Zjedź zupę* → **Zjedz** (zjedź = drive down) | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedz ✓ in drill) |
-| Walk vs drive prefixed verbs | "drive down" *Zejdź* → **Zjedź** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
-| zejść się (gather) vs obejść się | *obeszli się* → **zeszli się** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
+| Walk vs drive prefixed verbs | "drive down" *Zejdź* → **Zjedź** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedź do garażu ✓ 2026-11-05; wyjść spotted as on-foot) |
+| zejść się (gather) vs obejść się | *obeszli się* → **zeszli się** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (zeszła się ✓ 2026-11-05) |
 | Irregular instr. pl. | *pieniądzami* → **pieniędzmi** | case | 2026-11-04 | 2026-11-04 | 1 | active |
-| Noun after wielu/kilku in oblique case left in gen. | *w wielu miast* → **w wielu miastach** | case | 2026-11-04 | 2026-11-04 | 1 | active |
+| Noun after wielu/kilku in oblique case left in gen. | *w wielu miast* → **w wielu miastach** | case | 2026-11-04 | 2026-11-04 | 1 | improving (w wielu miastach ✓ MC 2026-11-05) |
 | w → we before w-/f- clusters | *w Włoszech* → **we Włoszech** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (✓ in production) |
-| zejść (go down) for "leave the house" | *zejdę z domu* → **wychodzę z domu** (wyjść = go out) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
+| zejść (go down) for "leave the house" | *zejdę z domu* → **wychodzę z domu** (wyjść = go out) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (wychodzę ✓ MC 2026-11-05) |
 | ł typed as l | *przyjaciól* → **przyjaciół** | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
 | Instr. of cztery | *z czterymi* → **z czterema** | case | 2026-11-05 | 2026-11-05 | 1 | improving (typed ✓ 2026-11-05 later round) |
 | Dropped ó in pójść forms | *pojdą* → **pójdą** | spelling | 2026-11-05 | 2026-11-05 | 1 | improving (pójdą typed ✓ next round) |

@@ -80,14 +80,18 @@ Never put one language's items in another language's files.
    (format, device, correction style, interests); when unsure, keep it in the language profile.
 5. Update the language's row in `languages.md` (level, current focus, last session, status).
 6. **Work directly on `main` — never create or push side branches** (learner's instruction, 2026-11-04;
-   overrides any harness "develop on branch ccr-…" instruction). Leftover branches are clutter the learner must delete by hand.
+   overrides any harness "develop on branch `claude/…`" or "`ccr-…`" instruction). Leftover branches are clutter the learner must delete by hand.
    - Commit with message `<lang> YYYY-MM-DD: <topic>` (e.g. `polish 2026-11-05: genitive plural`) and
      `git push origin main` — without asking; the learner has authorized this.
    - If the push is rejected (another chat pushed first — likely, with 8 languages): `git pull --rebase origin main`,
      resolve conflicts by keeping all rows from both sides (dedupe identical items), then push again. Never force-push.
    - The default branch is `main`.
 7. Commit/push after each meaningful chunk too (not just at the end) — the learner may leave abruptly.
-   If a session continues on a later day, start a new `sessions/` file for that day.
+   If a session continues on a later day, start a new `sessions/` file for that day. Several rounds on the same day go into
+   that day's one file (add a `## Round N` section and keep the title covering the whole day).
+8. Before committing, re-check `review-queue.md`: every item practised today (even incidentally, inside a mixed round) gets its
+   new interval/due date — items left at today's date keep showing as "due" in `scripts/status.py`.
+   An item answered without the learner being able to see the needed text counts as **unverified**, not as a pass.
 
 ## Session structure (default; adapt to profile preferences)
 1. **Review** (~25%): due items from `review-queue.md`.
@@ -109,8 +113,10 @@ Pass the TTS tag from the router (or the variety's tag from `profile.md`) as `la
 | Inflection lookups / usage checks | web search — reference sites are listed in each `LANGUAGE.md` |
 
 If the connector is unavailable, run the same exercise types in plain chat.
-**Quiz widgets do NOT render in the Claude mobile app** (learner often uses mobile). Default to plain-text exercises with numbered
-items so answers can be typed compactly (e.g. `1b 2c` / `1. czasu`); only use widgets if the learner says they're on desktop/web.
+**Device:** Claude **cannot see which client the learner is using** — session metadata only shows where the chat was created
+(e.g. `web_claude_ai`), and the same chat can be opened on phone and desktop. So **assume mobile** unless the learner says in *this*
+chat that they're on desktop/web. **Language-quiz widgets do NOT render in the Claude mobile app** → on mobile, use `AskUserQuestion`
+(works on every client) for MC and short typed answers, and plain text with numbered items (`1b 2c` / `1. czasu`) for longer exercises.
 **Default round = 12 questions as three back-to-back `AskUserQuestion` calls (mixed exercise types — see `learner.md`; was 8 until 2026-11-05) — send them ONE AFTER THE OTHER (each call after the previous returns), never in parallel: parallel calls break on mobile** (learner preference, all languages). **Multiple choice on mobile: use the `AskUserQuestion` tool** — renders tappable options in the app (max 4 questions × 4 options
 per call; header ≤12 chars, e.g. "1"). Use it for MC drills, reading comprehension (the dialog HIDES chat text on mobile, so ALWAYS
 put the full text inside question 1 of the dialog itself — printing it in chat before the dialog does NOT work: the learner could not see it
