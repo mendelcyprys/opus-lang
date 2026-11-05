@@ -28,7 +28,8 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | wielu/kilku + oblique case (w wielu miastach, z kilkoma) ; we Włoszech | grammar | 3d | 2026-11-08 |
 | Gen. pl. irregulars (kobiet, okien, przyjaciół, ludzi, pieniędzy, urodzin, wakacji) | grammar | 3d | 2026-11-08 |
 | wychodzić z domu (habit) vs zejść (go down) | vocab | 3d | 2026-11-08 |
-| Numerals + oblique cases (pięciu/trzech/czterech; instr. -oma/-ema: czterema!) | grammar | 1d | 2026-11-06 |
-| Typing: pójdą (ó), pójść forms | vocab/spelling | 1d | 2026-11-06 |
+| Numerals + oblique cases (pięciu/trzech/czterech; instr. -oma/-ema: czterema!) | grammar | 3d | 2026-11-08 |
+| Typing: pójdą (ó), pójść forms | vocab/spelling | 3d | 2026-11-08 |
 | zamknięte drzwi (participle -ty as adjective) | vocab | 3d | 2026-11-08 |
+| Reported speech: że / czy / żeby + -m (żebym zadzwonił; żeby … nie + impf) | grammar | 1d | 2026-11-06 |
 

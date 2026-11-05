@@ -27,3 +27,5 @@
 | Numerals + oblique cases (do pięciu sklepów, z trzema, o czterech, od pięciu lat) | 4/4 first try (MC); typed: czterymi ✗ → czterema | 2026-11-05 | 2026-11-05 | 2 |
 | Participle as adjective (zamknięte drzwi) — B2 stretch | MC correct | 2026-11-05 | 2026-11-05 | 1 |
 | Conditional gdybym… -bym (recheck) | correct, no doubled -bym | 2026-11-04 | 2026-11-05 | 3 |
+| Reported speech: że + unchanged tense; czy for questions; żeby + -m/-ś for requests | 5/5 first try (że będzie, czy lubię, żebym zadzwonił, żebym nie wchodził; spotted *żeby przyjdzie*) | 2026-11-05 | 2026-11-05 | 2 |
+| Instr. of 2–5 incl. feminine dwiema (z dwiema paniami), czterema typed ✓ | typed production correct after earlier slip | 2026-11-05 | 2026-11-05 | 3 |

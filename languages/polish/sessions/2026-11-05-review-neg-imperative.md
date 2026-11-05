@@ -29,3 +29,9 @@
 - **10/12.** ✓ error-spotting (nie zjedz), ✓ odd-one-out (obchodzę), ✓ zeszła się, ✓ Zjedź do garażu, reading 4/4 (od pięciu lat; habit impf; z trzema koleżankami; do Włoch), ✓ conditional (Gdybym miał…pojechałbym), ✓ B2 stretch zamknięte drzwi (participle -ty).
 - ✗ typed: *z czterymi przyjaciółmi* → **z czterema** (instr. of cztery).
 - ✗ typed: *pojdą* → **pójdą** (dropped ó; kiedy + pf future itself correct).
+
+## Fourth round (same day): typed fixes + reported speech introduced — **12/12**
+- Typed: ✓ Poszedł na obiad z czterema kolegami · ✓ Jutro pójdą do domu (both earlier slips — czterema, ó — now correct in production).
+- ✓ z czterymi = wrong instr.; ✓ odd-one-out wyjść.
+- New: reported speech (mowa zależna): no tense backshift, person shifts; questions → czy; requests/commands → żeby + -m/-ś/-śmy (past-form ending); negative command → żeby … nie + impf.
+  ✓ że jutro będzie · ✓ czy lubię · ✓ żebym zadzwonił · ✓ error-spot (*żeby przyjdzie* wrong) · reading 2/2 (Kraków café text) · ✓ z dwiema starszymi paniami · ✓ stretch: żebym tam nie wchodził.
