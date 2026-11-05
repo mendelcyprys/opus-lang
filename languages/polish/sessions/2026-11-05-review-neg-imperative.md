@@ -39,3 +39,11 @@
 ## Learner feedback / preferences noted (later rounds)
 - Wants longer sessions and longer rounds → default round is now 12 Qs (3 modals) with mixed exercise types (`learner.md`, `CLAUDE.md`).
 - Reading text printed in chat before an AskUserQuestion dialog is not visible on mobile → text must go inside question 1.
+
+## Fifth round (same day, later): review + reported speech + stretch — **12/12**
+- Review: ✓ reading (restaurant text inside Q1, visible this time — **verified**: W sobotę jest tłum) · ✓ nie tyle… ile · ✓ rozeszli się · ✓ error-spot nie zjedz · ✓ kiedy dojadę.
+- Reported speech: ✓ że jutro będzie · ✓ gdzie mieszkam (indirect question, no czy/że) · ✓ żebym poczekał (**caveat:** the correct form was among the options, so only recognition, not production).
+- Typed: ✓ Nie mam przyjaciół w tym mieście (ł, gen. pl.) · ✓ Kiedy przyjdzie, pójdziemy do domu (kiedy + pf future, ó).
+- ✓ z trzema studentami · ✓ B2 stretch: została napisana (passive zostać + participle), meaning MC.
+- Note for next time: don't put the target answer among the options in "typed" prompts.
+- Next: indirect questions with co/kiedy/dlaczego; żeby with another subject (chcę, żebyś…); passive zostać + participle; impf motion forms (chodzić/jeździć).

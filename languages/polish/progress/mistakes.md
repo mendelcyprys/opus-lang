@@ -10,7 +10,7 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Spelling: dropped letters / diacritics when typing | *zadwoniłeś* → **zadzwoniłeś**; *Bedę* → **Będę** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (clean in review) |
 | Motion verb nuance: wrong direction/means | *dojdę do Krakowa* → **dojadę/dotrę**; *że pójdzie* (come) → **przyjdzie** | vocabulary | 2026-11-04 | 2026-11-04 | 2 | improving (correct in review + dotrzesz) |
 | Accusative instead of genitive after negation | Nie kupuj *chleb* → **chleba** | case | 2026-11-04 | 2026-11-04 | 1 | improving (4/4 in drill) |
-| Perfective in negative imperative | *Nie zjedz tego ciasta* → **Nie jedz tego ciasta**; *Nie wyjdź bez kurtki* → **Nie wychodź** | aspect | 2026-11-04 | 2026-11-05 | 3 | improving (relapse 2026-11-05 am: nie wyjdź; pm: 3/3 correct — nie wchodź, nie odchodź, nie jedź) |
+| Perfective in negative imperative | *Nie zjedz tego ciasta* → **Nie jedz tego ciasta**; *Nie wyjdź bez kurtki* → **Nie wychodź** | aspect | 2026-11-04 | 2026-11-05 | 3 | improving (relapse 2026-11-05 am: nie wyjdź; pm: 3/3 correct — nie wchodź, nie odchodź, nie jedź; error-spot nie zjedz ✓ again, evening round) |
 | za- (drop by) vs prze- (through/across) | *Przeszedłem do sklepu* → **Zaszedłem** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (zajdę correct next round) |
 | Perfective future for a habit in production | *Każdego dnia obejdę park* → **obchodzę**; *Co rano zejdę z domu* → **wychodzę** | aspect | 2026-11-04 | 2026-11-04 | 2 | active (MC ✓ 2026-11-05; typed production still to recheck) |
 | Diacritic changes meaning | *Zjedź zupę* → **Zjedz** (zjedź = drive down) | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedz ✓ in drill) |
@@ -20,6 +20,6 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Noun after wielu/kilku in oblique case left in gen. | *w wielu miast* → **w wielu miastach** | case | 2026-11-04 | 2026-11-04 | 1 | improving (w wielu miastach ✓ MC 2026-11-05) |
 | w → we before w-/f- clusters | *w Włoszech* → **we Włoszech** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (✓ in production) |
 | zejść (go down) for "leave the house" | *zejdę z domu* → **wychodzę z domu** (wyjść = go out) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (wychodzę ✓ MC 2026-11-05) |
-| ł typed as l | *przyjaciól* → **przyjaciół** | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
-| Instr. of cztery | *z czterymi* → **z czterema** | case | 2026-11-05 | 2026-11-05 | 1 | improving (typed ✓ 2026-11-05 later round) |
-| Dropped ó in pójść forms | *pojdą* → **pójdą** | spelling | 2026-11-05 | 2026-11-05 | 1 | improving (pójdą typed ✓ next round) |
+| ł typed as l | *przyjaciól* → **przyjaciół** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (przyjaciół typed ✓ 2026-11-05 evening) |
+| Instr. of cztery | *z czterymi* → **z czterema** | case | 2026-11-05 | 2026-11-05 | 1 | improving (typed ✓ 2026-11-05 later round; z trzema ✓ MC evening) |
+| Dropped ó in pójść forms | *pojdą* → **pójdą** | spelling | 2026-11-05 | 2026-11-05 | 1 | improving (pójdą ✓, pójdziemy typed ✓ evening round) |
