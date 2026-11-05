@@ -9,15 +9,18 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
   Only Slavic pair: Polish (stronger) + Ukrainian (lower level).
 - **Goals (general):** hobby / interest in languages & culture (stated for Polish; check per language).
 - **Interests (for examples & texts):** food & cooking, travel & places, tech & work, books/film/music
-- **Time per session / frequency:** ~10 min bursts → keep sessions compact (1–2 rounds of 4)
+- **Time per session / frequency:** longer sessions now (~20–30 min; changed 2026-11-05, was ~10 min bursts) → several rounds per session, not 1–2
 - **Gender for 1st/2nd-person forms:** masculine (used *będę czekał* in Polish, 2026-11-04) — assume masculine unless told otherwise.
   Matters for Hebrew/Arabic addressing ("you"), Slavic past tense, Romance adjective agreement.
 
 ## Device & format
 - Uses the Claude **mobile app** — quiz widgets don't render. Use `AskUserQuestion` for MC and translation (with Hint/Skip options;
   learner types answers via "Other"). Plain text only for longer items. Answers compactly.
-- **Round length — DEFAULT for every language: 8 questions = 2 AskUserQuestion modals back to back** (4 + 4, no feedback in between),
-  then feedback on all 8. Don't stop at a single modal of 4 (re-confirmed 2026-11-04).
+- **Round length — DEFAULT for every language: 12 questions = 3 AskUserQuestion modals back to back, one after another** (4 + 4 + 4, no feedback in between),
+  then feedback on all 12 (raised from 8 on 2026-11-05: learner wants longer rounds). Don't stop at a single modal of 4.
+- **Variation within a round (2026-11-05):** mix exercise types in each round — e.g. MC fill-in, pick-the-translation, error-spotting
+  ("which sentence is wrong?"), odd-one-out, matching a form to its use, reading snippet, typed answer via "Other" — instead of 8 near-identical items.
+  Mix review + mistake drill + new material in one round; vary the topic and sentence frames.
 - Likes reading comprehension as text + AskUserQuestion MC.
 
 ## Teaching preferences
