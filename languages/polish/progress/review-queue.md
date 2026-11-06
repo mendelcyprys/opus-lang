@@ -17,9 +17,9 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Aspect in negative imperatives (nie jedz, nie wychodź, nie wchodź) | grammar | 7d | 2026-11-12 |
 | Aspect in positive imperatives (kup, powiedz) | grammar | 3d | 2026-11-07 |
 | iść w parze z; poczucie wspólnoty; nic dziwnego, że; zrezygnować z (+gen); na stałe | vocab | 3d | 2026-11-08 |
-| Prefixed motion verbs: wyjść/wyjechać, przyjść/przyjechać, odjechać, zajść, przejść, dojechać | vocab | 3d | 2026-11-08 |
+| Prefixed motion verbs: wyjść/wyjechać, przyjść/przyjechać, odjechać, zajść, przejść, dojechać | vocab | 7d | 2026-11-13 |
 | Motion prefixes w-/wy-/z- (wejść, zejść, wyjechać) | vocab | 3d | 2026-11-08 |
-| Habit impf vs single pf with motion verbs (wychodzę/wyjdę, obchodzę/obejdę) | grammar | 3d | 2026-11-08 |
+| Habit impf vs single pf with motion verbs (wychodzę/wyjdę, obchodzę/obejdę) | grammar | 7d | 2026-11-13 |
 | ob- / roz- się (objechać, rozejść się) | vocab | 3d | 2026-11-08 |
 | zjedz (eat up) vs zjedź (drive down) | vocab | 3d | 2026-11-08 |
 | zejść się / zjechać się (gather) vs rozejść się (disperse); obejść się bez (do without) | vocab | 3d | 2026-11-08 |
@@ -31,6 +31,7 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Numerals + oblique cases (pięciu/trzech/czterech; instr. -oma/-ema: czterema!) | grammar | 7d | 2026-11-12 |
 | Typing: pójdą (ó), pójść forms | vocab/spelling | 7d | 2026-11-12 |
 | zamknięte drzwi (participle -ty as adjective) | vocab | 3d | 2026-11-08 |
-| Reported speech: że / czy / żeby + -m (żebym zadzwonił; żeby … nie + impf) | grammar | 3d | 2026-11-08 |
-| Passive: zostać + participle (została napisana) — B2 | grammar | 1d | 2026-11-06 |
-| Indirect questions: gdzie/kiedy/co (no extra że/czy) | grammar | 1d | 2026-11-06 |
+| Reported speech: że / czy / żeby + -m (żebym zadzwonił; żeby … nie + impf) | grammar | 7d | 2026-11-13 |
+| Passive: zostać + participle (została napisana) — B2 | grammar | 3d | 2026-11-09 |
+| Indirect questions: gdzie/kiedy/co (no extra że/czy) | grammar | 3d | 2026-11-09 |
+| żeby + personal ending (żebym poczekał, NOT żeby poczekałem); żeby … nie + impf | grammar | 1d | 2026-11-07 |

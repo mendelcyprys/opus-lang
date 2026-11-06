@@ -1,6 +1,6 @@
 # Polish — Learning Plan
 
-_Last updated: 2026-11-05 (evening round)_
+_Last updated: 2026-11-06_
 
 ## Current phase
 **B1 consolidation** (reading/writing). Placement shows cases, numerals, conditional, comparatives and word order are solid at A2–B1. Initial gap was aspect in future time clauses — fixed within the first session (correct in MC + typed production).
@@ -27,7 +27,7 @@ _Last updated: 2026-11-05 (evening round)_
 _(Earlier next-session notes are kept in the session logs; this list is current as of 2026-11-05.)_
 1. **Review** due items (`review-queue.md`), incl. B2 phrases (nie tyle… ile…, iść w parze z…), restaurant vocab, ob-/roz- się,
    reported speech (due 2026-11-06).
-2. **Phase 4:** reported speech with pronoun shifts (powiedział, że ona…), żeby with a different subject (chcę, żebyś…),
+2. **Phase 4 (żeby + other subjects, indirect questions, passive intro done 2026-11-06 — drill żebym poczekał typed):** reported speech with pronoun shifts (powiedział, że ona…), żeby with a different subject (chcę, żebyś…),
    indirect questions with co/kiedy/dlaczego (gdzie ✓ 2026-11-05 evening). Then Phase 5: passive zostać + participle (intro ✓ MC).
 3. **Mistake drill:** habit impf in *typed* production (obchodzę, wychodzę — so far correct only in MC); typed diacritics (ó, ł).
 4. **Phase 2 remainder:** z- się vs roz- się in production; impf motion forms (chodzić/jeździć, przychodzę).
