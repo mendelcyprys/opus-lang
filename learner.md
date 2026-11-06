@@ -32,3 +32,8 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
 - Explanation language: depends on level → set per language in its `profile.md` (Polish: mix of simple Polish + English).
 - Typing: occasionally drops diacritics/letters — correct every time; suggest long-press / the right keyboard layout.
 - **Reading texts on mobile (2026-11-05):** chat text printed before an AskUserQuestion dialog is NOT visible. Put the whole text inside question 1 (and quote the relevant sentence in later questions).
+- **Randomise answer order (2026-11-06):** in every multiple-choice question, shuffle the position of the correct option — don't put it first (or in a predictable slot).
+  Spread correct answers across A/B/C/D within a modal. Never include the target answer among options of a "typed" item.
+- **Difficulty / hints (2026-11-06):** the learner wants to be challenged and says Claude may choose how hard to go. Often leave out the Hint option and the
+  answer scaffolding (e.g. no "Hint: Gdybym miał…, … bym…") — especially for typed items and anything already at mastery ≥3. Keep hints for brand-new material.
+  Mix in some hint-free, "cold" typed production every round; step difficulty up as accuracy stays high.
