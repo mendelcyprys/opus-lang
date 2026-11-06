@@ -5,7 +5,7 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 
 | Language | Level | Current focus | Last session | Status |
 |---|---|---|---|---|
-| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | reported speech, indirect questions, żeby + subjects, passive zostać (2 rounds 2026-11-06); next: spelling drill (ę/ż), participles in production, verbal nouns, impf motion forms | 2026-11-06 | active |
+| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | reported speech, indirect questions, żeby + subjects, passive zostać (3 rounds 2026-11-06); next: bym position in conditional main clause, participles in production, verbal nouns | 2026-11-06 | active |
 | Ukrainian | B1 (placement A2 4/4, B1 3/4) | instrumental, production | 2026-11-04 | active |
 | Hebrew | B1 (placement 8/8), probing B2 | B2: news-style reading, verbal nouns | 2026-11-04 | active |
 | Arabic | A1/A2 (MSA; placement 4/4) | negation (لا / لم / لن) intro done 7/8 → drill la/lam, ليس, typed production, broken plurals | 2026-11-05 | active |

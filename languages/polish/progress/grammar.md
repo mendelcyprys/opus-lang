@@ -11,7 +11,7 @@
 | Perfective future (napiszę) | produces form correctly | 2026-11-04 | 2026-11-04 | 3 |
 | Adjective agreement, plural non-masc.-personal | nowe — correct | 2026-11-04 | 2026-11-04 | 3 |
 | Numerals 2–4 vs 5+ (koty / sióstr) | correct | 2026-11-04 | 2026-11-04 | 3 |
-| Conditional (gdybym… kupiłbym) | correct; 2026-11-05 ✓ (gdybym miał… pojechałbym, no doubled -bym) | 2026-11-04 | 2026-11-05 | 3 |
+| Conditional (gdybym… kupiłbym) — 2026-11-06 slip in main clause, see row below; correct; 2026-11-05 ✓ (gdybym miał… pojechałbym, no doubled -bym) | 2026-11-04 | 2026-11-05 | 3 |
 | Comparatives (wyższa niż) | correct | 2026-11-04 | 2026-11-04 | 3 |
 | Aspect in time clauses (kiedy + future) | Placement: chose przeczytałem instead of przeczytam. Later same day: correct in MC and in typed production (skończy…pójdzie). 2026-11-05: dojadę, wyjdę, skończą…pójdą ✓ | 2026-11-04 | 2026-11-05 | 3 |
 | Word order (adverbials, pronoun clitics) | all 4 sentences correct | 2026-11-04 | 2026-11-04 | 3 |
@@ -34,4 +34,6 @@
 | żeby + personal ending: chcę, żebyś przyszedł; żeby przyjdziesz ✗ spotted; poprosiła, żebym… | MC ✓; typed żeby poczekałem ✗ → żebym poczekał; typed żebyśmy nie wchodzili ✓; 2nd round typed żebym zadzwonił ✓ | 2026-11-06 | 2026-11-06 | 3 |
 | Participles: passive kupiony; active świecące, ludzie mieszkający (= którzy mieszkają); adverbial czytając (while reading) — B2 | MC 4/4 2026-11-06 (świecące, którzy, kupiony, czytając) | 2026-11-06 | 2026-11-06 | 1 |
 | Indirect questions with co / czy / dlaczego | MC ✓ co robię, czy lubię kawę; typed dlaczego nie przyszłam (item was garbled, form fine) | 2026-11-05 | 2026-11-06 | 3 |
+| Verbal nouns (-anie/-enie): gotowanie, nie lubię stania (gen. after negation/verb) — B2 | MC ✓ 2/2 | 2026-11-06 | 2026-11-06 | 2 |
+| Conditional gdybym miał…, + main clause | ✗ 2026-11-06: *bym więcej zwiedział* (bym can't open the clause; zwiedził) — protasis gdybym miał ✓ | 2026-11-04 | 2026-11-06 | 2 |
 

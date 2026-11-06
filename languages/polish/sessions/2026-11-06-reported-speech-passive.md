@@ -16,3 +16,9 @@
 - Two items were flawed by me (Q4 had no truly wrong sentence besides a stylistic one; Q5 contradictory instructions male/female) → not counted. Lesson: check distractors before sending.
 - New: Phase 5 participle basics (passive -ny/-ty, active -ący, adverbial -ąc).
 - Next: participles in production, verbal nouns (-anie/-enie), spelling drill ę/ż, impf motion forms (chodzić/jeździć).
+
+## Round 3 (same day): spelling, verbal nouns, participles, review — **11/12**
+- ✓ typed Codziennie jeżdżę do pracy autobusem (ż, ę clean) · ✓ Gotowanie (verbal noun) · ✓ chodziłem (habit past) · ✓ error-spot *która pisząca* · ✓ typed Została zamknięta · ✓ nie lubię stania · ✓ że nie ma czasu, więc nie przyjdzie · ✓ pięcioma kolegami · ✓ reading (dworzec, remont) · ✓ odd-one-out dojechać · ✓ B2 stretch kto by to rozumiał.
+- ✗ typed conditional: *Gdybym miał więcej pieniędzy, bym więcej zwiedział* → **więcej bym zwiedził** / **zwiedziłbym więcej** (bym can't open the clause; zwiedził, pf l-form -ił). Protasis was correct.
+- My error: reading had typos (*ciężka dźwig* → ciężki dźwig); answer still unambiguous.
+- Next: conditional main clauses typed, participles in production, verbal nouns in context, impf motion forms (jeździć/chodzić) further, formal B1 recheck ~mid-Dec.
