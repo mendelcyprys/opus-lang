@@ -29,6 +29,9 @@
 | Conditional gdybym… -bym (recheck) — superseded (merged into Conditional row above) | correct, no doubled -bym | 2026-11-04 | 2026-11-05 | 3 |
 | Reported speech: że + unchanged tense; czy for questions; żeby + -m/-ś for requests | 2026-11-05 pm: że jutro będzie ✓, żebym poczekał ✓ (MC). 5/5 first try (że będzie, czy lubię, żebym zadzwonił, żebym nie wchodził; spotted *żeby przyjdzie*) | 2026-11-05 | 2026-11-05 | 2 |
 | Instr. of 2–5 incl. feminine dwiema (z dwiema paniami), czterema typed ✓ — superseded (merged into Numerals + oblique cases row) | typed production correct after earlier slip | 2026-11-05 | 2026-11-05 | 3 |
-| Indirect questions with question word (zapytał, gdzie mieszkam — no czy/że) | MC ✓ ×2 (gdzie, kiedy wracam) | 2026-11-05 | 2026-11-06 | 3 |
+| Indirect questions with question word (zapytał, gdzie mieszkam — no czy/że) | MC ✓ ×2 (gdzie, kiedy wracam) — see also row below | 2026-11-05 | 2026-11-06 | 3 |
 | Passive with zostać + participle (została napisana) — B2 stretch | MC ✓ 2026-11-06 (nie zostały otwarte; zostanie otwarte; B2 stretch: mogła zostać załatwiona) | 2026-11-05 | 2026-11-06 | 2 |
-| żeby + personal ending: chcę, żebyś przyszedł; żeby przyjdziesz ✗ spotted; poprosiła, żebym… | MC ✓; typed żeby poczekałem ✗ → żebym poczekał; typed żebyśmy nie wchodzili ✓ | 2026-11-06 | 2026-11-06 | 2 |
+| żeby + personal ending: chcę, żebyś przyszedł; żeby przyjdziesz ✗ spotted; poprosiła, żebym… | MC ✓; typed żeby poczekałem ✗ → żebym poczekał; typed żebyśmy nie wchodzili ✓; 2nd round typed żebym zadzwonił ✓ | 2026-11-06 | 2026-11-06 | 3 |
+| Participles: passive kupiony; active świecące, ludzie mieszkający (= którzy mieszkają); adverbial czytając (while reading) — B2 | MC 4/4 2026-11-06 (świecące, którzy, kupiony, czytając) | 2026-11-06 | 2026-11-06 | 1 |
+| Indirect questions with co / czy / dlaczego | MC ✓ co robię, czy lubię kawę; typed dlaczego nie przyszłam (item was garbled, form fine) | 2026-11-05 | 2026-11-06 | 3 |
+

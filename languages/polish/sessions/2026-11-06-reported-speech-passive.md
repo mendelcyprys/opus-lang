@@ -9,3 +9,10 @@
 
 ## Next time
 - Drill żebym/żebyś/żebyśmy typed; indirect questions with co/dlaczego; Phase 5 participles (-ący, -ny/-ty); impf motion forms (chodzić/jeździć); listening still unassessed.
+
+## Round 2 (same day): żeby drill, indirect questions, participles
+- Valid items **9/10**: ✓ typed żebym zadzwonił · ✓ co robię · ✓ czy lubię kawę · ✓ reading (zgubiony list; Gdańsk text inside Q1) · ✓ którzy (relative = -ący) · ✓ świecące · ✓ kupiony · ✓ Nie mam czas = wrong · ✓ B2 stretch czytając = while reading.
+- ✗ typed spelling only (grammar correct): *Codzinnie jeżdże* → **Codziennie jeżdżę** (dropped letters/ę again).
+- Two items were flawed by me (Q4 had no truly wrong sentence besides a stylistic one; Q5 contradictory instructions male/female) → not counted. Lesson: check distractors before sending.
+- New: Phase 5 participle basics (passive -ny/-ty, active -ący, adverbial -ąc).
+- Next: participles in production, verbal nouns (-anie/-enie), spelling drill ę/ż, impf motion forms (chodzić/jeździć).

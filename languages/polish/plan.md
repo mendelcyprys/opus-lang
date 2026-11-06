@@ -20,7 +20,7 @@ _Last updated: 2026-11-06_
 | 2 | Verbs of motion with prefixes (przy-, wy-, do-, prze-, za-, od-) | in progress: przy-/wy-/do-/prze-/za-/od-, w-/z-, ob-/roz- introduced 2026-11-04; walk vs drive (zejdź/zjedź) ✓ 2026-11-05 |
 | 3 | Instrumental & locative plural, genitive plural irregulars, numerals + case | in progress: instr./loc. pl. 6.5/8, gen. pl. irregulars 3.5/4 (2026-11-04); numerals + oblique cases started 2026-11-05 (MC 4/4, typed ✓ after one slip) |
 | 4 | Conditional (gdyby, żeby), reported speech | started 2026-11-05 (conditional ✓; reported speech intro 5/5 + 12/12 round; indirect questions ✓ evening) |
-| 5 | Participles & verbal nouns (reading-focused B1→B2) | planned |
+| 5 | Participles & verbal nouns (reading-focused B1→B2) | started 2026-11-06 (MC 4/4: -ny/-ty, -ący, -ąc) |
 | ongoing | Vocabulary via short B1 reading texts; translation into Polish from given sentences | |
 
 ## Next session
