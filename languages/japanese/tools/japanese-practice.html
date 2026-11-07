@@ -1,0 +1,368 @@
+<title>Japanese Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one exercise at a time; kana and Latin share one font stack; size control scales everything. */
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --fg:#1d2a2a; --muted:#5d6b6b; --line:#d9d5ca;
+  --accent:#0f6b63; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ui:'Source Sans 3','Noto Sans JP','Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+  --ja:'Noto Sans JP','Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+  --ar-size:1.9rem; /* set by the A-/A+ buttons; ALL text is sized from it */
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--ar-size)*.6);line-height:1.5;margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1em;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:18px}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px}
+.prompt{color:var(--muted);white-space:pre-line}
+.ja{font-family:var(--ja);font-size:var(--ar-size);line-height:1.6}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--ja);font-size:var(--ar-size);line-height:1.4;text-align:left;padding:10px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt small{display:block;font-family:var(--ui);font-size:.5em;color:var(--muted);margin-top:2px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--ja);font-size:var(--ar-size);width:100%;padding:8px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.6}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+.hintline{color:var(--muted);font-size:.85em}
+.hintline label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.built{min-height:calc(var(--ar-size)*1.9);border:2px dashed var(--line);border-radius:8px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pool{display:flex;flex-wrap:wrap;gap:8px}
+.tile{font-family:var(--ja);font-size:var(--ar-size);line-height:1.3;padding:6px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer}
+.tile:hover{border-color:var(--accent)}
+.tile:disabled{opacity:.3;cursor:default}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible,.tile:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .ja{font-size:calc(var(--ar-size)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6em}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .ja{font-size:calc(var(--ar-size)*.9)}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .ja{font-size:calc(var(--ar-size)*.8)}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;font-family:var(--ui);font-size:1em;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Japanese Practice · N5</h1>
+    <div class="sizer" role="group" aria-label="Text size">
+      <button class="ghost" id="smaller" aria-label="Smaller text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card"></main>
+</div>
+
+<script>
+/* ===================== EXERCISES (edit per session) =====================
+   mc:    opts[a] is the right option in the source; shuffled at runtime. "kana\nromaji" puts the romaji under the kana.
+   build: words = correct order (shuffled into tiles); accepted answers = joined words (+ optional alt:[...]).
+   type:  a = accepted answers in kana (spaces/punctuation ignored); typing romaji converts to kana (lowercase = ひらがな, UPPERCASE = カタカナ). */
+const ITEMS = [
+  {t:'mc', p:'Which is the reading of すし?', opts:['すし\nsushi','さし\nsashi','しし\nshishi','すち\nsuchi'], a:0,
+   why:'す = su, し = shi.', tag:'hiragana su/shi'},
+  {t:'mc', p:'Which one is the katakana for "coffee"?  (kōhī)', opts:['コーヒー','ユーヒー','コーピー','ニーヒー'], a:0,
+   why:'コ ko, ー long vowel, ヒ hi. Do not confuse コ/ユ or ヒ/ピ.', tag:'katakana コーヒー'},
+  {t:'mc', p:'Which kana is "wa"?', opts:['わ','れ','ね','め'], a:0,
+   why:'わ = wa. れ re, ね ne, め me look alike.', tag:'hiragana wa/re/ne/me'},
+  {t:'mc', p:'わたし ___ エリックです。\n(watashi ___ Erikku desu.)  "I am Erik."', opts:['は  (read: wa)','が  (ga)','を  (o)','の  (no)'], a:0,
+   why:'は marks the topic and is pronounced "wa" in this role.', tag:'particle は'},
+  {t:'mc', p:'"This is my ramen."  (a statement)', opts:['これは わたしの ラーメンです。\nkore wa watashi no rāmen desu.','これは わたしの ラーメンですか。\nkore wa watashi no rāmen desu ka.','これは ラーメンの わたしです。\nkore wa rāmen no watashi desu.','これを わたしの ラーメンです。\nkore o watashi no rāmen desu.'], a:0,
+   why:'Statement = ... です。 Add か only to ask a question. の = "my".', tag:'stray か'},
+  {t:'mc', p:'これは おちゃ ___ ?\n(kore wa ocha ___ ?)  "Is this tea?"', opts:['ですか\ndesu ka','ですが\ndesu ga','ですの\ndesu no','です\ndesu'], a:0,
+   why:'ですか = polite "is it?".', tag:'か question'},
+
+  {t:'build', p:'Tap the words in order:  "This is sushi."', words:['これ','は','すし','です'], tag:'build これはすしです'},
+  {t:'build', p:'Tap the words in order:  "I am Erik."', words:['わたし','は','エリック','です'], tag:'build わたしはエリックです'},
+  {t:'build', p:'Tap the words in order:  "Is this tea?"', words:['これ','は','おちゃ','です','か'], tag:'build これはおちゃですか'},
+
+  {t:'type', p:'Type in kana:  "This is ramen."\n(type: kore ha RA-MENN desu)', a:['これはラーメンです'], tag:'typed ラーメン'},
+  {t:'type', p:'Type in kana:  "Is this coffee?"\n(type: kore ha KO-HI- desu ka)', a:['これはコーヒーですか'], tag:'typed コーヒー'},
+  {t:'type', p:'Type in kana:  "I am Erik."\n(type: watashi ha ERIKKU desu)', a:['わたしはエリックです'], tag:'typed エリック'},
+];
+// shown after checking, keyed by index in ITEMS (build items use words.join; mc use opts[a])
+const MODEL = {9:'これは ラーメンです。',10:'これは コーヒーですか。',11:'わたしは エリックです。'};
+
+/* ===================== matching ===================== */
+const strict = s => s.normalize('NFKC').replace(/[\s.,;:!?。、？！・「」]+/g,'');
+const kata2hira = s => s.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0)-0x60));
+const loose = s => kata2hira(strict(s));
+const kanaOf = x => x.split('\n')[0];
+
+/* ===================== romaji -> kana (live while typing) ===================== */
+const ROM = (() => {
+  const m = {a:'あ',i:'い',u:'う',e:'え',o:'お',
+    ka:'か',ki:'き',ku:'く',ke:'け',ko:'こ', sa:'さ',shi:'し',si:'し',su:'す',se:'せ',so:'そ',
+    ta:'た',chi:'ち',ti:'ち',tsu:'つ',tu:'つ',te:'て',to:'と', na:'な',ni:'に',nu:'ぬ',ne:'ね',no:'の',
+    ha:'は',hi:'ひ',fu:'ふ',hu:'ふ',he:'へ',ho:'ほ', ma:'ま',mi:'み',mu:'む',me:'め',mo:'も',
+    ya:'や',yu:'ゆ',yo:'よ', ra:'ら',ri:'り',ru:'る',re:'れ',ro:'ろ', wa:'わ',wo:'を',
+    ga:'が',gi:'ぎ',gu:'ぐ',ge:'げ',go:'ご', za:'ざ',ji:'じ',zi:'じ',zu:'ず',ze:'ぜ',zo:'ぞ',
+    da:'だ',de:'で',do:'ど', ba:'ば',bi:'び',bu:'ぶ',be:'べ',bo:'ぼ', pa:'ぱ',pi:'ぴ',pu:'ぷ',pe:'ぺ',po:'ぽ',
+    ja:'じゃ',ju:'じゅ',jo:'じょ', '-':'ー'};
+  const y = {ky:'き',gy:'ぎ',ny:'に',hy:'ひ',by:'び',py:'ぴ',my:'み',ry:'り',sh:'し',ch:'ち'};
+  for (const k in y) { m[k+'a']=y[k]+'ゃ'; m[k+'u']=y[k]+'ゅ'; m[k+'o']=y[k]+'ょ'; }
+  m.sha='しゃ'; m.shu='しゅ'; m.sho='しょ'; m.cha='ちゃ'; m.chu='ちゅ'; m.cho='ちょ';
+  return m;
+})();
+const toKata = s => s.replace(/[ぁ-ゖ]/g, c => String.fromCharCode(c.charCodeAt(0)+0x60));
+function toKana(raw){
+  let out = '', i = 0;
+  const isV = c => /[aeiouy]/i.test(c || '');
+  while (i < raw.length) {
+    const ch = raw[i], low = ch.toLowerCase(), upper = ch !== low && /[A-Z]/.test(ch);
+    if (!/[a-z\-]/i.test(ch)) { out += ch === '.' ? '。' : ch === ',' ? '、' : ch === '?' ? '？' : ch; i++; continue; }
+    const put = (kana, n) => { out += upper ? toKata(kana) : kana; i += n; };
+    let hit = false;
+    for (const n of [3,2,1]) {                       // longest match first
+      const seg = raw.substr(i, n).toLowerCase();
+      if (seg.length === n && ROM[seg]) { put(ROM[seg], n); hit = true; break; }
+    }
+    if (hit) continue;
+    if (low === 'n') {                               // ん
+      const nx = raw[i+1];
+      if (nx && nx.toLowerCase() === 'n') { const after = raw[i+2]; put('ん', after && isV(after) ? 1 : 2); continue; }
+      if (nx && !isV(nx)) { put('ん', 1); continue; }
+    }
+    if (raw[i+1] && raw[i+1].toLowerCase() === low && /[bcdfghjklmpqrstvwxz]/.test(low)) { put('っ', 1); continue; }  // double consonant
+    out += ch; i++;                                  // incomplete syllable stays as typed
+  }
+  return out;
+}
+
+/* ===================== Claude (feedback) and comments (relay) ===================== */
+const $ = id => document.getElementById(id);
+let SAMPLE = null, COMMENTS = null;
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+const LEARNER = 'The learner is an English speaker (male), a beginner in Japanese (about N5/A1): hiragana and katakana nearly solid but forgotten often, only a few kanji, wants romaji alongside kana, types with a romaji-to-kana converter on a laptop. ' +
+  'Teaching style: correct every mistake briefly with the reason, in simple English; show kana with romaji; no kanji without furigana; no long essays; never ask for free creative writing, only concrete sentences to translate. ';
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking…';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short – ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){ const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b; }
+
+/* ===================== quiz flow ===================== */
+let order, cur, results, picked, answered, tiles;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function start(){
+  results = []; cur = 0;
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc') return {...it, idx, shown: shuffle(it.opts.map((x,i)=>({x, ok:i===it.a})))};
+    if(it.t==='build') return {...it, idx, a: [it.words.join('')].concat(it.alt||[])};
+    return {...it, idx};
+  });
+  render();
+}
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Exercise '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+function el(tag, cls, text){ const e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e }
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length) return summary();
+  const it = order[cur]; picked = null; answered = false; tiles = [];
+  st.innerHTML = '';
+  st.appendChild(el('div','prompt',it.p));
+  if(it.t==='mc'){
+    const box = el('div','opts');
+    it.shown.forEach((o,i)=>{
+      const [k, ro] = o.x.split('\n');
+      const b = el('button','opt'); b.type='button'; b.lang='ja'; b.append(k);
+      if(ro) b.appendChild(el('small',null,ro));
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else if(it.t==='build'){
+    const built = el('div','built'); built.id='built'; built.lang='ja';
+    const pool = el('div','pool'); pool.id='pool'; pool.lang='ja';
+    shuffle(it.words.map((w,i)=>({w,i}))).forEach(o=>{
+      const b = el('button','tile',o.w); b.type='button';
+      b.addEventListener('click',()=>{
+        if(answered) return;
+        if(b.parentNode===pool){ built.appendChild(b); tiles.push(o.i) } else { pool.appendChild(b); tiles.splice(tiles.indexOf(o.i),1) }
+        $('check').disabled = tiles.length===0;
+      });
+      pool.appendChild(b);
+    });
+    st.append(built, pool, el('div','hintline','Tap a word to move it up; tap it again to take it back.'));
+  } else {
+    const inp = document.createElement('input'); inp.type='text'; inp.id='ans'; inp.className='ans'; inp.lang='ja';
+    inp.autocomplete='off'; inp.autocapitalize='off'; inp.spellcheck=false; inp.setAttribute('aria-label','Your answer in kana');
+    inp.addEventListener('input', e => {
+      if(e.isComposing){ $('check').disabled=!inp.value.trim(); return }     // a real Japanese IME is doing the work
+      if($('conv') && $('conv').checked){ const v = toKana(inp.value); if(v!==inp.value) inp.value = v }
+      $('check').disabled = !inp.value.trim();
+    });
+    inp.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); if(!answered&&!$('check').disabled) check(); else if(answered) next() } });
+    const hint = el('div','hintline');
+    const lab = el('label'); const cb = document.createElement('input'); cb.type='checkbox'; cb.id='conv'; cb.checked=true;
+    lab.append(cb, ' Romaji → kana while typing');
+    hint.append(lab, el('span',null,'   lowercase = ひらがな · UPPERCASE = カタカナ · ha = は · wo = を · nn = ん · - = ー · double consonant = っ'));
+    st.append(inp, hint);
+  }
+  st.appendChild(Object.assign(el('div'),{id:'fb'})); $('fb').setAttribute('role','status');
+  const act = el('div','actions');
+  const c = el('button',null,'Check'); c.id='check'; c.type='button'; c.disabled=true; c.addEventListener('click',check);
+  const n = el('button',null,cur===order.length-1?'Finish':'Next'); n.id='next'; n.type='button'; n.hidden=true; n.addEventListener('click',next);
+  const sk = el('button','ghost','Skip'); sk.id='skip'; sk.type='button'; sk.addEventListener('click',()=>{ if(!answered) finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk); st.appendChild(act);
+  if(it.t==='type') setTimeout(()=>{ const i=$('ans'); if(i) i.focus() },50);
+}
+
+function check(){
+  const it = order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok, kind: ok?'ok':'wrong', given: kanaOf(it.shown[picked].x)});
+  } else {
+    const g = it.t==='build' ? tiles.map(i=>it.words[i]).join('') : $('ans').value;
+    let kind = 'wrong';
+    if(it.a.some(a=>strict(a)===strict(g))) kind = 'ok';
+    else if(it.a.some(a=>loose(a)===loose(g))) kind = 'near';
+    finish({ok: kind==='ok', kind, given: g});
+  }
+}
+
+function finish(r){
+  answered = true;
+  const it = order[cur];
+  r.tag = it.tag; r.q = it.p.split('\n')[0];
+  r.correct = it.t==='mc' ? kanaOf(it.opts[it.a]) : (MODEL[it.idx] || (it.t==='build' ? it.words.join(' ') : it.a[0]));
+  results.push(r);
+  const fb = $('fb'); fb.className = 'fb ' + (r.kind==='ok'?'ok': r.kind==='near'?'near':'no'); fb.innerHTML='';
+  fb.appendChild(el('strong',null, r.kind==='ok'?'Correct': r.kind==='near'?'Right words, wrong script': r.kind==='skip'?'Skipped':'Not quite'));
+  if(r.kind!=='ok'){ const m = el('div','ja',r.correct); m.lang='ja'; fb.appendChild(m) }
+  if(r.kind==='near') fb.appendChild(el('div','note','Check hiragana vs katakana: foreign loanwords (ラーメン, コーヒー, エリック) use katakana.'));
+  if(it.why) fb.appendChild(el('div','note',it.why));
+  if(SAMPLE && r.kind!=='ok'){
+    const b = claudeBtn('Ask Claude why'), box = el('div','claude-box');
+    b.addEventListener('click',()=>askClaude(LEARNER+'Explain this one mistake in at most 5 short lines, then give ONE similar short sentence to translate (no answer given).\n\nExercise: '+it.p+'\nCorrect answer: '+r.correct+'\nLearner '+(r.kind==='skip'?'skipped it':'wrote: '+r.given)+'\nTopic: '+it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
+  if(it.t==='mc') document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok) b.classList.add('right'); else if(i===picked) b.classList.add('wrong'); b.disabled=true });
+  else if(it.t==='build') document.querySelectorAll('.tile').forEach(b=>b.disabled=true);
+  else $('ans').readOnly = true;
+  $('check').hidden = true; $('skip').hidden = true; $('next').hidden = false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+function next(){ cur++; render() }
+
+function summary(){
+  const st = $('stage'); st.innerHTML='';
+  const ok = results.filter(r=>r.ok).length, tot = results.length;
+  const sum = el('div','sum'); sum.appendChild(el('h2',null,ok+' / '+tot)); st.appendChild(sum);
+  const bad = results.filter(r=>!r.ok);
+  if(!bad.length) st.appendChild(el('p',null,'Clean round.'));
+  bad.forEach(r=>{
+    const d = el('div','miss'); d.appendChild(el('small',null,r.q+'  ['+r.tag+']'));
+    const a = el('div','ja',r.correct); a.lang='ja'; d.appendChild(a);
+    if(r.given){ const g = el('small',null,'You wrote: '); const s = el('span','ja',r.given); s.lang='ja'; g.appendChild(s); d.appendChild(g) }
+    st.appendChild(d);
+  });
+  const lines = ['Japanese practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SCRIPT':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  st.appendChild(el('div','prompt','Paste this into the chat if sending fails:'));
+  const pre = el('pre'); pre.id='copytext'; pre.textContent = lines.join('\n'); st.appendChild(pre);
+  const act = el('div','actions');
+  const cp = el('button',null,'Copy results'); cp.type='button';
+  cp.addEventListener('click',()=>{
+    const done = ()=>{ cp.textContent='Copied' };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent='Selected – press copy' };
+    try{ navigator.clipboard.writeText(pre.textContent).then(done,fallback) }catch(e){ fallback() }
+  });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send = el('button',null,'Send results to Claude'); send.type='button';
+    const status = el('div','status');
+    send.addEventListener('click', async () => {
+      send.disabled = true; status.textContent = 'Sending…';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent = 'Sent. Claude will grade the round in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled = false;
+      }
+    });
+    act.append(send); sendStatus = status;
+  }
+  const again = el('button','ghost','New round'); again.type='button'; again.addEventListener('click',start);
+  act.append(cp, again); st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'), fbBox = el('div','claude-box');
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'right words, wrong script, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click',()=>askClaude(LEARNER+'Here are the results of a 12-exercise round ('+ok+'/'+tot+'). Give feedback compactly: (1) one line on what went well; (2) for each mistake what was wrong and why, with the corrected sentence in kana and romaji; (3) the one or two patterns to focus on next; (4) three short English sentences to translate into Japanese as follow-up practice (do not give the answers). Known weak spots: a stray か on statements, similar kana (わ れ ね め), katakana loanwords.\n\nResults:\n'+lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
+  updateTop();
+}
+
+/* text size (remembered per device when storage works) */
+const SIZES=[1.5,1.9,2.3,2.7,3.2,3.8,4.4]; // rem for --ar-size; body text = 60% of it
+let si=1;
+try{ const v=parseInt(localStorage.getItem('jaSize')); if(v>=0&&v<SIZES.length) si=v }catch(e){}
+function applySize(){ document.documentElement.style.setProperty('--ar-size',SIZES[si]+'rem'); try{ localStorage.setItem('jaSize',si) }catch(e){}
+  $('smaller').disabled = si===0; $('bigger').disabled = si===SIZES.length-1 }
+$('smaller').addEventListener('click',()=>{ if(si>0){ si--; applySize() } });
+$('bigger').addEventListener('click',()=>{ if(si<SIZES.length-1){ si++; applySize() } });
+applySize();
+start();
+</script>
