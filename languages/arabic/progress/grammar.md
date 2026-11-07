@@ -16,3 +16,6 @@
 | لن + subjunctive (will not) | MC ✓ لن أذهب غدًا; typed لن يذهب ✓ form (but wrote أمس for 'tomorrow'); round 3: MC لن تذهب غدًا ✓, typed لن أذهب … غدا ✓ | 2026-11-05 | 2026-11-07 | 3 |
 | ليس + nominal sentence (predicate accusative) | MC ✓ البيت ليس جديدًا (first try); round 2: MC ✓ + typed البيت ليس جديدًا ✓ | 2026-11-07 | 2026-11-07 | 2 |
 | ليست (fem. of ليس: agrees with subject) | MC ✓ هي ليست معلمةً; typed المعلمة ليست جديدة ✓ (first exposure, same round) | 2026-11-07 | 2026-11-07 | 2 |
+| ما + past (= didn't; alternative to لم + jussive) | MC ✓ ما كتبتُ; typed ما كتبت الكتاب ✓ (valid, page marked it wrong by mistake) | 2026-11-07 | 2026-11-07 | 2 |
+| Broken plural: بيت → بيوت; (سوق → أسواق, رسالة → رسائل seen) | MC ✓ بيوت | 2026-11-07 | 2026-11-07 | 1 |
+| Non-human plural → feminine singular adjective (البيوت جديدة، ليست جديدة) | MC ✓ + typed البيوت ليست جديدة ✓ | 2026-11-07 | 2026-11-07 | 2 |

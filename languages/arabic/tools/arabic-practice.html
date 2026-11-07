@@ -101,12 +101,12 @@ const ITEMS = [
   {t:'mc', p:'Which spelling is "I read" (past)?', opts:['قَرَأْتُ','قَرَيْتُ','قَرَاتُ','قَرَءْتُ'], a:0,
    why:'Hamza on the alif seat: قرأتُ.', tag:'hamza seat'},
 
-  {t:'type', p:'Type in Arabic: "I didn’t write the book."', a:['لم أكتب الكتاب'], tag:'typed لم + أكتب'},
-  {t:'type', p:'Type in Arabic: "He didn’t read the letter yesterday."', a:['لم يقرأ الرسالة أمس'], tag:'typed لم يقرأ'},
+  {t:'type', p:'Type in Arabic: "I didn’t write the book."', a:['لم أكتب الكتاب','ما كتبت الكتاب'], tag:'typed لم + أكتب'},
+  {t:'type', p:'Type in Arabic: "He didn’t read the letter yesterday."', a:['لم يقرأ الرسالة أمس','ما قرأ الرسالة أمس'], tag:'typed لم يقرأ'},
   {t:'type', p:'Type in Arabic: "The houses are not new."', a:['البيوت ليست جديدة'], tag:'typed ليست + plural'},
   {t:'type', p:'Type in Arabic: "I didn’t go with them."', a:['لم أذهب معهم','ما ذهبت معهم'], tag:'typed معهم'},
   {t:'type', p:'Type in Arabic: "We won’t read the letters tomorrow." (letters = رَسَائِل)', a:['لن نقرأ الرسائل غدا'], tag:'typed لن + رسائل'},
-  {t:'type', p:'Type in Arabic: "Did you (m) go to the teacher yesterday?"', a:['هل ذهبت إلى الأستاذ أمس'], tag:'typed هل + إلى'},
+  {t:'type', p:'Type in Arabic: "Did you (m) go to the teacher yesterday?"', a:['هل ذهبت إلى الأستاذ أمس','هل ذهبت إلى المعلم أمس'], tag:'typed هل + إلى'},
 ];
 // vowelled model answers shown after checking, keyed by index in ITEMS
 const MODEL = {6:'لَمْ أَكْتُبِ الكِتَابَ.',7:'لَمْ يَقْرَأِ الرِّسَالَةَ أَمْسِ.',8:'البُيُوتُ لَيْسَتْ جَدِيدَةً.',9:'لَمْ أَذْهَبْ مَعَهُمْ.',10:'لَنْ نَقْرَأَ الرَّسَائِلَ غَدًا.',11:'هَلْ ذَهَبْتَ إِلَى الأُسْتَاذِ أَمْسِ؟'};

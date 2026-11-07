@@ -16,4 +16,7 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | ذ in ذهب (typed: نذهب) | spelling | 3d | 2026-11-10 |
 | لا (don't) vs لم (didn't) vs لن (won't); jussive: لم أكتبْ / لم أذهبْ (NOT لم كتبتُ / لم ذهبتُ); drops ن (لم يذهبوا) | grammar | 1d | 2026-11-08 |
 | ليس / ليست + nominal sentence (predicate accusative) | grammar | 3d | 2026-11-10 |
-| غدًا (tomorrow ≠ أمس yesterday), خبز، اشترى، لأنّ | vocab | 3d | 2026-11-10 |
+| غدًا (tomorrow ≠ أمس yesterday ≠ جدًا very), خبز، اشترى، لأنّ | vocab | 1d | 2026-11-08 |
+| ما + past (didn't); لم + jussive vs ما + past — never mix | grammar | 3d | 2026-11-10 |
+| Broken plurals: بيوت، أسواق، رسائل (+ non-human plural → fem. sg. adjective) | grammar/vocab | 1d | 2026-11-08 |
+| Pronoun suffixes with prepositions: معه / معهم / معكم / معي | grammar | 1d | 2026-11-08 |

@@ -31,3 +31,11 @@
 - ✓ 5/6 MC (لن تذهب غدًا, لم تكتب, لم يذهبوا (ن dropped), هي ليست معلمةً, إلى) and **6/6 typed**: لن أذهب إلى السوق غدا, لم تكتب الرسالة, لم يذهبوا أمس, المعلمة ليست جديدة, قرأت الرسالة أمس, لم نقرأ الكتاب. غدا/أمس correct this time; hamza/إلى clean again.
 - ✗ MC "I didn't go to the market yesterday": chose *لَمْ ذَهَبْتُ إِلَى السُّوقِ أَمْسِ* (لم + past form) instead of **لَمْ أَذْهَبْ**. Third occurrence of لم + past form (first لم كتبتُ in round 1) — but the typed items with لم were all correct, so it is an MC-recognition trap when the past-looking option has a 'yesterday' cue.
 - Day total: three rounds (8/12 + 3 spelling, 11/12, 11/12). Relay pipeline artifact → chat confirmed working.
+
+## Round 4 (same day, Artifact; relayed): page said 8/12 → **10/12 after my correction**
+- New: ما + past ("didn't", alternative to لم + jussive), broken plural بيت → بيوت, non-human plural takes feminine singular adjective (البيوت جديدة / ليست جديدة).
+- ✓ MC 6/6: لم يذهب, ما كتبتُ, بيوت, البيوت جديدة, لن أقرأ … غدًا, قرأتُ. ✓ typed: لم يقرأ الرسالة أمس, البيوت ليست جديدة.
+- **Page bug (mine):** two typed answers were marked wrong although correct: *ما كتبت الكتاب* (valid ما + past, round's own new structure) and *هل ذهبت إلى المعلم أمس* (معلم = teacher, a valid synonym of أستاذ). Added alternatives; counted as correct here.
+- ✗ *ما ذهبت معكم* (with **you** pl.) for "with **them**" → **معهم** (ه = them, ك = you): pronoun suffix mix-up.
+- ✗ *لن نقرأ الرسائل **جداً*** ("very") for **غدًا** (tomorrow): the لن … + subjunctive was right, the word was wrong (similar-looking letters غ/ج; the غدًا/أمس slip earlier today is the same vocabulary item).
+- Day total: four Artifact/MC rounds; verb-negation system (لا/لم/لن/ما/ليس) now solid in typed production.
