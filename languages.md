@@ -12,4 +12,4 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 | Spanish | not assessed | onboarding & placement | — | not started |
 | French | A1 (beginner) | aller, prendre, est-ce que (2026-11-07, 11/12); next: faire, typed production, adjectives | 2026-11-07 | active |
 | German | not assessed | onboarding & placement | — | not started |
-| Japanese | beginner (kana nearly solid) | です sentences, self-intro | 2026-11-04 | active |
+| Japanese | beginner (kana nearly solid) | は/か/の sentences + tile building (10/12, 2026-11-07); next: self-intro, numbers, ヒ/ピ and ッ | 2026-11-07 | active |
