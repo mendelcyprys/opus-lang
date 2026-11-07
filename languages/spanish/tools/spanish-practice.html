@@ -110,21 +110,21 @@ pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--li
    build: words = correct order (shuffled into tiles); accepted = joined words (+ optional alt:[...]).
    type:  a = accepted answers (case, punctuation and stress marks ignored; CONFIG.loose decides what counts as a spelling slip). */
 const ITEMS = [
-  {"t": "mc", "p": "PLACEMENT (A1).\n> Yo ___ de Londres.\n(I am from London.)", "opts": ["soy", "estoy", "es", "tengo"], "a": 0, "why": "ser for origin/identity: soy de Londres. estar = location/state.", "tag": "ser origin"},
-  {"t": "mc", "p": "> ¿Dónde ___ el museo?\n(Where is the museum?)", "opts": ["está", "es", "hay", "son"], "a": 0, "why": "estar for location of a specific thing: ¿dónde está…?", "tag": "estar location"},
-  {"t": "mc", "p": "> En la ciudad ___ muchos restaurantes.\n(There are many restaurants in the city.)", "opts": ["hay", "están", "son", "tiene"], "a": 0, "why": "hay = there is / there are (one form for both).", "tag": "hay"},
-  {"t": "mc", "p": "> A mí me ___ el café.\n(I like coffee.)", "opts": ["gusta", "gusto", "gustan", "gustas"], "a": 0, "why": "gustar agrees with the thing liked: me gusta el café; me gustan los libros.", "tag": "me gusta"},
-  {"t": "mc", "p": "> Nosotros ___ en Madrid.\n(We live in Madrid.)", "opts": ["vivimos", "vivemos", "viven", "vivís"], "a": 0, "why": "vivir (-ir): vivo, vives, vive, vivimos, vivís, viven.", "tag": "vivir nosotros"},
-  {"t": "mc", "p": "Which is \"Do you (vosotros) speak Spanish?\" (Spain)", "opts": ["¿Habláis español?", "¿Hablan español?", "¿Hablas español?", "¿Habléis español?"], "a": 0, "why": "vosotros = you (plural, Spain): habláis. ustedes hablan = formal / Latin America.", "tag": "vosotros habláis"},
-  {"t": "build", "p": "Tap the words in order:\nI have a brother and two sisters.", "words": ["Tengo", "un", "hermano", "y", "dos", "hermanas"], "tag": "build tengo"},
-  {"t": "build", "p": "Tap the words in order:\nThe book is on the table.", "words": ["El", "libro", "está", "en", "la", "mesa"], "tag": "build estar location"},
-  {"t": "build", "p": "Tap the words in order:\nWhat do you want to eat? (tú)", "words": ["¿Qué", "quieres", "comer?"], "tag": "build querer + inf."},
-  {"t": "type", "p": "Type in Spanish:\nMy name is Erik.", "a": ["Me llamo Erik", "Mi nombre es Erik", "Soy Erik"], "tag": "typed me llamo"},
-  {"t": "type", "p": "Type in Spanish:\nI don't speak French. (use: hablar)", "a": ["No hablo francés", "Yo no hablo francés"], "tag": "typed no hablo (é)"},
-  {"t": "type", "p": "[A2 probe] Type in Spanish:\nYesterday I ate in a restaurant.", "a": ["Ayer comí en un restaurante", "Ayer yo comí en un restaurante", "Comí en un restaurante ayer"], "tag": "typed A2 preterite comí"},
+  {"t": "mc", "p": "RULE: ser = what/who/where FROM (identity, origin). estar = WHERE something is, and how it is right now.\n> Madrid ___ en España.", "opts": ["está", "es", "hay", "son"], "a": 0, "why": "Location of a place/thing → estar: Madrid está en España.", "tag": "estar location"},
+  {"t": "mc", "p": "> Mi hermano ___ profesor.\n(My brother is a teacher.)", "opts": ["es", "está", "hay", "tiene"], "a": 0, "why": "Profession/identity → ser: es profesor.", "tag": "ser profession"},
+  {"t": "mc", "p": "> Hoy ___ cansado.\n(Today I'm tired.)", "opts": ["estoy", "soy", "es", "hay"], "a": 0, "why": "Temporary state → estar: estoy cansado.", "tag": "estar state"},
+  {"t": "mc", "p": "RULE: gusta + one thing, gustan + several things.\n> Me ___ los libros de historia.", "opts": ["gustan", "gusta", "gusto", "gustas"], "a": 0, "why": "los libros = plural → me gustan.", "tag": "me gustan"},
+  {"t": "mc", "p": "> ¿Te ___ cocinar?\n(Do you like cooking?)", "opts": ["gusta", "gustan", "gustas", "gusto"], "a": 0, "why": "An infinitive counts as singular → te gusta cocinar.", "tag": "te gusta + inf."},
+  {"t": "mc", "p": "RULE: -ar: hablamos · -er: comemos · -ir: vivimos\n> Nosotros ___ una carta. (escribir = to write)", "opts": ["escribimos", "escribemos", "escribamos", "escriben"], "a": 0, "why": "escribir is -ir → nosotros escribimos.", "tag": "-ir nosotros"},
+  {"t": "mc", "p": "VOSOTROS (Spain, 'you all'): -ar → -áis, -er → -éis, -ir → -ís\n> ¿Vosotros ___ en Barcelona? (vivir)", "opts": ["vivís", "vivéis", "viven", "vivimos"], "a": 0, "why": "vivir (-ir) → vosotros vivís (accent on í).", "tag": "vosotros vivís"},
+  {"t": "mc", "p": "> ¿Qué ___ vosotros? (comer)\n(What are you all eating?)", "opts": ["coméis", "comís", "comen", "comáis"], "a": 0, "why": "comer (-er) → vosotros coméis.", "tag": "vosotros coméis"},
+  {"t": "build", "p": "Tap the words in order:\nWhere is the station?", "words": ["¿Dónde", "está", "la", "estación?"], "tag": "build dónde está"},
+  {"t": "build", "p": "Tap the words in order:\nI like Spanish food.", "words": ["Me", "gusta", "la", "comida", "española"], "tag": "build me gusta"},
+  {"t": "type", "p": "Type in Spanish:\nWe live in London.", "a": ["Vivimos en Londres", "Nosotros vivimos en Londres"], "tag": "typed vivimos"},
+  {"t": "type", "p": "Type in Spanish (vosotros):\nDo you all speak English?", "a": ["¿Habláis inglés?", "Habláis inglés", "¿Vosotros habláis inglés?", "Vosotros habláis inglés"], "tag": "typed habláis inglés (á, é)"},
 ];
 // shown after checking, keyed by index in ITEMS (generated by scripts/build_round.py from round.json)
-const MODEL = {9:"Me llamo Erik.",10:"No hablo francés.",11:"Ayer comí en un restaurante. (preterite: comer → comí)"};
+const MODEL = {10:"Vivimos en Londres.",11:"¿Habláis inglés?"};
 
 /* ===================== CONFIG:BEGIN (the only language-specific part) ===================== */
 const CONFIG = {
