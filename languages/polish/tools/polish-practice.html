@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Polish Practice</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap">
@@ -88,28 +89,21 @@ const DIA = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź'
 const loose = s => strict(s).replace(/[ąćęłńóśźż]/g, c => DIA[c]);
 
 const ITEMS = [
-  {t:'mc', p:'Które zdanie jest NIEPOPRAWNE?', opts:['Gdybym miał więcej czasu, bym zwiedził więcej miast.','Gdybym miał więcej czasu, zwiedziłbym więcej miast.','Gdybym miał więcej czasu, więcej miast bym zwiedził.','Gdybym miał więcej czasu, zwiedziłbym je wszystkie.'], a:0,
-   why:'Cząstka „bym” nie może otwierać zdania: zwiedziłbym… albo więcej miast bym zwiedził.', tag:'bym position'},
-  {t:'mc', p:'— Czy Ania już wróciła z pracy?\n— Nie, ___ nie wróciła.', opts:['jeszcze','już','jeszcze nie','nie już'], a:0,
-   why:'„Nie, jeszcze nie wróciła” = not yet. „Już nie” = not anymore.', tag:'jeszcze nie / już nie'},
-  {t:'mc', p:'Ania mówi do Marka: „Jutro przyjadę do ciebie”. Marek opowiada:\n„Ania powiedziała, że jutro ___ do mnie.”', opts:['przyjedzie','przyjadę','przyjedziesz','przyjechała'], a:0,
-   why:'Zmiana osoby: ja (Ania) → ona = przyjedzie; do ciebie → do mnie.', tag:'reported speech'},
-  {t:'mc', p:'Chcę, ___ mi pomógł. (mówię do jednego mężczyzny)', opts:['żebyś','żeby','żebym','żebyście'], a:0,
-   why:'żeby + końcówka osobowa: żebyś (ty). Czasownik w czasie przeszłym: pomógł.', tag:'żeby + person'},
-  {t:'mc', p:'Mężczyzna ___ przy oknie to mój brat. (the man standing at the window)', opts:['stojący','stojony','stanięty','stając'], a:0,
-   why:'Imiesłów przymiotnikowy czynny: stojący (= który stoi).', tag:'participle -ący'},
-  {t:'mc', p:'Ten most ___ w zeszłym roku. (was built; most = m)', opts:['został zbudowany','została zbudowana','zostały zbudowane','został zbudowana'], a:0,
-   why:'zostać + imiesłów bierny zgodny z rodzajem: most (m) → został zbudowany.', tag:'passive zostać'},
-
-  {t:'type', p:'Napisz po polsku (type in Polish): “If I had more time, I would visit more cities.” (I = man)', a:['gdybym miał więcej czasu, zwiedziłbym więcej miast','gdybym miał więcej czasu, odwiedziłbym więcej miast','gdybym miał więcej czasu, więcej miast bym zwiedził','gdybym miał więcej czasu, więcej miast bym odwiedził','gdybym miał więcej czasu, więcej bym zwiedził miast'], tag:'typed conditional'},
-  {t:'type', p:'Napisz po polsku: “She doesn’t live here anymore.”', a:['ona już tu nie mieszka','już tu nie mieszka','ona tu już nie mieszka','tu już nie mieszka','ona już nie mieszka tutaj','ona już nie mieszka tu','ona tutaj już nie mieszka','ona już tutaj nie mieszka','tutaj już nie mieszka','już tutaj nie mieszka','ona nie mieszka tu już'], tag:'typed już nie'},
-  {t:'type', p:'Napisz po polsku: “Don’t eat this cake!” (to one man)', a:['nie jedz tego ciasta'], tag:'typed neg. imperative'},
-  {t:'type', p:'Napisz po polsku: “I asked her to wait.” (I = man)', a:['poprosiłem ją, żeby poczekała','poprosiłem ją, żeby zaczekała','poprosiłem ją żeby poczekała','poprosiłem ją, aby poczekała'], tag:'typed żeby'},
-  {t:'type', p:'Napisz po polsku: “Every morning I leave the house at seven.”', a:['codziennie rano wychodzę z domu o siódmej','co rano wychodzę z domu o siódmej','każdego ranka wychodzę z domu o siódmej','codziennie wychodzę z domu o siódmej','rano wychodzę z domu o siódmej'], tag:'typed habit + diacritics'},
-  {t:'type', p:'Napisz po polsku: “I talked to four (female) friends.” (I = man)', a:['rozmawiałem z czterema koleżankami','rozmawiałem z czterema przyjaciółkami'], tag:'typed numeral + instr.'},
+  {"t": "mc", "p": "Zupa jest pyszna! ___ ją do końca.", "opts": ["Zjedz", "Zjedź", "Zejdź", "Jedź"], "a": 0, "why": "zjeść → zjedz (eat up). zjedź = zjechać (drive down); zejdź = zejść (walk down).", "tag": "zjedz/zjedź/zejdź"},
+  {"t": "mc", "p": "Które zdanie jest NIEPOPRAWNE?", "opts": ["Nie zjedz tego ciasta!", "Nie wychodź bez kurtki!", "Nie kupuj chleba.", "Nie wchodź tam."], "a": 0, "why": "Zakaz = czasownik niedokonany: nie jedz. Nie zjedz jest błędne.", "tag": "neg. imperative"},
+  {"t": "mc", "p": "Pojechałem do Włoch z ___ . (with my friends, all men)", "opts": ["przyjaciółmi", "przyjaciółami", "przyjaciółów", "przyjaciele"], "a": 0, "why": "Narzędnik l.mn.: przyjaciółmi (nieregularny, jak ludźmi, dziećmi, pieniędzmi).", "tag": "irregular instr. pl."},
+  {"t": "mc", "p": "Nie mamy dużo ___ . (money)", "opts": ["pieniędzy", "pieniądzy", "pieniądze", "pieniędzmi"], "a": 0, "why": "Dopełniacz l.mn.: pieniędzy (nie pieniądzy).", "tag": "gen. pl. irregular"},
+  {"t": "mc", "p": "Wiosną ___ ludzie na ulicach. (people gather = come together)", "opts": ["schodzą się", "obchodzą się", "rozchodzą się", "przechodzą się"], "a": 0, "why": "zejść się = gather; rozejść się = disperse; obejść się bez = do without.", "tag": "zejść się"},
+  {"t": "mc", "p": "Nie lubię ___ rano. (getting up early)", "opts": ["wstawania", "wstawanie", "wstać", "wstający"], "a": 0, "why": "Rzeczownik odczasownikowy wstawanie + dopełniacz po „nie lubię”: wstawania.", "tag": "verbal noun"},
+  {"t": "type", "p": "Napisz po polsku: “If I had more time, I would learn Polish every day.” (I = man)", "a": ["gdybym miał więcej czasu, uczyłbym się polskiego codziennie", "gdybym miał więcej czasu, uczyłbym się codziennie polskiego", "gdybym miał więcej czasu, codziennie uczyłbym się polskiego", "gdybym miał więcej czasu, uczyłbym się polskiego każdego dnia", "gdybym miał więcej czasu, uczyłbym się polskiego każdy dzień", "gdybym miał więcej czasu, codziennie bym się uczył polskiego", "gdybym miał więcej czasu, uczyłbym się po polsku codziennie", "gdybym miał więcej czasu, bardziej bym się uczył polskiego"], "tag": "typed conditional"},
+  {"t": "type", "p": "Napisz po polsku: “Don’t go in there, please!” (to one man)", "a": ["nie wchodź tam, proszę", "proszę, nie wchodź tam", "nie wchodź tam proszę", "nie wchodź tam"], "tag": "typed neg. imperative"},
+  {"t": "type", "p": "Napisz po polsku: “Anna said that she would come tomorrow.”", "a": ["anna powiedziała, że przyjdzie jutro", "anna powiedziała, że jutro przyjdzie", "anna powiedziała, że przyjedzie jutro", "anna powiedziała, że jutro przyjedzie", "anna powiedziała, że jutro do mnie przyjdzie", "anna powiedziała, że jutro przyjdzie do mnie"], "tag": "typed reported speech"},
+  {"t": "type", "p": "Napisz po polsku: “He asked me where I live.” (I = man)", "a": ["zapytał mnie, gdzie mieszkam", "zapytał, gdzie mieszkam", "spytał mnie, gdzie mieszkam", "spytał, gdzie mieszkam", "zapytał mnie gdzie mieszkam", "zapytał się mnie, gdzie mieszkam"], "tag": "typed indirect question"},
+  {"t": "type", "p": "Napisz po polsku: “I haven’t read this book yet.” (I = man)", "a": ["jeszcze nie przeczytałem tej książki", "jeszcze nie czytałem tej książki", "nie przeczytałem jeszcze tej książki", "nie czytałem jeszcze tej książki"], "tag": "typed jeszcze nie + gen."},
+  {"t": "type", "p": "Napisz po polsku: “She lives in Poland, and I live in Italy.” (I = man; take care with prepositions)", "a": ["ona mieszka w polsce, a ja mieszkam we włoszech", "ona mieszka w polsce, a ja we włoszech", "mieszka w polsce, a ja mieszkam we włoszech", "ona mieszka w polsce, a ja mieszkam we włoszech."], "tag": "typed locative + we"},
 ];
-// model answers shown after checking, keyed by index in ITEMS
-const MODEL = {6:'Gdybym miał więcej czasu, zwiedziłbym więcej miast.',7:'Ona już tu nie mieszka.',8:'Nie jedz tego ciasta!',9:'Poprosiłem ją, żeby poczekała.',10:'Codziennie rano wychodzę z domu o siódmej.',11:'Rozmawiałem z czterema koleżankami.'};
+// shown after checking, keyed by index in ITEMS (generated by scripts/build_round.py from round.json)
+const MODEL = {6:"Gdybym miał więcej czasu, uczyłbym się polskiego codziennie.",7:"Nie wchodź tam, proszę!",8:"Anna powiedziała, że przyjdzie jutro.",9:"Zapytał mnie, gdzie mieszkam.",10:"Jeszcze nie przeczytałem tej książki.",11:"Ona mieszka w Polsce, a ja mieszkam we Włoszech."};
 
 const $ = id => document.getElementById(id);
 
@@ -291,7 +285,7 @@ function summary(){
     const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
     fbBtn.addEventListener('click', () => askClaude(LEARNER + 'Here are the results of a 12-question round (' + ok + '/' + tot + '). Give feedback in this order, compactly: ' +
       '(1) one line on what went well; (2) for each mistake: what was wrong and why, with the corrected sentence; (3) the one or two patterns to focus on next; ' +
-      '(4) three short English sentences to translate into Polish as follow-up practice (do not give the answers). Known weak spots: bym never opens a clause, już nie vs jeszcze nie, typed diacritics, habit imperfective in typed production.\n\nResults:\n' + lines2, fbBox, fbBtn));
+      '(4) three short English sentences to translate into Polish as follow-up practice (do not give the answers). Known weak spots: past habit needs imperfective (jeździliśmy), bym never opens a clause, już nie vs jeszcze nie, typed diacritics.\n\nResults:\n' + lines2, fbBox, fbBtn));
     st.append(fbBtn, fbBox);
   }
   updateTop();
@@ -308,3 +302,5 @@ $('bigger').addEventListener('click',()=>{if(si<SIZES.length-1){si++;applySize()
 applySize();
 start();
 </script>
+
+</body></html>

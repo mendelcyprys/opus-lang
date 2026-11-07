@@ -12,3 +12,8 @@ URL: https://claude.ai/artifact/5GvuSvki7avC4WWs5tWJBA · always republish with 
 
 ## Per session
 Edit `ITEMS`/`MODEL` (6 mc, 3 build, 3 type works well), republish the same file path, grade the round in the chat when it arrives, and add valid variants to `a:[...]`.
+
+## Fast path (since 2026-11-07): round.json instead of editing JS
+1. Write the round in `tools/round.json` (format: header of `scripts/build_round.py`; `python3 scripts/build_round.py japanese --extract` shows the current one).
+2. `python3 scripts/build_round.py japanese` validates and rewrites the ITEMS/MODEL blocks of `japanese-practice.html`.
+3. Publish that file with the Artifact tool (same path, capabilities `{"sample":{},"comments":{}}`). Commit `round.json` + the page.

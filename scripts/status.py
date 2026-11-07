@@ -41,10 +41,11 @@ def main():
     out = []
     for d in sorted(p for p in LANGS.iterdir() if (p / "LANGUAGE.md").exists()):
         due = 0
-        for r in table(d / "progress" / "review-queue.md"):
-            m = DATE.search(col(r, "next due"))
-            if m and dt.date.fromisoformat(m.group()) <= today:
-                due += 1
+        for qf in ("review-queue.md", "review-later.md"):   # tidy.py moves far-off items to review-later.md
+            for r in table(d / "progress" / qf):
+                m = DATE.search(col(r, "next due"))
+                if m and dt.date.fromisoformat(m.group()) <= today:
+                    due += 1
         dates = sorted(f.name[:10] for f in (d / "sessions").glob("*.md") if DATE.match(f.name))
         r = dash.get(d.name, {})
         out.append(dict(lang=d.name, status=col(r, "status") or "?", level=col(r, "level") or "?",

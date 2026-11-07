@@ -37,7 +37,9 @@ def export(lang):
         sys.exit(f"No vocabulary file for '{lang}' ({src.relative_to(ROOT)})")
     out = LANGS / lang / "exports" / "anki.csv"
     cards = []
-    for header, cells in rows(src):
+    archive = src.parent / "archive" / "vocabulary.md"      # mastered / superseded rows moved by tidy.py
+    srcs = [src] + ([archive] if archive.exists() else [])
+    for header, cells in (x for s_ in srcs for x in rows(s_)):
         rec = dict(zip(header, cells))
         g = lambda *keys: next((v for h, v in rec.items() if any(h.startswith(k) for k in keys)), "")
         mastery = g("mastery") or "0"

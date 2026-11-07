@@ -14,3 +14,8 @@ then republish the same file path. When results arrive, grade them in the chat (
 
 ## Porting to another language
 Copy the page, change: title/h1, fonts and `direction`, `lang` on the input, `strict/loose`, the `LEARNER` prompt, the weak-spots sentence, the "spelling slip" hint, `ITEMS`/`MODEL`.
+
+## Fast path (since 2026-11-07): round.json instead of editing JS
+1. Write the round in `tools/round.json` (format: header of `scripts/build_round.py`; `python3 scripts/build_round.py polish --extract` shows the current one).
+2. `python3 scripts/build_round.py polish` validates and rewrites the ITEMS/MODEL blocks of `polish-practice.html`.
+3. Publish that file with the Artifact tool (same path, capabilities `{"sample":{},"comments":{}}`). Commit `round.json` + the page.

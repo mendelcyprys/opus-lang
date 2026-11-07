@@ -1,0 +1,156 @@
+{
+ "items": [
+  {
+   "t": "mc",
+   "p": "Zupa jest pyszna! ___ ją do końca.",
+   "opts": [
+    "Zjedz",
+    "Zjedź",
+    "Zejdź",
+    "Jedź"
+   ],
+   "why": "zjeść → zjedz (eat up). zjedź = zjechać (drive down); zejdź = zejść (walk down).",
+   "tag": "zjedz/zjedź/zejdź"
+  },
+  {
+   "t": "mc",
+   "p": "Które zdanie jest NIEPOPRAWNE?",
+   "opts": [
+    "Nie zjedz tego ciasta!",
+    "Nie wychodź bez kurtki!",
+    "Nie kupuj chleba.",
+    "Nie wchodź tam."
+   ],
+   "why": "Zakaz = czasownik niedokonany: nie jedz. Nie zjedz jest błędne.",
+   "tag": "neg. imperative"
+  },
+  {
+   "t": "mc",
+   "p": "Pojechałem do Włoch z ___ . (with my friends, all men)",
+   "opts": [
+    "przyjaciółmi",
+    "przyjaciółami",
+    "przyjaciółów",
+    "przyjaciele"
+   ],
+   "why": "Narzędnik l.mn.: przyjaciółmi (nieregularny, jak ludźmi, dziećmi, pieniędzmi).",
+   "tag": "irregular instr. pl."
+  },
+  {
+   "t": "mc",
+   "p": "Nie mamy dużo ___ . (money)",
+   "opts": [
+    "pieniędzy",
+    "pieniądzy",
+    "pieniądze",
+    "pieniędzmi"
+   ],
+   "why": "Dopełniacz l.mn.: pieniędzy (nie pieniądzy).",
+   "tag": "gen. pl. irregular"
+  },
+  {
+   "t": "mc",
+   "p": "Wiosną ___ ludzie na ulicach. (people gather = come together)",
+   "opts": [
+    "schodzą się",
+    "obchodzą się",
+    "rozchodzą się",
+    "przechodzą się"
+   ],
+   "why": "zejść się = gather; rozejść się = disperse; obejść się bez = do without.",
+   "tag": "zejść się"
+  },
+  {
+   "t": "mc",
+   "p": "Nie lubię ___ rano. (getting up early)",
+   "opts": [
+    "wstawania",
+    "wstawanie",
+    "wstać",
+    "wstający"
+   ],
+   "why": "Rzeczownik odczasownikowy wstawanie + dopełniacz po „nie lubię”: wstawania.",
+   "tag": "verbal noun"
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “If I had more time, I would learn Polish every day.” (I = man)",
+   "a": [
+    "gdybym miał więcej czasu, uczyłbym się polskiego codziennie",
+    "gdybym miał więcej czasu, uczyłbym się codziennie polskiego",
+    "gdybym miał więcej czasu, codziennie uczyłbym się polskiego",
+    "gdybym miał więcej czasu, uczyłbym się polskiego każdego dnia",
+    "gdybym miał więcej czasu, uczyłbym się polskiego każdy dzień",
+    "gdybym miał więcej czasu, codziennie bym się uczył polskiego",
+    "gdybym miał więcej czasu, uczyłbym się po polsku codziennie",
+    "gdybym miał więcej czasu, bardziej bym się uczył polskiego"
+   ],
+   "tag": "typed conditional",
+   "model": "Gdybym miał więcej czasu, uczyłbym się polskiego codziennie."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “Don’t go in there, please!” (to one man)",
+   "a": [
+    "nie wchodź tam, proszę",
+    "proszę, nie wchodź tam",
+    "nie wchodź tam proszę",
+    "nie wchodź tam"
+   ],
+   "tag": "typed neg. imperative",
+   "model": "Nie wchodź tam, proszę!"
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “Anna said that she would come tomorrow.”",
+   "a": [
+    "anna powiedziała, że przyjdzie jutro",
+    "anna powiedziała, że jutro przyjdzie",
+    "anna powiedziała, że przyjedzie jutro",
+    "anna powiedziała, że jutro przyjedzie",
+    "anna powiedziała, że jutro do mnie przyjdzie",
+    "anna powiedziała, że jutro przyjdzie do mnie"
+   ],
+   "tag": "typed reported speech",
+   "model": "Anna powiedziała, że przyjdzie jutro."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “He asked me where I live.” (I = man)",
+   "a": [
+    "zapytał mnie, gdzie mieszkam",
+    "zapytał, gdzie mieszkam",
+    "spytał mnie, gdzie mieszkam",
+    "spytał, gdzie mieszkam",
+    "zapytał mnie gdzie mieszkam",
+    "zapytał się mnie, gdzie mieszkam"
+   ],
+   "tag": "typed indirect question",
+   "model": "Zapytał mnie, gdzie mieszkam."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “I haven’t read this book yet.” (I = man)",
+   "a": [
+    "jeszcze nie przeczytałem tej książki",
+    "jeszcze nie czytałem tej książki",
+    "nie przeczytałem jeszcze tej książki",
+    "nie czytałem jeszcze tej książki"
+   ],
+   "tag": "typed jeszcze nie + gen.",
+   "model": "Jeszcze nie przeczytałem tej książki."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “She lives in Poland, and I live in Italy.” (I = man; take care with prepositions)",
+   "a": [
+    "ona mieszka w polsce, a ja mieszkam we włoszech",
+    "ona mieszka w polsce, a ja we włoszech",
+    "mieszka w polsce, a ja mieszkam we włoszech",
+    "ona mieszka w polsce, a ja mieszkam we włoszech."
+   ],
+   "tag": "typed locative + we",
+   "model": "Ona mieszka w Polsce, a ja mieszkam we Włoszech."
+  }
+ ]
+}

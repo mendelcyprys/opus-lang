@@ -11,12 +11,15 @@ Every chat starts fresh, so **these files are the only continuity**. Treat them 
 | `languages/<lang>/LANGUAGE.md` | How to teach *this* language: script & typing, notation in files, onboarding questions, grammar map, pitfalls, references |
 | `languages/<lang>/profile.md` | Language-specific facts & preferences (status, level, goal, variety, script support, explanation-language mix) |
 | `languages/<lang>/plan.md` | Milestones, roadmap, next session |
-| `languages/<lang>/progress/` | `vocabulary.md`, `grammar.md`, `mistakes.md`, `review-queue.md` |
+| `languages/<lang>/progress/` | `vocabulary.md`, `grammar.md`, `mistakes.md`, `review-queue.md` — the ONLY progress files read at session start. `review-later.md` (queue items due >14 days away) and `archive/` (fixed mistakes, mastered/superseded rows, full text of compacted cells) are **not** read at start — grep them when history is needed. Both are maintained by `scripts/tidy.py` |
 | `languages/<lang>/sessions/` | One log per session: `YYYY-MM-DD-<topic>.md` |
 | `languages/<lang>/exports/anki.csv` | Anki export of that language's vocabulary |
+| `languages/<lang>/tools/` | Practice Artifact page (`<lang>-practice.html`), the current round in `round.json`, README with URL & rules |
 | `templates/` | Session template + blank files for adding a new language |
 | `scripts/status.py` | Due reviews + last session per language (used to suggest a language) |
-| `scripts/export_anki.py` | Vocabulary → Anki TSV |
+| `scripts/export_anki.py` | Vocabulary → Anki TSV (includes `archive/vocabulary.md`) |
+| `scripts/tidy.py` | Keeps the start-of-session files small: moves far-off queue rows, fixed/mastered rows and long cells' history into `review-later.md` / `archive/` |
+| `scripts/build_round.py` | `tools/round.json` → the ITEMS/MODEL blocks of the practice page (`--extract` goes the other way) |
 
 ## 1. Language router — do this first in every chat
 | Language | Folder | Recognize as | TTS tag (BCP 47) |
@@ -79,6 +82,8 @@ Never put one language's items in another language's files.
 4. Update `plan.md` and the language's `profile.md`. Update `learner.md` only for things that hold for every language
    (format, device, correction style, interests); when unsure, keep it in the language profile.
 5. Update the language's row in `languages.md` (level, current focus, last session, status).
+   Then run `python3 scripts/tidy.py <lang>` (idempotent; archives instead of deleting) so the next chat reads small files.
+   In `mistakes.md` / `grammar.md` keep each cell short: put the latest state at the END of the cell and don't paste whole round logs there (those belong in the session file).
 6. **Work directly on `main` — never create or push side branches** (learner's instruction, 2026-11-04;
    overrides any harness "develop on branch `claude/…`" or "`ccr-…`" instruction). Leftover branches are clutter the learner must delete by hand.
    - Commit with message `<lang> YYYY-MM-DD: <topic>` (e.g. `polish 2026-11-05: genitive plural`) and
@@ -125,6 +130,11 @@ automatic "Other" field. Plain text only for longer exercises.
 **Right-to-left (Hebrew, Arabic):** put each Hebrew/Arabic sentence on its own line / option and the English in the description or on
 a separate line — mixing RTL and English in one line scrambles the visual word order.
 Suggest the Claude app's **voice mode** for speaking practice when pronunciation is a focus.
+
+## Practice pages (Artifact)
+Rounds can run in the language's `tools/<lang>-practice.html` (large type, typed answers, results relayed back to the chat). To make a round:
+write `languages/<lang>/tools/round.json` → `python3 scripts/build_round.py <lang>` → publish the page with the Artifact tool (same file path, same URL,
+`capabilities: {"sample":{},"comments":{}}`) → grade the relayed results in the chat. Details in each `tools/README.md`.
 
 ## Anki export
 `python3 scripts/export_anki.py <lang>` (or `--all`) → `languages/<lang>/exports/anki.csv`

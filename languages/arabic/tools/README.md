@@ -27,3 +27,8 @@ and three Claude hooks.
 
 ## Grading goes in the chat
 When a round arrives, give the full grading in the session chat (see `learner.md`); the thread reply is a short pointer. Re-check marks the page got wrong and add valid alternatives to `a:[...]`.
+
+## Fast path (since 2026-11-07): round.json instead of editing JS
+1. Write the round in `tools/round.json` (format: header of `scripts/build_round.py`; `python3 scripts/build_round.py arabic --extract` shows the current one).
+2. `python3 scripts/build_round.py arabic` validates and rewrites the ITEMS/MODEL blocks of `arabic-practice.html`.
+3. Publish that file with the Artifact tool (same path, capabilities `{"sample":{},"comments":{}}`). Commit `round.json` + the page.

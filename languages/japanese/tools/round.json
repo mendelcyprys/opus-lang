@@ -1,0 +1,142 @@
+{
+ "items": [
+  {
+   "t": "mc",
+   "p": "Which one is the katakana for \"pizza\"?  (piza)",
+   "opts": [
+    "ピザ",
+    "ヒザ",
+    "ビザ",
+    "ピサ"
+   ],
+   "why": "ピ = pi (small circle), ザ = za (two dots). ヒ = hi, ビ = bi.",
+   "tag": "katakana ピザ"
+  },
+  {
+   "t": "mc",
+   "p": "Which is \"three\"?",
+   "opts": [
+    "さん\nsan",
+    "ご\ngo",
+    "ろく\nroku",
+    "きゅう\nkyuu"
+   ],
+   "why": "1 いち · 2 に · 3 さん · 4 よん/し · 5 ご · 6 ろく · 7 なな/しち · 8 はち · 9 きゅう · 10 じゅう.",
+   "tag": "number 3"
+  },
+  {
+   "t": "mc",
+   "p": "Which is \"five\"?",
+   "opts": [
+    "ご\ngo",
+    "こ\nko",
+    "ろく\nroku",
+    "はち\nhachi"
+   ],
+   "why": "ご = go (5). こ = ko. ろく = 6, はち = 8.",
+   "tag": "number 5"
+  },
+  {
+   "t": "mc",
+   "p": "Which is \"Erik\" spelled correctly?",
+   "opts": [
+    "エリック",
+    "エリク",
+    "エリツク",
+    "エリッグ"
+   ],
+   "why": "Double consonant kk = small ッ + ク: エリック.",
+   "tag": "small ッ"
+  },
+  {
+   "t": "mc",
+   "p": "NEW: ～から きました = \"(I) came from ~\". Pattern: わたしは [place]から きました。\n\n\"I am from America.\"",
+   "opts": [
+    "わたしは アメリカから きました。\nwatashi wa Amerika kara kimashita.",
+    "わたしは アメリカが きました。\nwatashi wa Amerika ga kimashita.",
+    "わたしは アメリカの きました。\nwatashi wa Amerika no kimashita.",
+    "わたしは アメリカと きました。\nwatashi wa Amerika to kimashita."
+   ],
+   "why": "から = from. と would mean \"with\".",
+   "tag": "から きました"
+  },
+  {
+   "t": "mc",
+   "p": "\"This is my coffee.\"  (a statement)",
+   "opts": [
+    "これは わたしの コーヒーです。\nkore wa watashi no kōhī desu.",
+    "これは わたしの コーヒーですか。\nkore wa watashi no kōhī desu ka.",
+    "これを わたしの コーヒーです。\nkore o watashi no kōhī desu.",
+    "これは コーヒーの わたしです。\nkore wa kōhī no watashi desu."
+   ],
+   "why": "Statement = ... です。 (no か).",
+   "tag": "stray か"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:  \"I am from Canada.\"",
+   "words": [
+    "わたし",
+    "は",
+    "カナダ",
+    "から",
+    "きました"
+   ],
+   "tag": "build から きました"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:  \"Is this my ramen?\"",
+   "words": [
+    "これ",
+    "は",
+    "わたし",
+    "の",
+    "ラーメン",
+    "です",
+    "か"
+   ],
+   "tag": "build これはわたしのラーメンですか"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:  \"This is Erik’s tea.\"",
+   "words": [
+    "これ",
+    "は",
+    "エリック",
+    "の",
+    "おちゃ",
+    "です"
+   ],
+   "tag": "build エリックのおちゃ"
+  },
+  {
+   "t": "type",
+   "p": "Type in kana:  \"This is pizza.\"\n(type: kore ha PIZA desu)",
+   "a": [
+    "これはピザです"
+   ],
+   "tag": "typed ピザ",
+   "model": "これは ピザです。"
+  },
+  {
+   "t": "type",
+   "p": "Type in kana:  \"Erik’s coffee\"\n(type: ERIKKU no KO-HI-)",
+   "a": [
+    "エリックのコーヒー"
+   ],
+   "tag": "typed エリック + コーヒー",
+   "model": "エリックの コーヒー"
+  },
+  {
+   "t": "type",
+   "p": "Type in kana:  \"I am from Canada.\"\n(type: watashi ha KANADA kara kimashita)",
+   "a": [
+    "わたしはカナダからきました"
+   ],
+   "tag": "typed から きました",
+   "model": "わたしは カナダから きました。"
+  }
+ ]
+}
