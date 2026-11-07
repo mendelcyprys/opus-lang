@@ -37,3 +37,8 @@ assume these hold and don't re-interview; adjust if the learner says otherwise._
 - **Difficulty / hints (2026-11-06):** the learner wants to be challenged and says Claude may choose how hard to go. Often leave out the Hint option and the
   answer scaffolding (e.g. no "Hint: Gdybym miał…, … bym…") — especially for typed items and anything already at mastery ≥3. Keep hints for brand-new material.
   Mix in some hint-free, "cold" typed production every round; step difficulty up as accuracy stays high.
+
+## Practice pages / artifacts
+- **Artifact rounds: grade in the chat (2026-11-07):** when results arrive from the practice page (comment or pasted), post the full grading in THIS chat
+  (score, each miss with the correct form and why, patterns, what's due next) — not only in the artifact comment thread. Keep the thread reply to one or two lines
+  and resolve it. Also sanity-check the page's own marking: if a "WRONG" answer is actually valid, count it correct and add the alternative to `a:[...]`.

@@ -24,3 +24,6 @@ and three Claude hooks.
   Persian ی/ک are mapped to Arabic ي/ك (some phone keyboards). The old harakat regex accidentally covered Arabic-Indic digits and ٮ ٯ; now explicit escapes.
 - **Fixes:** multi-line prompts keep their line breaks (`white-space:pre-line`); Arabic glyphs inside English text use Amiri (font stack); `aria-live` moved from the whole card to the feedback box (`role="status"`).
 - Known limits: no persistence (results leave only via Send/Copy); a typed answer with a different but valid word order is marked wrong (add alternatives to `a:[...]`).
+
+## Grading goes in the chat
+When a round arrives, give the full grading in the session chat (see `learner.md`); the thread reply is a short pointer. Re-check marks the page got wrong and add valid alternatives to `a:[...]`.
