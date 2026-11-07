@@ -5,7 +5,7 @@ Record here only what is specific to Spanish, or where it differs. Update whenev
 
 - **Status:** active
 - **Started:** 2026-11-07
-- **Level (self-assessed / assessed):** beginner: some Duolingo (A1) + a few hours of an online first course
+- **Level (self-assessed / assessed):** beginner: some Duolingo (A1) + a few hours of an online course; placement 2026-11-07: 6/12 → low A1 (phrases/word order OK, verb forms & ser/estar not yet)
 - **Background (how/where learned so far):** Duolingo A1; part of an online beginner course
 - **Goal / why this language:** hobby / culture (assumed from learner.md — confirm)
 - **Target & deadline:** A1 → A2, no deadline
