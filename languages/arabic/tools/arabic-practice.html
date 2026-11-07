@@ -7,8 +7,8 @@
   --bg:#f6f4ef; --card:#ffffff; --fg:#1d2a2a; --muted:#5d6b6b; --line:#d9d5ca;
   --accent:#0f6b63; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
   --ar:'Amiri','Noto Naskh Arabic','Geeza Pro','Traditional Arabic',serif;
-  --ui:'Source Sans 3',system-ui,sans-serif;
-  --ar-size:2.6rem;
+  --ui:'Source Sans 3','Amiri',system-ui,sans-serif; /* Latin from Source Sans, Arabic glyphs fall through to Amiri */
+  --ar-size:2.6rem; /* set by the A-/A+ buttons; ALL text is sized from it, not only .ar */
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
@@ -17,18 +17,18 @@
   --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
   --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font:1.05rem/1.5 var(--ui);margin:0;padding-block:12px 40px;
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--ar-size)*.4);line-height:1.5;margin:0;padding-block:12px 40px;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-h1{font-size:1.1rem;margin:0;font-weight:600}
+h1{font-size:1.1em;margin:0;font-weight:600}
 .sizer{display:flex;align-items:center;gap:8px}
-.sizer button{min-width:48px;height:44px;font-size:1.1rem}
+.sizer button{min-width:48px;height:44px;font-size:18px} /* fixed so the controls never shrink or grow out of reach */
 .progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
 .progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
-.meta{color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px}
-.prompt{font-size:1.05rem;color:var(--muted)}
+.prompt{color:var(--muted);white-space:pre-line}
 .ar{font-family:var(--ar);font-size:var(--ar-size);line-height:1.9;direction:rtl;text-align:right;unicode-bidi:isolate}
 .stem{margin:0}
 .opts{display:grid;gap:10px}
@@ -41,28 +41,29 @@ h1{font-size:1.1rem;margin:0;font-weight:600}
 input.ans{font-family:var(--ar);font-size:var(--ar-size);direction:rtl;text-align:right;width:100%;padding:8px 14px;
   background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.7}
 input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
-button{font:600 1.05rem var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
 button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
 button:disabled{opacity:.45;cursor:default}
 button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .actions{display:flex;gap:10px;flex-wrap:wrap}
-.fb{padding:12px 14px;border-radius:8px;font-size:1rem;display:flex;flex-direction:column;gap:6px}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
 .fb.ok{background:var(--good-bg);color:var(--good)}
 .fb.no{background:var(--bad-bg);color:var(--bad)}
 .fb.near{background:var(--warn-bg);color:var(--warn)}
 .fb .ar{font-size:calc(var(--ar-size)*.9);color:var(--fg)}
 .fb .note{color:var(--fg)}
-.sum h2{margin:0;font-size:1.6rem}
+.sum h2{margin:0;font-size:1.6em}
 .miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
 .miss .ar{font-size:calc(var(--ar-size)*.85);line-height:1.7}
-.miss small{color:var(--muted)}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .ar{font-size:calc(var(--ar-size)*.7)}
 .tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
 .tool[disabled]{opacity:.5}
-.status{color:var(--muted);font-size:.95rem}
-.claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui),var(--ar);font-size:calc(var(--ar-size)*.5);line-height:1.8;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui);font-size:1.1em;line-height:1.8;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
 .claude-box:empty{display:none}
 .claude-box.err{color:var(--bad)}
-pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font:.95rem/1.5 var(--ui);margin:0;direction:ltr}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0;direction:ltr}
 @media (prefers-reduced-motion:reduce){.progress i{transition:none}}
 </style>
 
@@ -76,14 +77,15 @@ pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--li
   </header>
   <div class="progress" aria-hidden="true"><i id="bar"></i></div>
   <div class="meta"><span id="count"></span><span id="score"></span></div>
-  <main id="stage" class="card" aria-live="polite"></main>
+  <main id="stage" class="card"></main>
 </div>
 
 <script>
-const stripMarks = s => s.replace(/[ً-ٰٟـ]/g,'');
+const stripMarks = s => s.replace(/[\u064B-\u065F\u0670\u0640]/g,''); // harakat, dagger alif, tatweel
 // loose key: unify hamza seats, ى/ي, ة/ه, tanwin-alif; used to tell a spelling slip from a wrong word
-const loose = s => stripMarks(s).replace(/[أإآٱء]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[؟?.!،,\s]+/g,' ').trim();
-const strict = s => stripMarks(s).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
+const keys = s => s.replace(/\u06CC/g,'\u064A').replace(/\u06A9/g,'\u0643'); // Persian ye / kaf -> Arabic
+const loose = s => keys(stripMarks(s)).replace(/[أإآٱء]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[؟?.!،,\s]+/g,' ').trim();
+const strict = s => keys(stripMarks(s)).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
 
 const ITEMS = [
   {t:'mc', p:'"She won’t go tomorrow." (غَدًا = tomorrow, أَمْسِ = yesterday)', opts:['لَنْ تَذْهَبَ غَدًا','لَنْ تَذْهَبَ أَمْسِ','لَمْ تَذْهَبْ غَدًا','لَا ذَهَبَتْ غَدًا'], a:0,
@@ -113,8 +115,9 @@ const $ = id => document.getElementById(id);
 
 // --- feedback from Claude (page asks Claude via the sample capability; hidden when unavailable) ---
 let SAMPLE = null, COMMENTS = null;
-(async () => { try { COMMENTS = (window.claude && await window.claude.use('comments')) || null } catch (e) { COMMENTS = null } })();
-(async () => { try { SAMPLE = (window.claude && await window.claude.use('sample')) || null } catch (e) { SAMPLE = null } })();
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
 const ERR = {
   not_granted:'Claude access was not allowed for this page, so feedback is off.',
   sampling_disabled:'Claude is not available for this account.',
@@ -168,7 +171,7 @@ function render(){
   if(it.t==='mc'){
     const box=document.createElement('div');box.className='opts';
     it.shown.forEach((o,i)=>{
-      const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=o.x;b.dataset.i=i;
+      const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=o.x;
       b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
       box.appendChild(b);
     });
@@ -180,7 +183,7 @@ function render(){
     inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(); if(!answered&&!$('check').disabled)check(); else if(answered)next()}});
     st.appendChild(inp);
   }
-  const fb=document.createElement('div');fb.id='fb';st.appendChild(fb);
+  const fb=document.createElement('div');fb.id='fb';fb.setAttribute('role','status');st.appendChild(fb);
   const act=document.createElement('div');act.className='actions';
   const c=document.createElement('button');c.id='check';c.type='button';c.textContent='Check';c.disabled=true;c.addEventListener('click',check);
   const n=document.createElement('button');n.id='next';n.type='button';n.textContent=cur===order.length-1?'Finish':'Next';n.hidden=true;n.addEventListener('click',next);
@@ -245,7 +248,7 @@ function summary(){
     const d=document.createElement('div');d.className='miss';
     const q=document.createElement('small');q.textContent=r.q+'  ['+r.tag+']';d.appendChild(q);
     const a=document.createElement('div');a.className='ar';a.textContent=r.correct;d.appendChild(a);
-    if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.style.fontSize='1.6rem';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
+    if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
     st.appendChild(d);
   });
   const lines=['Arabic practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
@@ -295,10 +298,10 @@ function summary(){
 }
 
 // text size control (remembered per device when storage works)
-const SIZES=[1.8,2.2,2.6,3.0,3.5,4.0,4.6];
-let si=2;
-try{const v=parseInt(localStorage.getItem('arSize'));if(v>=0&&v<SIZES.length)si=v}catch(e){}
-function applySize(){document.documentElement.style.setProperty('--ar-size',SIZES[si]+'rem');try{localStorage.setItem('arSize',si)}catch(e){}
+const SIZES=[2.2,2.6,3.0,3.5,4.0,4.6,5.2]; // rem for --ar-size; body text = 40% of it (0.88rem … 2.08rem)
+let si=1;
+try{const v=parseInt(localStorage.getItem('arSize2'));if(v>=0&&v<SIZES.length)si=v}catch(e){}
+function applySize(){document.documentElement.style.setProperty('--ar-size',SIZES[si]+'rem');try{localStorage.setItem('arSize2',si)}catch(e){}
   $('smaller').disabled=si===0;$('bigger').disabled=si===SIZES.length-1}
 $('smaller').addEventListener('click',()=>{if(si>0){si--;applySize()}});
 $('bigger').addEventListener('click',()=>{if(si<SIZES.length-1){si++;applySize()}});

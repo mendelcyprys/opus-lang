@@ -16,3 +16,11 @@ and three Claude hooks.
    (omitting keeps the stored declaration; passing a different set revokes the rest). URL: https://claude.ai/artifact/9Gp267NvKwq2c8Eff6GuhV
 3. When the results arrive (comment from the page, or pasted text): log the round as usual (session file, progress files, review queue, commit).
 4. The same page works for other scripts (Hebrew, Japanese): change the font (`--ar`), `dir`, `lang`, and the item list.
+
+## Notes from the 2026-11-07 code audit
+- **Text size:** the A−/A+ buttons set `--ar-size`; *all* text (prompts, glosses, notes, feedback, summary, Claude's answers) is sized from it, since Arabic also appears in English lines.
+  Only the A−/A+ buttons themselves stay fixed. Storage key `arSize2`.
+- **Matching:** `strict()` strips harakat/tatweel and punctuation; `loose()` also merges hamza seats, ى/ي, ة/ه — equal under `loose` but not `strict` = "spelling slip".
+  Persian ی/ک are mapped to Arabic ي/ك (some phone keyboards). The old harakat regex accidentally covered Arabic-Indic digits and ٮ ٯ; now explicit escapes.
+- **Fixes:** multi-line prompts keep their line breaks (`white-space:pre-line`); Arabic glyphs inside English text use Amiri (font stack); `aria-live` moved from the whole card to the feedback box (`role="status"`).
+- Known limits: no persistence (results leave only via Send/Copy); a typed answer with a different but valid word order is marked wrong (add alternatives to `a:[...]`).
