@@ -1,7 +1,7 @@
 # Practice page (Spanish)
 
 `spanish-practice.html` — Artifact page for Spanish rounds (relay/grading rules as in `languages/arabic/tools/README.md`).
-URL: (set on first publish) · always republish with `capabilities: {"sample": {}, "comments": {}}`.
+URL: https://claude.ai/artifact/VDBDuAjK6nQpxjnCBfNpeY · always republish with `capabilities: {"sample": {}, "comments": {}}`.
 Built 2026-11-07 from the French page: **same code**, only `<title>`, accent colours and the `CONFIG` block differ.
 
 ## Per session (round.json fast path)

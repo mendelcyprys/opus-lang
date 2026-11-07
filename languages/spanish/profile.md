@@ -16,4 +16,4 @@ Record here only what is specific to Spanish, or where it differs. Update whenev
 - Explanation language mix: mostly English (beginner)
 - Other notes:
 - **Interference:** also learning French (A1) — watch for French forms/false friends; log as `interference (French)`.
-- **Practice page:** `tools/spanish-practice.html` (French/Ukrainian template).
+- **Practice page:** `tools/spanish-practice.html`, https://claude.ai/artifact/VDBDuAjK6nQpxjnCBfNpeY.

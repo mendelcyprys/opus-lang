@@ -16,4 +16,4 @@ Record here only what is specific to German, or where it differs. Update wheneve
 - Explanation language mix: mostly English (beginner)
 - Other notes:
 - **Yiddish bridge (2026-11-07):** use Yiddish cognates (איך בין / ich bin, דאָס הויז / das Haus, der/di/dos genders) to speed up vocabulary; flag where German differs (case endings, -en in Guten Morgen, sprechen vs Yiddish רעדן, pronunciation). Log interference as `interference (Yiddish)`.
-- **Practice page:** `tools/german-practice.html` (French/Ukrainian template).
+- **Practice page:** `tools/german-practice.html`, https://claude.ai/artifact/Sg37P5esrTWDbKbty4mrXF.
