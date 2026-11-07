@@ -15,3 +15,4 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 | أمس (yesterday) typed for غدًا (tomorrow) | لن يذهب أمس → لن يذهب **غدًا** | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (غدًا ✓ MC + typed round 3) |
 | Pronoun suffix: ك (you) for ه (him/them) | ما ذهبت معكم → **معهم** (with them) | vocabulary/agreement | 2026-11-07 | 2026-11-07 | 1 | active |
 | غدًا (tomorrow) typed as جداً (very) / أمس earlier | لن نقرأ الرسائل جداً → **غدًا** | vocabulary/spelling | 2026-11-07 | 2026-11-07 | 2 | active (غدًا wobbly in typed recall: 2 slips, 1 clean typed ×2) |
+| Dotted-letter slips when typing (ب/ت, أ/إ) | تيوتنا → بيوتنا; نذهت → نذهب; إمس → أمس | spelling | 2026-11-07 | 2026-11-07 | 3 | active (round 5: all 3 misses; grammar right; pause and reread before Check) |

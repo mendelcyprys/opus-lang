@@ -19,3 +19,5 @@
 | ما + past (= didn't; alternative to لم + jussive) | MC ✓ ما كتبتُ; typed ما كتبت الكتاب ✓ (valid, page marked it wrong by mistake) | 2026-11-07 | 2026-11-07 | 2 |
 | Broken plural: بيت → بيوت; (سوق → أسواق, رسالة → رسائل seen) | MC ✓ بيوت | 2026-11-07 | 2026-11-07 | 1 |
 | Non-human plural → feminine singular adjective (البيوت جديدة، ليست جديدة) | MC ✓ + typed البيوت ليست جديدة ✓ | 2026-11-07 | 2026-11-07 | 2 |
+| Pronoun suffixes with مع (معهم, معكم, معي, معنا) | round 5: MC معهم ✓, ليست معنا ✓; typed معكم ✓ (form), معي ✓ | 2026-11-07 | 2026-11-07 | 3 |
+| Broken plurals كتب، أسواق | round 5: MC ✓ ×2; typed الأسواق جديدة ✓ | 2026-11-07 | 2026-11-07 | 2 |

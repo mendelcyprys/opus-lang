@@ -39,3 +39,8 @@
 - ✗ *ما ذهبت معكم* (with **you** pl.) for "with **them**" → **معهم** (ه = them, ك = you): pronoun suffix mix-up.
 - ✗ *لن نقرأ الرسائل **جداً*** ("very") for **غدًا** (tomorrow): the لن … + subjunctive was right, the word was wrong (similar-looking letters غ/ج; the غدًا/أمس slip earlier today is the same vocabulary item).
 - Day total: four Artifact/MC rounds; verb-negation system (لا/لم/لن/ما/ليس) now solid in typed production.
+
+## Round 5 (same day, Artifact; relayed): **9/12**
+- ✓ MC 6/6: كتب, أسواق, معهم, الرسائل طويلة, ليست معنا, إلى. ✓ typed: الأسواق جديدة, لم يكتب الرسائل, ذهبت معي.
+- ✗ spelling only (grammar right in all three): *ما ذهبت إلى السوق **إمس*** → أمس; *لن **نذهت** معكم غداً* → نذهب (ب typed as ت); *تيوتنا ليست جديدة* → بيوتنا (dot slip).
+- Pattern: dotted-letter slips (ب/ت) and hamza seat when typing under speed; recognition and grammar are solid.
