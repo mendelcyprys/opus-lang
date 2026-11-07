@@ -27,3 +27,9 @@
 - ✗ *Zaprosiłem ją, żeby poczekała* → **Poprosiłem** ją, żeby poczekała (zaprosić = invite, prosić/poprosić = ask). Structure żeby + personal ending ✓.
 - ✗ *Każdego **ranku**, wychodzę…* → każdego **ranka** (gen. of ranek); also no comma after the time phrase. Habit impf wychodzę z domu ✓ typed for the first time.
 - ✗ *z czterema **przyjacielkami*** → **przyjaciółkami** (przyjaciółka: ó, not e). Numeral + instr. czterema ✓.
+
+## Round 3 (same day, chat, 3 modals): 11/12
+- ✓ reading (Marek, autobusem); poprosiła kelnera; każdego ranka (MC); error-spot *…, bym pojechał* ✓; już tu nie pracuje; został zbudowany; czterema koleżankami;
+  typed cold: *Każdego ranka wychodzę z domu o siódmej*, *Gdybym miał więcej czasu, zwiedziłbym więcej*, *Poprosiła mnie, żebym chwilę poczekał*; stania ✓.
+- ✗ 'Kiedy byłem dzieckiem, każdego lata ___ nad morze' → **jeździliśmy** (past habit = imperfective), chose pojechaliśmy.
+- Mixed with poprosić/ranka review: both now clean in MC and typed.
