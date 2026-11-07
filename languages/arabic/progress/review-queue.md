@@ -18,5 +18,8 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | ليس / ليست + nominal sentence (predicate accusative); typed ليست (not لست = I am not, r6 ✗) | grammar | 1d | 2026-11-08 |
 | غدًا (د, not ذ: غذاً ✗ r6; ≠ أمس yesterday ≠ جدًا very), خبز، اشترى، لأنّ | vocab | 1d | 2026-11-08 |
 | ما + past (didn't); لم + jussive vs ما + past — never mix | grammar | 3d | 2026-11-10 |
-| Broken plurals: بيوت، أسواق، كتب، رسائل (+ non-human plural → fem. sg. adjective) | grammar/vocab | 3d | 2026-11-10 |
+| Broken plurals: بيوت، أسواق، كتب، رسائل (+ non-human plural → fem. sg. adjective; r7 MC + typed ✓) | grammar/vocab | 3d | 2026-11-10 |
 | Pronoun suffixes with prepositions: معه / معهم / معكم / معي / معنا | grammar | 3d | 2026-11-10 |
+| Numbers 1–10 (typed: أربعة with أ, not ع) | vocab | 1d | 2026-11-08 |
+| Verb-first agreement: لن يذهب الأولاد vs الأولاد لن يذهبوا | grammar | 1d | 2026-11-08 |
+| New plurals أولاد، أقلام، مدن + كبير/مدينة | vocab | 1d | 2026-11-08 |

@@ -21,3 +21,6 @@
 | Non-human plural → feminine singular adjective (البيوت جديدة، ليست جديدة) | MC ✓ + typed البيوت ليست جديدة ✓ | 2026-11-07 | 2026-11-07 | 2 |
 | Pronoun suffixes with مع (معهم, معكم, معي, معنا) | round 5: MC معهم ✓, ليست معنا ✓; typed معكم ✓ (form), معي ✓ | 2026-11-07 | 2026-11-07 | 3 |
 | Broken plurals كتب، أسواق | round 5: MC ✓ ×2; typed الأسواق جديدة ✓ | 2026-11-07 | 2026-11-07 | 2 |
+| Numbers 1–10 (counting forms) | r7: MC ✓ ×3 (3, 5, order 7–10); typed عشرة ✓; أربعة ✗ (عربعة) | 2026-11-07 | 2026-11-07 | 2 |
+| Broken plural pattern أفعال (أولاد، أقلام، أسواق) / فُعُل (مدن، كتب) | r7: MC أولاد ✓ مدن ✓; typed الأقلام ✓ | 2026-11-07 | 2026-11-07 | 2 |
+| Verb-first sentence: verb stays SINGULAR (لن يذهب الأولاد) vs subject-first: plural (الأولاد لن يذهبوا) | r7 ✗: لن يذهبوا الأولاد (new point) | 2026-11-07 | 2026-11-07 | 0 |

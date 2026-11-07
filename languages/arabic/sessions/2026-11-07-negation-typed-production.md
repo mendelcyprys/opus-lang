@@ -49,3 +49,11 @@
 - ✓ MC 6/6, incl. the spelling items (أمس, نذهب, بيوتنا), إليه, ليست + non-human plural, لن … معك. ✓ typed: لم تكتب الرسالة, ذهب إليها, هل ذهبوا معكم (and typed أمس ✓).
 - ✗ typed letter slips again: *ذهتنا* → ذهبنا (ب→ت); *غذاً* → غداً (ذ for د); *كتبنا لست جديدة* → ليست (dropped ي; لست = 'I am not', so the form is wrong, not just spelling).
 - Pattern: MC spelling recognition 100%, typed production still drops/changes dotted letters. Suggest: reread each typed answer; maybe type slower or check the keyboard autocorrect.
+
+## Round 7 (same day, Artifact; relayed): page 8/12 → **9/12** (ما كتبت معه counted: valid Arabic, though the prompt asked for لم)
+- New: numbers 1–10 (Hebrew cognates), plurals أولاد / أقلام / مدن, كبير.
+- ✓ MC 6/6 (3, 5, 7–10 order, أولاد, مدن, المدن كبيرة); typed عشرة ✓, الأقلام ليست جديدة ✓.
+- ✗ عربعة → **أربعة** (ع for hamza-alif).
+- ✗ ذهبنا إلى السوق أمس for "to the city" → **إلى المدينة** (answered the previous round's sentence).
+- ✗ لن يذهبوا الأولاد → **لن يذهب الأولاد** / **الأولاد لن يذهبوا**: verb before a plural subject stays singular (new rule).
+- Next: verb-first agreement, numbers typed, new plurals.

@@ -16,3 +16,6 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 | Pronoun suffix: ك (you) for ه (him/them) | ما ذهبت معكم → **معهم** (with them) | vocabulary/agreement | 2026-11-07 | 2026-11-07 | 1 | active |
 | غدًا (tomorrow) typed as جداً (very) / أمس earlier | لن نقرأ الرسائل جداً → **غدًا** | vocabulary/spelling | 2026-11-07 | 2026-11-07 | 2 | active (غدًا wobbly in typed recall: 2 slips, 1 clean typed ×2) |
 | Dotted-letter slips when typing (ب/ت, أ/إ, ذ/د, dropped ي) | تيوتنا → بيوتنا; نذهت → نذهب; إمس → أمس; r6: ذهتنا → ذهبنا; غذاً → غداً; لست → ليست | spelling | 2026-11-07 | 2026-11-07 | 6 | active (rounds 5–6: every miss is a typed letter slip, MC spelling … fine, production under speed is the issue; grammar right; reread before Check) |
+| ع for initial أ (ʿayn vs hamza) | عربعة → **أربعة** | spelling | 2026-11-07 | 2026-11-07 | 1 | active |
+| Verb-first with plural subject: verb made plural | لن يذهبوا الأولاد → **لن يذهب الأولاد** (or الأولاد لن يذهبوا) | agreement | 2026-11-07 | 2026-11-07 | 1 | active |
+| Answer from memory of a previous round (ignored new word in prompt) | ذهبنا إلى السوق أمس for "…to the **city**" → المدينة | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |

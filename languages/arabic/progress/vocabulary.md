@@ -27,3 +27,9 @@ The first column is always the target-language term (used by scripts/export_anki
 | اِشْتَرَى / يَشْتَرِي | ishtarā / yashtarī | to buy | v., root ش-ر-ي, form VIII, defective (jussive يَشْتَرِ) | اِشْتَرَى كِتَابًا جَدِيدًا. — He bought a new book. | 2026-11-07 | 2026-11-07 | 1 |
 | لِأَنَّ | li-anna | because | conjunction (+ accusative noun) | لِأَنَّ الخُبْزَ لَيْسَ جَدِيدًا. — because the bread is not fresh/new. | 2026-11-07 | 2026-11-07 | 1 |
 | لَيْسَ | laysa | is not | negates nominal sentence; predicate accusative | البَيْتُ لَيْسَ جَدِيدًا. — The house is not new. | 2026-11-07 | 2026-11-07 | 1 |
+| وَاحِد … عَشَرَة (1–10) | wāḥid, ithnān, thalātha, arbaʿa, khamsa, sitta, sabʿa, thamāniya, tisʿa, ʿashara | numbers 1–10 | counting forms; Hebrew cognates (שלוש/ثلاثة, ארבע/أربعة, חמש/خمسة …) | ثَلَاثَةُ كُتُبٍ — three books | 2026-11-07 | 2026-11-07 | 2 |
+| أَرْبَعَة | arbaʿa | four | starts with أ (hamza), NOT ع; root ر-ب-ع | أَرْبَعَةُ أَقْلَامٍ — four pens | 2026-11-07 | 2026-11-07 | 1 |
+| وَلَد | walad | boy, child | m, pl. أَوْلَاد (أفعال) | الأَوْلَادُ فِي البَيْتِ. — The boys are at home. | 2026-11-07 | 2026-11-07 | 2 |
+| قَلَم | qalam | pen | m, pl. أَقْلَام (أفعال) | الأَقْلَامُ لَيْسَتْ جَدِيدَةً. — The pens are not new. | 2026-11-07 | 2026-11-07 | 2 |
+| مَدِينَة | madīna | city | f, pl. مُدُن (فُعُل) | المُدُنُ كَبِيرَةٌ. — The cities are big. | 2026-11-07 | 2026-11-07 | 1 |
+| كَبِير | kabīr | big | adj., root ك-ب-ر | المُدُنُ كَبِيرَةٌ. — The cities are big. | 2026-11-07 | 2026-11-07 | 2 |
