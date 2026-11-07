@@ -6,7 +6,7 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 |---|---|---|---|
 | Aspect in time clauses (kiedy + perfective future) | grammar | 7d | 2026-11-12 |
 | Imperfective compound future for ongoing future activity (będę się uczyć) | grammar | 7d | 2026-11-14 |
-| już nie vs jeszcze nie | vocab | 1d | 2026-11-08 |
+| już nie vs jeszcze nie | vocab | 3d | 2026-11-10 |
 | Spelling: zadzwonić (dzw), będę (ę) | vocab | 3d | 2026-11-10 |
 | Aspect pairs: brać→wziąć, mówić→powiedzieć, kupować→kupić, jeść→zjeść | vocab | 7d | 2026-11-14 |
 | przyjść (come) vs pójść (go); dojechać/dotrzeć vs dojść (on foot) | vocab | 7d | 2026-11-14 |
@@ -32,10 +32,11 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Typing: pójdą (ó), pójść forms | vocab/spelling | 7d | 2026-11-12 |
 | zamknięte drzwi (participle -ty as adjective) | vocab | 3d | 2026-11-08 |
 | Reported speech: że / czy / żeby + -m (żebym zadzwonił; żeby … nie + impf) | grammar | 14d | 2026-11-20 |
-| Passive: zostać + participle (została napisana) — B2 | grammar | 7d | 2026-11-13 |
+| Passive: zostać + participle (została napisana) — B2 | grammar | 14d | 2026-11-21 |
 | Indirect questions: gdzie/kiedy/co (no extra że/czy) | grammar | 7d | 2026-11-13 |
 | żeby + personal ending (żebym poczekał, NOT żeby poczekałem); żeby … nie + impf | grammar | 7d | 2026-11-14 |
 | Participles: passive -ny/-ty (kupiony, zamknięty), active -ący as adjective/relative (ludzie mieszkający), adverbial -ąc (czytając) | grammar | 7d | 2026-11-14 |
 | Spelling: codziennie, jeżdżę (ż + final ę) | vocab/spelling | 3d | 2026-11-09 |
-| Conditional main clause: bym/byś never first (więcej bym zwiedził / zwiedziłbym więcej); zwiedzić → zwiedził | grammar | 1d | 2026-11-08 |
+| Conditional main clause: bym/byś never first (więcej bym zwiedził / zwiedziłbym więcej); zwiedzić → zwiedził | grammar | 3d | 2026-11-10 |
 | Verbal nouns -anie/-enie (gotowanie, stanie → nie lubię stania) | grammar | 3d | 2026-11-10 |
+| poprosić (ask) vs zaprosić (invite); każdego ranka (gen.); przyjaciółka/przyjaciółkami (ó) | vocab | 1d | 2026-11-08 |

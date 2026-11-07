@@ -5,7 +5,7 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 
 | Language | Level | Current focus | Last session | Status |
 |---|---|---|---|---|
-| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | review round 2026-11-07 (10/12); next: bym position + już nie/jeszcze nie in conditional main clause, participles in production, verbal nouns | 2026-11-07 | active |
+| Polish | working at B1 (reading/writing); A2 passed 2026-11-04 (26/27) | two rounds 2026-11-07 (10/12; Artifact 9/12); bym + już nie now OK; next: vocab slips (poprosić/zaprosić), gen. of time phrases, participles in production in conditional main clause, participles in production, verbal nouns | 2026-11-07 | active |
 | Ukrainian | B1 (placement A2 4/4, B1 3/4) | instrumental, production | 2026-11-04 | active |
 | Hebrew | B1 (placement 8/8), probing B2 | B2: news-style reading, verbal nouns | 2026-11-04 | active |
 | Arabic | A1/A2 (MSA; placement 4/4) | negation system + ليس/ليست, ما + past, first broken plurals 2026-11-07 (4 rounds); next: more plurals, suffixes on prepositions, numbers 1–10 | 2026-11-07 | active |
