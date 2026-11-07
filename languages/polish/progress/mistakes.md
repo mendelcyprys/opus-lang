@@ -32,6 +32,8 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Preposition case government (C1) | wbrew *oczekiwań* → wbrew **oczekiwaniom** (dative) | case | 2026-11-07 | 2026-11-07 | 1 | active |
 | Transitive verb used without się | ceny *zwiększyły* → ceny **się zwiększyły** / **wzrosły** | vocabulary/grammar | 2026-11-07 | 2026-11-07 | 1 | improving (error-spot ✓, typed się zmniejszyła ✓ same day) |
 | Collocations (C1) | *kłaść* uwagę → **przykuwać** uwagę | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (MC uwaga/wpływ 3/3 ✓) |
-| „to note” verb: przypomnieć / zeznać for **zauważyć** | Warto *przypomnieć* / *zeznać* → Warto **zauważyć** | vocabulary | 2026-11-07 | 2026-11-07 | 2 | active |
-| wpływ na + accusative (not locative); past agreement fem. | wpływ *na moim życiu* → **na moje życie**; decyzja *miał* → **miała** | case/agreement | 2026-11-07 | 2026-11-07 | 1 | active |
-| liczba (countable) vs ilość (uncountable) | *Ilość turystów* → **Liczba turystów** | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |
+| „to note” verb: przypomnieć / zeznać for **zauważyć** | Warto *przypomnieć* / *zeznać* → Warto **zauważyć** | vocabulary | 2026-11-07 | 2026-11-07 | 2 | improving (typed ✓ round 3) |
+| wpływ na + accusative (not locative); past agreement fem. | wpływ *na moim życiu* → **na moje życie**; decyzja *miał* → **miała** | case/agreement | 2026-11-07 | 2026-11-07 | 1 | improving (typed ✓ next round) |
+| liczba (countable) vs ilość (uncountable) | *Ilość turystów* → **Liczba turystów** | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (MC + typed ✓) |
+| Collocation verb prefix in typed recall | *odciągnąć* wnioski → **wyciągnąć** wnioski | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |
+| s- vs z- prefix before voiceless consonant; pomoc dative | *zkończyliśmy* → **skończyliśmy**; *pomocu* → **pomocy** (fem.) | spelling/case | 2026-11-07 | 2026-11-07 | 1 | active |

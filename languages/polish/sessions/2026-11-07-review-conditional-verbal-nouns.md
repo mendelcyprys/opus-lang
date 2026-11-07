@@ -63,3 +63,8 @@
 - ~ *Ilość turystów się zmienszyła* → **Liczba turystów się zmniejszyła**: się ✓ (the target); spelling zmn**iej**szyła; liczba for countables (ilość for uncountables, colloquially tolerated).
 - ✗ *Warto zeznać* → **Warto zauważyć** (zeznać = testify in court). Second miss on this phrase.
 - ✗ *Ta decyzja miał duży wpływ na moim życiu* → **Ta decyzja miała duży wpływ na moje życie**: past agreement with fem. subject (miała); wpływ **na + accusative**, not locative.
+
+## C1 collocations round 2 (Artifact): **10/12**
+- ✓ all 6 MC: podjąć decyzję, wyciągnąć wnioski, odnieść sukces, ze względu na, w związku z, liczba vs ilość. Typed ✓: Warto zauważyć, że liczba studentów wzrosła (both earlier misses fixed); …wpływ na moje życie (acc. ✓); Podjęła trudną decyzję; Ze względu na złą pogodę….
+- ✗ *Dzięki twojej pomocu, zkończyliśmy* → **Dzięki twojej pomocy skończyliśmy**: pomoc is fem. (dat. pomocy, not -u); prefix s- before k (skończyć), not z-.
+- ✗ *odciągnąć wnioski* → **wyciągnąć** wnioski (MC ✓, typed recall slipped; odciągnąć = pull away/distract).

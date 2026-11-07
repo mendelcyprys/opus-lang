@@ -40,6 +40,8 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Passive: zostać + participle (została napisana) — B2 | grammar | 14d | 2026-11-21 |
 | Indirect questions: gdzie/kiedy/co (no extra że/czy) | grammar | 14d | 2026-11-21 |
 | Reported speech person shift (jestem → jest), żeby + other subject (żebyś zadzwonił), indirect dlaczego/kiedy | grammar | 7d | 2026-11-14 |
-| C1: warto ZAUWAŻYĆ (not zeznać/przypomnieć); wpływ na + acc. (na moje życie); liczba vs ilość; zmniejszyć się (spelling) | vocab/grammar | 1d | 2026-11-08 |
+| C1: warto ZAUWAŻYĆ; wpływ na + acc.; liczba vs ilość (all ✓ round 3); zmniejszyć się (spelling) | vocab/grammar | 3d | 2026-11-10 |
 | C1: wbrew + dat.; przykuwać / zwrócić uwagę; wywrzeć wpływ; zwiększyć się vs wzrosnąć | vocab/grammar | 3d | 2026-11-10 |
 | C1: gdybym był wiedział; wróciwszy; im… tym; mimo + gen. (no comma, no jego) | grammar | 3d | 2026-11-10 |
+| C1: wyciągnąć wnioski (typed! not odciągnąć); dzięki + dat. (pomocy); skończyć (s-, not z-) | vocab/grammar | 1d | 2026-11-08 |
+| C1: podjąć decyzję, odnieść sukces, ze względu na + acc., w związku z + instr. | vocab | 3d | 2026-11-10 |
