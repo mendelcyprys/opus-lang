@@ -19,3 +19,11 @@
 
 ## Next time
 - bym-position: more typed production + error-spotting; już nie / jeszcze nie in several contexts; participles in production; impf motion forms (chodzić/jeździć); formal B1 recheck ~mid-Dec.
+
+## Round 2 (same day, Polish Artifact, relayed from the page): page said 8/12 → **9/12 after my correction**
+- First round in the new Polish practice page (`tools/polish-practice.html`).
+- ✓ MC 6/6: error-spot *…, bym zwiedził* (bym-position now spotted ✓), *Nie, jeszcze nie wróciła*, reported speech *przyjedzie do mnie*, *chcę, żebyś mi pomógł*, *stojący*, *został zbudowany*.
+- ✓ typed: *Gdybym miał więcej czasu, zwiedziłbym…* ✓ (cold), *Nie jedz tego ciasta* ✓, and **Ona tutaj już nie mieszka** ✓ — valid (tutaj = tu); the page wrongly marked it wrong → alternatives added; counted correct. już nie / jeszcze nie typed now right.
+- ✗ *Zaprosiłem ją, żeby poczekała* → **Poprosiłem** ją, żeby poczekała (zaprosić = invite, prosić/poprosić = ask). Structure żeby + personal ending ✓.
+- ✗ *Każdego **ranku**, wychodzę…* → każdego **ranka** (gen. of ranek); also no comma after the time phrase. Habit impf wychodzę z domu ✓ typed for the first time.
+- ✗ *z czterema **przyjacielkami*** → **przyjaciółkami** (przyjaciółka: ó, not e). Numeral + instr. czterema ✓.

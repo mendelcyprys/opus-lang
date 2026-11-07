@@ -35,5 +35,6 @@
 | Participles: passive kupiony; active świecące, ludzie mieszkający (= którzy mieszkają); adverbial czytając (while reading) — B2 | MC 4/4 2026-11-06 (świecące, którzy, kupiony, czytając); 2026-11-07 czekający = którzy czekają ✓ | 2026-11-06 | 2026-11-07 | 2 |
 | Indirect questions with co / czy / dlaczego | MC ✓ co robię, czy lubię kawę; typed dlaczego nie przyszłam (item was garbled, form fine) | 2026-11-05 | 2026-11-06 | 3 |
 | Verbal nouns (-anie/-enie): gotowanie, nie lubię stania (gen. after negation/verb) — B2 | MC ✓ 2/2; 2026-11-07 stania ✓ | 2026-11-06 | 2026-11-07 | 3 |
-| Conditional gdybym miał…, + main clause | ✗ 2026-11-06: *bym więcej zwiedział* (bym can't open the clause; zwiedził) — protasis gdybym miał ✓. 2026-11-07: typed kupiłbym ✓ (cold) but error-spot of *…, bym pojechał* ✗ | 2026-11-04 | 2026-11-07 | 2 |
+| Conditional gdybym miał…, + main clause | 2026-11-07 round 2: error-spot ✓ (bym can't open the clause), typed zwiedziłbym ✓. Earlier: ✗ 2026-11-06: *bym więcej zwiedział* (bym can't open the clause; zwiedził) — protasis gdybym miał ✓. 2026-11-07: typed kupiłbym ✓ (cold) but error-spot of *…, bym pojechał* ✗ | 2026-11-04 | 2026-11-07 | 2 |
 
+| Numerals + instr. fem. (z czterema koleżankami) typed | czterema ✓ typed (round 2 2026-11-07); noun stem ✗ przyjacielkami → przyjaciółkami | 2026-11-05 | 2026-11-07 | 3 |
