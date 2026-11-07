@@ -15,3 +15,4 @@ Record here only what is specific to Ukrainian, or where it differs. Update when
 ## Preferences (only where different from learner.md)
 - Explanation language mix: English + simple Ukrainian; use Polish contrasts
 - Other notes:
+- **Practice page (2026-11-07):** `tools/ukrainian-practice.html` — clickable macOS Ukrainian keyboard + laptop keys mapped to Ukrainian (learner forgets non-Latin layouts on the laptop, cf. Hebrew). First round (instrumental of profession, false friends, vocative, -ся) loaded, not yet done.

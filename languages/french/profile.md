@@ -15,3 +15,4 @@ Record here only what is specific to French, or where it differs. Update wheneve
 ## Preferences (only where different from learner.md)
 - Explanation language mix: mostly English with French examples (beginner)
 - Other notes:
+- **Practice page (2026-11-07):** `tools/french-practice.html` — accent bar + Mac ⌥ shortcuts; accent slips flagged separately. First round (gender, aller/prendre/est-ce que, faire intro) loaded, not yet done.

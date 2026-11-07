@@ -1,0 +1,449 @@
+<title>Ukrainian Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* One exercise at a time; A-/A+ scales all text. Shared code with the French page — only the CONFIG block and colours differ. */
+:root{
+  --bg:#f4f5f2; --card:#ffffff; --fg:#1b2333; --muted:#5a6274; --line:#d7d9d2; --key:#eaece6;
+  --accent:#1f5ea8; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ui:'Source Sans 3',system-ui,sans-serif;
+  --tx:'Source Sans 3',system-ui,sans-serif;
+  --fs:1.9rem; /* set by the A-/A+ buttons; ALL text is sized from it */
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10141b; --card:#181d27; --fg:#e8eaee; --muted:#a3a9b6; --line:#2c3342; --key:#222938;
+  --accent:#7fb0ee; --accent-fg:#0a1628; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10141b; --card:#181d27; --fg:#e8eaee; --muted:#a3a9b6; --line:#2c3342; --key:#222938;
+  --accent:#7fb0ee; --accent-fg:#0a1628; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--fs)*.6);line-height:1.5;margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1em;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:18px}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:420px){.card{padding:14px}}
+.prompt{color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.prompt .tx{color:var(--fg)}
+.prompt .gap{height:.6em}
+.tx{font-family:var(--tx);font-size:var(--fs);line-height:1.5}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--tx);font-size:var(--fs);line-height:1.35;text-align:left;padding:10px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt small{display:block;font-family:var(--ui);font-size:.5em;color:var(--muted);margin-top:2px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--tx);font-size:var(--fs);width:100%;padding:8px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.5}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+.hintline{color:var(--muted);font-size:.85em;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.hintline label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.built{min-height:calc(var(--fs)*1.9);border:2px dashed var(--line);border-radius:8px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pool{display:flex;flex-wrap:wrap;gap:8px}
+.tile{font-family:var(--tx);font-size:var(--fs);line-height:1.3;padding:6px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer}
+.tile:hover{border-color:var(--accent)}
+.tile:disabled{opacity:.3;cursor:default}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible,.tile:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+/* on-screen keyboard (physical key order) and accent bar */
+.kb{display:flex;flex-direction:column;gap:6px;user-select:none;-webkit-user-select:none}
+.kb[hidden],.accents[hidden]{display:none}
+.kb .row{display:flex;gap:4px;justify-content:center}
+.kb button.k,.accents button{min-width:0;padding:0;position:relative;background:var(--key);color:var(--fg);border:1px solid var(--line);border-radius:6px;
+  font:400 clamp(17px,calc(var(--fs)*.72),28px)/1 var(--tx)}
+.kb button.k{flex:1 1 0;max-width:56px;height:clamp(44px,calc(var(--fs)*1.45),62px)}
+.kb button.k:hover,.accents button:hover{border-color:var(--accent)}
+.kb button.k:active,.kb button.k.flash,.accents button:active{background:var(--accent);color:var(--accent-fg)}
+.kb button.k sub{position:absolute;left:3px;bottom:3px;font:600 10px/1 var(--ui);color:var(--muted)}
+.kb.nolatin button.k sub{display:none}
+.kb button.wide{flex:6 1 0;max-width:none;font:600 15px/1 var(--ui)}
+.kb button.mid{flex:1.5 1 0;max-width:none}
+.accents{display:flex;flex-wrap:wrap;gap:6px}
+.accents button{width:clamp(44px,calc(var(--fs)*1.4),58px);height:clamp(44px,calc(var(--fs)*1.4),58px)}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .tx{font-size:calc(var(--fs)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6em}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .tx{font-size:calc(var(--fs)*.9)}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .tx{font-size:calc(var(--fs)*.8)}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;font-family:var(--ui);font-size:1em;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1 id="h1"></h1>
+    <div class="sizer" role="group" aria-label="Text size">
+      <button class="ghost" id="smaller" aria-label="Smaller text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card"></main>
+</div>
+
+<script>
+/* ===================== EXERCISES (generated from round.json by scripts/build_round.py) =====================
+   mc:    opts[a] is the right option in the source; shuffled at runtime. "text\ngloss" puts a small gloss under an option.
+   build: words = correct order (shuffled into tiles); accepted = joined words (+ optional alt:[...]).
+   type:  a = accepted answers (case, punctuation and stress marks ignored; CONFIG.loose decides what counts as a spelling slip). */
+const ITEMS = [
+  {"t": "mc", "p": "My brother works as a programmer.\nМій брат працює ___.", "opts": ["програмістом", "як програміста", "як програміст", "програміста"], "a": 0, "why": "працювати ким? → instrumental, no як: працює програмістом (Polish: pracuje jako programista — don't copy the jako).", "tag": "instr. profession"},
+  {"t": "mc", "p": "She wants to become a teacher.\nВона хоче стати ___.", "opts": ["вчителькою", "вчителька", "як вчителька", "вчительку"], "a": 0, "why": "стати / бути / працювати + instrumental: стати вчителькою, бути лікарем.", "tag": "instr. after стати"},
+  {"t": "mc", "p": "You need bread. Where do you go?\nЯ йду в ___.", "opts": ["магазин", "склеп", "завод", "диван"], "a": 0, "why": "магазин = shop. склеп = crypt (Polish sklep!), завод = factory (≠ zawód), диван = sofa (≠ dywan).", "tag": "false friends: магазин"},
+  {"t": "mc", "p": "Which word means \"fruit\"?", "opts": ["фрукти", "овочі", "ягоди", "горіхи"], "a": 0, "why": "фрукти = fruit. овочі = vegetables (≠ Polish owoce), ягоди = berries, горіхи = nuts.", "tag": "false friends: овочі"},
+  {"t": "mc", "p": "NEW: the vocative (кличний відмінок) is used whenever you call or address someone.\nFeminine -а → -о: Олена → Олено, Марія → Маріє.\n\nYou call your friend Olena:", "opts": ["Олено, ходи сюди!", "Олена, ходи сюди!", "Олену, ходи сюди!", "Оленою, ходи сюди!"], "a": 0, "why": "Vocative of Олена = Олено (like Polish Pani Anno!). Masculine: Петро → Петре, пан → пане: пане Петре!", "tag": "vocative -о"},
+  {"t": "mc", "p": "Polish: Spotkaliśmy się wczoraj.\n\"We met yesterday.\"", "opts": ["Ми зустрілися вчора.", "Ми ся зустріли вчора.", "Ми зустріли ся вчора.", "Ми зустріли себе вчора."], "a": 0, "why": "-ся is glued to the end of the verb (зустрілися / зустрілись), never a separate word like Polish się.", "tag": "-ся attached"},
+  {"t": "build", "p": "Tap the words in order:\nI worked as a cook in Lviv.", "words": ["Я", "працював", "кухарем", "у", "Львові"], "alt": ["У Львові я працював кухарем", "Я працював у Львові кухарем"], "tag": "build instr. кухарем"},
+  {"t": "build", "p": "Tap the words in order:\nMy sister wants to be a doctor.", "words": ["Моя", "сестра", "хоче", "бути", "лікаркою"], "tag": "build instr. лікаркою"},
+  {"t": "build", "p": "Tap the words in order:\nOlena, are you going to the shop?", "words": ["Олено", "ти", "йдеш", "у", "магазин"], "alt": ["ти йдеш у магазин Олено"], "tag": "build vocative + магазин"},
+  {"t": "type", "p": "Type in Ukrainian:\nHe works as a programmer.", "a": ["Він працює програмістом"], "tag": "typed програмістом"},
+  {"t": "type", "p": "Type in Ukrainian:\nI bought vegetables and fruit at the market.", "a": ["Я купив овочі та фрукти на ринку", "Я купив овочі і фрукти на ринку", "Я купив овочі й фрукти на ринку", "На ринку я купив овочі та фрукти", "На ринку я купив овочі і фрукти", "На ринку я купив овочі й фрукти", "Я купив на ринку овочі та фрукти", "Я купив на ринку овочі і фрукти"], "tag": "typed овочі / фрукти"},
+  {"t": "type", "p": "Type in Ukrainian:\nWe met at the station.  (station = вокза́л)", "a": ["Ми зустрілися на вокзалі", "Ми зустрілись на вокзалі", "Ми зустрілися на станції", "Ми зустрілись на станції", "Ми познайомилися на вокзалі", "Ми познайомились на вокзалі"], "tag": "typed зустрілися"},
+];
+// shown after checking, keyed by index in ITEMS (generated by scripts/build_round.py from round.json)
+const MODEL = {6:"Я працював кухарем у Львові. (ку́хар = cook)",7:"Моя сестра хоче бути лікаркою.",8:"Олено, ти йдеш у магазин?",9:"Він працює програмістом.",10:"Я купив овочі та фрукти на ринку.",11:"Ми зустрілися на вокзалі."};
+
+/* ===================== CONFIG:BEGIN (the only language-specific part) ===================== */
+const APOS = /['’‘ʼ`]/g;
+const LOOKALIKE = {a:'а',c:'с',e:'е',i:'і',o:'о',p:'р',x:'х',y:'у',k:'к',m:'м',t:'т',h:'н',b:'в'};
+const CONFIG = {
+  lang: 'uk', name: 'Ukrainian', heading: 'Ukrainian Practice · B1', store: 'uk',
+  // macOS "Ukrainian" (= the PC / Windows layout; macOS ≤ 12 called it "Ukrainian – PC"): [code, key label, char, shift char]
+  keyboard: {
+    label: 'Ukrainian keyboard (macOS “Ukrainian” layout)',
+    mapLabel: 'Laptop keys → Ukrainian (Mac layout)',
+    rows: [
+      [['KeyQ','q','й'],['KeyW','w','ц'],['KeyE','e','у'],['KeyR','r','к'],['KeyT','t','е'],['KeyY','y','н'],['KeyU','u','г'],['KeyI','i','ш'],['KeyO','o','щ'],['KeyP','p','з'],['BracketLeft','[','х'],['BracketRight',']','ї'],['Backslash','\\','ʼ',null]],
+      [['KeyA','a','ф'],['KeyS','s','і'],['KeyD','d','в'],['KeyF','f','а'],['KeyG','g','п'],['KeyH','h','р'],['KeyJ','j','о'],['KeyK','k','л'],['KeyL','l','д'],['Semicolon',';','ж'],['Quote',"'",'є']],
+      [['Backquote','`','ґ'],['KeyZ','z','я'],['KeyX','x','ч'],['KeyC','c','с'],['KeyV','v','м'],['KeyB','b','и'],['KeyN','n','т'],['KeyM','m','ь'],['Comma',',','б'],['Period','.','ю'],['Slash','/','.',',']],
+    ],
+    alias: {IntlBackslash:'Backquote'},          // ISO Mac keyboards: ґ sits between left Shift and Z
+    bottom: [[',',','],['space',' ','wide','Space'],['?','?'],['⌫',null,'mid','Backspace']],
+    native: /[Ѐ-ӿʼ]/,             // the computer is already in a Cyrillic layout → leave its input alone
+  },
+  script: /[\u0400-\u04FF]/,                              // prompt lines in this script are shown large ('> ' marks one by hand)
+  accents: null,
+  hint: 'ґ = ` key (ISO: left of Z) · apostrophe ʼ = \\ key · full stop = / (Shift: comma) · stress marks are ignored',
+  strict: s => s.normalize('NFD').replace(/́/g,'').normalize('NFC').toLowerCase().replace(APOS,'ʼ')
+                .replace(/[.,;:!?«»"“”„()\-–—]+/g,' ').replace(/\s+/g,' ').trim(),
+  loose: s => CONFIG.strict(s).replace(/[a-z]/g, c => LOOKALIKE[c] || c).replace(/ʼ/g,'')
+                .replace(/[їиы]/g,'і').replace(/[єэё]/g,'е').replace(/ґ/g,'г').replace(/ъ/g,''),
+  nearTitle: 'Right words, spelling slip',
+  nearNote: 'Check і / и / ї, е / є, г / ґ and the apostrophe (пʼять, мʼясо). Ukrainian has no ы э ё ъ.',
+  learner: 'The learner is an English speaker (male, use masculine forms for him), Ukrainian at B1, with stronger Polish (B1) — use Polish contrasts. He reads Cyrillic fluently, studies for hobby/culture. ' +
+    'Teaching style: correct every mistake briefly with the reason, in English with simple Ukrainian; mark stress (acute) only on new words; no long essays; never ask for free creative writing, only concrete sentences to translate. ' +
+    'Known weak spots: profession after працювати/бути/стати takes the instrumental without як (працює програмістом, not як програміста — Polish "jako" interference); Polish false friends (магазин vs склеп, овочі vs owoce); -ся is attached to the verb. ',
+};
+/* ===================== CONFIG:END ===================== */
+
+const strict = CONFIG.strict, loose = CONFIG.loose;
+const mainOf = x => x.split('\n')[0];
+const $ = id => document.getElementById(id);
+document.documentElement.lang = CONFIG.lang;
+$('h1').textContent = CONFIG.heading;
+const save = (k,v) => { try{ localStorage.setItem(CONFIG.store+k,v) }catch(e){} };
+const load = (k,d) => { try{ const v = localStorage.getItem(CONFIG.store+k); return v===null ? d : v }catch(e){ return d } };
+
+/* ===================== keyboard / accent bar ===================== */
+const KB = CONFIG.keyboard;
+const KEYMAP = {};
+if(KB){ KB.rows.flat().forEach(([code,,ch,sh]) => KEYMAP[code] = {ch, sh: sh===undefined ? ch.toUpperCase() : sh});
+        Object.entries(KB.alias||{}).forEach(([a,b]) => KEYMAP[a] = KEYMAP[b]) }
+let kbOpen = load('KbOpen', matchMedia('(pointer:fine)').matches ? '1' : '0') === '1';
+let kbLatin = load('KbLatin','1') === '1';
+let mapKeys = load('MapKeys','1') === '1';
+
+function insertAt(inp, text){
+  const s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  inp.value = inp.value.slice(0,s) + text + inp.value.slice(e);
+  const p = s + text.length; inp.setSelectionRange(p,p);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function backspace(inp){
+  let s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  if(s===e){ if(!s) return; s--; }
+  inp.value = inp.value.slice(0,s) + inp.value.slice(e); inp.setSelectionRange(s,s);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function flash(code){
+  const real = (KB && KB.alias && KB.alias[code]) || code;
+  const b = document.querySelector('.kb [data-code="'+real+'"]'); if(!b) return;
+  b.classList.add('flash'); setTimeout(()=>b.classList.remove('flash'),120);
+}
+function keyBtn(inp, cls, label, sub, act, code){
+  const b = el('button', cls); b.type='button'; b.tabIndex=-1; if(code) b.dataset.code=code;
+  b.append(label); if(sub){ const s=document.createElement('sub'); s.textContent=sub; b.appendChild(s) }
+  b.addEventListener('pointerdown', e => e.preventDefault());          // keep focus (and caret) in the input
+  b.addEventListener('click', () => { if(!inp.readOnly){ act(); if(matchMedia('(pointer:fine)').matches) inp.focus() } });
+  return b;
+}
+function buildKeyboard(inp){
+  const kb = el('div','kb'+(kbLatin?'':' nolatin')); kb.id='kb'; kb.hidden=!kbOpen; kb.lang=CONFIG.lang; kb.setAttribute('aria-label',KB.label);
+  KB.rows.forEach(r => {
+    const row = el('div','row');
+    r.forEach(([code,lat,ch]) => row.appendChild(keyBtn(inp,'k', ch, lat, ()=>insertAt(inp,ch), code)));
+    kb.appendChild(row);
+  });
+  const last = el('div','row');
+  KB.bottom.forEach(([label,ins,cls,code]) => last.appendChild(keyBtn(inp,'k '+(cls||'mid'), label, '', ins===null ? ()=>backspace(inp) : ()=>insertAt(inp,ins), code)));
+  kb.appendChild(last);
+  return kb;
+}
+function buildAccents(inp){
+  const bar = el('div','accents'); bar.lang=CONFIG.lang; bar.setAttribute('aria-label','Accented letters');
+  CONFIG.accents.forEach(ch => bar.appendChild(keyBtn(inp,'', ch, '', ()=>insertAt(inp,ch))));
+  return bar;
+}
+
+/* ===================== Claude (feedback) and comments (relay) ===================== */
+let SAMPLE = null, COMMENTS = null;
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking…';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short – ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){ const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b; }
+
+/* ===================== quiz flow ===================== */
+let order, cur, results, picked, answered, tiles;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function el(tag, cls, text){ const e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e }
+function tx(tag, text){ const e = el(tag,'tx',text); e.lang=CONFIG.lang; return e }
+function promptBox(p){
+  const box = el('div','prompt');
+  p.split('\n').forEach(line => {
+    if(!line.trim()) return box.appendChild(el('div','gap'));
+    if(line.startsWith('> ')) return box.appendChild(tx('div', line.slice(2)));        // marked target-language line
+    box.appendChild(CONFIG.script && CONFIG.script.test(line) ? tx('div', line) : el('div',null,line));
+  });
+  return box;
+}
+
+function start(){
+  results = []; cur = 0;
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc') return {...it, idx, shown: shuffle(it.opts.map((x,i)=>({x, ok:i===it.a})))};
+    if(it.t==='build') return {...it, idx, a: [it.words.join(' ')].concat(it.alt||[])};
+    return {...it, idx};
+  });
+  render();
+}
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Exercise '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length) return summary();
+  const it = order[cur]; picked = null; answered = false; tiles = [];
+  st.innerHTML = '';
+  st.appendChild(promptBox(it.p));
+  if(it.t==='mc'){
+    const box = el('div','opts');
+    it.shown.forEach((o,i)=>{
+      const [k, gl] = o.x.split('\n');
+      const b = el('button','opt'); b.type='button'; b.lang=CONFIG.lang; b.append(k);
+      if(gl) b.appendChild(el('small',null,gl));
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else if(it.t==='build'){
+    const built = el('div','built'); built.id='built'; built.lang=CONFIG.lang;
+    const pool = el('div','pool'); pool.id='pool'; pool.lang=CONFIG.lang;
+    shuffle(it.words.map((w,i)=>({w,i}))).forEach(o=>{
+      const b = el('button','tile',o.w); b.type='button';
+      b.addEventListener('click',()=>{
+        if(answered) return;
+        if(b.parentNode===pool){ built.appendChild(b); tiles.push(o.i) } else { pool.appendChild(b); tiles.splice(tiles.indexOf(o.i),1) }
+        $('check').disabled = tiles.length===0;
+      });
+      pool.appendChild(b);
+    });
+    st.append(built, pool, el('div','hintline','Tap a word to move it up; tap it again to take it back.'));
+  } else {
+    const inp = document.createElement('input'); inp.type='text'; inp.id='ans'; inp.className='ans'; inp.lang=CONFIG.lang;
+    inp.autocomplete='off'; inp.autocapitalize='off'; inp.spellcheck=false; inp.setAttribute('aria-label','Your answer in '+CONFIG.name);
+    inp.addEventListener('input', () => { $('check').disabled = !inp.value.trim() });
+    inp.addEventListener('keydown', e=>{
+      if(e.key==='Enter'){ e.preventDefault(); if(!answered&&!$('check').disabled) check(); else if(answered) next(); return }
+      if(!KB || inp.readOnly || e.isComposing || e.ctrlKey || e.metaKey || e.altKey) return;
+      if(e.code==='Backspace' || e.code==='Space'){ flash(e.code); return }
+      // Map physical keys to the layout, so it works with the computer still set to English.
+      // Phone keyboards send no key code, so they are never touched.
+      const k = KEYMAP[e.code];
+      if(!k) return;
+      flash(e.code);
+      if(!mapKeys || KB.native.test(e.key)) return;
+      const latin = /^[a-z]$/i.test(e.key);               // letter keys: follow the case the OS produced (Shift or Caps Lock)
+      const ch = (latin ? e.key !== e.key.toLowerCase() : e.shiftKey) ? k.sh : k.ch;
+      if(ch==null) return;
+      e.preventDefault(); insertAt(inp, ch);
+    });
+    st.appendChild(inp);
+    const hint = el('div','hintline');
+    const tog = (id, label, val, on) => { const lab = el('label'); const cb = document.createElement('input'); cb.type='checkbox'; cb.id=id; cb.checked=val; cb.addEventListener('change',()=>on(cb.checked)); lab.append(cb,' '+label); return lab };
+    if(KB){
+      const kb = buildKeyboard(inp);
+      st.appendChild(kb);
+      hint.append(
+        tog('kbopen','Show keyboard', kbOpen, v=>{ kbOpen=v; save('KbOpen',v?'1':'0'); kb.hidden=!v }),
+        tog('kblat','Latin key labels', kbLatin, v=>{ kbLatin=v; save('KbLatin',v?'1':'0'); kb.classList.toggle('nolatin',!v) }),
+        tog('mapkeys', KB.mapLabel, mapKeys, v=>{ mapKeys=v; save('MapKeys',v?'1':'0') }));
+    }
+    if(CONFIG.accents) st.appendChild(buildAccents(inp));
+    if(CONFIG.hint) hint.appendChild(el('span',null,CONFIG.hint));
+    st.appendChild(hint);
+  }
+  st.appendChild(Object.assign(el('div'),{id:'fb'})); $('fb').setAttribute('role','status');
+  const act = el('div','actions');
+  const c = el('button',null,'Check'); c.id='check'; c.type='button'; c.disabled=true; c.addEventListener('click',check);
+  const n = el('button',null,cur===order.length-1?'Finish':'Next'); n.id='next'; n.type='button'; n.hidden=true; n.addEventListener('click',next);
+  const sk = el('button','ghost','Skip'); sk.id='skip'; sk.type='button'; sk.addEventListener('click',()=>{ if(!answered) finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk); st.appendChild(act);
+  if(it.t==='type' && matchMedia('(pointer:fine)').matches) setTimeout(()=>{ const i=$('ans'); if(i) i.focus() },50);
+}
+
+function check(){
+  const it = order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok, kind: ok?'ok':'wrong', given: mainOf(it.shown[picked].x)});
+  } else {
+    const g = it.t==='build' ? tiles.map(i=>it.words[i]).join(' ') : $('ans').value;
+    let kind = 'wrong';
+    if(it.a.some(a=>strict(a)===strict(g))) kind = 'ok';
+    else if(it.a.some(a=>loose(a)===loose(g))) kind = 'near';
+    finish({ok: kind==='ok', kind, given: g});
+  }
+}
+
+function finish(r){
+  answered = true;
+  const it = order[cur];
+  r.tag = it.tag; r.q = it.p.split('\n').filter(l=>l.trim()).slice(-2).join(' / ');
+  r.correct = it.t==='mc' ? mainOf(it.opts[it.a]) : (MODEL[it.idx] || (it.t==='build' ? it.words.join(' ') : it.a[0]));
+  results.push(r);
+  const fb = $('fb'); fb.className = 'fb ' + (r.kind==='ok'?'ok': r.kind==='near'?'near':'no'); fb.innerHTML='';
+  fb.appendChild(el('strong',null, r.kind==='ok'?'Correct': r.kind==='near'?CONFIG.nearTitle: r.kind==='skip'?'Skipped':'Not quite'));
+  if(r.kind!=='ok' || it.t!=='mc') fb.appendChild(tx('div', r.correct));
+  if(r.kind==='near') fb.appendChild(el('div','note',CONFIG.nearNote));
+  if(it.why) fb.appendChild(el('div','note',it.why));
+  if(SAMPLE && r.kind!=='ok'){
+    const b = claudeBtn('Ask Claude why'), box = el('div','claude-box');
+    b.addEventListener('click',()=>askClaude(CONFIG.learner+'Explain this one mistake in at most 5 short lines, then give ONE similar short English sentence to translate into '+CONFIG.name+' (no answer given).\n\nExercise: '+it.p+'\nCorrect answer: '+r.correct+'\nLearner '+(r.kind==='skip'?'skipped it':'wrote: '+r.given)+'\nTopic: '+it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
+  if(it.t==='mc') document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok) b.classList.add('right'); else if(i===picked) b.classList.add('wrong'); b.disabled=true });
+  else if(it.t==='build') document.querySelectorAll('.tile').forEach(b=>b.disabled=true);
+  else $('ans').readOnly = true;
+  $('check').hidden = true; $('skip').hidden = true; $('next').hidden = false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+function next(){ cur++; render() }
+
+function summary(){
+  const st = $('stage'); st.innerHTML='';
+  const ok = results.filter(r=>r.ok).length, tot = results.length;
+  const sum = el('div','sum'); sum.appendChild(el('h2',null,ok+' / '+tot)); st.appendChild(sum);
+  const bad = results.filter(r=>!r.ok);
+  if(!bad.length) st.appendChild(el('p',null,'Clean round.'));
+  bad.forEach(r=>{
+    const d = el('div','miss'); d.appendChild(el('small',null,r.q+'  ['+r.tag+']'));
+    d.appendChild(tx('div', r.correct));
+    if(r.given){ const g = el('small',null,'You wrote: '); g.appendChild(tx('span', r.given)); d.appendChild(g) }
+    st.appendChild(d);
+  });
+  const lines = [CONFIG.name+' practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  st.appendChild(el('div','prompt','Paste this into the chat if sending fails:'));
+  const pre = el('pre'); pre.id='copytext'; pre.textContent = lines.join('\n'); st.appendChild(pre);
+  const act = el('div','actions');
+  const cp = el('button',null,'Copy results'); cp.type='button';
+  cp.addEventListener('click',()=>{
+    const done = ()=>{ cp.textContent='Copied' };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent='Selected – press copy' };
+    try{ navigator.clipboard.writeText(pre.textContent).then(done,fallback) }catch(e){ fallback() }
+  });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send = el('button',null,'Send results to Claude'); send.type='button';
+    const status = el('div','status');
+    send.addEventListener('click', async () => {
+      send.disabled = true; status.textContent = 'Sending…';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent = 'Sent. Claude will grade the round in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled = false;
+      }
+    });
+    act.append(send); sendStatus = status;
+  }
+  const again = el('button','ghost','New round'); again.type='button'; again.addEventListener('click',start);
+  act.append(cp, again); st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'), fbBox = el('div','claude-box');
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click',()=>askClaude(CONFIG.learner+'Here are the results of a '+tot+'-exercise round ('+ok+'/'+tot+'). Give feedback compactly: (1) one line on what went well; (2) for each mistake what was wrong and why, with the corrected sentence; (3) the one or two patterns to focus on next; (4) three short English sentences to translate into '+CONFIG.name+' as follow-up practice (do not give the answers).\n\nResults:\n'+lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
+  updateTop();
+}
+
+/* text size (remembered per device when storage works) */
+const SIZES=[1.5,1.9,2.3,2.7,3.2,3.8,4.4]; // rem for --fs; body text = 60% of it
+let si = parseInt(load('Size','1')); if(!(si>=0 && si<SIZES.length)) si = 1;
+function applySize(){ document.documentElement.style.setProperty('--fs',SIZES[si]+'rem'); save('Size',si);
+  $('smaller').disabled = si===0; $('bigger').disabled = si===SIZES.length-1 }
+$('smaller').addEventListener('click',()=>{ if(si>0){ si--; applySize() } });
+$('bigger').addEventListener('click',()=>{ if(si<SIZES.length-1){ si++; applySize() } });
+applySize();
+start();
+</script>

@@ -8,7 +8,7 @@ offers the languages with the most reviews due.
 - `learner.md` – who I am & preferences shared by all languages · `languages.md` – level & focus per language
 - `languages/<lang>/` – everything for one language: `LANGUAGE.md` (teaching notes), `profile.md`, `plan.md`,
   `progress/` (vocabulary, grammar, mistakes, review queue; `review-later.md` + `archive/` hold far-off and finished items),
-  `sessions/`, `exports/anki.csv`, and `tools/` (practice page + `round.json`; Polish, Arabic, Japanese, Hebrew so far)
+  `sessions/`, `exports/anki.csv`, and `tools/` (practice page + `round.json`; all active languages: Polish, Ukrainian, Hebrew, Arabic, French, Japanese)
 - `scripts/status.py` – reviews due per language · `scripts/export_anki.py <lang>|--all` – Anki export
 - `scripts/tidy.py <lang>|--all` – keeps the start-of-session files small (archives, never deletes)
 - `scripts/build_round.py <lang>` – `tools/round.json` → the exercises in that language's practice page

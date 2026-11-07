@@ -1,0 +1,434 @@
+<title>French Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* One exercise at a time; A-/A+ scales all text. Shared code with the French page — only the CONFIG block and colours differ. */
+:root{
+  --bg:#f4f5f2; --card:#ffffff; --fg:#1b2333; --muted:#5a6274; --line:#d7d9d2; --key:#eaece6;
+  --accent:#a3243b; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ui:'Source Sans 3',system-ui,sans-serif;
+  --tx:'Source Sans 3',system-ui,sans-serif;
+  --fs:1.9rem; /* set by the A-/A+ buttons; ALL text is sized from it */
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10141b; --card:#181d27; --fg:#e8eaee; --muted:#a3a9b6; --line:#2c3342; --key:#222938;
+  --accent:#f2899b; --accent-fg:#2a0710; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10141b; --card:#181d27; --fg:#e8eaee; --muted:#a3a9b6; --line:#2c3342; --key:#222938;
+  --accent:#f2899b; --accent-fg:#2a0710; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--fs)*.6);line-height:1.5;margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1em;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:18px}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:420px){.card{padding:14px}}
+.prompt{color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.prompt .tx{color:var(--fg)}
+.prompt .gap{height:.6em}
+.tx{font-family:var(--tx);font-size:var(--fs);line-height:1.5}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--tx);font-size:var(--fs);line-height:1.35;text-align:left;padding:10px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt small{display:block;font-family:var(--ui);font-size:.5em;color:var(--muted);margin-top:2px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--tx);font-size:var(--fs);width:100%;padding:8px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.5}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+.hintline{color:var(--muted);font-size:.85em;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.hintline label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.built{min-height:calc(var(--fs)*1.9);border:2px dashed var(--line);border-radius:8px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pool{display:flex;flex-wrap:wrap;gap:8px}
+.tile{font-family:var(--tx);font-size:var(--fs);line-height:1.3;padding:6px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer}
+.tile:hover{border-color:var(--accent)}
+.tile:disabled{opacity:.3;cursor:default}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible,.tile:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+/* on-screen keyboard (physical key order) and accent bar */
+.kb{display:flex;flex-direction:column;gap:6px;user-select:none;-webkit-user-select:none}
+.kb[hidden],.accents[hidden]{display:none}
+.kb .row{display:flex;gap:4px;justify-content:center}
+.kb button.k,.accents button{min-width:0;padding:0;position:relative;background:var(--key);color:var(--fg);border:1px solid var(--line);border-radius:6px;
+  font:400 clamp(17px,calc(var(--fs)*.72),28px)/1 var(--tx)}
+.kb button.k{flex:1 1 0;max-width:56px;height:clamp(44px,calc(var(--fs)*1.45),62px)}
+.kb button.k:hover,.accents button:hover{border-color:var(--accent)}
+.kb button.k:active,.kb button.k.flash,.accents button:active{background:var(--accent);color:var(--accent-fg)}
+.kb button.k sub{position:absolute;left:3px;bottom:3px;font:600 10px/1 var(--ui);color:var(--muted)}
+.kb.nolatin button.k sub{display:none}
+.kb button.wide{flex:6 1 0;max-width:none;font:600 15px/1 var(--ui)}
+.kb button.mid{flex:1.5 1 0;max-width:none}
+.accents{display:flex;flex-wrap:wrap;gap:6px}
+.accents button{width:clamp(44px,calc(var(--fs)*1.4),58px);height:clamp(44px,calc(var(--fs)*1.4),58px)}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .tx{font-size:calc(var(--fs)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6em}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .tx{font-size:calc(var(--fs)*.9)}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .tx{font-size:calc(var(--fs)*.8)}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;font-family:var(--ui);font-size:1em;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1 id="h1"></h1>
+    <div class="sizer" role="group" aria-label="Text size">
+      <button class="ghost" id="smaller" aria-label="Smaller text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card"></main>
+</div>
+
+<script>
+/* ===================== EXERCISES (generated from round.json by scripts/build_round.py) =====================
+   mc:    opts[a] is the right option in the source; shuffled at runtime. "text\ngloss" puts a small gloss under an option.
+   build: words = correct order (shuffled into tiles); accepted = joined words (+ optional alt:[...]).
+   type:  a = accepted answers (case, punctuation and stress marks ignored; CONFIG.loose decides what counts as a spelling slip). */
+const ITEMS = [
+  {"t": "mc", "p": "Which sentence is WRONG?", "opts": ["J'ai la livre de Paul.", "Je prends le café.", "Elle va à la gare.", "Nous mangeons un croissant."], "a": 0, "why": "livre (book) is masculine: le livre. la livre = pound (weight / money).", "tag": "gender: le livre"},
+  {"t": "mc", "p": "> Tu ___ au restaurant ce soir ?\n(Are you going to the restaurant tonight?)", "opts": ["vas", "va", "vais", "allez"], "a": 0, "why": "aller: je vais, tu vas, il/elle va, nous allons, vous allez, ils/elles vont.", "tag": "aller tu vas"},
+  {"t": "mc", "p": "> Ils ___ le train le matin.\n(They take the train in the morning.)", "opts": ["prennent", "prenent", "prend", "prenons"], "a": 0, "why": "prendre: je prends, tu prends, il prend, nous prenons, vous prenez, ils prennent (double n).", "tag": "prendre ils prennent"},
+  {"t": "mc", "p": "\"Do you live in Paris?\"  (tu)", "opts": ["Est-ce que tu habites à Paris ?", "Est-ce que tu habite à Paris ?", "Est-ce tu habites à Paris ?", "Est-ce que habites tu à Paris ?"], "a": 0, "why": "Est-ce que + normal statement word order; tu habites (‑es ending for tu).", "tag": "est-ce que"},
+  {"t": "mc", "p": "NEW: faire = to do / to make.\nje fais, tu fais, il fait, nous faisons, vous faites, ils font\n\n> Vous ___ la cuisine ?  (Do you cook?)", "opts": ["faites", "faisez", "fait", "font"], "a": 0, "why": "vous faites is irregular — like vous êtes and vous dites. faire la cuisine = to cook.", "tag": "faire vous faites"},
+  {"t": "mc", "p": "NEW: faire\n> Ils ___ un gâteau.  (They are making a cake.)", "opts": ["font", "faisent", "fait", "faisons"], "a": 0, "why": "ils font — the same pattern as ils vont, ils sont, ils ont.", "tag": "faire ils font"},
+  {"t": "build", "p": "Tap the words in order:\nIn the morning, I have a coffee.", "words": ["Le", "matin", "je", "prends", "un", "café"], "alt": ["je prends un café le matin"], "tag": "build prendre un café"},
+  {"t": "build", "p": "Tap the words in order:\nMy name is Erik and I live in London.", "words": ["Je", "m'appelle", "Erik", "et", "j'habite", "à", "Londres"], "tag": "build m'appelle / j'habite"},
+  {"t": "build", "p": "Tap the words in order:\nAre you going to the station? (vous)", "words": ["Est-ce", "que", "vous", "allez", "à", "la", "gare"], "tag": "build est-ce que + aller"},
+  {"t": "type", "p": "Type in French:\nI am going to the restaurant.", "a": ["Je vais au restaurant"], "tag": "typed je vais au"},
+  {"t": "type", "p": "Type in French:\nWe are having (taking) a croissant.", "a": ["Nous prenons un croissant", "On prend un croissant"], "tag": "typed nous prenons"},
+  {"t": "type", "p": "Type in French:\nShe is French.", "a": ["Elle est française"], "tag": "typed française (ç)"},
+];
+// shown after checking, keyed by index in ITEMS (generated by scripts/build_round.py from round.json)
+const MODEL = {6:"Le matin, je prends un café.",7:"Je m'appelle Erik et j'habite à Londres.",8:"Est-ce que vous allez à la gare ?",9:"Je vais au restaurant.  (à + le = au)",10:"Nous prenons un croissant.",11:"Elle est française."};
+
+/* ===================== CONFIG:BEGIN (the only language-specific part) ===================== */
+const CONFIG = {
+  lang: 'fr', name: 'French', heading: 'French Practice · A1', store: 'fr',
+  keyboard: null,                                 // Latin script: an accent bar is enough
+  script: null,                              // prompt lines in this script are shown large ('> ' marks one by hand)
+  accents: ['é','è','ê','ë','à','â','ç','î','ï','ô','û','ù','œ'],
+  hint: 'Mac: ⌥e then e = é · ⌥` then a/e/u = à è ù · ⌥i then vowel = â ê î ô û · ⌥u then vowel = ë ï · ⌥c = ç · ⌥q = œ · phone: long-press the letter',
+  strict: s => s.normalize('NFC').toLowerCase().replace(/œ/g,'oe').replace(/æ/g,'ae')
+                .replace(/[.,;:!?«»"“”„'’‘()\-–—]+/g,' ').replace(/\s+/g,' ').trim(),
+  loose: s => CONFIG.strict(s).normalize('NFD').replace(/[̀-ͯ]/g,''),
+  nearTitle: 'Right words, accent slip',
+  nearNote: 'Check the accents: é è ê à ç … (a missing or wrong accent is a spelling mistake in French).',
+  learner: 'The learner is an English speaker (male, use masculine forms for him), an absolute beginner in French (A1; some app exposure), studying for hobby/culture. ' +
+    'Teaching style: correct every mistake briefly with the reason, mostly in English with short French examples; no long essays; never ask for free creative writing, only concrete sentences to translate. ' +
+    'Known weak spots: noun gender (le livre, not la livre = pound), spelling of vous, irregular present of aller / prendre / faire, accents. ',
+};
+/* ===================== CONFIG:END ===================== */
+
+const strict = CONFIG.strict, loose = CONFIG.loose;
+const mainOf = x => x.split('\n')[0];
+const $ = id => document.getElementById(id);
+document.documentElement.lang = CONFIG.lang;
+$('h1').textContent = CONFIG.heading;
+const save = (k,v) => { try{ localStorage.setItem(CONFIG.store+k,v) }catch(e){} };
+const load = (k,d) => { try{ const v = localStorage.getItem(CONFIG.store+k); return v===null ? d : v }catch(e){ return d } };
+
+/* ===================== keyboard / accent bar ===================== */
+const KB = CONFIG.keyboard;
+const KEYMAP = {};
+if(KB){ KB.rows.flat().forEach(([code,,ch,sh]) => KEYMAP[code] = {ch, sh: sh===undefined ? ch.toUpperCase() : sh});
+        Object.entries(KB.alias||{}).forEach(([a,b]) => KEYMAP[a] = KEYMAP[b]) }
+let kbOpen = load('KbOpen', matchMedia('(pointer:fine)').matches ? '1' : '0') === '1';
+let kbLatin = load('KbLatin','1') === '1';
+let mapKeys = load('MapKeys','1') === '1';
+
+function insertAt(inp, text){
+  const s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  inp.value = inp.value.slice(0,s) + text + inp.value.slice(e);
+  const p = s + text.length; inp.setSelectionRange(p,p);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function backspace(inp){
+  let s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  if(s===e){ if(!s) return; s--; }
+  inp.value = inp.value.slice(0,s) + inp.value.slice(e); inp.setSelectionRange(s,s);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function flash(code){
+  const real = (KB && KB.alias && KB.alias[code]) || code;
+  const b = document.querySelector('.kb [data-code="'+real+'"]'); if(!b) return;
+  b.classList.add('flash'); setTimeout(()=>b.classList.remove('flash'),120);
+}
+function keyBtn(inp, cls, label, sub, act, code){
+  const b = el('button', cls); b.type='button'; b.tabIndex=-1; if(code) b.dataset.code=code;
+  b.append(label); if(sub){ const s=document.createElement('sub'); s.textContent=sub; b.appendChild(s) }
+  b.addEventListener('pointerdown', e => e.preventDefault());          // keep focus (and caret) in the input
+  b.addEventListener('click', () => { if(!inp.readOnly){ act(); if(matchMedia('(pointer:fine)').matches) inp.focus() } });
+  return b;
+}
+function buildKeyboard(inp){
+  const kb = el('div','kb'+(kbLatin?'':' nolatin')); kb.id='kb'; kb.hidden=!kbOpen; kb.lang=CONFIG.lang; kb.setAttribute('aria-label',KB.label);
+  KB.rows.forEach(r => {
+    const row = el('div','row');
+    r.forEach(([code,lat,ch]) => row.appendChild(keyBtn(inp,'k', ch, lat, ()=>insertAt(inp,ch), code)));
+    kb.appendChild(row);
+  });
+  const last = el('div','row');
+  KB.bottom.forEach(([label,ins,cls,code]) => last.appendChild(keyBtn(inp,'k '+(cls||'mid'), label, '', ins===null ? ()=>backspace(inp) : ()=>insertAt(inp,ins), code)));
+  kb.appendChild(last);
+  return kb;
+}
+function buildAccents(inp){
+  const bar = el('div','accents'); bar.lang=CONFIG.lang; bar.setAttribute('aria-label','Accented letters');
+  CONFIG.accents.forEach(ch => bar.appendChild(keyBtn(inp,'', ch, '', ()=>insertAt(inp,ch))));
+  return bar;
+}
+
+/* ===================== Claude (feedback) and comments (relay) ===================== */
+let SAMPLE = null, COMMENTS = null;
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking…';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short – ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){ const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b; }
+
+/* ===================== quiz flow ===================== */
+let order, cur, results, picked, answered, tiles;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function el(tag, cls, text){ const e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e }
+function tx(tag, text){ const e = el(tag,'tx',text); e.lang=CONFIG.lang; return e }
+function promptBox(p){
+  const box = el('div','prompt');
+  p.split('\n').forEach(line => {
+    if(!line.trim()) return box.appendChild(el('div','gap'));
+    if(line.startsWith('> ')) return box.appendChild(tx('div', line.slice(2)));        // marked target-language line
+    box.appendChild(CONFIG.script && CONFIG.script.test(line) ? tx('div', line) : el('div',null,line));
+  });
+  return box;
+}
+
+function start(){
+  results = []; cur = 0;
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc') return {...it, idx, shown: shuffle(it.opts.map((x,i)=>({x, ok:i===it.a})))};
+    if(it.t==='build') return {...it, idx, a: [it.words.join(' ')].concat(it.alt||[])};
+    return {...it, idx};
+  });
+  render();
+}
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Exercise '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length) return summary();
+  const it = order[cur]; picked = null; answered = false; tiles = [];
+  st.innerHTML = '';
+  st.appendChild(promptBox(it.p));
+  if(it.t==='mc'){
+    const box = el('div','opts');
+    it.shown.forEach((o,i)=>{
+      const [k, gl] = o.x.split('\n');
+      const b = el('button','opt'); b.type='button'; b.lang=CONFIG.lang; b.append(k);
+      if(gl) b.appendChild(el('small',null,gl));
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else if(it.t==='build'){
+    const built = el('div','built'); built.id='built'; built.lang=CONFIG.lang;
+    const pool = el('div','pool'); pool.id='pool'; pool.lang=CONFIG.lang;
+    shuffle(it.words.map((w,i)=>({w,i}))).forEach(o=>{
+      const b = el('button','tile',o.w); b.type='button';
+      b.addEventListener('click',()=>{
+        if(answered) return;
+        if(b.parentNode===pool){ built.appendChild(b); tiles.push(o.i) } else { pool.appendChild(b); tiles.splice(tiles.indexOf(o.i),1) }
+        $('check').disabled = tiles.length===0;
+      });
+      pool.appendChild(b);
+    });
+    st.append(built, pool, el('div','hintline','Tap a word to move it up; tap it again to take it back.'));
+  } else {
+    const inp = document.createElement('input'); inp.type='text'; inp.id='ans'; inp.className='ans'; inp.lang=CONFIG.lang;
+    inp.autocomplete='off'; inp.autocapitalize='off'; inp.spellcheck=false; inp.setAttribute('aria-label','Your answer in '+CONFIG.name);
+    inp.addEventListener('input', () => { $('check').disabled = !inp.value.trim() });
+    inp.addEventListener('keydown', e=>{
+      if(e.key==='Enter'){ e.preventDefault(); if(!answered&&!$('check').disabled) check(); else if(answered) next(); return }
+      if(!KB || inp.readOnly || e.isComposing || e.ctrlKey || e.metaKey || e.altKey) return;
+      if(e.code==='Backspace' || e.code==='Space'){ flash(e.code); return }
+      // Map physical keys to the layout, so it works with the computer still set to English.
+      // Phone keyboards send no key code, so they are never touched.
+      const k = KEYMAP[e.code];
+      if(!k) return;
+      flash(e.code);
+      if(!mapKeys || KB.native.test(e.key)) return;
+      const latin = /^[a-z]$/i.test(e.key);               // letter keys: follow the case the OS produced (Shift or Caps Lock)
+      const ch = (latin ? e.key !== e.key.toLowerCase() : e.shiftKey) ? k.sh : k.ch;
+      if(ch==null) return;
+      e.preventDefault(); insertAt(inp, ch);
+    });
+    st.appendChild(inp);
+    const hint = el('div','hintline');
+    const tog = (id, label, val, on) => { const lab = el('label'); const cb = document.createElement('input'); cb.type='checkbox'; cb.id=id; cb.checked=val; cb.addEventListener('change',()=>on(cb.checked)); lab.append(cb,' '+label); return lab };
+    if(KB){
+      const kb = buildKeyboard(inp);
+      st.appendChild(kb);
+      hint.append(
+        tog('kbopen','Show keyboard', kbOpen, v=>{ kbOpen=v; save('KbOpen',v?'1':'0'); kb.hidden=!v }),
+        tog('kblat','Latin key labels', kbLatin, v=>{ kbLatin=v; save('KbLatin',v?'1':'0'); kb.classList.toggle('nolatin',!v) }),
+        tog('mapkeys', KB.mapLabel, mapKeys, v=>{ mapKeys=v; save('MapKeys',v?'1':'0') }));
+    }
+    if(CONFIG.accents) st.appendChild(buildAccents(inp));
+    if(CONFIG.hint) hint.appendChild(el('span',null,CONFIG.hint));
+    st.appendChild(hint);
+  }
+  st.appendChild(Object.assign(el('div'),{id:'fb'})); $('fb').setAttribute('role','status');
+  const act = el('div','actions');
+  const c = el('button',null,'Check'); c.id='check'; c.type='button'; c.disabled=true; c.addEventListener('click',check);
+  const n = el('button',null,cur===order.length-1?'Finish':'Next'); n.id='next'; n.type='button'; n.hidden=true; n.addEventListener('click',next);
+  const sk = el('button','ghost','Skip'); sk.id='skip'; sk.type='button'; sk.addEventListener('click',()=>{ if(!answered) finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk); st.appendChild(act);
+  if(it.t==='type' && matchMedia('(pointer:fine)').matches) setTimeout(()=>{ const i=$('ans'); if(i) i.focus() },50);
+}
+
+function check(){
+  const it = order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok, kind: ok?'ok':'wrong', given: mainOf(it.shown[picked].x)});
+  } else {
+    const g = it.t==='build' ? tiles.map(i=>it.words[i]).join(' ') : $('ans').value;
+    let kind = 'wrong';
+    if(it.a.some(a=>strict(a)===strict(g))) kind = 'ok';
+    else if(it.a.some(a=>loose(a)===loose(g))) kind = 'near';
+    finish({ok: kind==='ok', kind, given: g});
+  }
+}
+
+function finish(r){
+  answered = true;
+  const it = order[cur];
+  r.tag = it.tag; r.q = it.p.split('\n').filter(l=>l.trim()).slice(-2).join(' / ');
+  r.correct = it.t==='mc' ? mainOf(it.opts[it.a]) : (MODEL[it.idx] || (it.t==='build' ? it.words.join(' ') : it.a[0]));
+  results.push(r);
+  const fb = $('fb'); fb.className = 'fb ' + (r.kind==='ok'?'ok': r.kind==='near'?'near':'no'); fb.innerHTML='';
+  fb.appendChild(el('strong',null, r.kind==='ok'?'Correct': r.kind==='near'?CONFIG.nearTitle: r.kind==='skip'?'Skipped':'Not quite'));
+  if(r.kind!=='ok' || it.t!=='mc') fb.appendChild(tx('div', r.correct));
+  if(r.kind==='near') fb.appendChild(el('div','note',CONFIG.nearNote));
+  if(it.why) fb.appendChild(el('div','note',it.why));
+  if(SAMPLE && r.kind!=='ok'){
+    const b = claudeBtn('Ask Claude why'), box = el('div','claude-box');
+    b.addEventListener('click',()=>askClaude(CONFIG.learner+'Explain this one mistake in at most 5 short lines, then give ONE similar short English sentence to translate into '+CONFIG.name+' (no answer given).\n\nExercise: '+it.p+'\nCorrect answer: '+r.correct+'\nLearner '+(r.kind==='skip'?'skipped it':'wrote: '+r.given)+'\nTopic: '+it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
+  if(it.t==='mc') document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok) b.classList.add('right'); else if(i===picked) b.classList.add('wrong'); b.disabled=true });
+  else if(it.t==='build') document.querySelectorAll('.tile').forEach(b=>b.disabled=true);
+  else $('ans').readOnly = true;
+  $('check').hidden = true; $('skip').hidden = true; $('next').hidden = false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+function next(){ cur++; render() }
+
+function summary(){
+  const st = $('stage'); st.innerHTML='';
+  const ok = results.filter(r=>r.ok).length, tot = results.length;
+  const sum = el('div','sum'); sum.appendChild(el('h2',null,ok+' / '+tot)); st.appendChild(sum);
+  const bad = results.filter(r=>!r.ok);
+  if(!bad.length) st.appendChild(el('p',null,'Clean round.'));
+  bad.forEach(r=>{
+    const d = el('div','miss'); d.appendChild(el('small',null,r.q+'  ['+r.tag+']'));
+    d.appendChild(tx('div', r.correct));
+    if(r.given){ const g = el('small',null,'You wrote: '); g.appendChild(tx('span', r.given)); d.appendChild(g) }
+    st.appendChild(d);
+  });
+  const lines = [CONFIG.name+' practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  st.appendChild(el('div','prompt','Paste this into the chat if sending fails:'));
+  const pre = el('pre'); pre.id='copytext'; pre.textContent = lines.join('\n'); st.appendChild(pre);
+  const act = el('div','actions');
+  const cp = el('button',null,'Copy results'); cp.type='button';
+  cp.addEventListener('click',()=>{
+    const done = ()=>{ cp.textContent='Copied' };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent='Selected – press copy' };
+    try{ navigator.clipboard.writeText(pre.textContent).then(done,fallback) }catch(e){ fallback() }
+  });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send = el('button',null,'Send results to Claude'); send.type='button';
+    const status = el('div','status');
+    send.addEventListener('click', async () => {
+      send.disabled = true; status.textContent = 'Sending…';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent = 'Sent. Claude will grade the round in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled = false;
+      }
+    });
+    act.append(send); sendStatus = status;
+  }
+  const again = el('button','ghost','New round'); again.type='button'; again.addEventListener('click',start);
+  act.append(cp, again); st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'), fbBox = el('div','claude-box');
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click',()=>askClaude(CONFIG.learner+'Here are the results of a '+tot+'-exercise round ('+ok+'/'+tot+'). Give feedback compactly: (1) one line on what went well; (2) for each mistake what was wrong and why, with the corrected sentence; (3) the one or two patterns to focus on next; (4) three short English sentences to translate into '+CONFIG.name+' as follow-up practice (do not give the answers).\n\nResults:\n'+lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
+  updateTop();
+}
+
+/* text size (remembered per device when storage works) */
+const SIZES=[1.5,1.9,2.3,2.7,3.2,3.8,4.4]; // rem for --fs; body text = 60% of it
+let si = parseInt(load('Size','1')); if(!(si>=0 && si<SIZES.length)) si = 1;
+function applySize(){ document.documentElement.style.setProperty('--fs',SIZES[si]+'rem'); save('Size',si);
+  $('smaller').disabled = si===0; $('bigger').disabled = si===SIZES.length-1 }
+$('smaller').addEventListener('click',()=>{ if(si>0){ si--; applySize() } });
+$('bigger').addEventListener('click',()=>{ if(si<SIZES.length-1){ si++; applySize() } });
+applySize();
+start();
+</script>

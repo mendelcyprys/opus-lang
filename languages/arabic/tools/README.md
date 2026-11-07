@@ -15,7 +15,7 @@ and three Claude hooks.
 2. Publish with the Artifact tool, **same file path / URL** (keeps the link), always passing `capabilities: {"sample": {}, "comments": {}}`
    (omitting keeps the stored declaration; passing a different set revokes the rest). URL: https://claude.ai/artifact/9Gp267NvKwq2c8Eff6GuhV
 3. When the results arrive (comment from the page, or pasted text): log the round as usual (session file, progress files, review queue, commit).
-4. Other languages have their own pages (`languages/<lang>/tools/`): Polish (Latin), Japanese (romaji → kana, tile building), Hebrew (RTL, Mac-layout keyboard, tile building). Port from the closest one for a new language.
+4. Other languages have their own pages (`languages/<lang>/tools/`): Polish (Latin), Japanese (romaji → kana, tile building), Hebrew (RTL, Mac-layout keyboard, tile building), Ukrainian + French (shared code with a CONFIG block: Cyrillic Mac keyboard / accent bar, tile building). Port from the closest one for a new language.
 
 ## Notes from the 2026-11-07 code audit
 - **Text size:** the A−/A+ buttons set `--ar-size`; *all* text (prompts, glosses, notes, feedback, summary, Claude's answers) is sized from it, since Arabic also appears in English lines.

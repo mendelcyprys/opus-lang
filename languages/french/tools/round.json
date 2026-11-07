@@ -1,0 +1,151 @@
+{
+ "items": [
+  {
+   "t": "mc",
+   "p": "Which sentence is WRONG?",
+   "opts": [
+    "J'ai la livre de Paul.",
+    "Je prends le café.",
+    "Elle va à la gare.",
+    "Nous mangeons un croissant."
+   ],
+   "why": "livre (book) is masculine: le livre. la livre = pound (weight / money).",
+   "tag": "gender: le livre"
+  },
+  {
+   "t": "mc",
+   "p": "> Tu ___ au restaurant ce soir ?\n(Are you going to the restaurant tonight?)",
+   "opts": [
+    "vas",
+    "va",
+    "vais",
+    "allez"
+   ],
+   "why": "aller: je vais, tu vas, il/elle va, nous allons, vous allez, ils/elles vont.",
+   "tag": "aller tu vas"
+  },
+  {
+   "t": "mc",
+   "p": "> Ils ___ le train le matin.\n(They take the train in the morning.)",
+   "opts": [
+    "prennent",
+    "prenent",
+    "prend",
+    "prenons"
+   ],
+   "why": "prendre: je prends, tu prends, il prend, nous prenons, vous prenez, ils prennent (double n).",
+   "tag": "prendre ils prennent"
+  },
+  {
+   "t": "mc",
+   "p": "\"Do you live in Paris?\"  (tu)",
+   "opts": [
+    "Est-ce que tu habites à Paris ?",
+    "Est-ce que tu habite à Paris ?",
+    "Est-ce tu habites à Paris ?",
+    "Est-ce que habites tu à Paris ?"
+   ],
+   "why": "Est-ce que + normal statement word order; tu habites (‑es ending for tu).",
+   "tag": "est-ce que"
+  },
+  {
+   "t": "mc",
+   "p": "NEW: faire = to do / to make.\nje fais, tu fais, il fait, nous faisons, vous faites, ils font\n\n> Vous ___ la cuisine ?  (Do you cook?)",
+   "opts": [
+    "faites",
+    "faisez",
+    "fait",
+    "font"
+   ],
+   "why": "vous faites is irregular — like vous êtes and vous dites. faire la cuisine = to cook.",
+   "tag": "faire vous faites"
+  },
+  {
+   "t": "mc",
+   "p": "NEW: faire\n> Ils ___ un gâteau.  (They are making a cake.)",
+   "opts": [
+    "font",
+    "faisent",
+    "fait",
+    "faisons"
+   ],
+   "why": "ils font — the same pattern as ils vont, ils sont, ils ont.",
+   "tag": "faire ils font"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nIn the morning, I have a coffee.",
+   "words": [
+    "Le",
+    "matin",
+    "je",
+    "prends",
+    "un",
+    "café"
+   ],
+   "alt": [
+    "je prends un café le matin"
+   ],
+   "model": "Le matin, je prends un café.",
+   "tag": "build prendre un café"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nMy name is Erik and I live in London.",
+   "words": [
+    "Je",
+    "m'appelle",
+    "Erik",
+    "et",
+    "j'habite",
+    "à",
+    "Londres"
+   ],
+   "model": "Je m'appelle Erik et j'habite à Londres.",
+   "tag": "build m'appelle / j'habite"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nAre you going to the station? (vous)",
+   "words": [
+    "Est-ce",
+    "que",
+    "vous",
+    "allez",
+    "à",
+    "la",
+    "gare"
+   ],
+   "model": "Est-ce que vous allez à la gare ?",
+   "tag": "build est-ce que + aller"
+  },
+  {
+   "t": "type",
+   "p": "Type in French:\nI am going to the restaurant.",
+   "a": [
+    "Je vais au restaurant"
+   ],
+   "model": "Je vais au restaurant.  (à + le = au)",
+   "tag": "typed je vais au"
+  },
+  {
+   "t": "type",
+   "p": "Type in French:\nWe are having (taking) a croissant.",
+   "a": [
+    "Nous prenons un croissant",
+    "On prend un croissant"
+   ],
+   "model": "Nous prenons un croissant.",
+   "tag": "typed nous prenons"
+  },
+  {
+   "t": "type",
+   "p": "Type in French:\nShe is French.",
+   "a": [
+    "Elle est française"
+   ],
+   "model": "Elle est française.",
+   "tag": "typed française (ç)"
+  }
+ ]
+}
