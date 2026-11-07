@@ -39,3 +39,8 @@
 - ✓ typed: kiedy skończę…, zadzwonię; past habit; Poprosiła mnie, żebym…; już tu nie mieszkam…; z pięcioma/czterema instr.
 - ✗ typed *Gdym miał…* → **Gdybym miał…** (dropped letters; main clause kupiłbym ✓).
 - Page marked *jeździliśmy na morze* wrong; valid colloquially → counted correct, alternatives added to the page.
+
+## Round 5 (same day, Polish Artifact): 10/12
+- ✓ zjedz (vs zjedź/zejdź), neg. imperative error-spot (nie zjedz), przyjaciółmi, pieniędzy, wstawania; typed: conditional (uczyłbym się…), Nie wchodź tam, indirect question (zapytał, gdzie mieszkam), jeszcze nie + gen., w Polsce/we Włoszech.
+- ✗ 'people gather' *obchodzą się* → **schodzą się** (zejść się; obejść się = do without) — repeat of 2026-11-04.
+- ✗ typed *przydzie* → **przyjdzie** (dropped j); reported speech structure ✓.
