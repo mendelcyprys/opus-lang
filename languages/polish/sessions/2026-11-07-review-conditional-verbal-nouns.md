@@ -57,3 +57,9 @@
 - ✗ wbrew + **dative**: wbrew oczekiwaniom (chose gen. oczekiwań).
 - ✗ *Warto przypomnieć, że ceny zwiększyły* → **Warto zauważyć, że ceny wzrosły** (przypomnieć = remind/recall; *zwiększyć* is transitive → needs *się*: ceny się zwiększyły, or wzrosły).
 - Verdict: 9/12 on a C1 sampler — grammar/reading at C1 items already OK; gaps are collocations, case government of prepositions (wbrew), reflexive/intransitive verbs.
+
+## C1 follow-up round (collocations, wbrew, się verbs; Artifact): **9/12** (one of the misses spelling only)
+- ✓ all 6 MC: przykuwać uwagę, zwrócić uwagę na, wywrzeć wpływ, wbrew moim radom, wbrew vs mimo (dative cue), error-spot *ceny zwiększyły*. Typed ✓: wbrew moim oczekiwaniom…, książka została napisana przez…, przeczytawszy list, wyszedł.
+- ~ *Ilość turystów się zmienszyła* → **Liczba turystów się zmniejszyła**: się ✓ (the target); spelling zmn**iej**szyła; liczba for countables (ilość for uncountables, colloquially tolerated).
+- ✗ *Warto zeznać* → **Warto zauważyć** (zeznać = testify in court). Second miss on this phrase.
+- ✗ *Ta decyzja miał duży wpływ na moim życiu* → **Ta decyzja miała duży wpływ na moje życie**: past agreement with fem. subject (miała); wpływ **na + accusative**, not locative.
