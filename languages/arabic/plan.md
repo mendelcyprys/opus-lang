@@ -1,6 +1,6 @@
 # Arabic — Learning Plan
 
-_Last updated: 2026-11-05_
+_Last updated: 2026-11-07_
 
 ## Current phase
 **Phase 1 — A2: start producing** (placement 4/4 on A1–A2 recognition, 2026-11-04). Main gap: production & reading fluency.
@@ -19,9 +19,9 @@ _Last updated: 2026-11-05_
 | 3 | Verb forms II–X via Hebrew binyan contrasts | planned |
 
 ## Next session
-1. **Review** due items, then drill لا (don't) vs لم (didn't) vs لن (won't) — the 2026-11-05 slip was لم for a habitual "don't".
-2. **Typed production check** (still recognition-only so far): hamza (أمس، إلى), ذ vs د (نذهب), معلمنا, لم يذهبوا.
-3. **New:** ليس with nominal sentences (لَيْسَ البَيْتُ جَدِيدًا); ما + past as an alternative to لم.
+1. **Review** due items. 2026-11-07 done: لا/لم/لن drill, ليس intro (MC ✓), first typed production (grammar ✓, spelling slips).
+2. **Typed production again:** إلى (not إلا/ألى), hamza seat in أقرأ/أمس/أستاذ, لم + jussive 1sg (لم أكتبْ), ليس typed.
+3. **New:** ما + past as an alternative to لم; first broken plurals.
 4. Then Phase 2 continued: more present verbs / stem vowels, first broken-plural patterns.
 
 ## Ideas / backlog

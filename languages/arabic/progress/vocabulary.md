@@ -22,3 +22,8 @@ The first column is always the target-language term (used by scripts/export_anki
 | لَا | lā | not, don't | particle; + present (habitual/now) | أَنَا لَا أَذْهَبُ إِلَى السُّوقِ. — I don't go to the market. | 2026-11-05 | 2026-11-05 | 2 |
 | لَمْ | lam | did not | particle; + jussive (short present) | لَمْ أَكْتُبْ الرِّسَالَةَ. — I didn't write the letter. | 2026-11-05 | 2026-11-05 | 2 |
 | لَنْ | lan | will not | particle; + subjunctive (shown for contrast) | لَنْ أَذْهَبَ. — I won't go. | 2026-11-05 | 2026-11-05 | 1 |
+| غَدًا | ghadan | tomorrow | adverb (accusative -an) | لَنْ أَذْهَبَ غَدًا. — I won't go tomorrow. | 2026-11-07 | 2026-11-07 | 1 |
+| خُبْز | khubz | bread | m | لَمْ يَشْتَرِ خُبْزًا. — He didn't buy bread. | 2026-11-07 | 2026-11-07 | 1 |
+| اِشْتَرَى / يَشْتَرِي | ishtarā / yashtarī | to buy | v., root ش-ر-ي, form VIII, defective (jussive يَشْتَرِ) | اِشْتَرَى كِتَابًا جَدِيدًا. — He bought a new book. | 2026-11-07 | 2026-11-07 | 1 |
+| لِأَنَّ | li-anna | because | conjunction (+ accusative noun) | لِأَنَّ الخُبْزَ لَيْسَ جَدِيدًا. — because the bread is not fresh/new. | 2026-11-07 | 2026-11-07 | 1 |
+| لَيْسَ | laysa | is not | negates nominal sentence; predicate accusative | البَيْتُ لَيْسَ جَدِيدًا. — The house is not new. | 2026-11-07 | 2026-11-07 | 1 |
