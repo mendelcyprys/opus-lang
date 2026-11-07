@@ -24,4 +24,4 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Instr. of cztery | *z czterymi* → **z czterema** | case | 2026-11-05 | 2026-11-05 | 1 | improving (typed ✓ 2026-11-05 later round; z trzema ✓ MC evening) |
 | Dropped ó in pójść forms | *pojdą* → **pójdą** | spelling | 2026-11-05 | 2026-11-05 | 1 | improving (pójdą ✓, pójdziemy typed ✓ evening round) |
 | Personal ending on the verb after żeby instead of on żeby | *żeby poczekałem* → **żebym poczekał** | word order/morphology | 2026-11-06 | 2026-11-06 | 1 | active (self-corrected when asked, żebym ✓ MC) |
-| Clitic *bym* placed first in the clause + pf l-form slip | *…, bym więcej zwiedział* → **więcej bym zwiedził** / **zwiedziłbym więcej** | word order/spelling | 2026-11-06 | 2026-11-06 | 1 | active |
+| Clitic *bym* placed first in the clause + pf l-form slip | *…, bym więcej zwiedział* → **więcej bym zwiedził** / **zwiedziłbym więcej** | word order/spelling | 2026-11-06 | 2026-11-07 | 2 | active (2026-11-07: typed kupiłbym ✓ but failed to spot *…, bym pojechał* in error-spot) |
