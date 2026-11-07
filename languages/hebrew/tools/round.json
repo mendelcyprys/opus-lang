@@ -1,14 +1,155 @@
-{"items": [
- {"t":"mc","p":"Read:\nבעקבות עליית מחירי הדיור, משפחות צעירות רבות עוזבות את המרכז ועוברות לפריפריה. על פי הסקר, כשליש מהן ציינו כי המעבר נעשה בלית ברירה. עם זאת, רבות מהן מדווחות בסופו של דבר על שיפור באיכות החיים.\n\nWhy are young families leaving the center?","opts":["Housing prices went up","They found better jobs","The schools closed","The survey told them to"],"why":"בעקבות עליית מחירי הדיור — following the rise in housing prices.","tag":"reading: housing"},
- {"t":"mc","p":"From the text: \"המעבר נעשה בלית ברירה\"\nWhat does בלית ברירה mean?","opts":["for lack of choice","without delay","by surprise","with great joy"],"why":"בְּלֵית בְּרֵירָה = having no choice (Aramaic-flavoured idiom, formal register).","tag":"idiom בלית ברירה"},
- {"t":"mc","p":"From the text: \"מדווחות בסופו של דבר על שיפור\"\nבסופו של דבר = ?","opts":["in the end, ultimately","at the end of the street","from the beginning","in their words"],"why":"בסופו של דבר = in the end / ultimately.","tag":"idiom בסופו של דבר"},
- {"t":"mc","p":"From the text: \"כשליש מהן\"\nWhat does כשליש mean?","opts":["about a third","like a messenger","exactly three","when a third"],"why":"כְּ- before a number = about/approximately; שליש = a third.","tag":"כ- approx + שליש"},
- {"t":"mc","p":"Which spelling is correct (plene, without niqqud)?","opts":["השולחנות במוזיאון","השלחנות במוזיאום","השולחנות במוזיאום","השלחנות במוזיאון"],"why":"שולחנות needs ו for the o-vowel; מוזיאון ends in final ן (not ם).","tag":"plene + final ן"},
- {"t":"mc","p":"Which sentence is WRONG?","opts":["ההחלטה התקבלו אתמול.","ההחלטה התקבלה אתמול.","ההחלטות התקבלו אתמול.","החוק התקבל אתמול."],"why":"החלטה is feminine singular → התקבלה. התקבלו is plural.","tag":"agreement error-spot"},
- {"t":"build","p":"Tap the words in order:\nFor lack of choice, the family moved to the north.","words":["בלית","ברירה","המשפחה","עברה","לצפון"],"alt":["המשפחה עברה לצפון בלית ברירה"],"model":"בלית ברירה המשפחה עברה לצפון.","tag":"build בלית ברירה"},
- {"t":"build","p":"Tap the words in order:\nIn the end, the exhibition was postponed.","words":["בסופו","של","דבר","התערוכה","נדחתה"],"alt":["התערוכה נדחתה בסופו של דבר"],"model":"בסופו של דבר התערוכה נדחתה.","tag":"build בסופו של דבר"},
- {"t":"build","p":"Tap the words in order:\nAbout a third of the tickets were booked in advance.","words":["כשליש","מהכרטיסים","הוזמנו","מראש"],"alt":["מראש הוזמנו כשליש מהכרטיסים"],"model":"כשליש מהכרטיסים הוזמנו מראש.","tag":"build כשליש + הוזמנו"},
- {"t":"type","p":"Type in Hebrew: \"the tables\" (plene spelling!)","a":["השולחנות"],"model":"השולחנות","tag":"typed השולחנות"},
- {"t":"type","p":"Type in Hebrew: \"The museum was inaugurated last year.\"","a":["המוזיאון נחנך בשנה שעברה","המוזיאון נחנך לפני שנה","המוזיאון נחנך בשנה הקודמת"],"model":"המוזיאון נחנך בשנה שעברה.","tag":"typed המוזיאון נחנך"},
- {"t":"type","p":"Type in Hebrew: \"The decision was made yesterday.\" (use: התקבל)","a":["ההחלטה התקבלה אתמול","אתמול התקבלה ההחלטה","ההחלטה התקבלה אתמול."],"model":"ההחלטה התקבלה אתמול.","tag":"typed ההחלטה התקבלה"}
-]}
+{
+ "items": [
+  {
+   "t": "mc",
+   "p": "Read:\nבעקבות עליית מחירי הדיור, משפחות צעירות רבות עוזבות את המרכז ועוברות לפריפריה. על פי הסקר, כשליש מהן ציינו כי המעבר נעשה בלית ברירה. עם זאת, רבות מהן מדווחות בסופו של דבר על שיפור באיכות החיים.\n\nWhy are young families leaving the center?",
+   "opts": [
+    "Housing prices went up",
+    "They found better jobs",
+    "The schools closed",
+    "The survey told them to"
+   ],
+   "why": "בעקבות עליית מחירי הדיור — following the rise in housing prices.",
+   "tag": "reading: housing"
+  },
+  {
+   "t": "mc",
+   "p": "From the text: \"המעבר נעשה בלית ברירה\"\nWhat does בלית ברירה mean?",
+   "opts": [
+    "for lack of choice",
+    "without delay",
+    "by surprise",
+    "with great joy"
+   ],
+   "why": "בְּלֵית בְּרֵירָה = having no choice (Aramaic-flavoured idiom, formal register).",
+   "tag": "idiom בלית ברירה"
+  },
+  {
+   "t": "mc",
+   "p": "From the text: \"מדווחות בסופו של דבר על שיפור\"\nבסופו של דבר = ?",
+   "opts": [
+    "in the end, ultimately",
+    "at the end of the street",
+    "from the beginning",
+    "in their words"
+   ],
+   "why": "בסופו של דבר = in the end / ultimately.",
+   "tag": "idiom בסופו של דבר"
+  },
+  {
+   "t": "mc",
+   "p": "From the text: \"כשליש מהן\"\nWhat does כשליש mean?",
+   "opts": [
+    "about a third",
+    "like a messenger",
+    "exactly three",
+    "when a third"
+   ],
+   "why": "כְּ- before a number = about/approximately; שליש = a third.",
+   "tag": "כ- approx + שליש"
+  },
+  {
+   "t": "mc",
+   "p": "Which spelling is correct (plene, without niqqud)?",
+   "opts": [
+    "השולחנות במוזיאון",
+    "השלחנות במוזיאום",
+    "השולחנות במוזיאום",
+    "השלחנות במוזיאון"
+   ],
+   "why": "שולחנות needs ו for the o-vowel; מוזיאון ends in final ן (not ם).",
+   "tag": "plene + final ן"
+  },
+  {
+   "t": "mc",
+   "p": "Which sentence is WRONG?",
+   "opts": [
+    "ההחלטה התקבלו אתמול.",
+    "ההחלטה התקבלה אתמול.",
+    "ההחלטות התקבלו אתמול.",
+    "החוק התקבל אתמול."
+   ],
+   "why": "החלטה is feminine singular → התקבלה. התקבלו is plural.",
+   "tag": "agreement error-spot"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nFor lack of choice, the family moved to the north.",
+   "words": [
+    "בלית",
+    "ברירה",
+    "המשפחה",
+    "עברה",
+    "לצפון"
+   ],
+   "alt": [
+    "המשפחה עברה לצפון בלית ברירה"
+   ],
+   "model": "בלית ברירה המשפחה עברה לצפון.",
+   "tag": "build בלית ברירה"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nIn the end, the exhibition was postponed.",
+   "words": [
+    "בסופו",
+    "של",
+    "דבר",
+    "התערוכה",
+    "נדחתה"
+   ],
+   "alt": [
+    "התערוכה נדחתה בסופו של דבר",
+    "בסופו של דבר נדחתה התערוכה"
+   ],
+   "model": "בסופו של דבר התערוכה נדחתה.",
+   "tag": "build בסופו של דבר"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nAbout a third of the tickets were booked in advance.",
+   "words": [
+    "כשליש",
+    "מהכרטיסים",
+    "הוזמנו",
+    "מראש"
+   ],
+   "alt": [
+    "מראש הוזמנו כשליש מהכרטיסים"
+   ],
+   "model": "כשליש מהכרטיסים הוזמנו מראש.",
+   "tag": "build כשליש + הוזמנו"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew: \"the tables\" (plene spelling!)",
+   "a": [
+    "השולחנות"
+   ],
+   "model": "השולחנות",
+   "tag": "typed השולחנות"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew: \"The museum was inaugurated last year.\"",
+   "a": [
+    "המוזיאון נחנך בשנה שעברה",
+    "המוזיאון נחנך לפני שנה",
+    "המוזיאון נחנך בשנה הקודמת"
+   ],
+   "model": "המוזיאון נחנך בשנה שעברה.",
+   "tag": "typed המוזיאון נחנך"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew: \"The decision was made yesterday.\" (use: התקבל)",
+   "a": [
+    "ההחלטה התקבלה אתמול",
+    "אתמול התקבלה ההחלטה",
+    "ההחלטה התקבלה אתמול."
+   ],
+   "model": "ההחלטה התקבלה אתמול.",
+   "tag": "typed ההחלטה התקבלה"
+  }
+ ]
+}

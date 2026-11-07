@@ -7,3 +7,4 @@
 | Passives pu'al / huf'al (בושל, תורגם, הוזמנו) | huf'al ✓; pu'al 1/2 (chose nif'al נבשל), then drill 4/4; 2026-11-07: בושל ✓, but typed תורגמה for m. subject (agreement) and הוחנך for נחנך | 2026-11-04 | 2026-11-07 | 3 |
 | Formal connectors (בעקבות, על אף / חרף vs בזכות) + nominal style (smichut of verbal nouns: פתיחת המסעדה) | 4/4 incl. stretch with VS word order; 2026-11-07 חרף ✓, עם פתיחת המוזיאון ✓ | 2026-11-04 | 2026-11-07 | 3 |
 | Verbal nouns (שם פעולה) by binyan: pi'el CiCuC (שיפוץ), hif'il haCCaCa (הזמנה), hitpa'el hitCaCCut (התפתחות), pa'al CCiCa (פתיחה) | MC 2/2 (הזמנה, התפתחות); r2: היעלמות ✓, התפתחות העיר ✓; r3: סגירה, היכנסות ✓, builds סגירת/פתיחת ✓ | 2026-11-07 | 2026-11-07 | 3 |
+| Verb-subject inversion after a fronted adverbial (בסופו של דבר נדחתה התערוכה) | produced spontaneously in a build, round 4 ✓ | 2026-11-07 | 2026-11-07 | 3 |

@@ -15,5 +15,6 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | נחנך (nif'al, was inaugurated — not הוחנך) | vocab | 7d | 2026-11-14 |
 | מנה / קינוח (number polarity) | vocab | 3d | 2026-11-10 |
 | מראש (in advance) | vocab | 3d | 2026-11-10 |
-| plene spelling: שולחנות, שלושה; מוזיאון (final ן) | vocab | 1d | 2026-11-08 |
+| plene spelling: שולחנות, שלושה; מוזיאון (final ן) — ✓ round 4 | vocab | 3d | 2026-11-10 |
 | verbal nouns pa'al CCiCa (סגירה) vs nif'al hiCaCCut (היכנסות) in smichut | grammar | 3d | 2026-11-10 |
+| B2 idioms: בלית ברירה, בסופו של דבר, כשליש (כ- approx.) | vocab | 3d | 2026-11-10 |

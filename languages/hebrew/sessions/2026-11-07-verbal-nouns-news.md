@@ -33,3 +33,8 @@
   builds סגירת הכביש הוחלטה, בעקבות… הוזמנו מראש, פתיחת התערוכה נדחתה; typed הכתבה תורגמה לאנגלית.
 - ✗ #10 השלחנות הוזמנו מראש → השולחנות (defective spelling; מראש now ✓).
 - ✗ #11 המוזיאום נחנך בשנה שעברה → המוזיאון (ן, not ם; נחנך ✓).
+
+## Round 4 (practice page): page 11/12 → **12/12**
+- New B2 idioms from an unpointed news text (housing/periphery): בלית ברירה, בסופו של דבר, כשליש (כ- = approx.). Reading + idioms 4/4 ✓.
+- Plene spelling + final ן fixed: MC ✓ and typed השולחנות ✓, המוזיאון נחנך ✓ (both round-3 misses fixed). ההחלטה התקבלה typed ✓ + error-spot ✓.
+- Page marked the build *בסופו של דבר נדחתה התערוכה* wrong — verb-subject inversion after a fronted adverbial is correct (formal style); alternative added, counted correct.
