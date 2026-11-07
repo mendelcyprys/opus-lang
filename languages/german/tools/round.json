@@ -1,0 +1,14 @@
+{"items": [
+ {"t":"mc","p":"LESSON 1 — your Yiddish helps! Yiddish איך בין → German ich bin.\n> Ich ___ Erik.\n(I am Erik.)","opts":["bin","bist","ist","sind"],"why":"sein (to be): ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind. Yiddish: איך בין, דו ביסט, ער איז.","tag":"ich bin"},
+ {"t":"mc","p":"Yiddish גוט מאָרגן → German?","opts":["Guten Morgen","Gut Morgen","Gute Morgen","Guter Morgen"],"why":"Guten Morgen / Guten Tag / Guten Abend — the -en ending (accusative greeting). Yiddish dropped it.","tag":"Guten Morgen"},
+ {"t":"mc","p":"Pronunciation: German w sounds like English…","opts":["v (Wasser = 'vasser')","w (as in water)","f","silent"],"why":"German w = English v: Wasser, wir, Wein. (Yiddish ווּ / וואַסער — same sound.)","tag":"w = v"},
+ {"t":"mc","p":"Which word means \"the house\"? (Yiddish: דאָס הויז)","opts":["das Haus","der Haus","die Haus","das Hous"],"why":"Haus is neuter: das Haus. Three genders: der (m), die (f), das (n). Yiddish דער/די/דאָס works the same way!","tag":"das Haus"},
+ {"t":"mc","p":"> Wie ___ du?\n(What is your name? — literally: How are you called?)","opts":["heißt","heiße","heißen","heißst"],"why":"heißen: ich heiße, du heißt, er heißt. ß = 'ss' sound.","tag":"du heißt"},
+ {"t":"mc","p":"Careful: Yiddish ‘ער רעדט’ (he talks) — German uses a different verb for 'speak':\n> Er ___ Deutsch.","opts":["spricht","sprichst","sprecht","spreche"],"why":"sprechen (speak a language): ich spreche, du sprichst, er spricht (e → i stem change!). reden = talk/chat — exists in German too, but not for 'speaks German'.","tag":"er spricht"},
+ {"t":"build","p":"Tap the words in order:\nI come from London.","words":["Ich","komme","aus","London"],"tag":"build ich komme aus"},
+ {"t":"build","p":"Tap the words in order:\nThe coffee is good.","words":["Der","Kaffee","ist","gut"],"tag":"build der Kaffee ist"},
+ {"t":"build","p":"Tap the words in order:\nWhere do you live? (du)","words":["Wo","wohnst","du?"],"tag":"build wo wohnst du"},
+ {"t":"type","p":"Type in German:\nGood morning! (use ‑en)","a":["Guten Morgen"],"model":"Guten Morgen!","tag":"typed Guten Morgen"},
+ {"t":"type","p":"Type in German:\nMy name is Erik. (ich heiße …)","a":["Ich heiße Erik","Ich heisse Erik"],"model":"Ich heiße Erik.","tag":"typed ich heiße (ß)"},
+ {"t":"type","p":"Type in German:\nI am from London. (ich bin aus …)","a":["Ich bin aus London","Ich komme aus London"],"model":"Ich bin aus London. / Ich komme aus London.","tag":"typed ich bin aus"}
+]}
