@@ -59,6 +59,9 @@ button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-
 .listen{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
 .listen[disabled]{opacity:.5}
 small.hint{color:var(--muted);font-size:.9rem}
+.claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui),var(--ar);font-size:calc(var(--ar-size)*.5);line-height:1.8;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
 pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font:.95rem/1.5 var(--ui);margin:0;direction:ltr}
 @media (prefers-reduced-motion:reduce){.progress i{transition:none}}
 </style>
@@ -110,6 +113,31 @@ const ITEMS = [
 const MODEL = {6:'ذَهَبْنَا إِلَى السُّوقِ أَمْسِ.',7:'لَمْ أَقْرَأِ الرِّسَالَةَ.',8:'لَنْ يَذْهَبَ غَدًا.',9:'البَيْتُ لَيْسَ جَدِيدًا.',10:'لَمْ تَذْهَبْ.',11:'ذَهَبْتُ مَعَهُ.'};
 
 const $ = id => document.getElementById(id);
+
+// --- feedback from Claude (page asks Claude via the sample capability; hidden when unavailable) ---
+let SAMPLE = null;
+(async () => { try { SAMPLE = (window.claude && await window.claude.use('sample')) || null } catch (e) { SAMPLE = null } })();
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+const LEARNER = 'The learner is an English speaker (male) studying Modern Standard Arabic at A1/A2: reads slowly with harakat, types on a phone Arabic keyboard without harakat. ' +
+  'Teaching style: correct every mistake briefly with the reason, in simple English; write Arabic examples fully vowelled (harakat); put each Arabic sentence on its own line; no long essays; never ask for free creative writing, only concrete sentences to translate. ';
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking\u2026';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short \u2013 ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){
+  const b = document.createElement('button'); b.type='button'; b.className='listen ghost'; b.textContent = label; return b;
+}
 
 // --- listening: browser speech synthesis (needs an Arabic voice on the device) ---
 const TTS = ('speechSynthesis' in window) ? window.speechSynthesis : null;
@@ -220,6 +248,12 @@ function finish(r){
   }
   if(it.why){const w=document.createElement('div');w.className='note';w.textContent=it.why;fb.appendChild(w)}
   fb.appendChild(listenBtn(r.say));
+  if(SAMPLE && r.kind !== 'ok'){
+    const b = claudeBtn('Ask Claude why'); const box = document.createElement('div'); box.className='claude-box';
+    b.addEventListener('click', () => askClaude(LEARNER + 'Explain this one mistake in at most 5 short lines, then give ONE similar sentence to translate (no answer given).\n\n' +
+      'Exercise: ' + it.p + (it.stem ? '\nSentence: ' + it.stem : '') + '\nCorrect answer: ' + r.correct + '\nLearner ' + (r.kind==='skip' ? 'skipped it' : 'wrote: ' + r.given) + '\nTopic: ' + it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
   if(it.t==='mc'){
     document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok)b.classList.add('right'); else if(i===picked)b.classList.add('wrong'); b.disabled=true });
   } else { $('ans').readOnly=true }
@@ -266,6 +300,14 @@ function summary(){
   });
   const again=document.createElement('button');again.type='button';again.className='ghost';again.textContent='New round';again.addEventListener('click',start);
   act.append(cp,again);st.appendChild(act);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'); const fbBox = document.createElement('div'); fbBox.className='claude-box';
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click', () => askClaude(LEARNER + 'Here are the results of a 12-question round (' + ok + '/' + tot + '). Give feedback in this order, compactly: ' +
+      '(1) one line on what went well; (2) for each mistake: what was wrong and why, with the corrected vowelled sentence; (3) the one or two patterns to focus on next; ' +
+      '(4) three short English sentences to translate into Arabic as follow-up practice (do not give the answers). Known weak spots: hamza seat (أ/إ) and final ى in إلى, لم + jussive, غدًا vs أمس.\n\nResults:\n' + lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
   updateTop();
 }
 
