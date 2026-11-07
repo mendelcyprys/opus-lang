@@ -57,3 +57,9 @@
 - ✗ ذهبنا إلى السوق أمس for "to the city" → **إلى المدينة** (answered the previous round's sentence).
 - ✗ لن يذهبوا الأولاد → **لن يذهب الأولاد** / **الأولاد لن يذهبوا**: verb before a plural subject stays singular (new rule).
 - Next: verb-first agreement, numbers typed, new plurals.
+
+## Round 8 (same day, Artifact; relayed): **10/12**
+- Focus: verb-first vs subject-first agreement, numbers.
+- ✓ MC 6/6 (ذهب الأولاد, الأولاد ذهبوا, error-spot لم يكتبوا الأولاد, أربعة, 6, 2); typed ✓ أربعة, الأولاد لم يكتبوا الرسائل, المدينة كبيرة, المدن ليست كبيرة.
+- ✗ letter slips only: ثمابية → **ثمانية**; لن يقوأ الأولاد غدا → **يقرأ** (word order + singular verb correct).
+- New rule from round 7 learned in one round.
