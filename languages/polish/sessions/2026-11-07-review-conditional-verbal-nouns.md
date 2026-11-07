@@ -33,3 +33,9 @@
   typed cold: *Każdego ranka wychodzę z domu o siódmej*, *Gdybym miał więcej czasu, zwiedziłbym więcej*, *Poprosiła mnie, żebym chwilę poczekał*; stania ✓.
 - ✗ 'Kiedy byłem dzieckiem, każdego lata ___ nad morze' → **jeździliśmy** (past habit = imperfective), chose pojechaliśmy.
 - Mixed with poprosić/ranka review: both now clean in MC and typed.
+
+## Round 4 (same day, Polish Artifact, relayed from the page): page said 10/12 → **11/12 after my correction**
+- ✓ MC 6/6: jeździliśmy (past habit), reported speech zadzwoni, spotted *zapytał, że kiedy*, czekania, poprosiłem… żeby, zostały otwarte.
+- ✓ typed: kiedy skończę…, zadzwonię; past habit; Poprosiła mnie, żebym…; już tu nie mieszkam…; z pięcioma/czterema instr.
+- ✗ typed *Gdym miał…* → **Gdybym miał…** (dropped letters; main clause kupiłbym ✓).
+- Page marked *jeździliśmy na morze* wrong; valid colloquially → counted correct, alternatives added to the page.
