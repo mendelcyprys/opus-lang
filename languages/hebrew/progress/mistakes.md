@@ -7,7 +7,8 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 |---|---|---|---|---|---|---|
 | Number gender with nouns (2 and 3–10) | שתי אחים → שני אחים; שלשה אחיות → שלוש אחיות | agreement | 2026-11-04 | 2026-11-07 | 1 | improving (4/4 in drill; ✓ שלוש מנות וארבעה קינוחים 2026-11-07) |
 | אצל used for "near" (place) | אצל הים → ליד הים | vocabulary | 2026-11-04 | 2026-11-07 | 1 | improving (spotted אצל הנמל as wrong, 2026-11-07) |
-| Defective spelling | שלשה → שלושה | spelling | 2026-11-04 | 2026-11-04 | 1 | active |
+| Defective spelling (missing ו/י of plene spelling) | שלשה → שלושה; השלחנות → השולחנות | spelling | 2026-11-04 | 2026-11-07 | 2 | active |
 | nif'al instead of pu'al for pi'el passives | נבשל → בושל (pi'el בישל → pu'al) | form | 2026-11-04 | 2026-11-04 | 1 | improving (4/4 in drill: פורסמה, נכתב, שופצה, נשלח) |
 | Passive verb doesn't agree with subject gender | הספר תורגמה → הספר תורגם | agreement | 2026-11-07 | 2026-11-07 | 1 | improving (round 2: 4/4 incl. typed תורגם, פורסמה) |
-| Wrong binyan for passive of a pa'al verb (huf'al instead of nif'al) | הוחנך → נחנך | form | 2026-11-07 | 2026-11-07 | 1 | improving (round 2: נחנך/הוזמנו 3/3) |
+| Wrong binyan for passive of a pa'al verb (huf'al instead of nif'al) | הוחנך → נחנך | form | 2026-11-07 | 2026-11-07 | 1 | improving (round 2: נחנך/הוזמנו 3/3; round 3 typed נחנך ✓) |
+| Wrong final letter (ם for ן) in a loanword | המוזיאום → המוזיאון | spelling | 2026-11-07 | 2026-11-07 | 1 | active |

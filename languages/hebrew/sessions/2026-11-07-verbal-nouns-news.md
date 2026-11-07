@@ -27,3 +27,9 @@
 - ✓ reading (בעקבות / חסימת הכביש), passive agreement תורגמה / בוטלו, נחנך (nif'al) vs הוזמנו (huf'al), nif'al verbal noun היעלמות,
   3/3 builds (בעקבות… בוטלו, חרף… נחנך, התפתחות העיר), typed הספר תורגם ✓ (fixed from round 1), הכתבה פורסמה ✓.
 - ✗ #11 typed: "השולחנות הוזמנו" — grammar right (plural huf'al), but left out מראש (in advance). Content omission, not a grammar error.
+
+## Round 3 (practice page) — 10/12 (grammar 12/12)
+- ✓ longer unpointed news reading + מראש + חרף = על אף; verbal nouns סגירה (pa'al CCiCa) and היכנסות (nif'al hiCaCCut); error-spot ההחלטה התקבלו;
+  builds סגירת הכביש הוחלטה, בעקבות… הוזמנו מראש, פתיחת התערוכה נדחתה; typed הכתבה תורגמה לאנגלית.
+- ✗ #10 השלחנות הוזמנו מראש → השולחנות (defective spelling; מראש now ✓).
+- ✗ #11 המוזיאום נחנך בשנה שעברה → המוזיאון (ן, not ם; נחנך ✓).

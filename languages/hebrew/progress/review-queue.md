@@ -10,8 +10,10 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | pu'al vs nif'al passive (בושל, not נבשל) | grammar | 3d | 2026-11-10 |
 | huf'al הוזמן; לאור; תורגם | vocab | 3d | 2026-11-10 |
 | בעקבות, חרף/על אף, שיפוץ, פתיחת (smichut) | vocab | 3d | 2026-11-10 |
-| passive verb agreement (תורגם / תורגמה / תורגמו; בוטלו) | grammar | 3d | 2026-11-10 |
+| passive verb agreement (תורגם / תורגמה / תורגמו; בוטלו) | grammar | 7d | 2026-11-14 |
 | verbal nouns: הזמנה (hif'il), התפתחות (hitpa'el) vs פיתוח, היעלמות (nif'al) | vocab | 3d | 2026-11-10 |
-| נחנך (nif'al, was inaugurated — not הוחנך) | vocab | 3d | 2026-11-10 |
+| נחנך (nif'al, was inaugurated — not הוחנך) | vocab | 7d | 2026-11-14 |
 | מנה / קינוח (number polarity) | vocab | 3d | 2026-11-10 |
-| מראש (in advance) | vocab | 1d | 2026-11-08 |
+| מראש (in advance) | vocab | 3d | 2026-11-10 |
+| plene spelling: שולחנות, שלושה; מוזיאון (final ן) | vocab | 1d | 2026-11-08 |
+| verbal nouns pa'al CCiCa (סגירה) vs nif'al hiCaCCut (היכנסות) in smichut | grammar | 3d | 2026-11-10 |
