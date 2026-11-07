@@ -1,16 +1,16 @@
 {
  "items": [
-  {"t":"mc","p":"\"The boys went to the market.\" (verb FIRST)","opts":["ذَهَبَ الأَوْلَادُ إِلَى السُّوقِ","ذَهَبُوا الأَوْلَادُ إِلَى السُّوقِ","ذَهَبَتِ الأَوْلَادُ إِلَى السُّوقِ","ذَهَبْنَا الأَوْلَادُ إِلَى السُّوقِ"],"why":"Verb before the subject → singular: ذهب الأولاد.","tag":"VS agreement past"},
-  {"t":"mc","p":"\"The boys went to the market.\" (subject FIRST)","opts":["الأَوْلَادُ ذَهَبُوا إِلَى السُّوقِ","الأَوْلَادُ ذَهَبَ إِلَى السُّوقِ","الأَوْلَادُ ذَهَبَتْ إِلَى السُّوقِ","الأَوْلَادُ ذَهَبْتُمْ إِلَى السُّوقِ"],"why":"Subject first → verb agrees fully: الأولاد ذهبوا.","tag":"SV agreement past"},
-  {"t":"mc","p":"Which sentence is WRONG?","opts":["لَمْ يَكْتُبُوا الأَوْلَادُ","لَمْ يَكْتُبِ الأَوْلَادُ","الأَوْلَادُ لَمْ يَكْتُبُوا","لَمْ يَكْتُبْ الوَلَدُ"],"why":"Verb first must be singular: لم يكتب الأولاد, not لم يكتبوا الأولاد.","tag":"VS agreement error-spot"},
-  {"t":"mc","p":"Which spelling is \"four\"?","opts":["أَرْبَعَة","عَرْبَعَة","أَرْبَاعَة","إِرْبَعَة"],"why":"أربعة: hamza on alif at the start; ع only at the end (-baʿa).","tag":"أربعة spelling"},
-  {"t":"mc","p":"Which number is سِتَّة (sitta)?","opts":["6","3","7","2"],"why":"ستة = 6 (Hebrew שש). ثلاثة 3, سبعة 7, اثنان 2.","tag":"number 6"},
-  {"t":"mc","p":"Which is \"two\"?","opts":["اِثْنَان","ثَمَانِيَة","ثَلَاثَة","تِسْعَة"],"why":"اثنان ithnān = 2 (Hebrew שניים).","tag":"number 2"},
-  {"t":"type","p":"Type the number word: 4","a":["أربعة"],"tag":"typed أربعة","model":"أَرْبَعَة"},
+  {"t":"mc","p":"NEW: number + noun. 3–10 take a PLURAL noun after them.\n\"three books\"","opts":["ثَلَاثَةُ كُتُبٍ","ثَلَاثَةُ كِتَابٍ","ثَلَاثَةُ كِتَابَانِ","كُتُبٌ ثَلَاثَة"],"why":"3–10 + plural noun in the genitive: ثلاثة كتبٍ (number first, then plural).","tag":"3 + plural"},
+  {"t":"mc","p":"NEW: \"reverse gender\". A MASCULINE noun takes a number WITH ة.\nكِتَاب is masculine → \"five books\" = ?","opts":["خَمْسَةُ كُتُبٍ","خَمْسُ كُتُبٍ","خَمْسَةُ كِتَابٍ","كُتُبٌ خَمْسَة"],"why":"Masculine singular (كتاب) → number with ة: خمسةُ كتبٍ. Strange but systematic!","tag":"reverse gender masc."},
+  {"t":"mc","p":"A FEMININE noun takes a number WITHOUT ة.\nرِسَالَة is feminine → \"three letters\" = ?","opts":["ثَلَاثُ رَسَائِلَ","ثَلَاثَةُ رَسَائِلَ","ثَلَاثُ رِسَالَةٍ","ثَلَاثَةُ رِسَالَاتٌ"],"why":"Feminine singular (رسالة) → number WITHOUT ة: ثلاثُ رسائلَ.","tag":"reverse gender fem."},
+  {"t":"mc","p":"\"The boys read the book.\" (verb FIRST)","opts":["قَرَأَ الأَوْلَادُ الكِتَابَ","قَرَأُوا الأَوْلَادُ الكِتَابَ","قَرَأْنَا الأَوْلَادُ الكِتَابَ","قَرَأَتِ الأَوْلَادُ الكِتَابَ"],"why":"Verb first → singular: قرأ الأولاد.","tag":"VS agreement review"},
+  {"t":"mc","p":"Which spelling is \"eight\"?","opts":["ثَمَانِيَة","ثَمَابِيَة","تَمَانِيَة","ثَمَانِيَا"],"why":"ثمانية: ث (3 dots), ن (1 dot ABOVE), ي (2 below), ة.","tag":"ثمانية spelling"},
+  {"t":"mc","p":"Which spelling is \"he reads\"?","opts":["يَقْرَأُ","يَقْوَأُ","يَغْرَأُ","يَقْرَءُ"],"why":"ق-ر-أ: ر (no dot, curves below the line), hamza on alif.","tag":"يقرأ spelling"},
   {"t":"type","p":"Type the number word: 8","a":["ثمانية"],"tag":"typed ثمانية","model":"ثَمَانِيَة"},
-  {"t":"type","p":"Type in Arabic, VERB FIRST: \"The boys won't read tomorrow.\"","a":["لن يقرأ الأولاد غدا"],"tag":"typed VS لن يقرأ الأولاد","model":"لَنْ يَقْرَأَ الأَوْلَادُ غَدًا."},
-  {"t":"type","p":"Type in Arabic, SUBJECT FIRST: \"The boys didn't write the letters.\"","a":["الأولاد لم يكتبوا الرسائل"],"tag":"typed SV الأولاد لم يكتبوا","model":"الأَوْلَادُ لَمْ يَكْتُبُوا الرَّسَائِلَ."},
-  {"t":"type","p":"Type in Arabic: \"The city is big.\"","a":["المدينة كبيرة"],"tag":"typed المدينة كبيرة","model":"المَدِينَةُ كَبِيرَةٌ."},
-  {"t":"type","p":"Type in Arabic: \"The cities are not big.\"","a":["المدن ليست كبيرة"],"tag":"typed المدن ليست كبيرة","model":"المُدُنُ لَيْسَتْ كَبِيرَةً."}
+  {"t":"type","p":"Type the number word: 7","a":["سبعة"],"tag":"typed سبعة","model":"سَبْعَة"},
+  {"t":"type","p":"Type in Arabic: \"The boys read the book.\" (SUBJECT first)","a":["الأولاد قرأوا الكتاب","الأولاد قرءوا الكتاب","الاولاد قرؤوا الكتاب","الأولاد قرؤوا الكتاب"],"tag":"typed SV قرأوا","model":"الأَوْلَادُ قَرَأُوا الكِتَابَ."},
+  {"t":"type","p":"Type in Arabic: \"We didn't go to the city.\" (use لم)","a":["لم نذهب إلى المدينة"],"tag":"typed لم نذهب","model":"لَمْ نَذْهَبْ إِلَى المَدِينَةِ."},
+  {"t":"type","p":"Type in Arabic: \"three books\"","a":["ثلاثة كتب"],"tag":"typed ثلاثة كتب","model":"ثَلَاثَةُ كُتُبٍ"},
+  {"t":"type","p":"Type in Arabic: \"The pens are with them.\" (with them = معهم)","a":["الأقلام معهم"],"tag":"typed الأقلام معهم","model":"الأَقْلَامُ مَعَهُمْ."}
  ]
 }
