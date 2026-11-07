@@ -23,3 +23,5 @@ The first column is always the target-language term (used by scripts/export_anki
 | נֶחְנַךְ | nekhnakh | was inaugurated / dedicated | ח-נ-ך, nif'al past 3ms (passive of pa'al חָנַךְ; no huf'al) | הַמּוּזֵאוֹן נֶחְנַךְ אֶתְמוֹל. — The museum was inaugurated yesterday. | 2026-11-07 | 2026-11-07 | 1 |
 | מָנָה | mana | dish, course; portion | f, pl. מָנוֹת | בַּתַּפְרִיט יֵשׁ שָׁלוֹשׁ מָנוֹת. — There are three dishes on the menu. | 2026-11-07 | 2026-11-07 | 3 |
 | קִינּוּחַ | kinu'akh | dessert | m, pl. קִינּוּחִים | אַרְבָּעָה קִינּוּחִים — four desserts | 2026-11-07 | 2026-11-07 | 3 |
+| הֵיעָלְמוּת | he'almut | disappearance | f; ע-ל-ם, verbal noun of nif'al נֶעֱלַם (hiCaCCut); ≠ הַעֲלָמָה (concealment, hif'il) | הֵיעָלְמוּת הַמַּפְתְּחוֹת — the disappearance of the keys | 2026-11-07 | 2026-11-07 | 2 |
+| מֵרֹאשׁ | merosh | in advance | adverb | הַשֻּׁלְחָנוֹת הוּזְמְנוּ מֵרֹאשׁ. — The tables were booked in advance. | 2026-11-07 | 2026-11-07 | 1 |

@@ -22,3 +22,8 @@
 ## Practice page (Artifact) built
 - `tools/hebrew-practice.html` (https://claude.ai/artifact/5wQf8mza4uZNkHhT7tKJh8), requested by the learner: clickable Hebrew keyboard in the Mac layout
   + physical laptop keys mapped to Hebrew. Loaded with round 2 (passive agreement, nif'al vs huf'al, nif'al verbal noun hiCaCCut, news reading).
+
+## Round 2 (practice page, 12 Qs) — 11/12
+- ✓ reading (בעקבות / חסימת הכביש), passive agreement תורגמה / בוטלו, נחנך (nif'al) vs הוזמנו (huf'al), nif'al verbal noun היעלמות,
+  3/3 builds (בעקבות… בוטלו, חרף… נחנך, התפתחות העיר), typed הספר תורגם ✓ (fixed from round 1), הכתבה פורסמה ✓.
+- ✗ #11 typed: "השולחנות הוזמנו" — grammar right (plural huf'al), but left out מראש (in advance). Content omission, not a grammar error.
