@@ -88,28 +88,28 @@ const loose = s => keys(stripMarks(s)).replace(/[أإآٱء]/g,'ا').replace(/ى
 const strict = s => keys(stripMarks(s)).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
 
 const ITEMS = [
-  {t:'mc', p:'"He didn’t go."', opts:['لَمْ يَذْهَبْ','لَمْ ذَهَبَ','لَمْ يَذْهَبُ','لَا ذَهَبَ'], a:0,
-   why:'لم + the short present (jussive, sukun on the last letter). Never the past form.', tag:'لم + jussive'},
-  {t:'mc', p:'NEW: مَا + past tense also means "didn’t" (a common alternative to لم + jussive): مَا ذَهَبْتُ = I didn’t go.\n\n"I didn’t write the letter."', opts:['مَا كَتَبْتُ الرِّسَالَةَ','مَا أَكْتُبْ الرِّسَالَةَ','لَنْ كَتَبْتُ الرِّسَالَةَ','لَمْ كَتَبْتُ الرِّسَالَةَ'], a:0,
-   why:'ما takes the PAST form (ما كتبتُ). لم takes the jussive (لم أكتبْ). Do not mix them.', tag:'ما + past'},
-  {t:'mc', p:'NEW: many nouns have a "broken" plural that changes inside the word. Which is the plural of بَيْت (house)?', opts:['بُيُوت','بَيْتُون','بَيْتَات','بَيِّتِين'], a:0,
-   why:'بيت → بُيُوت (broken plural, must be learned with the noun).', tag:'broken plural'},
-  {t:'mc', p:'NEW: a plural of THINGS takes a feminine SINGULAR adjective.\n\n"The houses are new."', opts:['البُيُوتُ جَدِيدَةٌ','البُيُوتُ جَدِيدٌ','البُيُوتُ جَدِيدُونَ','البُيُوتُ جُدَدَاءُ'], a:0,
-   why:'Non-human plural → feminine singular agreement: جديدة.', tag:'non-human plural'},
-  {t:'mc', p:'"I won’t read the book tomorrow."', opts:['لَنْ أَقْرَأَ الكِتَابَ غَدًا','لَمْ أَقْرَأْ الكِتَابَ غَدًا','لَنْ أَقْرَأُ الكِتَابَ أَمْسِ','لَا قَرَأْتُ الكِتَابَ غَدًا'], a:0,
-   why:'لن + subjunctive (fatha) for the future; غدًا = tomorrow.', tag:'لن + غدًا'},
-  {t:'mc', p:'Which spelling is "I read" (past)?', opts:['قَرَأْتُ','قَرَيْتُ','قَرَاتُ','قَرَءْتُ'], a:0,
-   why:'Hamza on the alif seat: قرأتُ.', tag:'hamza seat'},
+  {t:'mc', p:'Which is the plural of كِتَاب (book)?', opts:['كُتُب','كِتَابُونَ','كَتَبَات','كَاتِبُونَ'], a:0,
+   why:'كتاب → كُتُب (broken plural, learn it with the noun). كاتبون = writers.', tag:'broken plural كتب'},
+  {t:'mc', p:'Which is the plural of سُوق (market)?', opts:['أَسْوَاق','سُوقُونَ','سُوقَات','سِيَاق'], a:0,
+   why:'سوق → أَسْوَاق (pattern أَفْعَال).', tag:'broken plural أسواق'},
+  {t:'mc', p:'"I went with them."', opts:['ذَهَبْتُ مَعَهُمْ','ذَهَبْتُ مَعَكُمْ','ذَهَبْتُ مَعِي','ذَهَبْتُ مَعَهُ'], a:0,
+   why:'ـهم = them; ـكم = you (pl.); ـي = me; ـه = him.', tag:'معهم'},
+  {t:'mc', p:'"The letters are long."', opts:['الرَّسَائِلُ طَوِيلَةٌ','الرَّسَائِلُ طَوِيلٌ','الرَّسَائِلُ طَوِيلُونَ','الرَّسَائِلُ طَوِيلَانِ'], a:0,
+   why:'Plural of things → feminine singular adjective: طويلة.', tag:'non-human plural'},
+  {t:'mc', p:'"She is not with us."', opts:['هِيَ لَيْسَتْ مَعَنَا','هِيَ لَيْسَ مَعَنَا','هِيَ لَيْسَتْ مَعَهُمْ','هِيَ لَيْسَتْ مَعِي'], a:0,
+   why:'ليست (fem.) + مع + نا (us).', tag:'ليست + معنا'},
+  {t:'mc', p:'Which spelling is "to the market"?', opts:['إِلَى السُّوقِ','إِلَّا السُّوقِ','أَلَى السُّوقِ','إِلِي السُّوقِ'], a:0,
+   why:'إلى: hamza under the alif, final ى. إلّا = except.', tag:'إلى spelling'},
 
-  {t:'type', p:'Type in Arabic: "I didn’t write the book."', a:['لم أكتب الكتاب','ما كتبت الكتاب'], tag:'typed لم + أكتب'},
-  {t:'type', p:'Type in Arabic: "He didn’t read the letter yesterday."', a:['لم يقرأ الرسالة أمس','ما قرأ الرسالة أمس'], tag:'typed لم يقرأ'},
-  {t:'type', p:'Type in Arabic: "The houses are not new."', a:['البيوت ليست جديدة'], tag:'typed ليست + plural'},
-  {t:'type', p:'Type in Arabic: "I didn’t go with them."', a:['لم أذهب معهم','ما ذهبت معهم'], tag:'typed معهم'},
-  {t:'type', p:'Type in Arabic: "We won’t read the letters tomorrow." (letters = رَسَائِل)', a:['لن نقرأ الرسائل غدا'], tag:'typed لن + رسائل'},
-  {t:'type', p:'Type in Arabic: "Did you (m) go to the teacher yesterday?"', a:['هل ذهبت إلى الأستاذ أمس','هل ذهبت إلى المعلم أمس'], tag:'typed هل + إلى'},
+  {t:'type', p:'Type in Arabic: "I didn’t go to the market yesterday."', a:['لم أذهب إلى السوق أمس','ما ذهبت إلى السوق أمس'], tag:'typed لم + أمس'},
+  {t:'type', p:'Type in Arabic: "We won’t go with you (pl.) tomorrow."', a:['لن نذهب معكم غدا'], tag:'typed معكم + غدًا'},
+  {t:'type', p:'Type in Arabic: "The markets are new."', a:['الأسواق جديدة'], tag:'typed أسواق'},
+  {t:'type', p:'Type in Arabic: "He didn’t write the letters." (letters = رَسَائِل)', a:['لم يكتب الرسائل','ما كتب الرسائل'], tag:'typed لم يكتب'},
+  {t:'type', p:'Type in Arabic: "She went with me."', a:['ذهبت معي','هي ذهبت معي'], tag:'typed معي'},
+  {t:'type', p:'Type in Arabic: "Our houses are not new."', a:['بيوتنا ليست جديدة'], tag:'typed بيوتنا ليست'},
 ];
 // vowelled model answers shown after checking, keyed by index in ITEMS
-const MODEL = {6:'لَمْ أَكْتُبِ الكِتَابَ.',7:'لَمْ يَقْرَأِ الرِّسَالَةَ أَمْسِ.',8:'البُيُوتُ لَيْسَتْ جَدِيدَةً.',9:'لَمْ أَذْهَبْ مَعَهُمْ.',10:'لَنْ نَقْرَأَ الرَّسَائِلَ غَدًا.',11:'هَلْ ذَهَبْتَ إِلَى الأُسْتَاذِ أَمْسِ؟'};
+const MODEL = {6:'لَمْ أَذْهَبْ إِلَى السُّوقِ أَمْسِ.',7:'لَنْ نَذْهَبَ مَعَكُمْ غَدًا.',8:'الأَسْوَاقُ جَدِيدَةٌ.',9:'لَمْ يَكْتُبِ الرَّسَائِلَ.',10:'ذَهَبَتْ مَعِي.',11:'بُيُوتُنَا لَيْسَتْ جَدِيدَةً.'};
 
 const $ = id => document.getElementById(id);
 
