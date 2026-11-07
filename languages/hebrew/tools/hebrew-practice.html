@@ -1,0 +1,411 @@
+<title>Hebrew Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* One exercise at a time; Hebrew lines are RTL, English lines LTR (dir=auto per line); A-/A+ scales all text. */
+:root{
+  --bg:#f5f4f0; --card:#ffffff; --fg:#1c2233; --muted:#5b6275; --line:#d8d6cf; --key:#eceae4;
+  --accent:#2e55a3; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ui:'Source Sans 3','Noto Sans Hebrew','Arial Hebrew',system-ui,sans-serif;
+  --he:'Noto Sans Hebrew','Arial Hebrew','Arial',system-ui,sans-serif;
+  --fs:1.9rem; /* set by the A-/A+ buttons; ALL text is sized from it */
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10131b; --card:#181c27; --fg:#e8e9ee; --muted:#a2a8b8; --line:#2c3243; --key:#222839;
+  --accent:#8fb0f5; --accent-fg:#0b1530; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10131b; --card:#181c27; --fg:#e8e9ee; --muted:#a2a8b8; --line:#2c3243; --key:#222839;
+  --accent:#8fb0f5; --accent-fg:#0b1530; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--fs)*.6);line-height:1.5;margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1em;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:18px}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.prompt{color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.prompt .he{color:var(--fg)}
+.prompt .gap{height:.6em}
+.he{font-family:var(--he);font-size:var(--fs);line-height:1.6}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--he);font-size:var(--fs);line-height:1.4;text-align:right;padding:10px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt.en{font-family:var(--ui);font-size:calc(var(--fs)*.7);text-align:left}
+.opt small{display:block;font-family:var(--ui);font-size:.5em;color:var(--muted);margin-top:2px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--he);font-size:var(--fs);width:100%;padding:8px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.6}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+.hintline{color:var(--muted);font-size:.85em;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.hintline label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.built{min-height:calc(var(--fs)*1.9);border:2px dashed var(--line);border-radius:8px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pool{display:flex;flex-wrap:wrap;gap:8px}
+.tile{font-family:var(--he);font-size:var(--fs);line-height:1.3;padding:6px 14px;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer}
+.tile:hover{border-color:var(--accent)}
+.tile:disabled{opacity:.3;cursor:default}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible,.tile:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+/* on-screen keyboard: physical (left-to-right) key order of the macOS "Hebrew" layout */
+.kb{direction:ltr;display:flex;flex-direction:column;gap:6px;user-select:none;-webkit-user-select:none}
+.kb[hidden]{display:none}
+.kb .row{display:flex;gap:5px;justify-content:center}
+.kb .row:nth-child(2){padding-left:2.5%}
+.kb .row:nth-child(3){padding-left:6%}
+.kb button.k{flex:1 1 0;min-width:0;max-width:60px;height:clamp(44px,calc(var(--fs)*1.5),64px);padding:0;position:relative;
+  background:var(--key);color:var(--fg);border:1px solid var(--line);border-radius:6px;font:400 clamp(18px,calc(var(--fs)*.75),30px)/1 var(--he)}
+.kb button.k:hover{border-color:var(--accent)}
+.kb button.k:active,.kb button.k.flash{background:var(--accent);color:var(--accent-fg)}
+.kb button.k sub{position:absolute;left:4px;bottom:3px;font:600 10px/1 var(--ui);color:var(--muted)}
+.kb.nolatin button.k sub{display:none}
+.kb button.k.fin{box-shadow:inset 0 -3px 0 var(--line)}
+.kb button.wide{flex:6 1 0;max-width:none}
+.kb button.mid{flex:1.6 1 0;max-width:none;font:600 15px/1 var(--ui)}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .he{font-size:calc(var(--fs)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6em}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .he{font-size:calc(var(--fs)*.9)}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .he{font-size:calc(var(--fs)*.8)}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui);font-size:1em;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
+pre#copytext{white-space:pre-wrap;unicode-bidi:plaintext;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Hebrew Practice · B1→B2</h1>
+    <div class="sizer" role="group" aria-label="Text size">
+      <button class="ghost" id="smaller" aria-label="Smaller text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card"></main>
+</div>
+
+<script>
+/* ===================== EXERCISES (generated from round.json by scripts/build_round.py) =====================
+   mc:    opts[a] is the right option in the source; shuffled at runtime. "עברית\ngloss" puts an English gloss under the option;
+          an option that starts with a Latin letter is shown left-to-right (English answer).
+   build: words = correct order (shuffled into tiles); accepted = joined words (+ optional alt:[...]).
+   type:  a = accepted answers, unpointed (niqqud, spaces and punctuation ignored; a final-letter slip counts as "near"). */
+const ITEMS = [
+  {"t": "mc", "p": "Read:\nבעקבות הגשמים הכבדים, הכביש לירושלים נחסם לתנועה במשך שלוש שעות. לפי המשטרה, ההחלטה על חסימת הכביש התקבלה לאור הסכנה לנהגים.\n\nWhy was the road closed?", "opts": ["Because of the heavy rain", "Because of a strike", "Despite the rain", "Because of an accident"], "a": 0, "why": "בעקבות = following / as a result of. חסימת הכביש = the closing of the road (smichut of the verbal noun חסימה).", "tag": "reading: road closed"},
+  {"t": "mc", "p": "The article was translated into English.\nהכתבה ___ לאנגלית.", "opts": ["תורגמה", "תורגם", "תורגמו", "תרגמה"], "a": 0, "why": "כתבה is feminine → pu'al past 3fs תורגמה. תרגמה (pi'el) = she translated (active).", "tag": "passive agreement f"},
+  {"t": "mc", "p": "The flights were cancelled because of the weather.\nהטיסות ___ בגלל מזג האוויר.", "opts": ["בוטלו", "בוטלה", "בוטל", "ביטלו"], "a": 0, "why": "טיסות = plural → בוטלו (pu'al). ביטלו (pi'el) = they cancelled.", "tag": "passive agreement pl"},
+  {"t": "mc", "p": "The bridge was inaugurated last year.\nהגשר ___ בשנה שעברה.", "opts": ["נחנך", "הוחנך", "חונך", "התחנך"], "a": 0, "why": "חָנַךְ is pa'al → its passive is nif'al נחנך. Huf'al (הו…) is only the passive of hif'il (הִ…) verbs.", "tag": "nif'al vs huf'al: נחנך"},
+  {"t": "mc", "p": "The guests were invited by the manager.\nהאורחים ___ על ידי המנהל.", "opts": ["הוזמנו", "נזמנו", "הזמינו", "התזמנו"], "a": 0, "why": "הִזְמִין is hif'il → passive huf'al הוזמנו. הזמינו = they invited (active).", "tag": "nif'al vs huf'al: הוזמנו"},
+  {"t": "mc", "p": "NEW: nif'al verbs make nouns on the pattern hiCaCCut.\nנֶעֱלַם (disappeared) → ?", "opts": ["הֵיעָלְמוּת\ndisappearance", "הַעֲלָמָה\nconcealment (hif'il)", "הִתְעַלְּמוּת\nignoring (hitpa'el)", "עֲלִימָה\n(not a word)"], "a": 0, "why": "nif'al → hiCaCCut: נעלם → היעלמות, נמנע → הימנעות, נכנס → היכנסות. העלמה is from hif'il העלים (to hide something).", "tag": "verbal noun nif'al"},
+  {"t": "build", "p": "Tap the words in order:\nFollowing the strike, the flights were cancelled.", "words": ["בעקבות", "השביתה", "בוטלו", "הטיסות"], "alt": ["בעקבות השביתה הטיסות בוטלו"], "tag": "build בעקבות + בוטלו"},
+  {"t": "build", "p": "Tap the words in order:\nDespite the rain, the museum was inaugurated on time.", "words": ["חרף", "הגשם", "המוזיאון", "נחנך", "בזמן"], "alt": ["חרף הגשם נחנך המוזיאון בזמן"], "tag": "build חרף + נחנך"},
+  {"t": "build", "p": "Tap the words in order:\nThe development of the city was fast.", "words": ["התפתחות", "העיר", "הייתה", "מהירה"], "tag": "build התפתחות (smichut)"},
+  {"t": "type", "p": "Type in Hebrew:\nThe book was translated into Hebrew.", "a": ["הספר תורגם לעברית"], "tag": "typed תורגם (m)"},
+  {"t": "type", "p": "Type in Hebrew:\nThe tables were booked in advance.", "a": ["השולחנות הוזמנו מראש", "השולחנות הוזמנו מקודם"], "tag": "typed הוזמנו (pl)"},
+  {"t": "type", "p": "Type in Hebrew:\nThe article was published yesterday.", "a": ["הכתבה פורסמה אתמול", "המאמר פורסם אתמול", "הכתבה פורסמה ביום אתמול"], "tag": "typed פורסמה (f)"},
+];
+// shown after checking, keyed by index in ITEMS (generated by scripts/build_round.py from round.json)
+const MODEL = {6:"בעקבות השביתה בוטלו הטיסות.",7:"חרף הגשם המוזיאון נחנך בזמן.",8:"התפתחות העיר הייתה מהירה.",9:"הספר תורגם לעברית.",10:"השולחנות הוזמנו מראש.",11:"הכתבה פורסמה אתמול."};
+
+/* ===================== matching ===================== */
+const NIQQUD = /[֑-ׇ]/g;                       // cantillation + niqqud (incl. maqaf U+05BE)
+const strict = s => s.normalize('NFC').replace(NIQQUD,'').replace(/[\s.,;:!?"'״׳\-–—()]+/g,'');
+const FINALS = {'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ'};
+const loose = s => strict(s).replace(/[ךםןףץ]/g, c => FINALS[c]);
+const mainOf = x => x.split('\n')[0];
+const isLatin = s => /^[A-Za-z]/.test(s.trim());
+
+/* ===================== keyboard: macOS "Hebrew" layout (letter keys same as SI-1452) ===================== */
+const KB_ROWS = [
+  [['KeyQ','q','/'],['KeyW','w',"'"],['KeyE','e','ק'],['KeyR','r','ר'],['KeyT','t','א'],['KeyY','y','ט'],['KeyU','u','ו'],['KeyI','i','ן'],['KeyO','o','ם'],['KeyP','p','פ']],
+  [['KeyA','a','ש'],['KeyS','s','ד'],['KeyD','d','ג'],['KeyF','f','כ'],['KeyG','g','ע'],['KeyH','h','י'],['KeyJ','j','ח'],['KeyK','k','ל'],['KeyL','l','ך'],['Semicolon',';','ף'],['Quote',"'",',']],
+  [['KeyZ','z','ז'],['KeyX','x','ס'],['KeyC','c','ב'],['KeyV','v','ה'],['KeyB','b','נ'],['KeyN','n','מ'],['KeyM','m','צ'],['Comma',',','ת'],['Period','.','ץ'],['Slash','/','.']],
+];
+const KEYMAP = {}; KB_ROWS.flat().forEach(([code,,he]) => KEYMAP[code] = he);
+let kbOpen = (() => { try{ const v = localStorage.getItem('heKbOpen'); if(v!==null) return v==='1' }catch(e){} return matchMedia('(pointer:fine)').matches })();
+let kbLatin = (() => { try{ return localStorage.getItem('heKbLatin')!=='0' }catch(e){ return true } })();
+let mapKeys = (() => { try{ return localStorage.getItem('heMapKeys')!=='0' }catch(e){ return true } })();
+const save = (k,v) => { try{ localStorage.setItem(k,v) }catch(e){} };
+
+function insertAt(inp, text){
+  const s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  inp.value = inp.value.slice(0,s) + text + inp.value.slice(e);
+  const p = s + text.length; inp.setSelectionRange(p,p);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function backspace(inp){
+  let s = inp.selectionStart ?? inp.value.length, e = inp.selectionEnd ?? inp.value.length;
+  if(s===e){ if(!s) return; s--; }
+  inp.value = inp.value.slice(0,s) + inp.value.slice(e); inp.setSelectionRange(s,s);
+  inp.dispatchEvent(new Event('input',{bubbles:true}));
+}
+function flash(code){ const b = document.querySelector('.kb [data-code="'+code+'"]'); if(!b) return; b.classList.add('flash'); setTimeout(()=>b.classList.remove('flash'),120) }
+function buildKeyboard(inp){
+  const kb = el('div','kb'+(kbLatin?'':' nolatin')); kb.id='kb'; kb.hidden=!kbOpen; kb.setAttribute('aria-label','Hebrew keyboard (Mac layout)');
+  const key = (cls, label, sub, act, code) => {
+    const b = el('button','k '+cls); b.type='button'; b.tabIndex=-1; if(code) b.dataset.code=code;
+    b.append(label); if(sub){ const s=document.createElement('sub'); s.textContent=sub; b.appendChild(s) }
+    b.addEventListener('pointerdown', e => e.preventDefault());          // keep focus (and caret) in the input
+    b.addEventListener('click', () => { if(!inp.readOnly) act() });
+    return b;
+  };
+  KB_ROWS.forEach(r => {
+    const row = el('div','row');
+    r.forEach(([code,lat,he]) => row.appendChild(key('ךםןףץ'.includes(he)?'fin':'', he, lat, ()=>insertAt(inp,he), code)));
+    kb.appendChild(row);
+  });
+  const last = el('div','row');
+  last.append(key('mid','?', '', ()=>insertAt(inp,'?')), key('wide','space','', ()=>insertAt(inp,' '), 'Space'), key('mid','⌫','', ()=>backspace(inp), 'Backspace'));
+  kb.appendChild(last);
+  return kb;
+}
+
+/* ===================== Claude (feedback) and comments (relay) ===================== */
+const $ = id => document.getElementById(id);
+let SAMPLE = null, COMMENTS = null;
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+const LEARNER = 'The learner is an English speaker (male, address him with masculine forms), Modern Hebrew at B1 moving towards B2: reads unpointed text, needs no transliteration, studies for hobby/culture. ' +
+  'Teaching style: correct every mistake briefly with the reason, in English with simple Hebrew; write Hebrew unpointed except for a new or ambiguous word; put each Hebrew sentence on its own line; no long essays; never ask for free creative writing, only concrete sentences to translate. ' +
+  'Known weak spots: passive verb agreement with the subject (הספר תורגמה → תורגם), choosing the passive binyan (nif\'al for pa\'al verbs, pu\'al for pi\'el, huf\'al for hif\'il — הוחנך → נחנך), ליד vs אצל, number gender polarity (שלוש/שלושה). ';
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking…';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short – ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){ const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b; }
+
+/* ===================== quiz flow ===================== */
+let order, cur, results, picked, answered, tiles;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function el(tag, cls, text){ const e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e }
+const hasHe = s => /[֐-׿]/.test(s);
+function heText(tag, cls, text){ const e = el(tag, cls ? cls+' he' : 'he', text); e.lang='he'; e.dir='rtl'; return e }
+function promptBox(p){
+  const box = el('div','prompt');
+  p.split('\n').forEach(line => {
+    if(!line.trim()){ box.appendChild(el('div','gap')); return }
+    const d = hasHe(line) ? heText('div',null,line) : el('div',null,line);
+    if(hasHe(line)) d.dir='auto';
+    box.appendChild(d);
+  });
+  return box;
+}
+
+function start(){
+  results = []; cur = 0;
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc') return {...it, idx, shown: shuffle(it.opts.map((x,i)=>({x, ok:i===it.a})))};
+    if(it.t==='build') return {...it, idx, a: [it.words.join(' ')].concat(it.alt||[])};
+    return {...it, idx};
+  });
+  render();
+}
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Exercise '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length) return summary();
+  const it = order[cur]; picked = null; answered = false; tiles = [];
+  st.innerHTML = '';
+  st.appendChild(promptBox(it.p));
+  if(it.t==='mc'){
+    const box = el('div','opts');
+    it.shown.forEach((o,i)=>{
+      const [k, gl] = o.x.split('\n');
+      const latin = isLatin(k);
+      const b = el('button','opt'+(latin?' en':'')); b.type='button';
+      if(!latin){ b.lang='he'; b.dir='rtl' }
+      b.append(k);
+      if(gl){ const s = el('small',null,gl); s.dir='auto'; b.appendChild(s) }
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else if(it.t==='build'){
+    const built = el('div','built'); built.id='built'; built.lang='he'; built.dir='rtl';
+    const pool = el('div','pool'); pool.id='pool'; pool.lang='he'; pool.dir='rtl';
+    shuffle(it.words.map((w,i)=>({w,i}))).forEach(o=>{
+      const b = el('button','tile',o.w); b.type='button';
+      b.addEventListener('click',()=>{
+        if(answered) return;
+        if(b.parentNode===pool){ built.appendChild(b); tiles.push(o.i) } else { pool.appendChild(b); tiles.splice(tiles.indexOf(o.i),1) }
+        $('check').disabled = tiles.length===0;
+      });
+      pool.appendChild(b);
+    });
+    st.append(built, pool, el('div','hintline','Tap a word to move it up (it fills right to left); tap it again to take it back.'));
+  } else {
+    const inp = document.createElement('input'); inp.type='text'; inp.id='ans'; inp.className='ans'; inp.lang='he'; inp.dir='rtl';
+    inp.autocomplete='off'; inp.autocapitalize='off'; inp.spellcheck=false; inp.setAttribute('aria-label','Your answer in Hebrew');
+    inp.addEventListener('input', () => { $('check').disabled = !inp.value.trim() });
+    inp.addEventListener('keydown', e=>{
+      if(e.key==='Enter'){ e.preventDefault(); if(!answered&&!$('check').disabled) check(); else if(answered) next(); return }
+      if(inp.readOnly || e.isComposing || e.ctrlKey || e.metaKey || e.altKey) return;
+      if(e.code==='Backspace' || e.code==='Space'){ flash(e.code); return }
+      // Map physical keys to the Mac Hebrew layout, so it works with the computer still set to English.
+      // Phone keyboards send no key code, so they are never touched.
+      const he = KEYMAP[e.code];
+      if(!he) return;
+      flash(e.code);
+      if(mapKeys && !e.shiftKey && !hasHe(e.key)){ e.preventDefault(); insertAt(inp, he) }
+    });
+    const kb = buildKeyboard(inp);
+    const hint = el('div','hintline');
+    const tog = (id, label, val, on) => { const lab = el('label'); const cb = document.createElement('input'); cb.type='checkbox'; cb.id=id; cb.checked=val; cb.addEventListener('change',()=>on(cb.checked)); lab.append(cb,' '+label); return lab };
+    hint.append(
+      tog('kbopen','Show keyboard', kbOpen, v=>{ kbOpen=v; save('heKbOpen',v?'1':'0'); kb.hidden=!v }),
+      tog('kblat','Latin key labels', kbLatin, v=>{ kbLatin=v; save('heKbLatin',v?'1':'0'); kb.classList.toggle('nolatin',!v) }),
+      tog('mapkeys','Laptop keys → Hebrew (Mac layout)', mapKeys, v=>{ mapKeys=v; save('heMapKeys',v?'1':'0') }));
+    st.append(inp, kb, hint);
+  }
+  st.appendChild(Object.assign(el('div'),{id:'fb'})); $('fb').setAttribute('role','status');
+  const act = el('div','actions');
+  const c = el('button',null,'Check'); c.id='check'; c.type='button'; c.disabled=true; c.addEventListener('click',check);
+  const n = el('button',null,cur===order.length-1?'Finish':'Next'); n.id='next'; n.type='button'; n.hidden=true; n.addEventListener('click',next);
+  const sk = el('button','ghost','Skip'); sk.id='skip'; sk.type='button'; sk.addEventListener('click',()=>{ if(!answered) finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk); st.appendChild(act);
+  if(it.t==='type' && matchMedia('(pointer:fine)').matches) setTimeout(()=>{ const i=$('ans'); if(i) i.focus() },50);
+}
+
+function check(){
+  const it = order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok, kind: ok?'ok':'wrong', given: mainOf(it.shown[picked].x)});
+  } else {
+    const g = it.t==='build' ? tiles.map(i=>it.words[i]).join(' ') : $('ans').value;
+    let kind = 'wrong';
+    if(it.a.some(a=>strict(a)===strict(g))) kind = 'ok';
+    else if(it.a.some(a=>loose(a)===loose(g))) kind = 'near';
+    finish({ok: kind==='ok', kind, given: g});
+  }
+}
+
+function finish(r){
+  answered = true;
+  const it = order[cur];
+  r.tag = it.tag; r.q = it.p.split('\n').filter(l=>l.trim()).slice(-2).join(' / ');
+  r.correct = it.t==='mc' ? mainOf(it.opts[it.a]) : (MODEL[it.idx] || (it.t==='build' ? it.words.join(' ') : it.a[0]));
+  results.push(r);
+  const fb = $('fb'); fb.className = 'fb ' + (r.kind==='ok'?'ok': r.kind==='near'?'near':'no'); fb.innerHTML='';
+  fb.appendChild(el('strong',null, r.kind==='ok'?'Correct': r.kind==='near'?'Right words, final-letter slip': r.kind==='skip'?'Skipped':'Not quite'));
+  if(r.kind!=='ok' || it.t!=='mc'){ const m = isLatin(r.correct) ? el('div',null,r.correct) : heText('div',null,r.correct); fb.appendChild(m) }
+  if(r.kind==='near') fb.appendChild(el('div','note','Check the final forms: ך ם ן ף ץ only at the end of a word (כ מ נ פ צ elsewhere).'));
+  if(it.why){ const w = el('div','note',it.why); w.dir='auto'; fb.appendChild(w) }
+  if(SAMPLE && r.kind!=='ok'){
+    const b = claudeBtn('Ask Claude why'), box = el('div','claude-box');
+    b.addEventListener('click',()=>askClaude(LEARNER+'Explain this one mistake in at most 5 short lines, then give ONE similar short English sentence to translate into Hebrew (no answer given).\n\nExercise: '+it.p+'\nCorrect answer: '+r.correct+'\nLearner '+(r.kind==='skip'?'skipped it':'wrote: '+r.given)+'\nTopic: '+it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
+  if(it.t==='mc') document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok) b.classList.add('right'); else if(i===picked) b.classList.add('wrong'); b.disabled=true });
+  else if(it.t==='build') document.querySelectorAll('.tile').forEach(b=>b.disabled=true);
+  else $('ans').readOnly = true;
+  $('check').hidden = true; $('skip').hidden = true; $('next').hidden = false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+function next(){ cur++; render() }
+
+function summary(){
+  const st = $('stage'); st.innerHTML='';
+  const ok = results.filter(r=>r.ok).length, tot = results.length;
+  const sum = el('div','sum'); sum.appendChild(el('h2',null,ok+' / '+tot)); st.appendChild(sum);
+  const bad = results.filter(r=>!r.ok);
+  if(!bad.length) st.appendChild(el('p',null,'Clean round.'));
+  bad.forEach(r=>{
+    const d = el('div','miss'); const q = el('small',null,r.q+'  ['+r.tag+']'); q.dir='auto'; d.appendChild(q);
+    d.appendChild(isLatin(r.correct) ? el('div',null,r.correct) : heText('div',null,r.correct));
+    if(r.given){ const g = el('small',null,'You wrote: '); g.appendChild(isLatin(r.given) ? el('span',null,r.given) : heText('span',null,r.given)); d.appendChild(g) }
+    st.appendChild(d);
+  });
+  const lines = ['Hebrew practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'FINAL-LETTER':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  st.appendChild(el('div','prompt','Paste this into the chat if sending fails:'));
+  const pre = el('pre'); pre.id='copytext'; pre.textContent = lines.join('\n'); st.appendChild(pre);
+  const act = el('div','actions');
+  const cp = el('button',null,'Copy results'); cp.type='button';
+  cp.addEventListener('click',()=>{
+    const done = ()=>{ cp.textContent='Copied' };
+    const fallback = ()=>{ const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); cp.textContent='Selected – press copy' };
+    try{ navigator.clipboard.writeText(pre.textContent).then(done,fallback) }catch(e){ fallback() }
+  });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send = el('button',null,'Send results to Claude'); send.type='button';
+    const status = el('div','status');
+    send.addEventListener('click', async () => {
+      send.disabled = true; status.textContent = 'Sending…';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent = 'Sent. Claude will grade the round in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled = false;
+      }
+    });
+    act.append(send); sendStatus = status;
+  }
+  const again = el('button','ghost','New round'); again.type='button'; again.addEventListener('click',start);
+  act.append(cp, again); st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'), fbBox = el('div','claude-box');
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'final-letter slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click',()=>askClaude(LEARNER+'Here are the results of a '+tot+'-exercise round ('+ok+'/'+tot+'). Give feedback compactly: (1) one line on what went well; (2) for each mistake what was wrong and why, with the corrected Hebrew sentence on its own line; (3) the one or two patterns to focus on next; (4) three short English sentences to translate into Hebrew as follow-up practice (do not give the answers).\n\nResults:\n'+lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
+  updateTop();
+}
+
+/* text size (remembered per device when storage works) */
+const SIZES=[1.5,1.9,2.3,2.7,3.2,3.8,4.4]; // rem for --fs; body text = 60% of it
+let si=1;
+try{ const v=parseInt(localStorage.getItem('heSize')); if(v>=0&&v<SIZES.length) si=v }catch(e){}
+function applySize(){ document.documentElement.style.setProperty('--fs',SIZES[si]+'rem'); save('heSize',si);
+  $('smaller').disabled = si===0; $('bigger').disabled = si===SIZES.length-1 }
+$('smaller').addEventListener('click',()=>{ if(si>0){ si--; applySize() } });
+$('bigger').addEventListener('click',()=>{ if(si<SIZES.length-1){ si++; applySize() } });
+applySize();
+start();
+</script>

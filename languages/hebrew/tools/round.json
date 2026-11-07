@@ -1,0 +1,149 @@
+{
+ "items": [
+  {
+   "t": "mc",
+   "p": "Read:\nבעקבות הגשמים הכבדים, הכביש לירושלים נחסם לתנועה במשך שלוש שעות. לפי המשטרה, ההחלטה על חסימת הכביש התקבלה לאור הסכנה לנהגים.\n\nWhy was the road closed?",
+   "opts": [
+    "Because of the heavy rain",
+    "Because of a strike",
+    "Despite the rain",
+    "Because of an accident"
+   ],
+   "why": "בעקבות = following / as a result of. חסימת הכביש = the closing of the road (smichut of the verbal noun חסימה).",
+   "tag": "reading: road closed"
+  },
+  {
+   "t": "mc",
+   "p": "The article was translated into English.\nהכתבה ___ לאנגלית.",
+   "opts": [
+    "תורגמה",
+    "תורגם",
+    "תורגמו",
+    "תרגמה"
+   ],
+   "why": "כתבה is feminine → pu'al past 3fs תורגמה. תרגמה (pi'el) = she translated (active).",
+   "tag": "passive agreement f"
+  },
+  {
+   "t": "mc",
+   "p": "The flights were cancelled because of the weather.\nהטיסות ___ בגלל מזג האוויר.",
+   "opts": [
+    "בוטלו",
+    "בוטלה",
+    "בוטל",
+    "ביטלו"
+   ],
+   "why": "טיסות = plural → בוטלו (pu'al). ביטלו (pi'el) = they cancelled.",
+   "tag": "passive agreement pl"
+  },
+  {
+   "t": "mc",
+   "p": "The bridge was inaugurated last year.\nהגשר ___ בשנה שעברה.",
+   "opts": [
+    "נחנך",
+    "הוחנך",
+    "חונך",
+    "התחנך"
+   ],
+   "why": "חָנַךְ is pa'al → its passive is nif'al נחנך. Huf'al (הו…) is only the passive of hif'il (הִ…) verbs.",
+   "tag": "nif'al vs huf'al: נחנך"
+  },
+  {
+   "t": "mc",
+   "p": "The guests were invited by the manager.\nהאורחים ___ על ידי המנהל.",
+   "opts": [
+    "הוזמנו",
+    "נזמנו",
+    "הזמינו",
+    "התזמנו"
+   ],
+   "why": "הִזְמִין is hif'il → passive huf'al הוזמנו. הזמינו = they invited (active).",
+   "tag": "nif'al vs huf'al: הוזמנו"
+  },
+  {
+   "t": "mc",
+   "p": "NEW: nif'al verbs make nouns on the pattern hiCaCCut.\nנֶעֱלַם (disappeared) → ?",
+   "opts": [
+    "הֵיעָלְמוּת\ndisappearance",
+    "הַעֲלָמָה\nconcealment (hif'il)",
+    "הִתְעַלְּמוּת\nignoring (hitpa'el)",
+    "עֲלִימָה\n(not a word)"
+   ],
+   "why": "nif'al → hiCaCCut: נעלם → היעלמות, נמנע → הימנעות, נכנס → היכנסות. העלמה is from hif'il העלים (to hide something).",
+   "tag": "verbal noun nif'al"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nFollowing the strike, the flights were cancelled.",
+   "words": [
+    "בעקבות",
+    "השביתה",
+    "בוטלו",
+    "הטיסות"
+   ],
+   "alt": [
+    "בעקבות השביתה הטיסות בוטלו"
+   ],
+   "model": "בעקבות השביתה בוטלו הטיסות.",
+   "tag": "build בעקבות + בוטלו"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nDespite the rain, the museum was inaugurated on time.",
+   "words": [
+    "חרף",
+    "הגשם",
+    "המוזיאון",
+    "נחנך",
+    "בזמן"
+   ],
+   "alt": [
+    "חרף הגשם נחנך המוזיאון בזמן"
+   ],
+   "model": "חרף הגשם המוזיאון נחנך בזמן.",
+   "tag": "build חרף + נחנך"
+  },
+  {
+   "t": "build",
+   "p": "Tap the words in order:\nThe development of the city was fast.",
+   "words": [
+    "התפתחות",
+    "העיר",
+    "הייתה",
+    "מהירה"
+   ],
+   "model": "התפתחות העיר הייתה מהירה.",
+   "tag": "build התפתחות (smichut)"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew:\nThe book was translated into Hebrew.",
+   "a": [
+    "הספר תורגם לעברית"
+   ],
+   "model": "הספר תורגם לעברית.",
+   "tag": "typed תורגם (m)"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew:\nThe tables were booked in advance.",
+   "a": [
+    "השולחנות הוזמנו מראש",
+    "השולחנות הוזמנו מקודם"
+   ],
+   "model": "השולחנות הוזמנו מראש.",
+   "tag": "typed הוזמנו (pl)"
+  },
+  {
+   "t": "type",
+   "p": "Type in Hebrew:\nThe article was published yesterday.",
+   "a": [
+    "הכתבה פורסמה אתמול",
+    "המאמר פורסם אתמול",
+    "הכתבה פורסמה ביום אתמול"
+   ],
+   "model": "הכתבה פורסמה אתמול.",
+   "tag": "typed פורסמה (f)"
+  }
+ ]
+}

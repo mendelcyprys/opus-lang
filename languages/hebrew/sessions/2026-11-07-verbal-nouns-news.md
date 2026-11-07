@@ -18,3 +18,7 @@
 
 ## Next time
 - Typed passive sentences with agreement (m/f/pl): תורגם/תורגמה/תורגמו, בוטל/בוטלה/בוטלו.
+
+## Practice page (Artifact) built
+- `tools/hebrew-practice.html` (https://claude.ai/artifact/5wQf8mza4uZNkHhT7tKJh8), requested by the learner: clickable Hebrew keyboard in the Mac layout
+  + physical laptop keys mapped to Hebrew. Loaded with round 2 (passive agreement, nif'al vs huf'al, nif'al verbal noun hiCaCCut, news reading).

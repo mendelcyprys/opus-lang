@@ -15,4 +15,4 @@ Record here only what is specific to Hebrew, or where it differs. Update wheneve
 ## Preferences (only where different from learner.md)
 - Explanation language mix: English + simple Hebrew; address in masculine (אתה, confirmed 2026-11-04)
 - Other notes:
-- **Typing (2026-11-07):** on the laptop the learner keeps forgetting the Hebrew keyboard mapping, so typed Hebrew is a barrier there (phone keyboards are fine). Options: keep Hebrew on MC / tile-building for now, or build a practice page with an on-screen Hebrew keyboard / Latin→Hebrew key mapping (port from `languages/japanese/tools/japanese-practice.html`).
+- **Typing (2026-11-07):** on the laptop the learner keeps forgetting the Hebrew keyboard mapping, so typed Hebrew is a barrier there (phone keyboards are fine). → Practice page built 2026-11-07 (`tools/hebrew-practice.html`): clickable Mac-layout Hebrew keyboard + laptop keys mapped to Hebrew. Use it for typed rounds on the laptop.
