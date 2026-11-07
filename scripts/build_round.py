@@ -65,6 +65,10 @@ def build(lang):
     if errs:
         sys.exit("round.json problems:\n  " + "\n  ".join(errs))
     text = page.read_text(encoding="utf-8")
+    if any(i["t"] == "build" for i in items) and "t==='build'" not in text:
+        # Pages without tile support would render a build item as a typed box and crash on check (it.a undefined).
+        sys.exit(f"{page.name} has no tile-building support: turn the build items into mc/type, "
+                 "or port the build code from languages/japanese/tools/japanese-practice.html first")
     new, n = BLOCK.subn(lambda m: js(items), text, count=1)
     if n != 1:
         sys.exit("Could not find the ITEMS/MODEL block in " + page.name)

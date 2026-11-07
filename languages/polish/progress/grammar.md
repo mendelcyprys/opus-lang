@@ -11,7 +11,6 @@
 | Perfective future (napiszę) | produces form correctly | 2026-11-04 | 2026-11-04 | 3 |
 | Adjective agreement, plural non-masc.-personal | nowe — correct | 2026-11-04 | 2026-11-04 | 3 |
 | Numerals 2–4 vs 5+ (koty / sióstr) | correct | 2026-11-04 | 2026-11-04 | 3 |
-| Conditional (gdybym… kupiłbym) — 2026-11-06 slip in main clause, see row below; correct; 2026-11-05 ✓ (gdybym miał… pojechałbym, no doubled -bym) | 2026-11-04 | 2026-11-05 | 3 |
 | Comparatives (wyższa niż) | correct | 2026-11-04 | 2026-11-04 | 3 |
 | Aspect in time clauses (kiedy + future) | Placement: chose przeczytałem instead of przeczytam. Later same day: correct in MC and in typed production (skończy…pójdzie). 2026-11-05: dojadę, wyjdę, skończą…pójdą ✓ | 2026-11-04 | 2026-11-05 | 3 |
 | Word order (adverbials, pronoun clitics) | all 4 sentences correct | 2026-11-04 | 2026-11-04 | 3 |
@@ -32,6 +31,5 @@
 | Indirect questions with co / czy / dlaczego | MC ✓ co robię, czy lubię kawę; typed dlaczego nie przyszłam (item was garbled, form fine) | 2026-11-05 | 2026-11-06 | 3 |
 | Verbal nouns (-anie/-enie): gotowanie, nie lubię stania (gen. after negation/verb) — B2 | MC ✓ 2/2; 2026-11-07 stania ✓ | 2026-11-06 | 2026-11-07 | 3 |
 | Conditional gdybym miał…, + main clause | 2026-11-07 round 2: error-spot ✓ (bym can't open the clause), typed … ✓. 2026-11-07: typed kupiłbym ✓ (cold) but error-spot of *…, bym pojechał* ✗ | 2026-11-04 | 2026-11-07 | 2 |
-
 | Numerals + instr. fem. (z czterema koleżankami) typed | czterema ✓ typed (round 2 2026-11-07); noun stem ✗ przyjacielkami → przyjaciółkami | 2026-11-05 | 2026-11-07 | 3 |
 | Habit in the past → impf (każdego lata jeździliśmy) | round 3 (2026-11-07): MC ✗ chose pojechaliśmy | 2026-11-07 | 2026-11-07 | 1 |

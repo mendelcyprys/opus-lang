@@ -12,3 +12,7 @@ The first column is always the target-language term (used by scripts/export_anki
 | わたし | わたし (watashi) | I | pronoun (私) | わたしは エリックです。 — I'm Erik. | 2026-11-04 | 2026-11-04 | 3 |
 | これ | これ (kore) | this (thing) | demonstrative | これは すしです。 — This is sushi. | 2026-11-04 | 2026-11-04 | 3 |
 | エリック | えりっく (Erikku) | Erik | name, katakana; small ッ | わたしは エリックです。 — I'm Erik. | 2026-11-07 | 2026-11-07 | 2 |
+| さん | さん (san) | three | number (三); 1 いち 2 に 3 さん 4 よん/し 5 ご | いち、に、さん。 — one, two, three. | 2026-11-07 | 2026-11-07 | 2 |
+| ご | ご (go) | five | number (五); ≠ こ (ko) | ご、ろく、なな。 — five, six, seven. | 2026-11-07 | 2026-11-07 | 2 |
+| ピザ | ぴざ (piza) | pizza | noun, katakana loanword; ピ (pi) ≠ ヒ (hi) | これは ピザです。 — This is pizza. | 2026-11-07 | 2026-11-07 | 3 |
+| ～から | から (kara) | from | particle (place/time) | わたしは カナダから きました。 — I'm from Canada. | 2026-11-07 | 2026-11-07 | 2 |
