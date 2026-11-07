@@ -22,3 +22,8 @@
 
 ## Next time
 - A1 core: ser vs estar (location!), gustar agreement (gusta/gustan), present -ar/-er/-ir with all persons incl. vosotros; accents on -és nationalities.
+
+## Round 2 (practice page): **10/12** (grammar 12/12)
+- Focus: ser vs estar, gustar (gusta/gustan/+inf.), nosotros -imos, vosotros -áis/-éis/-ís. All 8 MC + 2 builds ✓ — every placement gap fixed in recognition.
+- ✗ typed *nosotros vivimos en London* → **Londres** (Spanish name of the city; vivimos ✓).
+- ✗ typed *Vosotros hablaís angles* → **habláis inglés**: accent on the a (-áis); *angles* ← French *anglais* → Spanish **inglés** (interference).
