@@ -23,3 +23,5 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | Numbers 1–10 (typed: أربعة ✓ r8; ثمانية with ن — r8 ثمابية ✗) | vocab | 1d | 2026-11-08 |
 | Verb-first agreement: لن يذهب الأولاد vs الأولاد لن يذهبوا (r8 ✓) | grammar | 1d | 2026-11-08 |
 | New plurals أولاد، أقلام، مدن + كبير/مدينة | vocab | 1d | 2026-11-08 |
+| Numbers 3–10 + plural, reverse gender (خمسة كتب / ثلاث رسائل) | grammar | 1d | 2026-11-08 |
+| Past ـوا (قرأوا) vs present ـون (يقرأون) | grammar | 1d | 2026-11-08 |

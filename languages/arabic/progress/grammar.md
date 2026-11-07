@@ -24,3 +24,4 @@
 | Numbers 1–10 (counting forms) | r7: MC ✓ ×3 (3, 5, order 7–10); typed عشرة ✓; أربعة ✗ (عربعة); r8: MC ✓ ×3, typed أربعة ✓, ثمانية ✗ (ثمابية) | 2026-11-07 | 2026-11-07 | 2 |
 | Broken plural pattern أفعال (أولاد، أقلام، أسواق) / فُعُل (مدن، كتب) | r7: MC أولاد ✓ مدن ✓; typed الأقلام ✓ | 2026-11-07 | 2026-11-07 | 2 |
 | Verb-first sentence: verb stays SINGULAR (لن يذهب الأولاد) vs subject-first: plural (الأولاد لن يذهبوا) | r7 ✗: لن يذهبوا الأولاد (new point); r8: MC ✓ ×3, typed VS ✓ (letter slip only) + SV ✓ | 2026-11-07 | 2026-11-07 | 2 |
+| Numbers 3–10 + genitive plural, reverse gender (خمسةُ كتبٍ، ثلاثُ رسائلَ) | r9: MC 3/3 ✓, typed ثلاثة كتب ✓ | 2026-11-07 | 2026-11-07 | 1 |

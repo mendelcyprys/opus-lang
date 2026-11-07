@@ -20,3 +20,4 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 | Verb-first with plural subject: verb made plural | لن يذهبوا الأولاد → **لن يذهب الأولاد** (or الأولاد لن يذهبوا) | agreement | 2026-11-07 | 2026-11-07 | 1 | improving (r8: 5/5 incl. typed) |
 | Answer from memory of a previous round (ignored new word in prompt) | ذهبنا إلى السوق أمس for "…to the **city**" → المدينة | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |
 | Dotted/shape letter slips, round 8 | ثمابية → ثمانية (ن→ب); يقوأ → يقرأ (ر→و) | spelling | 2026-11-07 | 2026-11-07 | 2 | active (same pattern as the dotted-letter row; grammar right) |
+| Present form for past / ـوا on present plural | الأولاد يقرأوا → **قرأوا** (past) / **يقرأون** (present: ن, no alif) | tense/spelling | 2026-11-07 | 2026-11-07 | 1 | active |

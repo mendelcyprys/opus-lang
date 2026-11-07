@@ -63,3 +63,8 @@
 - ✓ MC 6/6 (ذهب الأولاد, الأولاد ذهبوا, error-spot لم يكتبوا الأولاد, أربعة, 6, 2); typed ✓ أربعة, الأولاد لم يكتبوا الرسائل, المدينة كبيرة, المدن ليست كبيرة.
 - ✗ letter slips only: ثمابية → **ثمانية**; لن يقوأ الأولاد غدا → **يقرأ** (word order + singular verb correct).
 - New rule from round 7 learned in one round.
+
+## Round 9 (same day, Artifact; relayed): **11/12**
+- New: number + counted noun (3–10 + genitive plural), reverse gender (خمسةُ كتبٍ / ثلاثُ رسائلَ) — MC 3/3 ✓ first try; typed ثلاثة كتب ✓.
+- ✓ VS review (قرأ الأولاد), spelling ثمانية / يقرأ (MC + typed ثمانية, سبعة ✓ — round-8 slips fixed), لم نذهب إلى المدينة, الأقلام معهم.
+- ✗ *الأولاد يقرأوا الكتاب* → **الأولاد قرأوا الكتاب** (past asked; present plural would be يقرأون — ن, no silent alif). SV plural agreement itself ✓.
