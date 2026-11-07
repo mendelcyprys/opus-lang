@@ -6,7 +6,7 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 |---|---|---|---|---|---|---|
 | Past instead of perfective future in time clause | Kiedy *przeczytałem* tę książkę, oddam ci ją → Kiedy **przeczytam** … | aspect/tense | 2026-11-04 | 2026-11-05 | 4 | improving (dojadę ✓, wyjdę ✓ on 2026-11-05) |
 | Present instead of imperfective future for duration in future | Jutro cały dzień *uczę się* → **będę się uczyć** (present is OK colloquially for plans) | aspect/tense | 2026-11-04 | 2026-11-04 | 1 | improving (correct 2026-11-04 review) |
-| już nie vs jeszcze nie | Kupiłeś chleb? — *Już nie* → **Jeszcze nie** (not yet); już nie = not anymore | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (both correct in review) |
+| już nie vs jeszcze nie | Kupiłeś chleb? — *Już nie* → **Jeszcze nie** (not yet); już nie = not anymore. 2026-11-07: 'she doesn't live here anymore' → *Jeszcze tu nie mieszka* ✗ → **Już tu nie mieszka** | vocabulary | 2026-11-04 | 2026-11-07 | 2 | active (relapse 2026-11-07) |
 | Spelling: dropped letters / diacritics when typing | *zadwoniłeś* → **zadzwoniłeś**; *Bedę* → **Będę** | spelling | 2026-11-04 | 2026-11-06 | 2 | active (clean typed Codziennie jeżdżę 2026-11-06 round 3; relapse earlier same day: *Codzinnie*, *jeżdże* → codziennie, jeżdżę — dropped ę/letters again on phone) |
 | Motion verb nuance: wrong direction/means | *dojdę do Krakowa* → **dojadę/dotrę**; *że pójdzie* (come) → **przyjdzie** | vocabulary | 2026-11-04 | 2026-11-04 | 2 | improving (correct in review + dotrzesz) |
 | Accusative instead of genitive after negation | Nie kupuj *chleb* → **chleba** | case | 2026-11-04 | 2026-11-04 | 1 | improving (4/4 in drill) |

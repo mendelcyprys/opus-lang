@@ -15,7 +15,7 @@
 | Comparatives (wyższa niż) | correct | 2026-11-04 | 2026-11-04 | 3 |
 | Aspect in time clauses (kiedy + future) | Placement: chose przeczytałem instead of przeczytam. Later same day: correct in MC and in typed production (skończy…pójdzie). 2026-11-05: dojadę, wyjdę, skończą…pójdą ✓ | 2026-11-04 | 2026-11-05 | 3 |
 | Word order (adverbials, pronoun clitics) | all 4 sentences correct | 2026-11-04 | 2026-11-04 | 3 |
-| Imperfective (compound) future: będę + inf./l-form | Chose present *uczę się* for 'jutro cały dzień' — acceptable colloquially, but target form is *będę się uczyć* | 2026-11-04 | 2026-11-04 | 2 |
+| Imperfective (compound) future: będę + inf./l-form | Chose present *uczę się* for 'jutro cały dzień' — acceptable colloquially, but target form is *będę się uczyć*. 2026-11-07 MC ✓ będę się uczyć | 2026-11-04 | 2026-11-07 | 3 |
 | Background (impf) vs interrupting action (pf) in past | oglądaliśmy…kiedy zadzwoniłeś — correct in production | 2026-11-04 | 2026-11-04 | 3 |
 | Aspect pair formation (prefix / suffix / suppletive) | 4/4 in first practice | 2026-11-04 | 2026-11-04 | 3 |
 | Aspect in imperatives (pf positive / impf negative) — superseded (duplicate row, see below) | 4/4 first try | 2026-11-04 | 2026-11-04 | 3 |
@@ -31,9 +31,9 @@
 | Instr. of 2–5 incl. feminine dwiema (z dwiema paniami), czterema typed ✓ — superseded (merged into Numerals + oblique cases row) | typed production correct after earlier slip | 2026-11-05 | 2026-11-05 | 3 |
 | Indirect questions with question word (zapytał, gdzie mieszkam — no czy/że) | MC ✓ ×2 (gdzie, kiedy wracam) — see also row below | 2026-11-05 | 2026-11-06 | 3 |
 | Passive with zostać + participle (została napisana) — B2 stretch | MC ✓ 2026-11-06 (nie zostały otwarte; zostanie otwarte; B2 stretch: mogła zostać załatwiona) | 2026-11-05 | 2026-11-06 | 2 |
-| żeby + personal ending: chcę, żebyś przyszedł; żeby przyjdziesz ✗ spotted; poprosiła, żebym… | MC ✓; typed żeby poczekałem ✗ → żebym poczekał; typed żebyśmy nie wchodzili ✓; 2nd round typed żebym zadzwonił ✓ | 2026-11-06 | 2026-11-06 | 3 |
-| Participles: passive kupiony; active świecące, ludzie mieszkający (= którzy mieszkają); adverbial czytając (while reading) — B2 | MC 4/4 2026-11-06 (świecące, którzy, kupiony, czytając) | 2026-11-06 | 2026-11-06 | 1 |
+| żeby + personal ending: chcę, żebyś przyszedł; żeby przyjdziesz ✗ spotted; poprosiła, żebym… | MC ✓; typed żeby poczekałem ✗ → żebym poczekał; typed żebyśmy nie wchodzili ✓; 2nd round typed żebym zadzwonił ✓; 2026-11-07 MC żebym pomógł ✓ | 2026-11-06 | 2026-11-07 | 3 |
+| Participles: passive kupiony; active świecące, ludzie mieszkający (= którzy mieszkają); adverbial czytając (while reading) — B2 | MC 4/4 2026-11-06 (świecące, którzy, kupiony, czytając); 2026-11-07 czekający = którzy czekają ✓ | 2026-11-06 | 2026-11-07 | 2 |
 | Indirect questions with co / czy / dlaczego | MC ✓ co robię, czy lubię kawę; typed dlaczego nie przyszłam (item was garbled, form fine) | 2026-11-05 | 2026-11-06 | 3 |
-| Verbal nouns (-anie/-enie): gotowanie, nie lubię stania (gen. after negation/verb) — B2 | MC ✓ 2/2 | 2026-11-06 | 2026-11-06 | 2 |
-| Conditional gdybym miał…, + main clause | ✗ 2026-11-06: *bym więcej zwiedział* (bym can't open the clause; zwiedził) — protasis gdybym miał ✓ | 2026-11-04 | 2026-11-06 | 2 |
+| Verbal nouns (-anie/-enie): gotowanie, nie lubię stania (gen. after negation/verb) — B2 | MC ✓ 2/2; 2026-11-07 stania ✓ | 2026-11-06 | 2026-11-07 | 3 |
+| Conditional gdybym miał…, + main clause | ✗ 2026-11-06: *bym więcej zwiedział* (bym can't open the clause; zwiedził) — protasis gdybym miał ✓. 2026-11-07: typed kupiłbym ✓ (cold) but error-spot of *…, bym pojechał* ✗ | 2026-11-04 | 2026-11-07 | 2 |
 
