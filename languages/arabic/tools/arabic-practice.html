@@ -88,28 +88,28 @@ const loose = s => keys(stripMarks(s)).replace(/[أإآٱء]/g,'ا').replace(/ى
 const strict = s => keys(stripMarks(s)).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
 
 const ITEMS = [
-  {t:'mc', p:'"She won’t go tomorrow." (غَدًا = tomorrow, أَمْسِ = yesterday)', opts:['لَنْ تَذْهَبَ غَدًا','لَنْ تَذْهَبَ أَمْسِ','لَمْ تَذْهَبْ غَدًا','لَا ذَهَبَتْ غَدًا'], a:0,
-   why:'لن = future "will not" (+ غدًا, tomorrow). أمس is yesterday.', tag:'لن + غدًا'},
-  {t:'mc', p:'"I didn’t go to the market yesterday."', opts:['لَمْ أَذْهَبْ إِلَى السُّوقِ أَمْسِ','لَنْ أَذْهَبَ إِلَى السُّوقِ أَمْسِ','لَا أَذْهَبُ إِلَى السُّوقِ أَمْسِ','لَمْ ذَهَبْتُ إِلَى السُّوقِ أَمْسِ'], a:0,
-   why:'Past meaning = لم + short present (jussive).', tag:'لم + jussive'},
-  {t:'mc', p:'"She didn’t write."', opts:['لَمْ تَكْتُبْ','لَمْ كَتَبَتْ','لَمْ تَكْتُبُ','لَنْ تَكْتُبْ'], a:0,
-   why:'لم + تكتب with sukun on the last letter (jussive); لم never takes the past form or a ضمة.', tag:'لم + jussive 3fs'},
-  {t:'mc', p:'"They (m) didn’t go." (the ن of يذهبون drops)', opts:['لَمْ يَذْهَبُوا','لَمْ يَذْهَبُونَ','لَنْ يَذْهَبُونَ','لَمْ ذَهَبُوا'], a:0,
-   why:'Jussive drops the final ن of -ون, and a silent alif is written: لم يذهبوا.', tag:'jussive drops ن'},
-  {t:'mc', p:'NEW: لَيْسَ agrees with its subject. For "she" it is لَيْسَتْ.\n\n"She is not a teacher."', opts:['هِيَ لَيْسَتْ مُعَلِّمَةً','هِيَ لَيْسَ مُعَلِّمَةٌ','هِيَ لَا مُعَلِّمَةً','هِيَ لَمْ مُعَلِّمَةً'], a:0,
-   why:'ليست (fem.) + predicate in the accusative: معلمةً.', tag:'ليست'},
-  {t:'mc', p:'Which is "to the market" with correct spelling?', opts:['إِلَى السُّوقِ','إِلَا السُّوقِ','أِلَى السُّوقِ','اِلَى السُّوقِ'], a:0,
-   why:'إلى: hamza UNDER the alif, final ى.', tag:'إلى spelling'},
+  {t:'mc', p:'"He didn’t go."', opts:['لَمْ يَذْهَبْ','لَمْ ذَهَبَ','لَمْ يَذْهَبُ','لَا ذَهَبَ'], a:0,
+   why:'لم + the short present (jussive, sukun on the last letter). Never the past form.', tag:'لم + jussive'},
+  {t:'mc', p:'NEW: مَا + past tense also means "didn’t" (a common alternative to لم + jussive): مَا ذَهَبْتُ = I didn’t go.\n\n"I didn’t write the letter."', opts:['مَا كَتَبْتُ الرِّسَالَةَ','مَا أَكْتُبْ الرِّسَالَةَ','لَنْ كَتَبْتُ الرِّسَالَةَ','لَمْ كَتَبْتُ الرِّسَالَةَ'], a:0,
+   why:'ما takes the PAST form (ما كتبتُ). لم takes the jussive (لم أكتبْ). Do not mix them.', tag:'ما + past'},
+  {t:'mc', p:'NEW: many nouns have a "broken" plural that changes inside the word. Which is the plural of بَيْت (house)?', opts:['بُيُوت','بَيْتُون','بَيْتَات','بَيِّتِين'], a:0,
+   why:'بيت → بُيُوت (broken plural, must be learned with the noun).', tag:'broken plural'},
+  {t:'mc', p:'NEW: a plural of THINGS takes a feminine SINGULAR adjective.\n\n"The houses are new."', opts:['البُيُوتُ جَدِيدَةٌ','البُيُوتُ جَدِيدٌ','البُيُوتُ جَدِيدُونَ','البُيُوتُ جُدَدَاءُ'], a:0,
+   why:'Non-human plural → feminine singular agreement: جديدة.', tag:'non-human plural'},
+  {t:'mc', p:'"I won’t read the book tomorrow."', opts:['لَنْ أَقْرَأَ الكِتَابَ غَدًا','لَمْ أَقْرَأْ الكِتَابَ غَدًا','لَنْ أَقْرَأُ الكِتَابَ أَمْسِ','لَا قَرَأْتُ الكِتَابَ غَدًا'], a:0,
+   why:'لن + subjunctive (fatha) for the future; غدًا = tomorrow.', tag:'لن + غدًا'},
+  {t:'mc', p:'Which spelling is "I read" (past)?', opts:['قَرَأْتُ','قَرَيْتُ','قَرَاتُ','قَرَءْتُ'], a:0,
+   why:'Hamza on the alif seat: قرأتُ.', tag:'hamza seat'},
 
-  {t:'type', p:'Type in Arabic: "I won’t go to the market tomorrow."', a:['لن أذهب إلى السوق غدا'], tag:'typed لن + غدا'},
-  {t:'type', p:'Type in Arabic: "She didn’t write the letter."', a:['لم تكتب الرسالة'], tag:'typed لم + تكتب'},
-  {t:'type', p:'Type in Arabic: "They (m) didn’t go yesterday."', a:['لم يذهبوا أمس'], tag:'typed لم يذهبوا'},
-  {t:'type', p:'Type in Arabic: "The teacher (f) is not new."', a:['المعلمة ليست جديدة'], tag:'typed ليست'},
-  {t:'type', p:'Type in Arabic: "I read the letter yesterday."', a:['قرأت الرسالة أمس'], tag:'typed قرأت'},
-  {t:'type', p:'Type in Arabic: "We didn’t read the book."', a:['لم نقرأ الكتاب'], tag:'typed لم نقرأ'},
+  {t:'type', p:'Type in Arabic: "I didn’t write the book."', a:['لم أكتب الكتاب'], tag:'typed لم + أكتب'},
+  {t:'type', p:'Type in Arabic: "He didn’t read the letter yesterday."', a:['لم يقرأ الرسالة أمس'], tag:'typed لم يقرأ'},
+  {t:'type', p:'Type in Arabic: "The houses are not new."', a:['البيوت ليست جديدة'], tag:'typed ليست + plural'},
+  {t:'type', p:'Type in Arabic: "I didn’t go with them."', a:['لم أذهب معهم','ما ذهبت معهم'], tag:'typed معهم'},
+  {t:'type', p:'Type in Arabic: "We won’t read the letters tomorrow." (letters = رَسَائِل)', a:['لن نقرأ الرسائل غدا'], tag:'typed لن + رسائل'},
+  {t:'type', p:'Type in Arabic: "Did you (m) go to the teacher yesterday?"', a:['هل ذهبت إلى الأستاذ أمس'], tag:'typed هل + إلى'},
 ];
 // vowelled model answers shown after checking, keyed by index in ITEMS
-const MODEL = {6:'لَنْ أَذْهَبَ إِلَى السُّوقِ غَدًا.',7:'لَمْ تَكْتُبْ الرِّسَالَةَ.',8:'لَمْ يَذْهَبُوا أَمْسِ.',9:'المُعَلِّمَةُ لَيْسَتْ جَدِيدَةً.',10:'قَرَأْتُ الرِّسَالَةَ أَمْسِ.',11:'لَمْ نَقْرَأْ الكِتَابَ.'};
+const MODEL = {6:'لَمْ أَكْتُبِ الكِتَابَ.',7:'لَمْ يَقْرَأِ الرِّسَالَةَ أَمْسِ.',8:'البُيُوتُ لَيْسَتْ جَدِيدَةً.',9:'لَمْ أَذْهَبْ مَعَهُمْ.',10:'لَنْ نَقْرَأَ الرَّسَائِلَ غَدًا.',11:'هَلْ ذَهَبْتَ إِلَى الأُسْتَاذِ أَمْسِ؟'};
 
 const $ = id => document.getElementById(id);
 
