@@ -92,29 +92,29 @@ pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--li
    build: words = correct order (shuffled into tiles); accepted answers = joined words (+ optional alt:[...]).
    type:  a = accepted answers in kana (spaces/punctuation ignored); typing romaji converts to kana (lowercase = ひらがな, UPPERCASE = カタカナ). */
 const ITEMS = [
-  {t:'mc', p:'Which is the reading of すし?', opts:['すし\nsushi','さし\nsashi','しし\nshishi','すち\nsuchi'], a:0,
-   why:'す = su, し = shi.', tag:'hiragana su/shi'},
-  {t:'mc', p:'Which one is the katakana for "coffee"?  (kōhī)', opts:['コーヒー','ユーヒー','コーピー','ニーヒー'], a:0,
-   why:'コ ko, ー long vowel, ヒ hi. Do not confuse コ/ユ or ヒ/ピ.', tag:'katakana コーヒー'},
-  {t:'mc', p:'Which kana is "wa"?', opts:['わ','れ','ね','め'], a:0,
-   why:'わ = wa. れ re, ね ne, め me look alike.', tag:'hiragana wa/re/ne/me'},
-  {t:'mc', p:'わたし ___ エリックです。\n(watashi ___ Erikku desu.)  "I am Erik."', opts:['は  (read: wa)','が  (ga)','を  (o)','の  (no)'], a:0,
-   why:'は marks the topic and is pronounced "wa" in this role.', tag:'particle は'},
-  {t:'mc', p:'"This is my ramen."  (a statement)', opts:['これは わたしの ラーメンです。\nkore wa watashi no rāmen desu.','これは わたしの ラーメンですか。\nkore wa watashi no rāmen desu ka.','これは ラーメンの わたしです。\nkore wa rāmen no watashi desu.','これを わたしの ラーメンです。\nkore o watashi no rāmen desu.'], a:0,
-   why:'Statement = ... です。 Add か only to ask a question. の = "my".', tag:'stray か'},
-  {t:'mc', p:'これは おちゃ ___ ?\n(kore wa ocha ___ ?)  "Is this tea?"', opts:['ですか\ndesu ka','ですが\ndesu ga','ですの\ndesu no','です\ndesu'], a:0,
-   why:'ですか = polite "is it?".', tag:'か question'},
+  {t:'mc', p:'Which one is the katakana for "pizza"?  (piza)', opts:['ピザ','ヒザ','ビザ','ピサ'], a:0,
+   why:'ピ = pi (small circle), ザ = za (two dots). ヒ = hi, ビ = bi.', tag:'katakana ピザ'},
+  {t:'mc', p:'Which is "three"?', opts:['さん\nsan','ご\ngo','ろく\nroku','きゅう\nkyuu'], a:0,
+   why:'1 いち · 2 に · 3 さん · 4 よん/し · 5 ご · 6 ろく · 7 なな/しち · 8 はち · 9 きゅう · 10 じゅう.', tag:'number 3'},
+  {t:'mc', p:'Which is "five"?', opts:['ご\ngo','こ\nko','ろく\nroku','はち\nhachi'], a:0,
+   why:'ご = go (5). こ = ko. ろく = 6, はち = 8.', tag:'number 5'},
+  {t:'mc', p:'Which is "Erik" spelled correctly?', opts:['エリック','エリク','エリツク','エリッグ'], a:0,
+   why:'Double consonant kk = small ッ + ク: エリック.', tag:'small ッ'},
+  {t:'mc', p:'NEW: ～から きました = "(I) came from ~". Pattern: わたしは [place]から きました。\n\n"I am from America."', opts:['わたしは アメリカから きました。\nwatashi wa Amerika kara kimashita.','わたしは アメリカが きました。\nwatashi wa Amerika ga kimashita.','わたしは アメリカの きました。\nwatashi wa Amerika no kimashita.','わたしは アメリカと きました。\nwatashi wa Amerika to kimashita.'], a:0,
+   why:'から = from. と would mean "with".', tag:'から きました'},
+  {t:'mc', p:'"This is my coffee."  (a statement)', opts:['これは わたしの コーヒーです。\nkore wa watashi no kōhī desu.','これは わたしの コーヒーですか。\nkore wa watashi no kōhī desu ka.','これを わたしの コーヒーです。\nkore o watashi no kōhī desu.','これは コーヒーの わたしです。\nkore wa kōhī no watashi desu.'], a:0,
+   why:'Statement = ... です。 (no か).', tag:'stray か'},
 
-  {t:'build', p:'Tap the words in order:  "This is sushi."', words:['これ','は','すし','です'], tag:'build これはすしです'},
-  {t:'build', p:'Tap the words in order:  "I am Erik."', words:['わたし','は','エリック','です'], tag:'build わたしはエリックです'},
-  {t:'build', p:'Tap the words in order:  "Is this tea?"', words:['これ','は','おちゃ','です','か'], tag:'build これはおちゃですか'},
+  {t:'build', p:'Tap the words in order:  "I am from Canada."', words:['わたし','は','カナダ','から','きました'], tag:'build から きました'},
+  {t:'build', p:'Tap the words in order:  "Is this my ramen?"', words:['これ','は','わたし','の','ラーメン','です','か'], tag:'build これはわたしのラーメンですか'},
+  {t:'build', p:'Tap the words in order:  "This is Erik’s tea."', words:['これ','は','エリック','の','おちゃ','です'], tag:'build エリックのおちゃ'},
 
-  {t:'type', p:'Type in kana:  "This is ramen."\n(type: kore ha RA-MENN desu)', a:['これはラーメンです'], tag:'typed ラーメン'},
-  {t:'type', p:'Type in kana:  "Is this coffee?"\n(type: kore ha KO-HI- desu ka)', a:['これはコーヒーですか'], tag:'typed コーヒー'},
-  {t:'type', p:'Type in kana:  "I am Erik."\n(type: watashi ha ERIKKU desu)', a:['わたしはエリックです'], tag:'typed エリック'},
+  {t:'type', p:'Type in kana:  "This is pizza."\n(type: kore ha PIZA desu)', a:['これはピザです'], tag:'typed ピザ'},
+  {t:'type', p:'Type in kana:  "Erik’s coffee"\n(type: ERIKKU no KO-HI-)', a:['エリックのコーヒー'], tag:'typed エリック + コーヒー'},
+  {t:'type', p:'Type in kana:  "I am from Canada."\n(type: watashi ha KANADA kara kimashita)', a:['わたしはカナダからきました'], tag:'typed から きました'},
 ];
 // shown after checking, keyed by index in ITEMS (build items use words.join; mc use opts[a])
-const MODEL = {9:'これは ラーメンです。',10:'これは コーヒーですか。',11:'わたしは エリックです。'};
+const MODEL = {9:'これは ピザです。',10:'エリックの コーヒー',11:'わたしは カナダから きました。'};
 
 /* ===================== matching ===================== */
 const strict = s => s.normalize('NFKC').replace(/[\s.,;:!?。、？！・「」]+/g,'');
