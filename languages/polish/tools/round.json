@@ -1,153 +1,16 @@
 {
  "items": [
-  {
-   "t": "mc",
-   "p": "Ten obraz od razu ___ uwagę zwiedzających.",
-   "opts": [
-    "przykuwa",
-    "kładzie",
-    "stawia",
-    "robi"
-   ],
-   "why": "przykuwać uwagę = to catch attention. (zwracać uwagę na = to pay attention to)",
-   "tag": "przykuwać uwagę"
-  },
-  {
-   "t": "mc",
-   "p": "Proszę ___ uwagę na ten szczegół.",
-   "opts": [
-    "zwrócić",
-    "przykuć",
-    "położyć",
-    "wziąć"
-   ],
-   "why": "zwrócić uwagę na + biernik = to pay attention to / point out.",
-   "tag": "zwrócić uwagę na"
-  },
-  {
-   "t": "mc",
-   "p": "Decyzja ___ wpływ na całą firmę.",
-   "opts": [
-    "wywarła",
-    "zrobiła",
-    "wzięła",
-    "dała"
-   ],
-   "why": "wywrzeć wpływ na = to exert influence on (formalne). Też: mieć wpływ na.",
-   "tag": "wywrzeć wpływ"
-  },
-  {
-   "t": "mc",
-   "p": "Wbrew ___ radom, wyjechał w nocy.",
-   "opts": [
-    "moim",
-    "moich",
-    "moje",
-    "moimi"
-   ],
-   "why": "wbrew + celownik: wbrew moim radom.",
-   "tag": "wbrew + dat."
-  },
-  {
-   "t": "mc",
-   "p": "___ trudnościom skończyliśmy projekt na czas. (in spite of / against the odds)",
-   "opts": [
-    "Wbrew",
-    "Mimo",
-    "Dzięki",
-    "Pomimo"
-   ],
-   "why": "Celownik (trudnościom) → wbrew. Mimo/pomimo wymagają dopełniacza (mimo trudności). Dzięki + celownik = thanks to (sens nie pasuje).",
-   "tag": "wbrew vs mimo"
-  },
-  {
-   "t": "mc",
-   "p": "Które zdanie jest NIEPOPRAWNE?",
-   "opts": [
-    "Ceny zwiększyły w tym roku.",
-    "Ceny wzrosły w tym roku.",
-    "Ceny się zwiększyły w tym roku.",
-    "Rząd zwiększył ceny w tym roku."
-   ],
-   "why": "zwiększyć (coś) jest przechodni → bez dopełnienia potrzebne się: ceny się zwiększyły; albo wzrosnąć: ceny wzrosły.",
-   "tag": "zwiększyć się error-spot"
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “The number of tourists has decreased.” (use: zmniejszyć)",
-   "a": [
-    "liczba turystów się zmniejszyła",
-    "liczba turystów zmniejszyła się"
-   ],
-   "tag": "typed zmniejszyć się",
-   "model": "Liczba turystów zmniejszyła się."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “Contrary to my expectations, the film was excellent.”",
-   "a": [
-    "wbrew moim oczekiwaniom film był świetny",
-    "wbrew moim oczekiwaniom, film był świetny",
-    "wbrew moim oczekiwaniom film był doskonały",
-    "wbrew moim oczekiwaniom, film był doskonały",
-    "wbrew moim oczekiwaniom film był znakomity",
-    "wbrew moim oczekiwaniom, film był znakomity",
-    "wbrew moim oczekiwaniom film był wspaniały",
-    "wbrew moim oczekiwaniom, film był wspaniały"
-   ],
-   "tag": "typed wbrew oczekiwaniom",
-   "model": "Wbrew moim oczekiwaniom film był świetny."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “It is worth noting that prices have risen.”",
-   "a": [
-    "warto zauważyć, że ceny wzrosły",
-    "warto zauważyć że ceny wzrosły",
-    "warto zauważyć, że ceny się zwiększyły",
-    "warto zauważyć, że ceny zwiększyły się",
-    "warto zaznaczyć, że ceny wzrosły",
-    "warto podkreślić, że ceny wzrosły"
-   ],
-   "tag": "typed warto zauważyć",
-   "model": "Warto zauważyć, że ceny wzrosły."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “The book was written by a young author.” (passive with zostać)",
-   "a": [
-    "książka została napisana przez młodego autora",
-    "ta książka została napisana przez młodego autora",
-    "książka została napisana przez młodą autorkę"
-   ],
-   "tag": "typed passive została napisana",
-   "model": "Książka została napisana przez młodego autora."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “Having read the letter, he left.” (use -wszy)",
-   "a": [
-    "przeczytawszy list, wyszedł",
-    "przeczytawszy list wyszedł",
-    "przeczytawszy list, wyjechał",
-    "przeczytawszy list, odszedł",
-    "przeczytawszy list, poszedł"
-   ],
-   "tag": "typed przeczytawszy",
-   "model": "Przeczytawszy list, wyszedł."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “This decision had a big influence on my life.”",
-   "a": [
-    "ta decyzja miała duży wpływ na moje życie",
-    "ta decyzja wywarła duży wpływ na moje życie",
-    "decyzja miała duży wpływ na moje życie",
-    "ta decyzja miała wielki wpływ na moje życie",
-    "ta decyzja wywarła wielki wpływ na moje życie"
-   ],
-   "tag": "typed wpływ na",
-   "model": "Ta decyzja miała duży wpływ na moje życie."
-  }
+  {"t":"mc","p":"Po długiej dyskusji zarząd ___ decyzję.","opts":["podjął","zrobił","wziął","dał"],"why":"podjąć decyzję = to make a decision (NIE: zrobić decyzję — kalka z angielskiego).","tag":"podjąć decyzję"},
+  {"t":"mc","p":"Z tej porażki musimy ___ wnioski.","opts":["wyciągnąć","zrobić","wziąć","wydobyć"],"why":"wyciągnąć wnioski = to draw conclusions.","tag":"wyciągnąć wnioski"},
+  {"t":"mc","p":"Firma ___ ogromny sukces na rynku.","opts":["odniosła","zrobiła","miała","wzięła"],"why":"odnieść sukces = to achieve success (formalne). Potocznie też: mieć sukces.","tag":"odnieść sukces"},
+  {"t":"mc","p":"Lot odwołano ze względu ___ złą pogodę.","opts":["na","o","w","z"],"why":"ze względu na + biernik = because of / due to.","tag":"ze względu na"},
+  {"t":"mc","p":"W związku ___ remontem biuro jest zamknięte.","opts":["z","na","do","od"],"why":"w związku z + narzędnik (remontem) = in connection with / due to.","tag":"w związku z"},
+  {"t":"mc","p":"Które zdanie jest NIEPOPRAWNE?","opts":["Ilość osób w sali wzrosła.","Liczba osób w sali wzrosła.","Ilość wody w jeziorze spadła.","Liczba studentów się zmniejszyła."],"why":"Rzeczy policzalne (osoby, studenci) → liczba; niepoliczalne (woda) → ilość.","tag":"liczba vs ilość error-spot"},
+  {"t":"type","p":"Napisz po polsku: “It is worth noting that the number of students has risen.”","a":["warto zauważyć, że liczba studentów wzrosła","warto zauważyć że liczba studentów wzrosła","warto zauważyć, że liczba studentów się zwiększyła","warto zauważyć, że liczba studentów zwiększyła się"],"tag":"typed warto zauważyć + liczba","model":"Warto zauważyć, że liczba studentów wzrosła."},
+  {"t":"type","p":"Napisz po polsku: “This book had a big influence on my life.”","a":["ta książka miała duży wpływ na moje życie","ta książka wywarła duży wpływ na moje życie","książka miała duży wpływ na moje życie","ta książka miała wielki wpływ na moje życie"],"tag":"typed wpływ na + acc.","model":"Ta książka miała duży wpływ na moje życie."},
+  {"t":"type","p":"Napisz po polsku: “She made a difficult decision.” (she = ona)","a":["podjęła trudną decyzję","ona podjęła trudną decyzję"],"tag":"typed podjęła decyzję","model":"Podjęła trudną decyzję."},
+  {"t":"type","p":"Napisz po polsku: “Thanks to your help, we finished on time.” (your = twojej)","a":["dzięki twojej pomocy skończyliśmy na czas","dzięki twojej pomocy, skończyliśmy na czas","dzięki twojej pomocy zdążyliśmy na czas","dzięki twojej pomocy skończyliśmy w terminie"],"tag":"typed dzięki + dat.","model":"Dzięki twojej pomocy skończyliśmy na czas."},
+  {"t":"type","p":"Napisz po polsku: “Due to the bad weather, the concert was cancelled.” (use: ze względu na)","a":["ze względu na złą pogodę koncert został odwołany","ze względu na złą pogodę, koncert został odwołany","ze względu na złą pogodę odwołano koncert","ze względu na złą pogodę koncert odwołano","ze względu na złą pogodę, odwołano koncert","ze względu na złą pogodę koncert odwołali"],"tag":"typed ze względu na","model":"Ze względu na złą pogodę koncert został odwołany."},
+  {"t":"type","p":"Napisz po polsku: “We must draw conclusions from this.”","a":["musimy z tego wyciągnąć wnioski","musimy wyciągnąć z tego wnioski","musimy wyciągnąć wnioski z tego"],"tag":"typed wyciągnąć wnioski","model":"Musimy wyciągnąć z tego wnioski."}
  ]
 }
