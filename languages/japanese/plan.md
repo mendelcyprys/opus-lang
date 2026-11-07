@@ -20,7 +20,7 @@ _Last updated: 2026-11-07_
 | 4 | A2/N4: plain form, te-form | planned |
 
 ## Next session
-1. Review (ヒ/ピ, ッ); self-intro (〜です、〜からきました); numbers 1–10; run rounds in `tools/japanese-practice.html` (MC → tiles → typed with the romaji converter).
+1. Review numbers 1-10, から きました, は/か tile order; then ます verbs (present/past) and を/に/で; rounds in `tools/japanese-practice.html`.
 
 ## Ideas / backlog
 - Katakana loanwords from food/tech (interests).

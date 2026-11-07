@@ -16,3 +16,8 @@
 
 ## Next time
 - Review ヒ/ピ and っ/ッ; self-intro (〜です、〜からきました); numbers 1–10; then ます verbs. Mix MC → build → typed again.
+
+## Round 2 (same day, Artifact; relayed): **11/12**
+- ✓ MC 6/6: ピザ (ヒ/ピ now right), さん, ご, エリック (small ッ), わたしは アメリカから きました (new), statement without stray か. ✓ typed 3/3: これはピザです, エリックのコーヒー, わたしはカナダからきました. ✓ builds: から きました, エリックのおちゃ.
+- ✗ build 'Is this my ramen?': wrote これかわたしのラーメンですは → これは わたしの ラーメン です か (は and か tiles swapped).
+- Both round-1 weak spots (ヒ/ピ, ッ) clean; new: numbers 3 and 5, ～から きました.
