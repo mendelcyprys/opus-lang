@@ -1,150 +1,16 @@
 {
  "items": [
-  {
-   "t": "mc",
-   "p": "Anna: „Jestem zmęczona.” → Anna powiedziała, że ___ zmęczona.",
-   "opts": [
-    "jest",
-    "jestem",
-    "była",
-    "będzie"
-   ],
-   "why": "Mowa zależna: czas się NIE zmienia (inaczej niż w angielskim), zmienia się osoba: jestem → jest.",
-   "tag": "reported speech person shift"
-  },
-  {
-   "t": "mc",
-   "p": "Mama chce, ___ wcześniej wrócił do domu. (that YOU return)",
-   "opts": [
-    "żebyś",
-    "żeby",
-    "żebym",
-    "że"
-   ],
-   "why": "Inny podmiot: chcę, żebyś + forma przeszła (wrócił). Końcówka -ś idzie na żeby.",
-   "tag": "żeby + other subject"
-  },
-  {
-   "t": "mc",
-   "p": "Zapytał mnie, ___ wyjeżdżam. (when)",
-   "opts": [
-    "kiedy",
-    "czy kiedy",
-    "że kiedy",
-    "jeśli"
-   ],
-   "why": "Pytanie zależne: tylko słowo pytające (kiedy/co/dlaczego), bez że/czy.",
-   "tag": "indirect question kiedy"
-  },
-  {
-   "t": "mc",
-   "p": "Po koncercie wszyscy ___ do domów. (dispersed, went off)",
-   "opts": [
-    "rozeszli się",
-    "zeszli się",
-    "obeszli się",
-    "przeszli się"
-   ],
-   "why": "rozejść się = disperse; zejść się = gather; obejść się bez = do without; przejść się = take a walk.",
-   "tag": "rozejść się"
-  },
-  {
-   "t": "mc",
-   "p": "Które zdanie jest NIEPOPRAWNE?",
-   "opts": [
-    "Płacę za wszystko pieniądzami.",
-    "Rozmawiałem z ludźmi.",
-    "Bawię się z dziećmi.",
-    "Spotkałem się z przyjaciółmi."
-   ],
-   "why": "Narzędnik l.mn.: pieniędzmi (jak ludźmi, dziećmi, przyjaciółmi).",
-   "tag": "pieniędzmi error-spot"
-  },
-  {
-   "t": "mc",
-   "p": "[B2] Nie tyle chodzi o pieniądze, ___ o czas.",
-   "opts": [
-    "ile",
-    "ale",
-    "co",
-    "niż"
-   ],
-   "why": "Stała konstrukcja: nie tyle X, ile Y (not so much X as Y).",
-   "tag": "nie tyle… ile"
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “I want you to call me tomorrow.” (to a man)",
-   "a": [
-    "chcę, żebyś zadzwonił do mnie jutro",
-    "chcę, żebyś jutro do mnie zadzwonił",
-    "chcę, żebyś do mnie jutro zadzwonił",
-    "chcę, żebyś jutro zadzwonił do mnie",
-    "chcę żebyś zadzwonił do mnie jutro",
-    "chcę żebyś jutro do mnie zadzwonił",
-    "chcę, żebyś do mnie zadzwonił jutro",
-    "chcę żebyś do mnie zadzwonił jutro"
-   ],
-   "tag": "typed żebyś zadzwonił",
-   "model": "Chcę, żebyś jutro do mnie zadzwonił."
-  },
-  {
-   "t": "type",
-   "p": "Zamień na mowę zależną: Piotr: „Mieszkam w Krakowie.” → Piotr powiedział, że …",
-   "a": [
-    "piotr powiedział, że mieszka w krakowie",
-    "piotr powiedział że mieszka w krakowie",
-    "mieszka w krakowie"
-   ],
-   "tag": "typed reported speech",
-   "model": "Piotr powiedział, że mieszka w Krakowie."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “I don't know why she left.” (left = went out, single event)",
-   "a": [
-    "nie wiem, dlaczego wyszła",
-    "nie wiem dlaczego wyszła",
-    "nie wiem, czemu wyszła",
-    "nie wiem, dlaczego ona wyszła"
-   ],
-   "tag": "typed indirect dlaczego",
-   "model": "Nie wiem, dlaczego wyszła."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “I went to the cinema with my (female) friends.”",
-   "a": [
-    "poszedłem do kina z przyjaciółkami",
-    "poszedłem z przyjaciółkami do kina",
-    "poszedłem do kina z moimi przyjaciółkami",
-    "poszedłem z moimi przyjaciółkami do kina"
-   ],
-   "tag": "typed przyjaciółkami",
-   "model": "Poszedłem do kina z przyjaciółkami."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “Every summer we used to go to the sea.” (by car/train)",
-   "a": [
-    "każdego lata jeździliśmy nad morze",
-    "co roku latem jeździliśmy nad morze",
-    "każdego lata jeździliśmy nad morze."
-   ],
-   "tag": "typed past habit jeździliśmy",
-   "model": "Każdego lata jeździliśmy nad morze."
-  },
-  {
-   "t": "type",
-   "p": "Napisz po polsku: “She asked me to wait.” (I = man)",
-   "a": [
-    "poprosiła mnie, żebym poczekał",
-    "poprosiła mnie żebym poczekał",
-    "poprosiła, żebym poczekał",
-    "poprosiła mnie, żebym zaczekał"
-   ],
-   "tag": "typed poprosiła żebym",
-   "model": "Poprosiła mnie, żebym poczekał."
-  }
+  {"t":"mc","p":"[C1 · czytanie] „Choć reforma miała uprościć przepisy, w praktyce przyczyniła się do jeszcze większego zamętu.”\nCo wynika z tekstu?","opts":["Reforma przyniosła skutek odwrotny do zamierzonego.","Reforma uprościła przepisy, ale z opóźnieniem.","Reforma nie została wprowadzona w praktyce.","Zamęt istniał tylko przed reformą."],"why":"miała uprościć = was supposed to simplify; przyczyniła się do zamętu = contributed to confusion → opposite effect.","tag":"C1 reading inference"},
+  {"t":"mc","p":"[C1 · czytanie] „Trudno oprzeć się wrażeniu, że autor raczej sugeruje, niż dowodzi.”\nCo zarzuca się autorowi?","opts":["Brak przekonujących argumentów.","Zbyt długi tekst.","Zbyt wiele przykładów.","Kopiowanie cudzych myśli."],"why":"raczej sugeruje, niż dowodzi = hints rather than proves → lack of evidence. Trudno oprzeć się wrażeniu = one can't help feeling.","tag":"C1 reading stance"},
+  {"t":"mc","p":"Gdybym ___ o tym wcześniej, nie podpisałbym umowy. (past counterfactual, formal/literary)","opts":["był wiedział","wiedziałbym","będę wiedział","bym wiedział"],"why":"Czas zaprzeszły w trybie przypuszczającym (literacki): gdybym był wiedział. Potocznie też: gdybym wiedział.","tag":"C1 past conditional"},
+  {"t":"mc","p":"___ do domu, zauważyłem, że drzwi są otwarte. (having arrived — completed before)","opts":["Wróciwszy","Wracając","Wrócony","Wróciłszy"],"why":"Imiesłów uprzedni -wszy/-łszy: wróciwszy = having returned (czynność wcześniejsza). Wracając = while returning.","tag":"C1 anterior participle"},
+  {"t":"mc","p":"Ten problem ___ uwagę ekspertów już od lat. (collocation)","opts":["przykuwa","kładzie","robi","bierze"],"why":"przykuwać uwagę = to attract/grip attention. Stała kolokacja.","tag":"C1 collocation"},
+  {"t":"mc","p":"Które zdanie ma rejestr najbardziej formalny?","opts":["Uprzejmie proszę o ustosunkowanie się do powyższego.","Daj znać, co o tym myślisz.","Napisz mi, co sądzisz.","Powiedz, jak to widzisz."],"why":"ustosunkować się do + uprzejmie proszę + powyższe = urzędowy rejestr.","tag":"C1 register"},
+  {"t":"mc","p":"Wbrew ___ , projekt zakończył się sukcesem. (contrary to expectations)","opts":["oczekiwaniom","oczekiwań","oczekiwaniach","oczekiwania"],"why":"wbrew + celownik: wbrew oczekiwaniom.","tag":"C1 wbrew + dat."},
+  {"t":"mc","p":"Które zdanie jest NIEPOPRAWNE?","opts":["Mimo że deszcz, wyszliśmy na spacer.","Mimo że padał deszcz, wyszliśmy.","Mimo deszczu wyszliśmy.","Pomimo deszczu wyszliśmy."],"why":"„Mimo że” wymaga pełnego zdania z czasownikiem (mimo że padał deszcz). Mimo/pomimo + dopełniacz albo mimo że + zdanie.","tag":"C1 error-spot mimo"},
+  {"t":"type","p":"Przekształć, używając „mimo + dopełniacz”: Chociaż był zmęczony, pracował dalej. → … pracował dalej.","a":["mimo zmęczenia pracował dalej","pomimo zmęczenia pracował dalej","mimo zmęczenia, pracował dalej"],"tag":"typed mimo + verbal noun","model":"Mimo zmęczenia pracował dalej."},
+  {"t":"type","p":"Przekształć na stronę bierną (zostać): Firma zatrudniła nowego dyrektora. → Nowy dyrektor …","a":["nowy dyrektor został zatrudniony przez firmę","nowy dyrektor został przez firmę zatrudniony"],"tag":"typed passive zostać","model":"Nowy dyrektor został zatrudniony przez firmę."},
+  {"t":"type","p":"Napisz po polsku: “The more I read, the less I understand.”","a":["im więcej czytam, tym mniej rozumiem","im więcej czytam tym mniej rozumiem"],"tag":"typed im… tym","model":"Im więcej czytam, tym mniej rozumiem."},
+  {"t":"type","p":"Napisz po polsku: “It is worth noting that prices have risen.” (use: warto)","a":["warto zauważyć, że ceny wzrosły","warto zauważyć że ceny wzrosły","warto zaznaczyć, że ceny wzrosły","warto odnotować, że ceny wzrosły","warto podkreślić, że ceny wzrosły","warto zwrócić uwagę, że ceny wzrosły","warto zwrócić uwagę na to, że ceny wzrosły","warto zauważyć, że ceny poszły w górę"],"tag":"typed warto zauważyć","model":"Warto zauważyć, że ceny wzrosły."}
  ]
 }
