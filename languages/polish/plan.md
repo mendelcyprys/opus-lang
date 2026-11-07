@@ -11,6 +11,7 @@ _Last updated: 2026-11-07 (round 3 added)_
 | A2 (reading/writing) | — | 2026-11-04 | 26/27 on placement test → passed |
 | B1 (reading/writing) | ~2027-02 | 2026-11-04 (informal) | reading ~low B2 on familiar topics (2 B2 texts 8/8); writing ~B1; formal recheck ~mid-Dec |
 | B2 | later | | |
+| C1 (stretch sampler) | — | 2026-11-07 | 9/12 informal (reading + advanced grammar ✓; gaps: collocations, wbrew + dat., się verbs) |
 
 ## Roadmap
 | Phase | Focus | Status |

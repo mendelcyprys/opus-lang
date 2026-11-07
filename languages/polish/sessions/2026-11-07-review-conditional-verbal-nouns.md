@@ -49,3 +49,11 @@
 - Focus: reported speech (person shift, tense kept), żeby + other subject (żebyś), indirect questions (kiedy, dlaczego), rozejść się, pieniędzmi, B2 nie tyle… ile.
 - All MC ✓; typed ✓: Piotr powiedział, że mieszka w Krakowie; Nie wiem, dlaczego wyszła; z przyjaciółkami (ó ✓); Każdego lata jeździliśmy nad morze (past habit impf ✓); Poprosiła mnie, żebym poczekał.
 - Page marked *Chcę, żebyś do mnie zadzwonił jutro* wrong — valid word order; counted correct, alternative added.
+
+## C1 stretch test (Artifact; relayed): page 7/12 → **9/12**
+- ✓ both C1 reading items (inference, author's stance), gdybym był wiedział, wróciwszy, register (ustosunkować się), mimo że error-spot, im więcej…, tym mniej.
+- Recounted as correct: #10 *został zatrudniony przez firmę* (learner continued the given "Nowy dyrektor …" — valid); #9 *Mimo jego zmęczenia, pracował dalej* (mimo + gen. ✓; style: drop *jego* and the comma → Mimo zmęczenia pracował dalej).
+- ✗ przykuwać uwagę (chose *kładzie*; collocation).
+- ✗ wbrew + **dative**: wbrew oczekiwaniom (chose gen. oczekiwań).
+- ✗ *Warto przypomnieć, że ceny zwiększyły* → **Warto zauważyć, że ceny wzrosły** (przypomnieć = remind/recall; *zwiększyć* is transitive → needs *się*: ceny się zwiększyły, or wzrosły).
+- Verdict: 9/12 on a C1 sampler — grammar/reading at C1 items already OK; gaps are collocations, case government of prepositions (wbrew), reflexive/intransitive verbs.

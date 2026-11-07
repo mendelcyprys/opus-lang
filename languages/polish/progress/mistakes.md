@@ -29,3 +29,6 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | poprosić (ask) vs zaprosić (invite) | Zaprosiłem ją, żeby poczekała → **Poprosiłem** ją, żeby poczekała | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (poprosiła kelnera MC ✓, typed Poprosiła mnie, żebym… ✓ round 3) |
 | Genitive of ranek in time phrase | każdego ranku → każdego **ranka** | case | 2026-11-07 | 2026-11-07 | 1 | improving (MC ✓ and typed Każdego ranka wychodzę… ✓ round 3) |
 | przyjaciółka stem (ó), not e | przyjacielkami → **przyjaciółkami** | spelling | 2026-11-07 | 2026-11-07 | 1 | improving (typed z przyjaciółkami ✓ pm) |
+| Preposition case government (C1) | wbrew *oczekiwań* → wbrew **oczekiwaniom** (dative) | case | 2026-11-07 | 2026-11-07 | 1 | active |
+| Transitive verb used without się | ceny *zwiększyły* → ceny **się zwiększyły** / **wzrosły** | vocabulary/grammar | 2026-11-07 | 2026-11-07 | 1 | active |
+| Collocations (C1) | *kłaść* uwagę → **przykuwać** uwagę | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |

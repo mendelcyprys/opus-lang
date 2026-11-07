@@ -33,3 +33,4 @@
 | Conditional gdybym miał…, + main clause | 2026-11-07 round 2: error-spot ✓ (bym can't open the clause), typed … ✓. 2026-11-07: typed kupiłbym ✓ (cold) but error-spot of *…, bym pojechał* ✗ | 2026-11-04 | 2026-11-07 | 2 |
 | Numerals + instr. fem. (z czterema koleżankami) typed | czterema ✓ typed (round 2 2026-11-07); noun stem ✗ przyjacielkami → przyjaciółkami | 2026-11-05 | 2026-11-07 | 3 |
 | Habit in the past → impf (każdego lata jeździliśmy) | round 3 (2026-11-07): MC ✗ chose pojechaliśmy | 2026-11-07 | 2026-11-07 | 1 |
+| C1 sampler: gdybym był wiedział (past conditional), imiesłów uprzedni -wszy (wróciwszy), im… tym, mimo + gen. | C1 test 2026-11-07: all ✓ (MC/typed) | 2026-11-07 | 2026-11-07 | 2 |
