@@ -19,5 +19,4 @@ Record here only what is specific to Arabic, or where it differs. Update wheneve
   **large-type Artifact** (page with A−/A+ size control, Amiri font, typed + MC items, "copy results" summary the learner pastes back).
   First one: https://claude.ai/artifact/9Gp267NvKwq2c8Eff6GuhV (source in `languages/arabic/tools/arabic-practice.html`). Update the item list per session
   (republish same URL). In chat, keep Arabic to a minimum and transliterate. Same may apply to Hebrew (and Japanese kana/kanji) — ask.
-- **Artifact feedback (2026-11-07):** the practice page uses the `sample` capability (declare `capabilities: {sample: {}}` on every republish) — "Ask Claude why" per miss
-  and "Get feedback from Claude" on the summary, so the learner gets feedback inside the page. Results are still pasted back into chat so they get logged in the repo.
+- **Artifact feedback & relay (2026-11-07):** the practice page uses `sample` (feedback inside the page) and `comments` ("Send results to Claude" posts the round into the chat session). Declare `capabilities: {"sample": {}, "comments": {}}` on every republish. Details: `tools/README.md`.

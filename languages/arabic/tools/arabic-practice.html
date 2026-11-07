@@ -56,9 +56,9 @@ button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-
 .miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
 .miss .ar{font-size:calc(var(--ar-size)*.85);line-height:1.7}
 .miss small{color:var(--muted)}
-.listen{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
-.listen[disabled]{opacity:.5}
-small.hint{color:var(--muted);font-size:.9rem}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95rem}
 .claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui),var(--ar);font-size:calc(var(--ar-size)*.5);line-height:1.8;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
 .claude-box:empty{display:none}
 .claude-box.err{color:var(--bad)}
@@ -80,12 +80,9 @@ pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--li
 </div>
 
 <script>
-const D = {
-  q: "ًٌٍَُِّْٰٕٓٔـ"
-};
 const stripMarks = s => s.replace(/[ً-ٰٟـ]/g,'');
 // loose key: unify hamza seats, ى/ي, ة/ه, tanwin-alif; used to tell a spelling slip from a wrong word
-const loose = s => stripMarks(s).replace(/[أإآٱء]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[؟?.!،,\s]+/g,' ').trim().replace(/ا ?$/,'ا');
+const loose = s => stripMarks(s).replace(/[أإآٱء]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[؟?.!،,\s]+/g,' ').trim();
 const strict = s => stripMarks(s).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
 
 const ITEMS = [
@@ -115,7 +112,8 @@ const MODEL = {6:'ذَهَبْنَا إِلَى السُّوقِ أَمْسِ.',
 const $ = id => document.getElementById(id);
 
 // --- feedback from Claude (page asks Claude via the sample capability; hidden when unavailable) ---
-let SAMPLE = null;
+let SAMPLE = null, COMMENTS = null;
+(async () => { try { COMMENTS = (window.claude && await window.claude.use('comments')) || null } catch (e) { COMMENTS = null } })();
 (async () => { try { SAMPLE = (window.claude && await window.claude.use('sample')) || null } catch (e) { SAMPLE = null } })();
 const ERR = {
   not_granted:'Claude access was not allowed for this page, so feedback is off.',
@@ -136,35 +134,9 @@ function askClaude(prompt, box, btn, opts){
     .finally(() => { btn.disabled = false; btn.textContent = label });
 }
 function claudeBtn(label){
-  const b = document.createElement('button'); b.type='button'; b.className='listen ghost'; b.textContent = label; return b;
+  const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b;
 }
 
-// --- listening: browser speech synthesis (needs an Arabic voice on the device) ---
-const TTS = ('speechSynthesis' in window) ? window.speechSynthesis : null;
-let arVoice = null;
-function pickVoice(){
-  if(!TTS) return;
-  const vs = TTS.getVoices();
-  arVoice = vs.find(v=>/^ar[-_]SA/i.test(v.lang)) || vs.find(v=>/^ar/i.test(v.lang)) || null;
-}
-if(TTS){pickVoice(); TTS.addEventListener && TTS.addEventListener('voiceschanged', pickVoice)}
-function speak(text, btn){
-  if(!TTS){ if(btn) btn.textContent='No audio on this device'; return }
-  try{
-    TTS.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ar-SA'; if(arVoice) u.voice = arVoice;
-    u.rate = 0.8;
-    u.onerror = () => { if(btn) btn.textContent='Audio failed \u2013 no Arabic voice?' };
-    TTS.speak(u);
-  }catch(e){ if(btn) btn.textContent='Audio failed' }
-}
-function listenBtn(text){
-  const b = document.createElement('button'); b.type='button'; b.className='listen ghost';
-  b.textContent = '\u25B6 Listen'; b.setAttribute('aria-label','Listen to the Arabic');
-  b.addEventListener('click', () => speak(text, b));
-  return b;
-}
 let order, cur, results, picked, answered;
 
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -225,7 +197,7 @@ function check(){
   } else {
     const g=$('ans').value, gs=strict(g), gl=loose(g);
     let kind='wrong';
-    if(it.a.some(a=>strict(a)===gs || strict(a).replace(/ا$/,'')===gs.replace(/ا$/,'') && false)) kind='ok';
+    if(it.a.some(a=>strict(a)===gs)) kind='ok';
     else if(it.a.some(a=>loose(a)===gl)) kind='near';
     finish({ok:kind==='ok',kind,given:g});
   }
@@ -236,7 +208,6 @@ function finish(r){
   const it=order[cur];
   r.tag=it.tag; r.q=it.p;
   r.correct = it.t==='mc' ? it.opts[it.a] : (MODEL[it.idx]||it.a[0]);
-  r.say = (it.t==='mc' && it.stem) ? it.stem.replace('___', r.correct) : r.correct;
   results.push(r);
   const fb=$('fb'); fb.className='fb '+(r.kind==='ok'?'ok':r.kind==='near'?'near':'no');
   let head = r.kind==='ok'?'Correct': r.kind==='near'?'Right words, spelling slip': r.kind==='skip'?'Skipped':'Not quite';
@@ -247,7 +218,6 @@ function finish(r){
     if(r.kind==='near'){const n=document.createElement('div');n.className='note';n.textContent='Check the hamza seat, final ى / ي, or ة / ه.';fb.appendChild(n)}
   }
   if(it.why){const w=document.createElement('div');w.className='note';w.textContent=it.why;fb.appendChild(w)}
-  fb.appendChild(listenBtn(r.say));
   if(SAMPLE && r.kind !== 'ok'){
     const b = claudeBtn('Ask Claude why'); const box = document.createElement('div'); box.className='claude-box';
     b.addEventListener('click', () => askClaude(LEARNER + 'Explain this one mistake in at most 5 short lines, then give ONE similar sentence to translate (no answer given).\n\n' +
@@ -276,17 +246,8 @@ function summary(){
     const q=document.createElement('small');q.textContent=r.q+'  ['+r.tag+']';d.appendChild(q);
     const a=document.createElement('div');a.className='ar';a.textContent=r.correct;d.appendChild(a);
     if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.style.fontSize='1.6rem';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
-    d.appendChild(listenBtn(r.say));
     st.appendChild(d);
   });
-  const rev=document.createElement('div');rev.className='miss';
-  const rh=document.createElement('small');rh.className='hint';rh.textContent='Hear every correct answer from this round:';rev.appendChild(rh);
-  results.forEach((r,i)=>{
-    const row=document.createElement('div');row.style.cssText='display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap';
-    const t=document.createElement('span');t.className='ar';t.style.fontSize='calc(var(--ar-size)*.8)';t.textContent=r.say;
-    row.append(listenBtn(r.say),t);rev.appendChild(row);
-  });
-  st.appendChild(rev);
   const lines=['Arabic practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
   results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
   const label=document.createElement('div');label.className='prompt';label.textContent='Paste this into the chat so I can log your round:';st.appendChild(label);
@@ -298,8 +259,30 @@ function summary(){
     const fallback=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selected – press copy'};
     try{navigator.clipboard.writeText(pre.textContent).then(done,fallback)}catch(e){fallback()}
   });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send=document.createElement('button');send.type='button';send.textContent='Send results to Claude';
+    const status=document.createElement('div');status.className='status';
+    send.addEventListener('click', async () => {
+      send.disabled=true; status.textContent='Sending\u2026';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent='Sent. Claude will log the round and reply in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled=false;
+      }
+    });
+    act.append(send);
+    sendStatus = status;
+  }
   const again=document.createElement('button');again.type='button';again.className='ghost';again.textContent='New round';again.addEventListener('click',start);
   act.append(cp,again);st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
   if(SAMPLE){
     const fbBtn = claudeBtn('Get feedback from Claude'); const fbBox = document.createElement('div'); fbBox.className='claude-box';
     const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
