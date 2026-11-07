@@ -22,3 +22,8 @@
 
 ## Next time
 - и vs і drill (Polish i ↔ Ukr. и in stems: купив, робити; "and" = і/й/та); працюю/працює (-ю/-є after vowels); овочі/фрукти; ринок/центр/вокзал in locative.
+
+## Round 2 (practice page) — 11/12
+- ✓ купив, і = and, працює (MC + typed), овочі/фрукти error-spot, у центрі, builds (працюю кухарем у центрі; Петре… на ринку; на вокзалі… в центр),
+  typed Вона працює лікаркою, Я купив овочі та фрукти на ринку (redo ✓), Олено, де вокзал?
+- ✗ #6 vocative: Пане Петро → Пане Петре (both words take the vocative).
