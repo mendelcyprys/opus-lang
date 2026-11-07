@@ -1,16 +1,150 @@
 {
  "items": [
-  {"t":"mc","p":"Anna: „Jestem zmęczona.” → Anna powiedziała, że ___ zmęczona.","opts":["jest","jestem","była","będzie"],"why":"Mowa zależna: czas się NIE zmienia (inaczej niż w angielskim), zmienia się osoba: jestem → jest.","tag":"reported speech person shift"},
-  {"t":"mc","p":"Mama chce, ___ wcześniej wrócił do domu. (that YOU return)","opts":["żebyś","żeby","żebym","że"],"why":"Inny podmiot: chcę, żebyś + forma przeszła (wrócił). Końcówka -ś idzie na żeby.","tag":"żeby + other subject"},
-  {"t":"mc","p":"Zapytał mnie, ___ wyjeżdżam. (when)","opts":["kiedy","czy kiedy","że kiedy","jeśli"],"why":"Pytanie zależne: tylko słowo pytające (kiedy/co/dlaczego), bez że/czy.","tag":"indirect question kiedy"},
-  {"t":"mc","p":"Po koncercie wszyscy ___ do domów. (dispersed, went off)","opts":["rozeszli się","zeszli się","obeszli się","przeszli się"],"why":"rozejść się = disperse; zejść się = gather; obejść się bez = do without; przejść się = take a walk.","tag":"rozejść się"},
-  {"t":"mc","p":"Które zdanie jest NIEPOPRAWNE?","opts":["Płacę za wszystko pieniądzami.","Rozmawiałem z ludźmi.","Bawię się z dziećmi.","Spotkałem się z przyjaciółmi."],"why":"Narzędnik l.mn.: pieniędzmi (jak ludźmi, dziećmi, przyjaciółmi).","tag":"pieniędzmi error-spot"},
-  {"t":"mc","p":"[B2] Nie tyle chodzi o pieniądze, ___ o czas.","opts":["ile","ale","co","niż"],"why":"Stała konstrukcja: nie tyle X, ile Y (not so much X as Y).","tag":"nie tyle… ile"},
-  {"t":"type","p":"Napisz po polsku: “I want you to call me tomorrow.” (to a man)","a":["chcę, żebyś zadzwonił do mnie jutro","chcę, żebyś jutro do mnie zadzwonił","chcę, żebyś do mnie jutro zadzwonił","chcę, żebyś jutro zadzwonił do mnie","chcę żebyś zadzwonił do mnie jutro","chcę żebyś jutro do mnie zadzwonił"],"tag":"typed żebyś zadzwonił","model":"Chcę, żebyś jutro do mnie zadzwonił."},
-  {"t":"type","p":"Zamień na mowę zależną: Piotr: „Mieszkam w Krakowie.” → Piotr powiedział, że …","a":["piotr powiedział, że mieszka w krakowie","piotr powiedział że mieszka w krakowie","mieszka w krakowie"],"tag":"typed reported speech","model":"Piotr powiedział, że mieszka w Krakowie."},
-  {"t":"type","p":"Napisz po polsku: “I don't know why she left.” (left = went out, single event)","a":["nie wiem, dlaczego wyszła","nie wiem dlaczego wyszła","nie wiem, czemu wyszła","nie wiem, dlaczego ona wyszła"],"tag":"typed indirect dlaczego","model":"Nie wiem, dlaczego wyszła."},
-  {"t":"type","p":"Napisz po polsku: “I went to the cinema with my (female) friends.”","a":["poszedłem do kina z przyjaciółkami","poszedłem z przyjaciółkami do kina","poszedłem do kina z moimi przyjaciółkami","poszedłem z moimi przyjaciółkami do kina"],"tag":"typed przyjaciółkami","model":"Poszedłem do kina z przyjaciółkami."},
-  {"t":"type","p":"Napisz po polsku: “Every summer we used to go to the sea.” (by car/train)","a":["każdego lata jeździliśmy nad morze","co roku latem jeździliśmy nad morze","każdego lata jeździliśmy nad morze."],"tag":"typed past habit jeździliśmy","model":"Każdego lata jeździliśmy nad morze."},
-  {"t":"type","p":"Napisz po polsku: “She asked me to wait.” (I = man)","a":["poprosiła mnie, żebym poczekał","poprosiła mnie żebym poczekał","poprosiła, żebym poczekał","poprosiła mnie, żebym zaczekał"],"tag":"typed poprosiła żebym","model":"Poprosiła mnie, żebym poczekał."}
+  {
+   "t": "mc",
+   "p": "Anna: „Jestem zmęczona.” → Anna powiedziała, że ___ zmęczona.",
+   "opts": [
+    "jest",
+    "jestem",
+    "była",
+    "będzie"
+   ],
+   "why": "Mowa zależna: czas się NIE zmienia (inaczej niż w angielskim), zmienia się osoba: jestem → jest.",
+   "tag": "reported speech person shift"
+  },
+  {
+   "t": "mc",
+   "p": "Mama chce, ___ wcześniej wrócił do domu. (that YOU return)",
+   "opts": [
+    "żebyś",
+    "żeby",
+    "żebym",
+    "że"
+   ],
+   "why": "Inny podmiot: chcę, żebyś + forma przeszła (wrócił). Końcówka -ś idzie na żeby.",
+   "tag": "żeby + other subject"
+  },
+  {
+   "t": "mc",
+   "p": "Zapytał mnie, ___ wyjeżdżam. (when)",
+   "opts": [
+    "kiedy",
+    "czy kiedy",
+    "że kiedy",
+    "jeśli"
+   ],
+   "why": "Pytanie zależne: tylko słowo pytające (kiedy/co/dlaczego), bez że/czy.",
+   "tag": "indirect question kiedy"
+  },
+  {
+   "t": "mc",
+   "p": "Po koncercie wszyscy ___ do domów. (dispersed, went off)",
+   "opts": [
+    "rozeszli się",
+    "zeszli się",
+    "obeszli się",
+    "przeszli się"
+   ],
+   "why": "rozejść się = disperse; zejść się = gather; obejść się bez = do without; przejść się = take a walk.",
+   "tag": "rozejść się"
+  },
+  {
+   "t": "mc",
+   "p": "Które zdanie jest NIEPOPRAWNE?",
+   "opts": [
+    "Płacę za wszystko pieniądzami.",
+    "Rozmawiałem z ludźmi.",
+    "Bawię się z dziećmi.",
+    "Spotkałem się z przyjaciółmi."
+   ],
+   "why": "Narzędnik l.mn.: pieniędzmi (jak ludźmi, dziećmi, przyjaciółmi).",
+   "tag": "pieniędzmi error-spot"
+  },
+  {
+   "t": "mc",
+   "p": "[B2] Nie tyle chodzi o pieniądze, ___ o czas.",
+   "opts": [
+    "ile",
+    "ale",
+    "co",
+    "niż"
+   ],
+   "why": "Stała konstrukcja: nie tyle X, ile Y (not so much X as Y).",
+   "tag": "nie tyle… ile"
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “I want you to call me tomorrow.” (to a man)",
+   "a": [
+    "chcę, żebyś zadzwonił do mnie jutro",
+    "chcę, żebyś jutro do mnie zadzwonił",
+    "chcę, żebyś do mnie jutro zadzwonił",
+    "chcę, żebyś jutro zadzwonił do mnie",
+    "chcę żebyś zadzwonił do mnie jutro",
+    "chcę żebyś jutro do mnie zadzwonił",
+    "chcę, żebyś do mnie zadzwonił jutro",
+    "chcę żebyś do mnie zadzwonił jutro"
+   ],
+   "tag": "typed żebyś zadzwonił",
+   "model": "Chcę, żebyś jutro do mnie zadzwonił."
+  },
+  {
+   "t": "type",
+   "p": "Zamień na mowę zależną: Piotr: „Mieszkam w Krakowie.” → Piotr powiedział, że …",
+   "a": [
+    "piotr powiedział, że mieszka w krakowie",
+    "piotr powiedział że mieszka w krakowie",
+    "mieszka w krakowie"
+   ],
+   "tag": "typed reported speech",
+   "model": "Piotr powiedział, że mieszka w Krakowie."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “I don't know why she left.” (left = went out, single event)",
+   "a": [
+    "nie wiem, dlaczego wyszła",
+    "nie wiem dlaczego wyszła",
+    "nie wiem, czemu wyszła",
+    "nie wiem, dlaczego ona wyszła"
+   ],
+   "tag": "typed indirect dlaczego",
+   "model": "Nie wiem, dlaczego wyszła."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “I went to the cinema with my (female) friends.”",
+   "a": [
+    "poszedłem do kina z przyjaciółkami",
+    "poszedłem z przyjaciółkami do kina",
+    "poszedłem do kina z moimi przyjaciółkami",
+    "poszedłem z moimi przyjaciółkami do kina"
+   ],
+   "tag": "typed przyjaciółkami",
+   "model": "Poszedłem do kina z przyjaciółkami."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “Every summer we used to go to the sea.” (by car/train)",
+   "a": [
+    "każdego lata jeździliśmy nad morze",
+    "co roku latem jeździliśmy nad morze",
+    "każdego lata jeździliśmy nad morze."
+   ],
+   "tag": "typed past habit jeździliśmy",
+   "model": "Każdego lata jeździliśmy nad morze."
+  },
+  {
+   "t": "type",
+   "p": "Napisz po polsku: “She asked me to wait.” (I = man)",
+   "a": [
+    "poprosiła mnie, żebym poczekał",
+    "poprosiła mnie żebym poczekał",
+    "poprosiła, żebym poczekał",
+    "poprosiła mnie, żebym zaczekał"
+   ],
+   "tag": "typed poprosiła żebym",
+   "model": "Poprosiła mnie, żebym poczekał."
+  }
  ]
 }

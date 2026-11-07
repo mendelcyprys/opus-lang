@@ -44,3 +44,8 @@
 - ✓ zjedz (vs zjedź/zejdź), neg. imperative error-spot (nie zjedz), przyjaciółmi, pieniędzy, wstawania; typed: conditional (uczyłbym się…), Nie wchodź tam, indirect question (zapytał, gdzie mieszkam), jeszcze nie + gen., w Polsce/we Włoszech.
 - ✗ 'people gather' *obchodzą się* → **schodzą się** (zejść się; obejść się = do without) — repeat of 2026-11-04.
 - ✗ typed *przydzie* → **przyjdzie** (dropped j); reported speech structure ✓.
+
+## Round (afternoon, Artifact; relayed): page 11/12 → **12/12**
+- Focus: reported speech (person shift, tense kept), żeby + other subject (żebyś), indirect questions (kiedy, dlaczego), rozejść się, pieniędzmi, B2 nie tyle… ile.
+- All MC ✓; typed ✓: Piotr powiedział, że mieszka w Krakowie; Nie wiem, dlaczego wyszła; z przyjaciółkami (ó ✓); Każdego lata jeździliśmy nad morze (past habit impf ✓); Poprosiła mnie, żebym poczekał.
+- Page marked *Chcę, żebyś do mnie zadzwonił jutro* wrong — valid word order; counted correct, alternative added.

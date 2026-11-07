@@ -17,7 +17,7 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Diacritic changes meaning | *Zjedź zupę* → **Zjedz** (zjedź = drive down) | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedz ✓ in drill) |
 | Walk vs drive prefixed verbs | "drive down" *Zejdź* → **Zjedź** | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (Zjedź do garażu ✓ 2026-11-05; wyjść spotted as on-foot) |
 | zejść się (gather) vs obejść się | *obeszli się* → **zeszli się**; 2026-11-07 *obchodzą się* → **schodzą się** | vocabulary | 2026-11-04 | 2026-11-07 | 2 | active (relapse round 5) |
-| Irregular instr. pl. | *pieniądzami* → **pieniędzmi** | case | 2026-11-04 | 2026-11-04 | 1 | active |
+| Irregular instr. pl. | *pieniądzami* → **pieniędzmi** | case | 2026-11-04 | 2026-11-07 | 1 | improving (error-spot ✓ 2026-11-07) |
 | Noun after wielu/kilku in oblique case left in gen. | *w wielu miast* → **w wielu miastach** | case | 2026-11-04 | 2026-11-04 | 1 | improving (w wielu miastach ✓ MC 2026-11-05) |
 | w → we before w-/f- clusters | *w Włoszech* → **we Włoszech** | spelling | 2026-11-04 | 2026-11-04 | 1 | improving (✓ in production) |
 | zejść (go down) for "leave the house" | *zejdę z domu* → **wychodzę z domu** (wyjść = go out) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | improving (wychodzę ✓ MC 2026-11-05) |
@@ -28,4 +28,4 @@ Track patterns, not one-offs. Bump the count each time a pattern recurs; target 
 | Clitic *bym* placed first in the clause + pf l-form slip | *…, bym więcej zwiedział* → **więcej bym zwiedził** / **zwiedziłbym więcej** | word order/spelling | 2026-11-06 | 2026-11-07 | 2 | improving (2026-11-07 pm Artifact round: error-spot ✓ + typed zwiedziłbym ✓; am: typed kupiłbym ✓ but error-spot ✗) |
 | poprosić (ask) vs zaprosić (invite) | Zaprosiłem ją, żeby poczekała → **Poprosiłem** ją, żeby poczekała | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (poprosiła kelnera MC ✓, typed Poprosiła mnie, żebym… ✓ round 3) |
 | Genitive of ranek in time phrase | każdego ranku → każdego **ranka** | case | 2026-11-07 | 2026-11-07 | 1 | improving (MC ✓ and typed Każdego ranka wychodzę… ✓ round 3) |
-| przyjaciółka stem (ó), not e | przyjacielkami → **przyjaciółkami** | spelling | 2026-11-07 | 2026-11-07 | 1 | active |
+| przyjaciółka stem (ó), not e | przyjacielkami → **przyjaciółkami** | spelling | 2026-11-07 | 2026-11-07 | 1 | improving (typed z przyjaciółkami ✓ pm) |
