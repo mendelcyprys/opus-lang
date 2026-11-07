@@ -56,6 +56,9 @@ button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-
 .miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
 .miss .ar{font-size:calc(var(--ar-size)*.85);line-height:1.7}
 .miss small{color:var(--muted)}
+.listen{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.listen[disabled]{opacity:.5}
+small.hint{color:var(--muted);font-size:.9rem}
 pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font:.95rem/1.5 var(--ui);margin:0;direction:ltr}
 @media (prefers-reduced-motion:reduce){.progress i{transition:none}}
 </style>
@@ -107,6 +110,33 @@ const ITEMS = [
 const MODEL = {6:'ذَهَبْنَا إِلَى السُّوقِ أَمْسِ.',7:'لَمْ أَقْرَأِ الرِّسَالَةَ.',8:'لَنْ يَذْهَبَ غَدًا.',9:'البَيْتُ لَيْسَ جَدِيدًا.',10:'لَمْ تَذْهَبْ.',11:'ذَهَبْتُ مَعَهُ.'};
 
 const $ = id => document.getElementById(id);
+
+// --- listening: browser speech synthesis (needs an Arabic voice on the device) ---
+const TTS = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+let arVoice = null;
+function pickVoice(){
+  if(!TTS) return;
+  const vs = TTS.getVoices();
+  arVoice = vs.find(v=>/^ar[-_]SA/i.test(v.lang)) || vs.find(v=>/^ar/i.test(v.lang)) || null;
+}
+if(TTS){pickVoice(); TTS.addEventListener && TTS.addEventListener('voiceschanged', pickVoice)}
+function speak(text, btn){
+  if(!TTS){ if(btn) btn.textContent='No audio on this device'; return }
+  try{
+    TTS.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ar-SA'; if(arVoice) u.voice = arVoice;
+    u.rate = 0.8;
+    u.onerror = () => { if(btn) btn.textContent='Audio failed \u2013 no Arabic voice?' };
+    TTS.speak(u);
+  }catch(e){ if(btn) btn.textContent='Audio failed' }
+}
+function listenBtn(text){
+  const b = document.createElement('button'); b.type='button'; b.className='listen ghost';
+  b.textContent = '\u25B6 Listen'; b.setAttribute('aria-label','Listen to the Arabic');
+  b.addEventListener('click', () => speak(text, b));
+  return b;
+}
 let order, cur, results, picked, answered;
 
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -178,6 +208,7 @@ function finish(r){
   const it=order[cur];
   r.tag=it.tag; r.q=it.p;
   r.correct = it.t==='mc' ? it.opts[it.a] : (MODEL[it.idx]||it.a[0]);
+  r.say = (it.t==='mc' && it.stem) ? it.stem.replace('___', r.correct) : r.correct;
   results.push(r);
   const fb=$('fb'); fb.className='fb '+(r.kind==='ok'?'ok':r.kind==='near'?'near':'no');
   let head = r.kind==='ok'?'Correct': r.kind==='near'?'Right words, spelling slip': r.kind==='skip'?'Skipped':'Not quite';
@@ -188,6 +219,7 @@ function finish(r){
     if(r.kind==='near'){const n=document.createElement('div');n.className='note';n.textContent='Check the hamza seat, final ى / ي, or ة / ه.';fb.appendChild(n)}
   }
   if(it.why){const w=document.createElement('div');w.className='note';w.textContent=it.why;fb.appendChild(w)}
+  fb.appendChild(listenBtn(r.say));
   if(it.t==='mc'){
     document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok)b.classList.add('right'); else if(i===picked)b.classList.add('wrong'); b.disabled=true });
   } else { $('ans').readOnly=true }
@@ -210,8 +242,17 @@ function summary(){
     const q=document.createElement('small');q.textContent=r.q+'  ['+r.tag+']';d.appendChild(q);
     const a=document.createElement('div');a.className='ar';a.textContent=r.correct;d.appendChild(a);
     if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.style.fontSize='1.6rem';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
+    d.appendChild(listenBtn(r.say));
     st.appendChild(d);
   });
+  const rev=document.createElement('div');rev.className='miss';
+  const rh=document.createElement('small');rh.className='hint';rh.textContent='Hear every correct answer from this round:';rev.appendChild(rh);
+  results.forEach((r,i)=>{
+    const row=document.createElement('div');row.style.cssText='display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap';
+    const t=document.createElement('span');t.className='ar';t.style.fontSize='calc(var(--ar-size)*.8)';t.textContent=r.say;
+    row.append(listenBtn(r.say),t);rev.appendChild(row);
+  });
+  st.appendChild(rev);
   const lines=['Arabic practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
   results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
   const label=document.createElement('div');label.className='prompt';label.textContent='Paste this into the chat so I can log your round:';st.appendChild(label);

@@ -19,3 +19,9 @@
 
 ## Next time
 - Typed production: إلى, أ in أقرأ/أمس/أستاذ; لم + jussive typed (esp. 1sg); ليس in production; then broken plurals.
+
+## Round 2 (same day, large-type Artifact): **11/12**
+- Learner asked for bigger Arabic text (chat + modals too small) → built a large-type practice Artifact (`tools/arabic-practice.html`); results are pasted back into chat.
+- ✓ all 6 MC (لا, لم + jussive, إلى, ليس, أقرأ, ذهبنا) and 5/6 typed: ذهبنا إلى السوق أمس, لم أقرأ الرسالة, البيت ليس جديدًا, لم تذهب, ذهبت معه — **hamza/إلى spelling now clean in typed production** (was the round-1 weakness).
+- ✗ typed "He won't go tomorrow" → wrote *لن يذهب **أمس*** (yesterday) instead of **غدًا** (tomorrow); لن form itself ✓. Vocabulary slip (غدًا new that morning).
+- Learner request: audio in the artifact (listen to answers) → added speech synthesis (ar-SA) buttons.
