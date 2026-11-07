@@ -11,5 +11,5 @@ Categories: case / aspect / tense / mood / gender / agreement / particle / word 
 | Wrong verb from priming (كتب for قرأ) | كتبته → قرأته (suffix right, verb wrong) | vocabulary | 2026-11-04 | 2026-11-04 | 1 | active |
 | لا vs لم (present 'don't' vs 'didn't') | أنا لم أذهب (meant 'I don't go') → أنا **لا** أذهب | tense | 2026-11-05 | 2026-11-07 | 1 | improving (لا أذهب ✓ 2026-11-07) |
 | إلى (to) vs إلا (except); final ى | ذهبنا إلا السوق → إلى; ألى → إلى | spelling | 2026-11-07 | 2026-11-07 | 2 | improving (typed إلى ✓ round 2) |
-| لم + past form instead of jussive | لم كتبتُ → **لم أكتبْ** | tense/mood | 2026-11-07 | 2026-11-07 | 1 | active |
-| أمس (yesterday) typed for غدًا (tomorrow) | لن يذهب أمس → لن يذهب **غدًا** | vocabulary | 2026-11-07 | 2026-11-07 | 1 | active |
+| لم + past form instead of jussive | لم كتبتُ → **لم أكتبْ**; لم ذهبتُ → **لم أذهبْ** (MC, 'yesterday' cue) | tense/mood | 2026-11-07 | 2026-11-07 | 2 | improving (typed لم + jussive ✓ ×5 in rounds 2–3; MC trap still caught him once) |
+| أمس (yesterday) typed for غدًا (tomorrow) | لن يذهب أمس → لن يذهب **غدًا** | vocabulary | 2026-11-07 | 2026-11-07 | 1 | improving (غدًا ✓ MC + typed round 3) |

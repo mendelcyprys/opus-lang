@@ -14,6 +14,6 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 | prepositions + suffixes (لي له معه إليه) | grammar | 1d | 2026-11-08 |
 | present tense prefixes/endings (أكتب، تكتبين، يذهبون) | grammar | 3d | 2026-11-08 |
 | ذ in ذهب (typed: نذهب) | spelling | 3d | 2026-11-10 |
-| لا (don't) vs لم (didn't) vs لن (won't); jussive: لم أكتبْ (NOT لم كتبتُ); drops ن (لم يذهبوا) | grammar | 1d | 2026-11-08 |
-| ليس + nominal sentence (predicate accusative) | grammar | 3d | 2026-11-10 |
-| غدًا (tomorrow ≠ أمس yesterday), خبز، اشترى، لأنّ | vocab | 1d | 2026-11-08 |
+| لا (don't) vs لم (didn't) vs لن (won't); jussive: لم أكتبْ / لم أذهبْ (NOT لم كتبتُ / لم ذهبتُ); drops ن (لم يذهبوا) | grammar | 1d | 2026-11-08 |
+| ليس / ليست + nominal sentence (predicate accusative) | grammar | 3d | 2026-11-10 |
+| غدًا (tomorrow ≠ أمس yesterday), خبز، اشترى، لأنّ | vocab | 3d | 2026-11-10 |

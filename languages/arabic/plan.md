@@ -20,7 +20,7 @@ _Last updated: 2026-11-07_
 
 ## Next session
 1. **Review** due items. 2026-11-07 done: لا/لم/لن drill, ليس intro (MC ✓), first typed production (grammar ✓, spelling slips).
-2. **Typed production again** (via the large-type Artifact; round 2 on 2026-11-07 was 11/12 — hamza/إلى now clean): غدًا vs أمس, لم + jussive with other persons, لن + subjunctive typed.
+2. **Via the large-type Artifact** (rounds 2–3 on 2026-11-07: 11/12 each; hamza/إلى, غدًا, typed لم/لن/ليست clean): next, trap MCs for لم + past form, ما + past, then first broken plurals (كتب, بيوت, أسواق) and numbers 1–10.
 3. **New:** ما + past as an alternative to لم; first broken plurals.
 4. Then Phase 2 continued: more present verbs / stem vowels, first broken-plural patterns.
 

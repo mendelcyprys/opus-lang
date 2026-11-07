@@ -25,3 +25,9 @@
 - ✓ all 6 MC (لا, لم + jussive, إلى, ليس, أقرأ, ذهبنا) and 5/6 typed: ذهبنا إلى السوق أمس, لم أقرأ الرسالة, البيت ليس جديدًا, لم تذهب, ذهبت معه — **hamza/إلى spelling now clean in typed production** (was the round-1 weakness).
 - ✗ typed "He won't go tomorrow" → wrote *لن يذهب **أمس*** (yesterday) instead of **غدًا** (tomorrow); لن form itself ✓. Vocabulary slip (غدًا new that morning).
 - Learner request: audio in the artifact (listen to answers) → added speech synthesis (ar-SA) buttons.
+
+## Round 3 (same day, Artifact; results relayed via the page's "Send results to Claude"): **11/12**
+- Focus: غدًا vs أمس, لم + jussive with other persons, لن, new ليست (fem. of ليس), إلى spelling.
+- ✓ 5/6 MC (لن تذهب غدًا, لم تكتب, لم يذهبوا (ن dropped), هي ليست معلمةً, إلى) and **6/6 typed**: لن أذهب إلى السوق غدا, لم تكتب الرسالة, لم يذهبوا أمس, المعلمة ليست جديدة, قرأت الرسالة أمس, لم نقرأ الكتاب. غدا/أمس correct this time; hamza/إلى clean again.
+- ✗ MC "I didn't go to the market yesterday": chose *لَمْ ذَهَبْتُ إِلَى السُّوقِ أَمْسِ* (لم + past form) instead of **لَمْ أَذْهَبْ**. Third occurrence of لم + past form (first لم كتبتُ in round 1) — but the typed items with لم were all correct, so it is an MC-recognition trap when the past-looking option has a 'yesterday' cue.
+- Day total: three rounds (8/12 + 3 spelling, 11/12, 11/12). Relay pipeline artifact → chat confirmed working.
