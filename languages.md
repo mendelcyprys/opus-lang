@@ -11,5 +11,5 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 | Arabic | A1/A2 (MSA; placement 4/4) | negation system solid; numbers 1–10, plurals أولاد/أقلام/مدن 2026-11-07 + verb-first agreement, number + noun (9 rounds); next: typed accuracy, numbers + counted nouns | 2026-11-07 | active |
 | Spanish | low A1 (placement 6/12); Spain variety | placement done; next: ser/estar, gustar, present + vosotros | 2026-11-07 | active |
 | French | A1 (beginner) | aller, prendre, est-ce que ✓, faire intro (2026-11-07: 11/12, page 11/12); next: accents in typing, faire, adjectives | 2026-11-07 | active |
-| German | absolute beginner (passive childhood Yiddish) | lesson 1: sein, heißen, der/die/das, Yiddish bridge | 2026-11-07 | active |
+| German | A1 start (absolute beginner + passive Yiddish) | lesson 1 11/12 (sein, heißen, der/die/das); next: present tense, haben, nicht/kein | 2026-11-07 | active |
 | Japanese | beginner (kana nearly solid) | は/か/の, ヒ/ピ, ッ solid (round 2: 11/12, 2026-11-07); numbers 1-10 and ～から きました started; next: more numbers, ます verbs | 2026-11-07 | active |
