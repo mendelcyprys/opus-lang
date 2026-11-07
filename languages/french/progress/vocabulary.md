@@ -23,3 +23,9 @@ The first column is always the target-language term (used by scripts/export_anki
 | parler | to speak | 1er groupe, aux. avoir | Elle ne parle pas français. | 2026-11-04 | 2026-11-04 | 2 |
 | manger | to eat | 1er groupe (nous mangeons), aux. avoir | Vous mangez une pizza. | 2026-11-04 | 2026-11-04 | 2 |
 | aimer | to like, love | 1er groupe, aux. avoir | Je n'aime pas le fromage. | 2026-11-04 | 2026-11-04 | 0 |
+| aller | to go | 3e groupe, irregular: vais, vas, va, allons, allez, vont; aux. être | Je vais à la gare. | 2026-11-07 | 2026-11-07 | 1 |
+| prendre | to take; to have (food/drink) | 3e groupe, irregular: prends, prends, prend, prenons, prenez, prennent; aux. avoir | Nous prenons un café. | 2026-11-07 | 2026-11-07 | 1 |
+| s'appeler / j'habite | to be called / I live | reflexive intro / -er verb | Je m'appelle Paul. J'habite à Lyon. | 2026-11-07 | 2026-11-07 | 0 |
+| le croissant | croissant | m | Je mange un croissant. | 2026-11-07 | 2026-11-07 | 1 |
+| le restaurant | restaurant | m | Le soir, je vais au restaurant. | 2026-11-07 | 2026-11-07 | 1 |
+| le matin / le soir | in the morning / evening | time phrases | Le matin, je prends un café. | 2026-11-07 | 2026-11-07 | 1 |

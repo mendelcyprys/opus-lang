@@ -4,13 +4,16 @@ Intervals: 1d → 3d → 7d → 14d → 30d → 90d. Miss → back to 1d.
 
 | Item | Kind (vocab/grammar) | Current interval | Next due |
 |---|---|---|---|
-| être present (je/tu/il) | grammar | 1d | 2026-11-05 |
-| bonjour / salut / merci / au revoir | vocab | 1d | 2026-11-05 |
-| anglais/anglaise, français/française | vocab | 1d | 2026-11-05 |
-| être present plural (nous/vous/ils) | grammar | 1d | 2026-11-05 |
-| articles + gender (le/la/l'/un/une) | grammar | 1d | 2026-11-05 |
-| fromage, école, gare, café, pizza | vocab | 1d | 2026-11-05 |
-| avoir present + les/des | grammar | 1d | 2026-11-05 |
-| chat, livre, ami(e) | vocab | 1d | 2026-11-05 |
-| -er present + ne…pas (+ de after negation) | grammar | 1d | 2026-11-05 |
-| parler, manger, aimer; vous spelling | vocab | 1d | 2026-11-05 |
+| être present (all persons) | grammar | 7d | 2026-11-14 |
+| bonjour / salut / merci / au revoir | vocab | 3d | 2026-11-10 |
+| anglais/anglaise, français/française | vocab | 3d | 2026-11-10 |
+| articles + gender (le/la/l'/un/une); le livre vs la livre | grammar | 1d | 2026-11-08 |
+| fromage, école, gare, café, pizza | vocab | 3d | 2026-11-10 |
+| avoir present + les/des | grammar | 7d | 2026-11-14 |
+| chat, livre, ami(e) | vocab | 3d | 2026-11-10 |
+| -er present + ne…pas (+ de after negation) | grammar | 7d | 2026-11-14 |
+| parler, manger, aimer; vous spelling | vocab | 3d | 2026-11-10 |
+| aller (vais…) ; à la gare | grammar | 1d | 2026-11-08 |
+| prendre (prends/prenons/prenez/prennent) | grammar | 1d | 2026-11-08 |
+| Est-ce que questions | grammar | 1d | 2026-11-08 |
+| croissant, restaurant, le matin/le soir, j'habite, je m'appelle | vocab | 1d | 2026-11-08 |

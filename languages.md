@@ -10,6 +10,6 @@ _Status: not started → active (after onboarding) → paused (learner taking a 
 | Hebrew | B1 (placement 8/8), probing B2 | B2: news-style reading, verbal nouns | 2026-11-04 | active |
 | Arabic | A1/A2 (MSA; placement 4/4) | negation (لا / لم / لن) intro done 7/8 → drill la/lam, ليس, typed production, broken plurals | 2026-11-05 | active |
 | Spanish | not assessed | onboarding & placement | — | not started |
-| French | absolute beginner (A1 track) | -er verbs, ne…pas | 2026-11-04 | active |
+| French | A1 (beginner) | aller, prendre, est-ce que (2026-11-07, 11/12); next: faire, typed production, adjectives | 2026-11-07 | active |
 | German | not assessed | onboarding & placement | — | not started |
 | Japanese | beginner (kana nearly solid) | です sentences, self-intro | 2026-11-04 | active |
