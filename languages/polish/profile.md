@@ -21,3 +21,4 @@ general items were moved to `learner.md`._
 - Gender for 1st-person forms: used masculine (*będę czekał*) 2026-11-04 — assume masculine unless told otherwise (also in learner.md).
 - Stretch: every so often (~1 in 3–4 rounds) an exercise at B1+/B2 level (requested 2026-11-04).
 - Typing: occasionally drops diacritics/letters (Bedę, zadwoniłeś) — correct every time; suggested long-press on Polish keyboard.
+- **Practice page (2026-11-07):** rounds can run in the Polish Artifact (`tools/polish-practice.html`, https://claude.ai/artifact/5sJJsNkwBdeCJsFHEPMSpq) — typed items, diacritic-aware checking, results sent back to the chat. Details: `tools/README.md`.

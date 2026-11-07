@@ -1,0 +1,310 @@
+<title>Polish Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one question at a time, large type, size control pinned to the header. */
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --fg:#1d2a2a; --muted:#5d6b6b; --line:#d9d5ca;
+  --accent:#0f6b63; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ar:'Source Sans 3',system-ui,sans-serif;
+  --ui:'Source Sans 3',system-ui,sans-serif;
+  --ar-size:1.6rem; /* set by the A-/A+ buttons; ALL text is sized from it */
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:calc(var(--ar-size)*.65);line-height:1.5;margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1em;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:18px} /* fixed so the controls never shrink or grow out of reach */
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9em;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px}
+.prompt{color:var(--muted);white-space:pre-line}
+.ar{font-family:var(--ar);font-size:var(--ar-size);line-height:1.5;direction:ltr;text-align:left}
+.stem{margin:0}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--ar);font-size:var(--ar-size);line-height:1.5;direction:ltr;text-align:left;padding:10px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--ar);font-size:var(--ar-size);direction:ltr;text-align:left;width:100%;padding:8px 14px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.7}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+button{font:600 1em var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.fb{padding:12px 14px;border-radius:8px;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .ar{font-size:calc(var(--ar-size)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6em}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .ar{font-size:calc(var(--ar-size)*.9);line-height:1.5}
+.miss small{color:var(--muted);font-size:.95em}
+.miss small .ar{font-size:calc(var(--ar-size)*.8)}
+.tool{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:transparent;color:var(--accent);border:2px solid var(--accent);padding:8px 16px}
+.tool[disabled]{opacity:.5}
+.status{color:var(--muted);font-size:.95em}
+.claude-box{white-space:pre-wrap;unicode-bidi:plaintext;font-family:var(--ui);font-size:1em;line-height:1.7;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
+.claude-box:empty{display:none}
+.claude-box.err{color:var(--bad)}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95em;line-height:1.5;margin:0;direction:ltr}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Polish Practice · B1</h1>
+    <div class="sizer" role="group" aria-label="Text size">
+      <button class="ghost" id="smaller" aria-label="Smaller text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card"></main>
+</div>
+
+<script>
+// strict keeps diacritics (ą ę ó ł ś ć ń ź ż); loose folds them, so a dropped diacritic shows as a spelling slip, not a wrong word
+const fold = s => s.normalize('NFC').toLowerCase();
+const strict = s => fold(s).replace(/[.,;:!?\u201E\u201D\u201C"'\u2019()\-\u2013\u2014]+/g,' ').replace(/\s+/g,' ').trim();
+const DIA = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'};
+const loose = s => strict(s).replace(/[ąćęłńóśźż]/g, c => DIA[c]);
+
+const ITEMS = [
+  {t:'mc', p:'Które zdanie jest NIEPOPRAWNE?', opts:['Gdybym miał więcej czasu, bym zwiedził więcej miast.','Gdybym miał więcej czasu, zwiedziłbym więcej miast.','Gdybym miał więcej czasu, więcej miast bym zwiedził.','Gdybym miał więcej czasu, zwiedziłbym je wszystkie.'], a:0,
+   why:'Cząstka „bym” nie może otwierać zdania: zwiedziłbym… albo więcej miast bym zwiedził.', tag:'bym position'},
+  {t:'mc', p:'— Czy Ania już wróciła z pracy?\n— Nie, ___ nie wróciła.', opts:['jeszcze','już','jeszcze nie','nie już'], a:0,
+   why:'„Nie, jeszcze nie wróciła” = not yet. „Już nie” = not anymore.', tag:'jeszcze nie / już nie'},
+  {t:'mc', p:'Ania mówi do Marka: „Jutro przyjadę do ciebie”. Marek opowiada:\n„Ania powiedziała, że jutro ___ do mnie.”', opts:['przyjedzie','przyjadę','przyjedziesz','przyjechała'], a:0,
+   why:'Zmiana osoby: ja (Ania) → ona = przyjedzie; do ciebie → do mnie.', tag:'reported speech'},
+  {t:'mc', p:'Chcę, ___ mi pomógł. (mówię do jednego mężczyzny)', opts:['żebyś','żeby','żebym','żebyście'], a:0,
+   why:'żeby + końcówka osobowa: żebyś (ty). Czasownik w czasie przeszłym: pomógł.', tag:'żeby + person'},
+  {t:'mc', p:'Mężczyzna ___ przy oknie to mój brat. (the man standing at the window)', opts:['stojący','stojony','stanięty','stając'], a:0,
+   why:'Imiesłów przymiotnikowy czynny: stojący (= który stoi).', tag:'participle -ący'},
+  {t:'mc', p:'Ten most ___ w zeszłym roku. (was built; most = m)', opts:['został zbudowany','została zbudowana','zostały zbudowane','został zbudowana'], a:0,
+   why:'zostać + imiesłów bierny zgodny z rodzajem: most (m) → został zbudowany.', tag:'passive zostać'},
+
+  {t:'type', p:'Napisz po polsku (type in Polish): “If I had more time, I would visit more cities.” (I = man)', a:['gdybym miał więcej czasu, zwiedziłbym więcej miast','gdybym miał więcej czasu, odwiedziłbym więcej miast','gdybym miał więcej czasu, więcej miast bym zwiedził','gdybym miał więcej czasu, więcej miast bym odwiedził','gdybym miał więcej czasu, więcej bym zwiedził miast'], tag:'typed conditional'},
+  {t:'type', p:'Napisz po polsku: “She doesn’t live here anymore.”', a:['ona już tu nie mieszka','już tu nie mieszka','ona tu już nie mieszka','tu już nie mieszka','ona już nie mieszka tutaj','ona już nie mieszka tu'], tag:'typed już nie'},
+  {t:'type', p:'Napisz po polsku: “Don’t eat this cake!” (to one man)', a:['nie jedz tego ciasta'], tag:'typed neg. imperative'},
+  {t:'type', p:'Napisz po polsku: “I asked her to wait.” (I = man)', a:['poprosiłem ją, żeby poczekała','poprosiłem ją, żeby zaczekała','poprosiłem ją żeby poczekała','poprosiłem ją, aby poczekała'], tag:'typed żeby'},
+  {t:'type', p:'Napisz po polsku: “Every morning I leave the house at seven.”', a:['codziennie rano wychodzę z domu o siódmej','co rano wychodzę z domu o siódmej','każdego ranka wychodzę z domu o siódmej','codziennie wychodzę z domu o siódmej','rano wychodzę z domu o siódmej'], tag:'typed habit + diacritics'},
+  {t:'type', p:'Napisz po polsku: “I talked to four (female) friends.” (I = man)', a:['rozmawiałem z czterema koleżankami','rozmawiałem z czterema przyjaciółkami'], tag:'typed numeral + instr.'},
+];
+// model answers shown after checking, keyed by index in ITEMS
+const MODEL = {6:'Gdybym miał więcej czasu, zwiedziłbym więcej miast.',7:'Ona już tu nie mieszka.',8:'Nie jedz tego ciasta!',9:'Poprosiłem ją, żeby poczekała.',10:'Codziennie rano wychodzę z domu o siódmej.',11:'Rozmawiałem z czterema koleżankami.'};
+
+const $ = id => document.getElementById(id);
+
+// --- feedback from Claude (page asks Claude via the sample capability; hidden when unavailable) ---
+let SAMPLE = null, COMMENTS = null;
+const loadCap = async name => { try { return (window.claude && await window.claude.use(name)) || null } catch (e) { return null } };
+loadCap('sample').then(f => { SAMPLE = f });
+loadCap('comments').then(c => { COMMENTS = c });
+const ERR = {
+  not_granted:'Claude access was not allowed for this page, so feedback is off.',
+  sampling_disabled:'Claude is not available for this account.',
+  rate_limited:'Too many requests or usage limit reached. Try again in a little while.',
+  session_expired:'Please sign in again, then try again.',
+  upstream_error:'The connection to Claude was interrupted. Try again.',
+};
+const LEARNER = 'The learner is an English speaker (male) studying Polish at B1 (reading/writing ~B1-B2): often drops diacritics when typing on a phone. ' +
+  'Teaching style: correct every mistake briefly with the reason; explain in simple Polish mixed with English for tricky bits; no long essays; never ask for free creative writing, only concrete sentences to translate. ';
+function askClaude(prompt, box, btn, opts){
+  if(!SAMPLE){ box.className='claude-box err'; box.textContent='Feedback from Claude is not available here.'; return }
+  const ctl = new AbortController();
+  const label = btn.textContent; btn.disabled = true; box.className='claude-box'; box.textContent = 'Thinking\u2026';
+  SAMPLE(prompt, Object.assign({ signal: ctl.signal, modelTier: 'default', onText: ({text}) => { box.textContent = text } }, opts||{}))
+    .then(r => { if(r.truncated) box.textContent += '\n\n(Cut short \u2013 ask again for a shorter answer.)' })
+    .catch(e => { box.className='claude-box' + (e.code==='cancelled'?'':' err'); box.textContent = (e.text ? e.text + '\n\n' : '') + (e.code==='cancelled' ? '' : (ERR[e.code] || ERR.upstream_error)) })
+    .finally(() => { btn.disabled = false; btn.textContent = label });
+}
+function claudeBtn(label){
+  const b = document.createElement('button'); b.type='button'; b.className='tool ghost'; b.textContent = label; return b;
+}
+
+let order, cur, results, picked, answered;
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function start(){
+  results = []; cur = 0;
+  // shuffle options once per run; remember which index is right
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc'){const o=shuffle(it.opts.map((x,i)=>({x,ok:i===it.a})));return {...it,idx,shown:o}}
+    return {...it,idx};
+  });
+  render();
+}
+
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Question '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length){return summary()}
+  const it = order[cur]; picked = null; answered = false;
+  st.innerHTML = '';
+  const p = document.createElement('div'); p.className='prompt'; p.textContent = it.p; st.appendChild(p);
+  if(it.stem){const s=document.createElement('p');s.className='ar stem';s.textContent=it.stem;st.appendChild(s)}
+  if(it.t==='mc'){
+    const box=document.createElement('div');box.className='opts';
+    it.shown.forEach((o,i)=>{
+      const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=o.x;
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else {
+    const inp=document.createElement('input');inp.type='text';inp.id='ans';inp.className='ans';inp.setAttribute('dir','ltr');inp.lang='pl';
+    inp.autocomplete='off';inp.autocapitalize='off';inp.spellcheck=false;inp.setAttribute('aria-label','Your answer in Polish');
+    inp.addEventListener('input',()=>{$('check').disabled=!inp.value.trim()});
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(); if(!answered&&!$('check').disabled)check(); else if(answered)next()}});
+    st.appendChild(inp);
+  }
+  const fb=document.createElement('div');fb.id='fb';fb.setAttribute('role','status');st.appendChild(fb);
+  const act=document.createElement('div');act.className='actions';
+  const c=document.createElement('button');c.id='check';c.type='button';c.textContent='Check';c.disabled=true;c.addEventListener('click',check);
+  const n=document.createElement('button');n.id='next';n.type='button';n.textContent=cur===order.length-1?'Finish':'Next';n.hidden=true;n.addEventListener('click',next);
+  const sk=document.createElement('button');sk.id='skip';sk.type='button';sk.className='ghost';sk.textContent='Skip';sk.addEventListener('click',()=>{ if(answered)return; finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk);st.appendChild(act);
+  if(it.t==='type') setTimeout(()=>{const i=$('ans'); if(i) i.focus()},50);
+}
+
+function check(){
+  const it=order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok,kind:ok?'ok':'wrong',given:it.shown[picked].x});
+  } else {
+    const g=$('ans').value, gs=strict(g), gl=loose(g);
+    let kind='wrong';
+    if(it.a.some(a=>strict(a)===gs)) kind='ok';
+    else if(it.a.some(a=>loose(a)===gl)) kind='near';
+    finish({ok:kind==='ok',kind,given:g});
+  }
+}
+
+function finish(r){
+  answered=true;
+  const it=order[cur];
+  r.tag=it.tag; r.q=it.p;
+  r.correct = it.t==='mc' ? it.opts[it.a] : (MODEL[it.idx]||it.a[0]);
+  results.push(r);
+  const fb=$('fb'); fb.className='fb '+(r.kind==='ok'?'ok':r.kind==='near'?'near':'no');
+  let head = r.kind==='ok'?'Correct': r.kind==='near'?'Right words, spelling slip': r.kind==='skip'?'Skipped':'Not quite';
+  fb.innerHTML='';
+  const h=document.createElement('strong');h.textContent=head;fb.appendChild(h);
+  if(r.kind!=='ok'){
+    const m=document.createElement('div');m.className='ar';m.textContent=r.correct;fb.appendChild(m);
+    if(r.kind==='near'){const n=document.createElement('div');n.className='note';n.textContent='Check the diacritics: ą ę ó ł ś ć ń ź ż.';fb.appendChild(n)}
+  }
+  if(it.why){const w=document.createElement('div');w.className='note';w.textContent=it.why;fb.appendChild(w)}
+  if(SAMPLE && r.kind !== 'ok'){
+    const b = claudeBtn('Ask Claude why'); const box = document.createElement('div'); box.className='claude-box';
+    b.addEventListener('click', () => askClaude(LEARNER + 'Explain this one mistake in at most 5 short lines, then give ONE similar sentence to translate (no answer given).\n\n' +
+      'Exercise: ' + it.p + (it.stem ? '\nSentence: ' + it.stem : '') + '\nCorrect answer: ' + r.correct + '\nLearner ' + (r.kind==='skip' ? 'skipped it' : 'wrote: ' + r.given) + '\nTopic: ' + it.tag, box, b, {modelTier:'quick'}));
+    fb.append(b, box);
+  }
+  if(it.t==='mc'){
+    document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok)b.classList.add('right'); else if(i===picked)b.classList.add('wrong'); b.disabled=true });
+  } else { $('ans').readOnly=true }
+  $('check').hidden=true; $('skip').hidden=true; $('next').hidden=false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+
+function next(){cur++;render()}
+
+function summary(){
+  const st=$('stage'); st.innerHTML='';
+  const ok=results.filter(r=>r.ok).length, tot=results.length;
+  const wrap=document.createElement('div');wrap.className='sum';
+  const h=document.createElement('h2');h.textContent=ok+' / '+tot;wrap.appendChild(h);
+  st.appendChild(wrap);
+  const bad=results.filter(r=>!r.ok);
+  if(!bad.length){const p=document.createElement('p');p.textContent='Clean round.';st.appendChild(p)}
+  bad.forEach(r=>{
+    const d=document.createElement('div');d.className='miss';
+    const q=document.createElement('small');q.textContent=r.q+'  ['+r.tag+']';d.appendChild(q);
+    const a=document.createElement('div');a.className='ar';a.textContent=r.correct;d.appendChild(a);
+    if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
+    st.appendChild(d);
+  });
+  const lines=['Polish practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  const label=document.createElement('div');label.className='prompt';label.textContent='Paste this into the chat so I can log your round:';st.appendChild(label);
+  const pre=document.createElement('pre');pre.id='copytext';pre.textContent=lines.join('\n');st.appendChild(pre);
+  const act=document.createElement('div');act.className='actions';
+  const cp=document.createElement('button');cp.type='button';cp.textContent='Copy results';
+  cp.addEventListener('click',()=>{
+    const done=()=>{cp.textContent='Copied'};
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selected – press copy'};
+    try{navigator.clipboard.writeText(pre.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+  let sendStatus = null;
+  if(COMMENTS && COMMENTS.sendToClaude){
+    const send=document.createElement('button');send.type='button';send.textContent='Send results to Claude';
+    const status=document.createElement('div');status.className='status';
+    send.addEventListener('click', async () => {
+      send.disabled=true; status.textContent='Sending\u2026';
+      try{
+        const can = await COMMENTS.canSendToClaude();
+        if(can!=='available'){ status.textContent = can==='no_session' ? 'No Claude session is listening right now. Use Copy results and paste it into the chat.' : 'Sending to Claude is not available for this view. Use Copy results.'; send.disabled=false; return }
+        const anchor = await COMMENTS.anchorFor(pre);
+        let text = pre.textContent; if(new TextEncoder().encode(text).length>3900) text = text.slice(0,1500)+'\n(truncated)';
+        await COMMENTS.sendToClaude({anchor, text});
+        status.textContent='Sent. Claude will log the round and reply in the chat.';
+      }catch(e){
+        status.textContent = e.code==='consent_required'||e.code==='forbidden' ? 'Commenting from the page was not allowed. Use Copy results.' : e.code==='rate_limited' ? 'Slow down a moment, then try again.' : 'Could not send. Use Copy results and paste it into the chat.';
+        send.disabled=false;
+      }
+    });
+    act.append(send);
+    sendStatus = status;
+  }
+  const again=document.createElement('button');again.type='button';again.className='ghost';again.textContent='New round';again.addEventListener('click',start);
+  act.append(cp,again);st.appendChild(act);
+  if(sendStatus) st.appendChild(sendStatus);
+  if(SAMPLE){
+    const fbBtn = claudeBtn('Get feedback from Claude'); const fbBox = document.createElement('div'); fbBox.className='claude-box';
+    const lines2 = results.map((r,i)=>(i+1)+'. ['+r.tag+'] '+r.q+' | correct: '+r.correct+' | '+(r.ok?'learner correct':(r.kind==='skip'?'skipped':(r.kind==='near'?'spelling slip, wrote: ':'wrong, wrote: ')+(r.given||'-')))).join('\n');
+    fbBtn.addEventListener('click', () => askClaude(LEARNER + 'Here are the results of a 12-question round (' + ok + '/' + tot + '). Give feedback in this order, compactly: ' +
+      '(1) one line on what went well; (2) for each mistake: what was wrong and why, with the corrected sentence; (3) the one or two patterns to focus on next; ' +
+      '(4) three short English sentences to translate into Polish as follow-up practice (do not give the answers). Known weak spots: bym never opens a clause, już nie vs jeszcze nie, typed diacritics, habit imperfective in typed production.\n\nResults:\n' + lines2, fbBox, fbBtn));
+    st.append(fbBtn, fbBox);
+  }
+  updateTop();
+}
+
+// text size control (remembered per device when storage works)
+const SIZES=[1.3,1.6,1.9,2.2,2.6,3.0,3.5]; // rem for --ar-size; body text = 65% of it
+let si=1;
+try{const v=parseInt(localStorage.getItem('plSize'));if(v>=0&&v<SIZES.length)si=v}catch(e){}
+function applySize(){document.documentElement.style.setProperty('--ar-size',SIZES[si]+'rem');try{localStorage.setItem('plSize',si)}catch(e){}
+  $('smaller').disabled=si===0;$('bigger').disabled=si===SIZES.length-1}
+$('smaller').addEventListener('click',()=>{if(si>0){si--;applySize()}});
+$('bigger').addEventListener('click',()=>{if(si<SIZES.length-1){si++;applySize()}});
+applySize();
+start();
+</script>
