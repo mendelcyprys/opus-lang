@@ -1,0 +1,241 @@
+<title>Arabic Practice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one question at a time, very large Arabic, size control pinned to the header. */
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --fg:#1d2a2a; --muted:#5d6b6b; --line:#d9d5ca;
+  --accent:#0f6b63; --accent-fg:#ffffff; --good:#1b7a3a; --good-bg:#e1f2e6; --bad:#b3261e; --bad-bg:#fbe7e4; --warn-bg:#fff3d6; --warn:#8a5a00;
+  --ar:'Amiri','Noto Naskh Arabic','Geeza Pro','Traditional Arabic',serif;
+  --ui:'Source Sans 3',system-ui,sans-serif;
+  --ar-size:2.6rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111817; --card:#18211f; --fg:#ece8dd; --muted:#a3b0ac; --line:#2c3a37;
+  --accent:#58c4b8; --accent-fg:#06201d; --good:#6fd08c; --good-bg:#16301e; --bad:#ff8a80; --bad-bg:#3a1b19; --warn-bg:#3a2f12; --warn:#f0c15a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:1.05rem/1.5 var(--ui);margin:0;padding-block:12px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:1.1rem;margin:0;font-weight:600}
+.sizer{display:flex;align-items:center;gap:8px}
+.sizer button{min-width:48px;height:44px;font-size:1.1rem}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.meta{color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px}
+.prompt{font-size:1.05rem;color:var(--muted)}
+.ar{font-family:var(--ar);font-size:var(--ar-size);line-height:1.9;direction:rtl;text-align:right;unicode-bidi:isolate}
+.stem{margin:0}
+.opts{display:grid;gap:10px}
+.opt{font-family:var(--ar);font-size:var(--ar-size);line-height:1.8;direction:rtl;text-align:right;padding:6px 18px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;cursor:pointer;min-height:64px}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:var(--card);box-shadow:0 0 0 2px var(--accent) inset}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+input.ans{font-family:var(--ar);font-size:var(--ar-size);direction:rtl;text-align:right;width:100%;padding:8px 14px;
+  background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:8px;line-height:1.7}
+input.ans:focus{outline:3px solid var(--accent);outline-offset:1px}
+button{font:600 1.05rem var(--ui);background:var(--accent);color:var(--accent-fg);border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.ghost{background:transparent;color:var(--fg);border:2px solid var(--line)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.fb{padding:12px 14px;border-radius:8px;font-size:1rem;display:flex;flex-direction:column;gap:6px}
+.fb.ok{background:var(--good-bg);color:var(--good)}
+.fb.no{background:var(--bad-bg);color:var(--bad)}
+.fb.near{background:var(--warn-bg);color:var(--warn)}
+.fb .ar{font-size:calc(var(--ar-size)*.9);color:var(--fg)}
+.fb .note{color:var(--fg)}
+.sum h2{margin:0;font-size:1.6rem}
+.miss{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:10px}
+.miss .ar{font-size:calc(var(--ar-size)*.85);line-height:1.7}
+.miss small{color:var(--muted)}
+pre#copytext{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;font:.95rem/1.5 var(--ui);margin:0;direction:ltr}
+@media (prefers-reduced-motion:reduce){.progress i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Arabic Practice · MSA</h1>
+    <div class="sizer" role="group" aria-label="Arabic text size">
+      <button class="ghost" id="smaller" aria-label="Smaller Arabic text">A−</button>
+      <button class="ghost" id="bigger" aria-label="Larger Arabic text">A+</button>
+    </div>
+  </header>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <div class="meta"><span id="count"></span><span id="score"></span></div>
+  <main id="stage" class="card" aria-live="polite"></main>
+</div>
+
+<script>
+const D = {
+  q: "ًٌٍَُِّْٰٕٓٔـ"
+};
+const stripMarks = s => s.replace(/[ً-ٰٟـ]/g,'');
+// loose key: unify hamza seats, ى/ي, ة/ه, tanwin-alif; used to tell a spelling slip from a wrong word
+const loose = s => stripMarks(s).replace(/[أإآٱء]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[؟?.!،,\s]+/g,' ').trim().replace(/ا ?$/,'ا');
+const strict = s => stripMarks(s).replace(/[؟?.!،,]+/g,'').replace(/\s+/g,' ').trim();
+
+const ITEMS = [
+  {t:'mc', p:'Fill the gap: "I don’t write every day."', stem:'أَنَا ___ أَكْتُبُ كُلَّ يَوْمٍ.', opts:['لَا','لَمْ','لَنْ','لَيْسَ'], a:0,
+   why:'Habitual present "don’t" = لا + present.', tag:'لا / لم / لن'},
+  {t:'mc', p:'"I didn’t write a letter."', opts:['لَمْ أَكْتُبْ رِسَالَةً','لَمْ كَتَبْتُ رِسَالَةً','لَا كَتَبْتُ رِسَالَةً','لَنْ كَتَبْتُ رِسَالَةً'], a:0,
+   why:'After لم the verb is the short present (jussive): لم أكتبْ. Never the past form.', tag:'لم + jussive'},
+  {t:'mc', p:'Which spelling is "to, towards"?', opts:['إِلَى','إِلَّا','أَلَى','اِلَا'], a:0,
+   why:'إلى: hamza UNDER the alif, final ى. (إلّا = except.)', tag:'إلى spelling'},
+  {t:'mc', p:'"The teacher is not new."', opts:['المُعَلِّمُ لَيْسَ جَدِيدًا','المُعَلِّمُ لَا جَدِيدٌ','المُعَلِّمُ لَمْ جَدِيدٌ','المُعَلِّمُ لَنْ جَدِيدًا'], a:0,
+   why:'ليس negates a nominal sentence; predicate in the accusative (جديدًا).', tag:'ليس'},
+  {t:'mc', p:'Which spelling is "I read"?', opts:['أَقْرَأُ','أَقْرَءُ','أَقْرَاُ','أَقْرَأْءُ'], a:0,
+   why:'After a vowelled letter the hamza sits on an alif here: أقرأ.', tag:'hamza seat'},
+  {t:'mc', p:'Which spelling is "we went"?', opts:['ذَهَبْنَا','دَهَبْنَا','زَهَبْنَا','ضَهَبْنَا'], a:0,
+   why:'ذ (dh) in ذهب, not د.', tag:'ذ vs د'},
+
+  {t:'type', p:'Type in Arabic: "We went to the market yesterday."', a:['ذهبنا إلى السوق أمس'], tag:'typed إلى / أمس'},
+  {t:'type', p:'Type in Arabic: "I didn’t read the letter."', a:['لم أقرأ الرسالة'], tag:'typed لم + أقرأ'},
+  {t:'type', p:'Type in Arabic: "He won’t go tomorrow."', a:['لن يذهب غدا'], tag:'typed لن'},
+  {t:'type', p:'Type in Arabic: "The house is not new."', a:['البيت ليس جديدا'], tag:'typed ليس'},
+  {t:'type', p:'Type in Arabic: "She didn’t go."', a:['لم تذهب'], tag:'typed لم + تذهب'},
+  {t:'type', p:'Type in Arabic: "I went with him."', a:['ذهبت معه'], tag:'typed pronoun suffix'},
+];
+// vowelled model answers shown after checking
+const MODEL = {6:'ذَهَبْنَا إِلَى السُّوقِ أَمْسِ.',7:'لَمْ أَقْرَأِ الرِّسَالَةَ.',8:'لَنْ يَذْهَبَ غَدًا.',9:'البَيْتُ لَيْسَ جَدِيدًا.',10:'لَمْ تَذْهَبْ.',11:'ذَهَبْتُ مَعَهُ.'};
+
+const $ = id => document.getElementById(id);
+let order, cur, results, picked, answered;
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function start(){
+  results = []; cur = 0;
+  // shuffle options once per run; remember which index is right
+  order = ITEMS.map((it,idx)=>{
+    if(it.t==='mc'){const o=shuffle(it.opts.map((x,i)=>({x,ok:i===it.a})));return {...it,idx,shown:o}}
+    return {...it,idx};
+  });
+  render();
+}
+
+function updateTop(){
+  $('bar').style.width = (cur/order.length*100)+'%';
+  $('count').textContent = cur<order.length ? 'Question '+(cur+1)+' of '+order.length : 'Done';
+  $('score').textContent = results.filter(r=>r.ok).length+' correct';
+}
+
+function render(){
+  updateTop();
+  const st = $('stage');
+  if(cur>=order.length){return summary()}
+  const it = order[cur]; picked = null; answered = false;
+  st.innerHTML = '';
+  const p = document.createElement('div'); p.className='prompt'; p.textContent = it.p; st.appendChild(p);
+  if(it.stem){const s=document.createElement('p');s.className='ar stem';s.textContent=it.stem;st.appendChild(s)}
+  if(it.t==='mc'){
+    const box=document.createElement('div');box.className='opts';
+    it.shown.forEach((o,i)=>{
+      const b=document.createElement('button');b.type='button';b.className='opt';b.textContent=o.x;b.dataset.i=i;
+      b.addEventListener('click',()=>{ if(answered)return; picked=i; box.querySelectorAll('.opt').forEach(e=>e.classList.remove('sel')); b.classList.add('sel'); $('check').disabled=false });
+      box.appendChild(b);
+    });
+    st.appendChild(box);
+  } else {
+    const inp=document.createElement('input');inp.type='text';inp.id='ans';inp.className='ans';inp.setAttribute('dir','rtl');inp.lang='ar';
+    inp.autocomplete='off';inp.autocapitalize='off';inp.spellcheck=false;inp.setAttribute('aria-label','Your answer in Arabic');
+    inp.addEventListener('input',()=>{$('check').disabled=!inp.value.trim()});
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(); if(!answered&&!$('check').disabled)check(); else if(answered)next()}});
+    st.appendChild(inp);
+  }
+  const fb=document.createElement('div');fb.id='fb';st.appendChild(fb);
+  const act=document.createElement('div');act.className='actions';
+  const c=document.createElement('button');c.id='check';c.type='button';c.textContent='Check';c.disabled=true;c.addEventListener('click',check);
+  const n=document.createElement('button');n.id='next';n.type='button';n.textContent=cur===order.length-1?'Finish':'Next';n.hidden=true;n.addEventListener('click',next);
+  const sk=document.createElement('button');sk.id='skip';sk.type='button';sk.className='ghost';sk.textContent='Skip';sk.addEventListener('click',()=>{ if(answered)return; finish({ok:false,kind:'skip',given:''}) });
+  act.append(c,n,sk);st.appendChild(act);
+  if(it.t==='type') setTimeout(()=>{const i=$('ans'); if(i) i.focus()},50);
+}
+
+function check(){
+  const it=order[cur];
+  if(it.t==='mc'){
+    const ok = it.shown[picked].ok;
+    finish({ok,kind:ok?'ok':'wrong',given:it.shown[picked].x});
+  } else {
+    const g=$('ans').value, gs=strict(g), gl=loose(g);
+    let kind='wrong';
+    if(it.a.some(a=>strict(a)===gs || strict(a).replace(/ا$/,'')===gs.replace(/ا$/,'') && false)) kind='ok';
+    else if(it.a.some(a=>loose(a)===gl)) kind='near';
+    finish({ok:kind==='ok',kind,given:g});
+  }
+}
+
+function finish(r){
+  answered=true;
+  const it=order[cur];
+  r.tag=it.tag; r.q=it.p;
+  r.correct = it.t==='mc' ? it.opts[it.a] : (MODEL[it.idx]||it.a[0]);
+  results.push(r);
+  const fb=$('fb'); fb.className='fb '+(r.kind==='ok'?'ok':r.kind==='near'?'near':'no');
+  let head = r.kind==='ok'?'Correct': r.kind==='near'?'Right words, spelling slip': r.kind==='skip'?'Skipped':'Not quite';
+  fb.innerHTML='';
+  const h=document.createElement('strong');h.textContent=head;fb.appendChild(h);
+  if(r.kind!=='ok'){
+    const m=document.createElement('div');m.className='ar';m.textContent=r.correct;fb.appendChild(m);
+    if(r.kind==='near'){const n=document.createElement('div');n.className='note';n.textContent='Check the hamza seat, final ى / ي, or ة / ه.';fb.appendChild(n)}
+  }
+  if(it.why){const w=document.createElement('div');w.className='note';w.textContent=it.why;fb.appendChild(w)}
+  if(it.t==='mc'){
+    document.querySelectorAll('.opt').forEach((b,i)=>{ if(it.shown[i].ok)b.classList.add('right'); else if(i===picked)b.classList.add('wrong'); b.disabled=true });
+  } else { $('ans').readOnly=true }
+  $('check').hidden=true; $('skip').hidden=true; $('next').hidden=false; $('next').focus();
+  $('score').textContent = results.filter(x=>x.ok).length+' correct';
+}
+
+function next(){cur++;render()}
+
+function summary(){
+  const st=$('stage'); st.innerHTML='';
+  const ok=results.filter(r=>r.ok).length, tot=results.length;
+  const wrap=document.createElement('div');wrap.className='sum';
+  const h=document.createElement('h2');h.textContent=ok+' / '+tot;wrap.appendChild(h);
+  st.appendChild(wrap);
+  const bad=results.filter(r=>!r.ok);
+  if(!bad.length){const p=document.createElement('p');p.textContent='Clean round.';st.appendChild(p)}
+  bad.forEach(r=>{
+    const d=document.createElement('div');d.className='miss';
+    const q=document.createElement('small');q.textContent=r.q+'  ['+r.tag+']';d.appendChild(q);
+    const a=document.createElement('div');a.className='ar';a.textContent=r.correct;d.appendChild(a);
+    if(r.given){const g=document.createElement('small');g.textContent='You wrote: ';const s=document.createElement('span');s.className='ar';s.style.fontSize='1.6rem';s.textContent=r.given;g.appendChild(s);d.appendChild(g)}
+    st.appendChild(d);
+  });
+  const lines=['Arabic practice '+new Date().toISOString().slice(0,10)+': '+ok+'/'+tot];
+  results.forEach((r,i)=>lines.push((i+1)+'. '+(r.ok?'OK':(r.kind==='near'?'SPELLING':r.kind==='skip'?'SKIP':'WRONG'))+' ['+r.tag+']'+(r.ok?'':' wrote: '+(r.given||'-'))));
+  const label=document.createElement('div');label.className='prompt';label.textContent='Paste this into the chat so I can log your round:';st.appendChild(label);
+  const pre=document.createElement('pre');pre.id='copytext';pre.textContent=lines.join('\n');st.appendChild(pre);
+  const act=document.createElement('div');act.className='actions';
+  const cp=document.createElement('button');cp.type='button';cp.textContent='Copy results';
+  cp.addEventListener('click',()=>{
+    const done=()=>{cp.textContent='Copied'};
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selected – press copy'};
+    try{navigator.clipboard.writeText(pre.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+  const again=document.createElement('button');again.type='button';again.className='ghost';again.textContent='New round';again.addEventListener('click',start);
+  act.append(cp,again);st.appendChild(act);
+  updateTop();
+}
+
+// text size control (remembered per device when storage works)
+const SIZES=[1.8,2.2,2.6,3.0,3.5,4.0,4.6];
+let si=2;
+try{const v=parseInt(localStorage.getItem('arSize'));if(v>=0&&v<SIZES.length)si=v}catch(e){}
+function applySize(){document.documentElement.style.setProperty('--ar-size',SIZES[si]+'rem');try{localStorage.setItem('arSize',si)}catch(e){}
+  $('smaller').disabled=si===0;$('bigger').disabled=si===SIZES.length-1}
+$('smaller').addEventListener('click',()=>{if(si>0){si--;applySize()}});
+$('bigger').addEventListener('click',()=>{if(si<SIZES.length-1){si++;applySize()}});
+applySize();
+start();
+</script>

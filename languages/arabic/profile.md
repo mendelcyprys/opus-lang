@@ -15,3 +15,7 @@ Record here only what is specific to Arabic, or where it differs. Update wheneve
 ## Preferences (only where different from learner.md)
 - Explanation language mix: mostly English; Arabic examples fully vowelled
 - Other notes:
+- **Font size (2026-11-07):** Arabic script looks too small in chat and in `AskUserQuestion` modals — hard to read. Run Arabic rounds in a
+  **large-type Artifact** (page with A−/A+ size control, Amiri font, typed + MC items, "copy results" summary the learner pastes back).
+  First one: https://claude.ai/artifact/9Gp267NvKwq2c8Eff6GuhV (source in `languages/arabic/tools/arabic-practice.html`). Update the item list per session
+  (republish same URL). In chat, keep Arabic to a minimum and transliterate. Same may apply to Hebrew (and Japanese kana/kanji) — ask.
