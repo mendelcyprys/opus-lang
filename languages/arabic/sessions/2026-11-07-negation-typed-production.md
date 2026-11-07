@@ -44,3 +44,8 @@
 - ✓ MC 6/6: كتب, أسواق, معهم, الرسائل طويلة, ليست معنا, إلى. ✓ typed: الأسواق جديدة, لم يكتب الرسائل, ذهبت معي.
 - ✗ spelling only (grammar right in all three): *ما ذهبت إلى السوق **إمس*** → أمس; *لن **نذهت** معكم غداً* → نذهب (ب typed as ت); *تيوتنا ليست جديدة* → بيوتنا (dot slip).
 - Pattern: dotted-letter slips (ب/ت) and hamza seat when typing under speed; recognition and grammar are solid.
+
+## Round 6 (same day, Artifact; relayed): **9/12**
+- ✓ MC 6/6, incl. the spelling items (أمس, نذهب, بيوتنا), إليه, ليست + non-human plural, لن … معك. ✓ typed: لم تكتب الرسالة, ذهب إليها, هل ذهبوا معكم (and typed أمس ✓).
+- ✗ typed letter slips again: *ذهتنا* → ذهبنا (ب→ت); *غذاً* → غداً (ذ for د); *كتبنا لست جديدة* → ليست (dropped ي; لست = 'I am not', so the form is wrong, not just spelling).
+- Pattern: MC spelling recognition 100%, typed production still drops/changes dotted letters. Suggest: reread each typed answer; maybe type slower or check the keyboard autocorrect.
