@@ -17,3 +17,7 @@
 
 ## Next time
 - Faire, more aller/prendre in production, questions with inversion/intonation, adjective agreement & position, partitive (du/de la/des).
+
+## Round 2 (practice page, 12 Qs) — 11/12
+- ✓ le livre (error-spot), tu vas, ils prennent, est-ce que, NEW faire: vous faites ✓, ils font ✓; builds 3/3; typed Je vais au restaurant ✓, Nous prenons un croissant ✓.
+- ✗ #12 typed: Elle est francaise → française (missing ç; accent slip, words right).

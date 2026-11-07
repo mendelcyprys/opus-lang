@@ -29,3 +29,4 @@ The first column is always the target-language term (used by scripts/export_anki
 | le croissant | croissant | m | Je mange un croissant. | 2026-11-07 | 2026-11-07 | 1 |
 | le restaurant | restaurant | m | Le soir, je vais au restaurant. | 2026-11-07 | 2026-11-07 | 1 |
 | le matin / le soir | in the morning / evening | time phrases | Le matin, je prends un café. | 2026-11-07 | 2026-11-07 | 1 |
+| faire | to do, to make | 3e groupe, irregular: fais, fais, fait, faisons, faites, font; aux. avoir, p.p. fait | Vous faites la cuisine ? | 2026-11-07 | 2026-11-07 | 1 |
